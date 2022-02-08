@@ -36,7 +36,3 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: view
-quoting:
-  database: true
-  schema: true
-  identifier: true
