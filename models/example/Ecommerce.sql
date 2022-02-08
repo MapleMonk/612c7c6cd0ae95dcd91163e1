@@ -7,7 +7,7 @@ create table \"MM_TEST\".\"TEST\".\"NEWPERSONA\" (name varchar(25));",
                             }
                         ) }}
                         with sample_data as (
-                            select * from MM_TEST.TEST.Ecommerce
+                            select * from ("A")
                         ),
                         final as (
                             select * from sample_data
