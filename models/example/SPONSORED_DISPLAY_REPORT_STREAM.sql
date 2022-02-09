@@ -17,7 +17,7 @@ with source_data as (
         _AIRBYTE_AB_ID,
         _AIRBYTE_EMITTED_AT,
         convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT
-    from _AIRBYTE_RAW_{{var('prefix')}}_SPONSORED_DISPLAY_REPORT_STREAM
+    from _AIRBYTE_RAW_{{var('prefix')}}SPONSORED_DISPLAY_REPORT_STREAM
 )
 
 select *
