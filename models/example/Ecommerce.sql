@@ -7,7 +7,7 @@
                         ) }}
                         with sample_data as (
 
-                            select * from MM_TEST.TEST.Ecommerce
+                            select * from VALUES('1')
                         ),
                         
                         final as (
