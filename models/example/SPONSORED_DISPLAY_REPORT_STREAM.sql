@@ -7,7 +7,7 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table', alias= var('prefix')+ 'SPONSORED_DISPLAY_REPORT_STREAM_FINAL') }}
+{{ config(materialized='table', alias= var('prefix')+ 'SPONSORED_DISPLAY_REPORT_STREAM') }}
 
 with source_data as (
     select get_path(parse_json(_airbyte_data), '"metric"') as METRIC,
