@@ -2,7 +2,7 @@
 version: 2
 
 models:
-    - name: Orders
+    - name: SPONSORED_DISPLAY_REPORT_STREAM
       description: "A starter dbt model"
       columns:
           - name: id
