@@ -3,12 +3,12 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "eq66774.ap-southeast-1"
-      user: "krishna123"
-      password: "Maple@2021"
+      account: "ON23562.ap-south-1.aws"
+      user: "KumarMaplemonk"
+      password: "Maplemonk@123"
       role: "ACCOUNTADMIN"
-      database: "DEMO_DB"
+      database: "MM_TEST"
       warehouse: "COMPUTE_WH"
-      schema: "navMaplemonk"
+      schema: "TEST"
       threads: 10
       client_session_keep_alive: false
