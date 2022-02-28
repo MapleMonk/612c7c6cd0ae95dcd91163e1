@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "CREATE OR REPLACE TABLE Vahdam_db.maplemonk.DSR AS WITH CTE AS (SELECT OI.ORDER_TIMESTAMP::date AS DATE, UPPER(DAYNAME(OI.ORDER_TIMESTAMP::DATE)) AS Day, SUM(CASE WHEN OI.shop_name=\'Shopify_India\' THEN OI.Net_Sales END) AS Shopify_India_Sales, SUM(CASE WHEN OI.shop_name=\'Shopify_Germany\' THEN OI.Net_Sales END) AS Shopify_Germany_Sales, SUM(CASE WHEN OI.shop_name=\'Shopify_Italy\' THEN OI.Net_Sales END) AS Shopify_Italy_Sales, SUM(CASE WHEN OI.shop_name=\'Shopify_USA_Wholesale\' THEN OI.Net_Sales END) AS Shopify_USA_Wholesale_Sales, SUM(CASE WHEN OI.shop_name=\'Shopify_USA\' THEN OI.Net_Sales END) AS Shopify_USA_Sales, SUM(CASE WHEN OI.shop_name=\'Shopify_Global\' THEN OI.Net_Sales END) AS Shopify_Global_Sales FROM Vahdam_db.maplemonk.Shopify_All_orders_items OI WHERE OI.is_refund=0 GROUP BY OI.ORDER_TIMESTAMP::date ORDER BY OI.ORDER_TIMESTAMP::date DESC) SELECT CTE.*, AZ.AMAZON_ADS_US_SPEND_SPONSORED_PRODUCTS, AZ.AMAZON_ADS_US_SPEND_SPONSORED_DISPLAY, AZ.AMAZON_ADS_US_SPEND_SPONSORED_BRANDS_VIDEO, AZ.AMAZON_ADS_US_SPEND_SPONSORED_BRANDS, FG.GOOGLE_ADS_US_SPEND, FG.FACEBOOK_ADS_US_SPEND, AZS.NET_SALES AS AMAZON_USA_SALES FROM CTE LEFT JOIN (SELECT DATE, SUM(CASE WHEN CAMPAIGN_TYPE=\'Sponsored Products\' THEN SPEND END) AS AMAZON_ADS_US_SPEND_SPONSORED_PRODUCTS, SUM(CASE WHEN CAMPAIGN_TYPE=\'Sponsored Display\' THEN SPEND END) AS AMAZON_ADS_US_SPEND_SPONSORED_DISPLAY, SUM(CASE WHEN CAMPAIGN_TYPE=\'Sponsored Brands Video\' THEN SPEND END) AS AMAZON_ADS_US_SPEND_SPONSORED_BRANDS_VIDEO, SUM(CASE WHEN CAMPAIGN_TYPE=\'Sponsored Brands\' THEN SPEND END) AS AMAZON_ADS_US_SPEND_SPONSORED_BRANDS FROM Vahdam_db.maplemonk.AMAZONADS_NA_MARKETING GROUP BY DATE) AZ ON CTE.DATE=AZ.DATE LEFT JOIN (SELECT DATE, SUM(CASE WHEN CHANNEL=\'Google Ads\' THEN SPEND END) AS GOOGLE_ADS_US_SPEND, SUM(CASE WHEN CHANNEL=\'Facebook Ads\' THEN SPEND END) AS FACEBOOK_ADS_US_SPEND FROM Vahdam_db.maplemonk.MARKETING_CONSOLIDATED GROUP BY DATE) FG ON CTE.DATE=FG.DATE LEFT JOIN (SELECT \"Purchase-datetime-PDT\"::DATE AS DATE, COUNT(DISTINCT \"amazon-order-id\") Orders, SUM(TRY_CAST(QUANTITY AS FLOAT)) Units, SUM(TRY_CAST(\"item-promotion-discount\" AS FLOAT)), SUM(TRY_CAST(\"item-tax\" AS FLOAT)), SUM(TRY_CAST(\"item-price\" AS FLOAT)) AS SALES, SUM(TRY_CAST(\"item-price\" AS FLOAT)) AS NET_SALES FROM (SELECT *, CONVERT_TIMEZONE(\'UTC\',\'America/Los_Angeles\', \"purchase-date\":: DATETIME) as \"Purchase-datetime-PDT\" FROM Vahdam_db.maplemonk.ASPUSA_GET_FLAT_FILE_ALL_ORDERS_DATA_BY_LAST_UPDATE_GENERAL)X WHERE \"Purchase-datetime-PDT\"::DATE >=\'2022-02-01\' AND CURRENCY = \'USD\' AND \'order-status\' NOT IN(\'Cancelled\') AND \"item-price\" NOT IN(\'\',\'0.0\') GROUP BY \"Purchase-datetime-PDT\"::DATE ORDER BY \"Purchase-datetime-PDT\"::DATE)AZS ON CTE.DATE=AZS.DATE;",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from VAHDAM_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
