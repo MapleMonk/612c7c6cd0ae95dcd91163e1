@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "new_table"
+    description: "A starter dbt model"
