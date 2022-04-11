@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "xa56703.ap-south-1.aws"
+      user: "analyticsUgaoo"
+      password: "Analytics@123"
+      role: "ACCOUNTADMIN"
+      database: "UGAOO_DB"
+      warehouse: "MAPLEMONK_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
