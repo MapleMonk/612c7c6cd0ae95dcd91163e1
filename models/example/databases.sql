@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "DROP TABLE TEST.RANDOM.TESTCHECK; CREATE TABLE TEST.RANDOM.TESTCHECK (name varchar(30));",
+                                "sql": "DROP TABLE TEST.RANDOM.TESTCHECKIT; CREATE TABLE TEST.RANDOM.TESTCHECKIT (name varchar(30));",
                                 "transaction": true
                             }
                         ) }}
