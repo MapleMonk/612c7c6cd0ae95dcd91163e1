@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "create or replace table ALMOWEAR_DB.maplemonk.easy_ecom_consolidated_AW as with sub_orders as ( select * from ( select *,row_number()over(partition by suborder_id,sku order by _AIRBYTE_NORMALIZED_AT desc) as rw from ALMOWEAR_DB.MAPLEMONK.EASYECOM_IN_CUSTOMER_ORDERS_SUBORDERS c ) a where rw =1 ), first_order as ( select * from ( select *,row_number()over(partition by contact_num order by order_date asc) as rw from EASYECOM_IN_CUSTOMER_ORDERS c ) a where rw =1 ) select \'Almo\' as SHOP_NAME, o.carrier_id, o.courier, o.email, o.contact_num, o.MARKETPLACE, o.MARKETPLACE_ID, o.ORDER_ID, date(o.shipping_Last_update_date) shipping_last_update_date, o.shipping_status, s.SKU, s.sku_type, s.PRODUCT_ID, s.PRODUCTNAME, case when o.pickup_country=\'India\' then \'INR\' end as CURRENCY, case when returned_quantity >0 then 1 else 0 end as IS_REFUND, o.CITY::varchar City, o.STATE:: varchar State, o.order_status, date(o.ORDER_Date) as ORDER_Date, S.total_shipping_charge::float as SHIPPING_PRICE, s.item_quantity::int as number_of_products_in_combo, s.suborder_quantity::int suborder_quantity, s.shipped_quantity::int shipped_quantity, s.returned_quantity::int returned_quantity, s.cancelled_quantity::int cancelled_quantity, (returned_quantity::int/suborder_quantity::int)*selling_price as return_sales, (cancelled_quantity::int/suborder_quantity::int)*selling_price as cancel_sales, s.TAX::float Tax, s.mrp as suborder_mrp, p.mrp as product_mrp, range, s.category, style, collection, -1*(coalesce(o.total_discount*(case when selling_price=0 then 1 else selling_price end/case when sum(selling_price)over (partition by o.order_id) = 0 then 1 else sum(selling_price)over (partition by o.order_id) end ),0)::float) as discount , case when selling_price::float is null then 0 else selling_price::float end selling_price, s.mrp*suborder_quantity as mrp_sales, case when fo.order_id = o.order_id then 1 else 0 end as new_customer_flag, case when o.shipping_STATUS in (\'In Transit\', \'Shipment Created\') then datediff(day,date(o.ORDER_Date), getdate()) when o.shipping_STATUS in (\'Delivered\',\'Delivered To Origin\') then datediff(day,date(o.ORDER_Date),date(o.shipping_Last_update_date)) end::int as Days_in_Shipment from EASYECOM_IN_CUSTOMER_ORDERS o join sub_orders s on o._AIRBYTE_EASYECOM_IN_CUSTOMER_ORDERS_HASHID = s._AIRBYTE_EASYECOM_IN_CUSTOMER_ORDERS_HASHID left join first_order fo on fo.contact_num = o.contact_num left join product_master p on p.sku = s.sku",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from ALMOWEAR_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
