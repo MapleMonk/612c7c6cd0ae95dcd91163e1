@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "es52380.ap-south-1.aws"
+      user: "analyticsalmo"
+      password: "Almowear@123"
+      role: "ACCOUNTADMIN"
+      database: "ALMOWEAR_DB"
+      warehouse: "ALMOWEAR_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
