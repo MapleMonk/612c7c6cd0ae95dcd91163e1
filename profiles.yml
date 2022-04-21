@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "st32668.ap-south-1.aws"
+      user: "Shakirtcns"
+      password: "Tcns@123"
+      role: "ACCOUNTADMIN"
+      database: "TCNS_DB"
+      warehouse: "TCNS_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
