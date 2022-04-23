@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "tk87571.ap-south-1.aws"
+      user: "snitch"
+      password: "4MClothingLLP"
+      role: "ACCOUNTADMIN"
+      database: "SNITCH_DB"
+      warehouse: "SNITCH_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
