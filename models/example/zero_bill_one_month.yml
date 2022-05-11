@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "zero_bill_one_month"
+    description: "A starter dbt model"
