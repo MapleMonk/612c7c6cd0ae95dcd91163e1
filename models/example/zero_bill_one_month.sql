@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.zero_bill_one_month ADD (order_DATE Date); UPDATE eggozdb.maplemonk.zero_bill_one_month SET order_date = TRY_TO_DATE(\"date(last_order_date)\",\'DD/MM/YYYY\'); ALTER TABLE eggozdb.maplemonk.zero_bill_one_month ADD (Onboarding_DATE Date); UPDATE eggozdb.maplemonk.zero_bill_one_month SET order_date = TRY_TO_DATE(\"date(zb.onboarding_date)\",\'DD/MM/YYYY\');",
+                                "sql": "alter table eggozdb.maplemonk.zero_bill_one_month alter column MODIFY(last_order_date date); alter table eggozdb.maplemonk.zero_bill_one_month alter column MODIFY(zb.onboarding_datedate date);",
                                 "transaction": true
                             }
                         ) }}
