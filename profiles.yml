@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "WN37042.ap-south-1.aws"
+      user: "AnalyticsSymphony"
+      password: "Maplemonk@321"
+      role: "ACCOUNTADMIN"
+      database: "SYMPHONY_DB"
+      warehouse: "SYMPHONY_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
