@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ff73615.ap-south-1.aws"
+      user: "analyticsfaballey"
+      password: "iZf6GNuO23"
+      role: "ACCOUNTADMIN"
+      database: "FABALLEY_DB"
+      warehouse: "FABALLEY_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
