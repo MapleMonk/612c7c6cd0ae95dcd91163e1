@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: "EPM_Sheet1"
+  - name: "EPM_Draft"
     description: "A starter dbt model"

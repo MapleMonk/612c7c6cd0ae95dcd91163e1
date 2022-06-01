@@ -1,13 +1,13 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.EPM_sheet1 ADD (LogDate Date); UPDATE eggozdb.maplemonk.EPM_sheet1 SET LogDate = TRY_TO_DATE(date,\'DD/MM/YYYY\');",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.epm_draft ADD (LogDate Date); UPDATE eggozdb.maplemonk.epm_draft SET LogDate = TRY_TO_DATE(\"date(Date)\",\'DD/MM/YYYY\');",
                                 "transaction": true
                             }
                         ) }}
                         with sample_data as (
 
-                            select * from EGGOZDB.MAPLEMONK.EPM_Sheet1
+                            select * from EGGOZDB.MAPLEMONK.EPM_Draft
                         ),
                         
                         final as (
