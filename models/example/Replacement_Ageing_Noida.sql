@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.replacement_ageing_noida ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_noida SET Ddate = TRY_TO_DATE(\"Receiving Date\",\'DD/MM/YYYY\');",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.replacement_ageing_noida ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_noida SET Ddate = TRY_TO_DATE(\"Receiving Date\");",
                                 "transaction": true
                             }
                         ) }}
