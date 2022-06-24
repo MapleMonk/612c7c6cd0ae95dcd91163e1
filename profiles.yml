@@ -1,14 +1,15 @@
 default:
   target: "dev"
   outputs:
-    dev:
-      type: "snowflake"
-      account: "ww77149.ap-south-1.aws"
-      user: "AAKASH"
-      password: "Maplemonk@123"
-      role: "ACCOUNTADMIN"
-      database: "MM_TEST"
-      warehouse: "COMPUTE_WH"
-      schema: "Maplemonk"
-      threads: 10
-      client_session_keep_alive: false
+    dev:      
+      type: redshift
+      host: testcluster.cc20cjjw2d93.ap-south-1.redshift.amazonaws.com
+      user: maplemonk
+      password: MonkMaple123
+      port: 5439
+      dbname: dev
+      schema: public
+      threads: 4
+      keepalives_idle: 240 
+      connect_timeout: 10 
+      ra3_node: true
