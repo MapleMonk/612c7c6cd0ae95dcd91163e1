@@ -1,13 +1,13 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "CREATE TABLE maplemonk.mm_test.persons ( PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255) );",
+                                "sql": "CREATE TABLE dev.maplemonk.personalD( PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255) );",
                                 "transaction": true
                             }
                         ) }}
                         with sample_data as (
 
-                            select * from MM_TEST.information_schema.databases
+                            select * from dev.maplemonk.bigecom
                         ),
                         
                         final as (
