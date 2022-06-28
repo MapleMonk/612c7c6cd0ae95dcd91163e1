@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.replacement_ageing_noida ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_noida SET Ddate = TRY_TO_DATE(\"Receiving Date\"); ALTER TABLE eggozdb.maplemonk.replacement_ageing_noida MODIFY COLUMN ageing varchar; ALTER TABLE eggozdb.maplemonk.replacement_ageing_delhi ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_delhi SET Ddate = TRY_TO_DATE(\"Receiving Date\"); ALTER TABLE eggozdb.maplemonk.replacement_ageing_gurgaon ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_gurgaon SET Ddate = TRY_TO_DATE(\"Receiving Date\");",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.replacement_ageing_noida ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_noida SET Ddate = TRY_TO_DATE(\"Receiving Date\"); ALTER TABLE eggozdb.maplemonk.replacement_ageing_noida MODIFY COLUMN ageing int; ALTER TABLE eggozdb.maplemonk.replacement_ageing_delhi ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_delhi SET Ddate = TRY_TO_DATE(\"Receiving Date\"); ALTER TABLE eggozdb.maplemonk.replacement_ageing_gurgaon ADD (Ddate Date); UPDATE eggozdb.maplemonk.replacement_ageing_gurgaon SET Ddate = TRY_TO_DATE(\"Receiving Date\");",
                                 "transaction": true
                             }
                         ) }}
