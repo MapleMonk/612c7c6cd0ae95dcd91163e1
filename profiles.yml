@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "IW72048.ap-south-1.aws"
+      user: "Aakash"
+      password: "Maplemonk@123"
+      role: "ACCOUNTADMIN"
+      database: "TCNS_DEMO"
+      warehouse: "COMPUTE_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
