@@ -1,13 +1,13 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "CREATE TABLE dev.maplemonk.DEPARTMENT( ID INT PRIMARY KEY NOT NULL, DEPT CHAR(50) NOT NULL, EMP_ID INT NOT NULL );",
+                                "sql": "CREATE TABLE dev.public.DEPARTMENT( ID INT PRIMARY KEY NOT NULL, DEPT CHAR(50) NOT NULL, EMP_ID INT NOT NULL );",
                                 "transaction": true
                             }
                         ) }}
                         with sample_data as (
 
-                            select * from pg_table_def
+                            select * from dev.public.accounts
                         ),
                         
                         final as (
