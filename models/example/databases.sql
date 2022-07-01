@@ -5,13 +5,5 @@
                                 "transaction": true
                             }
                         ) }}
-                        with sample_data as (
-
-                            select * from dev.public.accounts
-                        ),
-                        
-                        final as (
-                            select * from sample_data
-                        )
-                        select * from final
+                      
                         
