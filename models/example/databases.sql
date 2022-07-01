@@ -1,12 +1,11 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "CREATE TABLE dev.maplemonk.DEPARTMENTDUP( ID INT PRIMARY KEY NOT NULL, DEPT CHAR(50) NOT NULL, EMP_ID INT NOT NULL );",
+                                "sql": "CREATE TABLE dev.maplemonk.DEP( ID INT PRIMARY KEY NOT NULL, DEPT CHAR(50) NOT NULL, EMP_ID INT NOT NULL );",
                                 "transaction": true
                             }
                         ) }}
-                      
-                          with sample_data as (
+                        with sample_data as (
 
                             select * from STV_TBL_PERM
                         ),
@@ -15,3 +14,4 @@
                             select * from sample_data
                         )
                         select * from final
+                        
