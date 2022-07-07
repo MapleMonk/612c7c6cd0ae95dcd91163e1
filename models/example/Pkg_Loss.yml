@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Pkg_Loss"
+    description: "A starter dbt model"
