@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "select dl.date, eggs_sold, net_sales, dl.Total Loss(White),dl.Total Loss(Brown), dl.Total Loss(Nutra),dl.Total PPP Loss, dl.Loss Amt(White), dl.Loss Amt(Brown),dl.Loss Amt(Nutra+), dl.Total PPP Loss Amt,dl.Total UB Loss, dl.Total Loss from eggozdb.maplemonk.summary_reporting_table_beat_retailer ds, loss_Daily_loss_log dl group by date;",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.loss_Daily_loss_log ADD (ddate Date); UPDATE eggozdb.maplemonk.loss_Daily_loss_log SET ddate = TRY_TO_DATE(\"Date\");",
                                 "transaction": true
                             }
                         ) }}
