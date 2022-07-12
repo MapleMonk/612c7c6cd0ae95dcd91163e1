@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.loss_daily_loss_log ADD (dDate Date); UPDATE eggozdb.maplemonk.loss_daily_loss_log SET LogDate = TRY_TO_DATE(\"DATE\",\'DD/MM/YYYY\');",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.loss_daily_loss_log ADD (dDate Date); UPDATE eggozdb.maplemonk.loss_daily_loss_log SET dDate = TRY_TO_DATE(\"DATE\",\'DD/MM/YYYY\');",
                                 "transaction": true
                             }
                         ) }}
