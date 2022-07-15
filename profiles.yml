@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "zn19511.ap-south-1.aws"
+      user: "AnalyticsAV"
+      password: "A9y3bd3z123"
+      role: "ACCOUNTADMIN"
+      database: "AV_DB"
+      warehouse: "AV_WAREHOUSE"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
