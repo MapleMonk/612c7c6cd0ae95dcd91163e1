@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "gc41316.ap-south-1.aws"
+      user: "HILOANALYTICS"
+      password: "5A6EB0&e"
+      role: "accountadmin"
+      database: "HILODESIGN_DB"
+      warehouse: "HILODESIGN_WH"
+      schema: "maplemonk"
+      threads: 10
+      client_session_keep_alive: false
