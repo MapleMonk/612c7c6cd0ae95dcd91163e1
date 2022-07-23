@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.region_wise_procurement_master_data ADD (GRN_Date date); UPDATE eggozdb.maplemonk.region_wise_procurement_master_data SET GRN_Date = \"GRN Date\";",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.region_wise_procurement_master_data ADD (GRN_Date date); UPDATE eggozdb.maplemonk.region_wise_procurement_master_data SET GRN_Date = STR_TO_DATE(\"GRN Date\", \'%d%m%Y\');",
                                 "transaction": true
                             }
                         ) }}
