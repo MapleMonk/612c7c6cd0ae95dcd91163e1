@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "loss_Daily_loss_log"
+    description: "A starter dbt model"
