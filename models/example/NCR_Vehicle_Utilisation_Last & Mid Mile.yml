@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "NCR_Vehicle_Utilisation_Last & Mid Mile"
+    description: "A starter dbt model"
