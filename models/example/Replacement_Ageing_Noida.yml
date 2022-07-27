@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Replacement_Ageing_Noida"
+    description: "A starter dbt model"
