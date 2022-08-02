@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "DK99371.ap-south-1.aws"
+      user: "drvmarketing"
+      password: "p5GbRBVl43"
+      role: "AccountAdmin"
+      database: "RPSG_DB"
+      warehouse: "RPSG_WH"
+      schema: "MapleMonk"
+      threads: 10
+      client_session_keep_alive: false
