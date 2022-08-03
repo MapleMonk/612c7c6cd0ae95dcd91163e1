@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "epl_Egg_Proc_Data"
+    description: "A starter dbt model"
