@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "AA_IT_New_sponsored_products_report_stream"
+    description: "A starter dbt model"
