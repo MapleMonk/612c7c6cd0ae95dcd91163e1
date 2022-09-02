@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "https://lt82698.ap-south-1.aws"
+      user: "infraghc"
+      password: "SC83AuRuGWNpaAp"
+      role: "Accountadmin"
+      database: "GHC_DB"
+      warehouse: "GHC_WAREHOUSE"
+      schema: "maplemonk"
+      threads: 10
+      client_session_keep_alive: false
