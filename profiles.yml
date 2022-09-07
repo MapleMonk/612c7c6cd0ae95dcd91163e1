@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "pm98618.ap-south-1.aws"
+      user: "AAKASH"
+      role: "ACCOUNTADMIN"
+      database: "MM_TEST"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
