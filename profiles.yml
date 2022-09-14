@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "pm98618.ap-south-1.aws"
+      user: "DEV_TESTING_13_SEPT457"
+      role: "DEV_TESTING_13_SEPT457_ROLE"
+      database: "DEV_TESTING_13_SEPT457_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
