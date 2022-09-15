@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "zj77807.ap-south-1.aws"
+      user: "analyticsslurp"
+      password: "tUQ6AwB4334"
+      role: "ACCOUNTADMIN"
+      database: "SLURP_DB"
+      warehouse: "SLURP_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
