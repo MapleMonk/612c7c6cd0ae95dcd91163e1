@@ -3,7 +3,7 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "https://lt82698.ap-south-1.aws"
+      account: "lt82698.ap-south-1.aws"
       user: "infraghc"
       password: "SC83AuRuGWNpaAp"
       role: "Accountadmin"
