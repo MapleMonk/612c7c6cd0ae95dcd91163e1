@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "xc22072.ap-south-1.aws"
+      user: "nessaanalytics"
+      password: "RkEpZbBo32"
+      role: "ACCOUNTADMIN"
+      database: "NESSA_DB"
+      warehouse: "NESSA_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
