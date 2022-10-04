@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "create or replace table ghc_db.maplemonk.shopify_utm_campaigns_wise_orders as select count(ID) as No_of_Orders, LANDING_UTM_CAMPAIGN, created_at::date as Order_Date From GHC_DB.maplemonk.shopify_all_orders group by LANDING_UTM_CAMPAIGN, created_at::date",
+                                "sql": "create or replace table ghc_db.maplemonk.shopify_utm_campaigns_wise_orders as select count(ID) as No_of_Orders, LANDING_UTM_CAMPAIGN, created_at::date as Order_Date , shop_name From GHC_DB.maplemonk.shopify_all_orders group by LANDING_UTM_CAMPAIGN, created_at::date, shop_name",
                                 "transaction": true
                             }
                         ) }}
