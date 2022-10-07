@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "pm98618.ap-south-1.aws"
+      user: "SAI_TEST_1266"
+      password: "cPW6FkDdFl"
+      role: "SAI_TEST_1266_ROLE"
+      database: "SAI_TEST_1266_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
