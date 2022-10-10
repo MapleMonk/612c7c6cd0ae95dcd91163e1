@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "pm98618.ap-south-1.aws"
+      user: "AVATAR107"
+      role: "AVATAR107_ROLE"
+      database: "AVATAR107_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
