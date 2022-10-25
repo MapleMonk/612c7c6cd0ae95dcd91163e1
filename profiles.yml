@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "pu28729.eu-north-1.aws"
+      user: "POMMEAMALYTICS"
+      password: "oqUuqUKL234"
+      role: "ACCOUNTADMIN"
+      database: "Pomme_DB"
+      warehouse: "POmme_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
