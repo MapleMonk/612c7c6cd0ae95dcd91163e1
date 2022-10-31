@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "kj09642.ap-south-1.aws"
+      user: "welspunanalytics"
+      password: "rq9EPpQA234"
+      role: "ACCOUNTADMIN"
+      database: "WELSPUN_DB"
+      warehouse: "WELSPUN_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
