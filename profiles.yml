@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "gr03377.ap-south-1.aws"
+      user: "BBKANALYTICS"
+      password: "Bbk@1234"
+      role: "ACCOUNTADMIN"
+      database: "BBK_DB"
+      warehouse: "BBK_WH"
+      schema: "maplemonk"
+      threads: 10
+      client_session_keep_alive: false
