@@ -7,7 +7,7 @@
                         ) }}
                         with sample_data as (
 
-                            select * from EGGOZDB.MAPLEMONK.egg_procurement_log_Sheet1
+                            select * from EGGOZDB.MAPLEMONK.EPM_Sheet1
                         ),
                         
                         final as (

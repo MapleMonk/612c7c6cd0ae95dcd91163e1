@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: "egg_procurement_log_Sheet1"
+  - name: "EPM_Sheet1"
     description: "A starter dbt model"
