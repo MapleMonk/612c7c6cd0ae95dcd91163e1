@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "eh44415.ap-south-1.aws"
+      user: "HILO_DEMO_ACCOUNT824"
+      role: "HILO_DEMO_ACCOUNT824_ROLE"
+      database: "HILO_DEMO_ACCOUNT824_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
