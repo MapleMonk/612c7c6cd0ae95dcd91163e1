@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "region_wise_procurement_MasterData"
+    description: "A starter dbt model"
