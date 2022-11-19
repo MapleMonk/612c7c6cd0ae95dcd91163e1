@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "ALTER TABLE eggozdb.maplemonk.region_wise_procurement_masterdata ADD (GRN_DATE Date); UBILL_DATE eggozdb.maplemonk.region_wise_procurement_masterdata SET GRN_DATE = TRY_TO_DATE(\"GRN Date\",\'YYYY-MM-DD\'); ALTER TABLE eggozdb.maplemonk.region_wise_procurement_masterdata ADD (BILL_DATE Date); UBILL_DATE eggozdb.maplemonk.region_wise_procurement_masterdata SET BILL_DATE = TRY_TO_DATE(\"Bill Date\",\'YYYY-MM-DD\');",
+                                "sql": "ALTER TABLE eggozdb.maplemonk.region_wise_procurement_masterdata ADD (GRN_DATE Date); UPDATE eggozdb.maplemonk.region_wise_procurement_masterdata SET GRN_DATE = TRY_TO_DATE(\"GRN Date\",\'DD/MM/YYYY\'); ALTER TABLE eggozdb.maplemonk.region_wise_procurement_masterdata ADD (BILL_DATE Date); UPDATE eggozdb.maplemonk.region_wise_procurement_masterdata SET BILL_DATE = TRY_TO_DATE(\"Bill Date\",\'DD/MM/YYYY\');",
                                 "transaction": true
                             }
                         ) }}
