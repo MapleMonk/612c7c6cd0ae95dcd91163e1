@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "eh44415.ap-south-1.aws"
+      user: "EXECUTIVE_REPORT_VADH213"
+      role: "EXECUTIVE_REPORT_VADH213_ROLE"
+      database: "EXECUTIVE_REPORT_VADH213_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
