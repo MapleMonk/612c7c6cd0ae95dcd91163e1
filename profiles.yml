@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "qd30499.ap-south-1.aws"
+      user: "TechGynoveda"
+      password: "4FB2CrBZa5T5zspz"
+      role: "ACCOUNTADMIN"
+      database: "GYNOVEDA_DB"
+      warehouse: "GYNOVEDA_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
