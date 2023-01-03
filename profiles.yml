@@ -3,9 +3,9 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "eh44415.ap-south-1.aws"
-      user: "EXECUTIVE_REPORT_VADH213"
-      role: "EXECUTIVE_REPORT_VADH213_ROLE"
+      account: "me70656.ap-south-1.aws"
+      user: "AAKASH"
+      role: "ACCOUNTADMIN"
       database: "EXECUTIVE_REPORT_VADH213_DB"
       warehouse: "COMPUTE_WH"
       schema: "Maplemonk"
