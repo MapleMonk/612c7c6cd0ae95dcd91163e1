@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ajrdlng-ey71974"
+      user: "Naveen"
+      password: "Maplemonk@123"
+      role: "ACCOUNTADMIN"
+      database: "EASYECOM"
+      warehouse: "COMPUTE_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
