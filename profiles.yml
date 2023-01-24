@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "zf44361.ap-south-1.aws"
+      user: "lilanalytics"
+      password: "8@hAq\"-:"
+      role: "ACCOUNTADMIN"
+      database: "LILGOODNESS_DB"
+      warehouse: "LILGOODNESS_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
