@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "https://zovocjm-xs11016"
+      user: "ANUROOP"
+      role: "ACCOUNTADMIN"
+      database: "MAPLEMONK_DEMO_DB"
+      warehouse: "MAPLEMONK_DEMO_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
