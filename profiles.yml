@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "okcvrma-cl71499"
+      user: "naveen"
+      role: "ACCOUNTADMIN"
+      database: "MAPLEMONK_DEMO_DB"
+      warehouse: "MAPLEMONK_DEMO_WH"
+      schema: "MAPLEMONK_CUSTOMER"
+      threads: 10
+      client_session_keep_alive: false
