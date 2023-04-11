@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "wj05281.ap-south-1.aws"
+      user: "BuildSkill148"
+      password: "d02K5UpC7I0s8"
+      role: "ACCOUNTADMIN"
+      database: "BuildSkill148_DB"
+      warehouse: "BuildSkill148_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
