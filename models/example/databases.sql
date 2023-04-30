@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "create or replace table opensecret_db.MAPLEMONK.Shopify_UTM_Parameters_fact_item as select * from opensecret_db.MAPLEMONK.Shopify_Order_Attribution_open_secret_store_Shopify_UTM_Parameters ;",
+                                "sql": "create or replace table opensecret_db.MAPLEMONK.Shopify_UTM_Parameters_fact_item as select * from opensecret_db.MAPLEMONK.SHOPIFY_ORDER_ATTRIBUTION_OPEN_SECRET_STORE_UTM_PARAMETERS;",
                                 "transaction": true
                             }
                         ) }}
