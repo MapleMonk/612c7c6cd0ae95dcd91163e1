@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ellaqlw-vo80035"
+      user: "bharatkhatri"
+      password: "Open@1234"
+      role: "ACCOUNTADMIN"
+      database: "opensecret_db"
+      warehouse: "opensecret_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
