@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "",
+                                "sql": "create or replace table MAPLEMONK_DEMO_DB.MAPLEMONK_CUSTOMER.Shopify_UTM_Parameters_fact_item as select * from MAPLEMONK_DEMO_DB.MAPLEMONK_CUSTOMER.Shopify_Order_Attribution_perfora_care_Shopify_UTM_Parameters ;",
                                 "transaction": true
                             }
                         ) }}
