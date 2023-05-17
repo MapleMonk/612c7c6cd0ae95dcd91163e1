@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Replacement_Ageing_Delhi"
+    description: "A starter dbt model"
