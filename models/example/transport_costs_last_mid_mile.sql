@@ -7,7 +7,7 @@
                         ) }}
                         with sample_data as (
 
-                            select * from EGGOZDB.MAPLEMONK.transport_costs_last mid mile
+                            select * from EGGOZDB.MAPLEMONK.transport_costs_last_mid_mile
                         ),
                         
                         final as (
