@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ba95169.ap-south-1.aws"
+      user: "ANALYTICSVAHDAM"
+      password: "Monk@123"
+      role: "ACCOUNTADMIN"
+      database: "VAHDAM_DB"
+      warehouse: "VAHDAM_ANALYTICS"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
