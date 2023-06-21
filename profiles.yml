@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ku81714.ap-south-1.aws"
+      user: "GHCAnalytics"
+      password: "tva4OERVBvy2W6l"
+      role: "ACCOUNTADMIN"
+      database: "ghc_db"
+      warehouse: "ghc_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
