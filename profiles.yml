@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "xfodpfn-fn33781"
+      user: "analyticsbeardo"
+      password: "Aok.Ux0G=vuncAI"
+      role: "ACCOUNTADMIN"
+      database: "Beardo_db"
+      warehouse: "beardo_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
