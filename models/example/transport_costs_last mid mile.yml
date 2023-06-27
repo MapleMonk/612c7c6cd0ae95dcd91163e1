@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: "transport_costs_last_mid_mile"
+  - name: "transport_costs_last mid mile"
     description: "A starter dbt model"
