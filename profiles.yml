@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "cz00047.ap-south-1.aws"
+      user: "MAPLEMONKTEST185"
+      password: "DoZ7wq0D095d1"
+      role: "ACCOUNTADMIN"
+      database: "MAPLEMONKTEST185_DB"
+      warehouse: "MAPLEMONKTEST185_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
