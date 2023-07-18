@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "mcczgji-ya40582"
+      user: "naveen"
+      password: "Maplemonk@123"
+      role: "ACCOUNTADMIN"
+      database: "MAPLEMONK_DEMO_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "MAPLEMONK_CUSTOMER"
+      threads: 10
+      client_session_keep_alive: false
