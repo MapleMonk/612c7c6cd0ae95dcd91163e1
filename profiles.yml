@@ -5,6 +5,7 @@ default:
       type: "snowflake"
       account: "mcczgji-ya40582"
       user: "naveen"
+      password: "Maplemonk@123"
       role: "ACCOUNTADMIN"
       database: "MAPLEMONK_DEMO_DB"
       warehouse: "COMPUTE_WH"
