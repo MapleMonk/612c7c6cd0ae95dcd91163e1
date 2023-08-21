@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "dxtcpne-sr54729"
+      user: "ANALYTICSSKINQ"
+      password: "8@GS@m33"
+      role: "Accountadmin"
+      database: "skinq_db"
+      warehouse: "Skinq_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
