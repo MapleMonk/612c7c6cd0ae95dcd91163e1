@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "create or replace table skinq_db.Maplemonk.Shopify_UTM_Parameters_fact_item as select * from skinq_db.Maplemonk.Shopify_skin_q_Shopify_UTM_Parameters ;",
+                                "sql": "create or replace table skinq_db.Maplemonk.Shopify_UTM_Parameters_fact_item as select * from skinq_db.Maplemonk.Shopify_skin_q_UTM_Parameters ;",
                                 "transaction": true
                             }
                         ) }}
