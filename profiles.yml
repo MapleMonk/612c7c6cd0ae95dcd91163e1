@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "fmnsfvt-pg92410"
+      user: "Analyticsrubans"
+      password: "u7?F2,7W'Nrw"
+      role: "ACCOUNTADMIN"
+      database: "rubans_db"
+      warehouse: "rubans_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
