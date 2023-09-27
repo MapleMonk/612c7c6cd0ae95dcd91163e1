@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "marico-analytics_beardo"
+      user: "COMPUTE_BEARDO"
+      password: "Beardo@123"
+      role: "PRD_SYS_ADMIN_BEARDO"
+      database: "PRD_DB"
+      warehouse: "PRD_BI_COMPUTE_WHS_BEARDO"
+      schema: "BEARDO"
+      threads: 10
+      client_session_keep_alive: false
