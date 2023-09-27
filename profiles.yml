@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "zqrbphp-tv81740"
+      user: "BSCAnalytics"
+      password: "lI4:0{]t1K2s"
+      role: "ACCOUNTADMIN"
+      database: "BSC_DB"
+      warehouse: "BSC_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
