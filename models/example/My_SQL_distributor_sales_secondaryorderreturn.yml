@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: "My_SQL_distributor_sales_secondarytripevent"
+  - name: "My_SQL_distributor_sales_secondaryorderreturn"
     description: "A starter dbt model"
