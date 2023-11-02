@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "zw91969.ap-south-1.aws"
+      user: "Charak_Pharma_Pvt_Ltd507"
+      password: "LH3jddfwgmTM4"
+      role: "ACCOUNTADMIN"
+      database: "Charak_Pharma_Pvt_Ltd507_DB"
+      warehouse: "Charak_Pharma_Pvt_Ltd507_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
