@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "dyzeaup-di70861"
+      user: "dunaturaanalytics"
+      password: "Qfeg8B2~Vho5"
+      role: "ACCOUNTADMIN"
+      database: "dunatura_db"
+      warehouse: "dunatura_wh"
+      schema: "maplemonk"
+      threads: 10
+      client_session_keep_alive: false
