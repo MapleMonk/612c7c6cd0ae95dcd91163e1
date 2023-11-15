@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "whqfayh-hg39800"
+      user: "MyMuseWarroom"
+      password: "p1AT$69n"
+      role: "ACCOUNTADMIN"
+      database: "MYMUSE_DB"
+      warehouse: "MYMUSE_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
