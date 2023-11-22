@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "create or replace table SLEEPYCAT_DB.MAPLEMONK.SLEEPYCAT_PandL as select SALEORDERITEMCODE ,a.source as Marketing_Source ,a.channel as Marketing_Channel ,a.marketplace ,a.order_date as Date ,a.order_id ,a.reference_code ,a.shop_name ,a.return_flag ,a.new_customer_flag ,a.customer_id_final ,payment_mode ,payment_gateway ,a.awb ,a.order_Status ,a.shipping_status ,a.final_shipping_status ,case when lower(order_Status) like \'%cancel%\' then upper(order_status) else upper(coalesce(final_shipping_status,order_status)) end final_status ,a.sku ,a.sku_code ,a.product_name_final PRODUCT_NAME_FINAL ,a.product_sub_category product_sub_category ,a.product_category PRODUCT_CATEGORY ,a.quantity ,d.MRP*quantity MRP ,a.selling_price Gross_sale ,a.shipping_price shipping_price ,case when lower(coalesce(final_status,\'1\')) not in (\'cancelled\',\'rto\') then d.cogs*quantity else 0 end as COGS ,a.tax tax ,div0(ifnull(e.spend,0), count(1) over (partition by a.order_Date::date, a.channel)) as Paid_Marketing_Google ,div0(ifnull(f.spend,0), count(1) over (partition by a.order_Date::date, a.channel)) as Paid_Marketing_Facebook ,div0(ifnull(g.spend,0), count(1) over (partition by a.order_Date::date, a.channel)) as Paid_Marketing_Amazon ,case when a.new_customer_flag = \'Repeat\' then LAG(a.order_date) IGNORE NULLS OVER (partition by a.customer_id_final ORDER BY a.order_date) end previous_date ,datediff(day,previous_date,a.order_Date) days_from_last_order from SLEEPYCAT_DB.MAPLEMONK.SLEEPYCAT_db_sales_consolidated a left join (select * from (select sku_code , try_to_date(start_date,\'DD-MON-YY\') start_Date , try_to_date(end_date,\'DD-MON-YY\') End_date , try_to_double(mrp) mrp , try_to_double(cogs) cogs , row_number() over (partition by sku_code, start_date, end_date order by mrp desc) rw from SLEEPYCAT_DB.MAPLEMONK.SKU_MRP_COGS ) where rw=1 ) d on replace(d.sku_code,\' \',\'\') = replace(a.sku_code,\' \',\'\') and to_date(a.order_date)::date >= d.start_date and to_date(a.order_date)::date <= d.end_date left join (select date, sum(spend) spend from SLEEPYCAT_DB.MAPLEMONK.SLEEPYCAT_db_MARKETING_CONSOLIDATED where lower(channel) like \'%google%\' group by date) e on e.date = a.order_Date::date and lower(case when lower(a.channel) like \'%google%\' then \'google\' end) like \'%google%\' left join (select date, sum(spend) spend from SLEEPYCAT_DB.MAPLEMONK.SLEEPYCAT_db_MARKETING_CONSOLIDATED where lower(channel) like \'%facebook%\' group by date) f on f.date = a.order_Date::date and lower(case when lower(a.channel) like \'%facebook%\' then \'facebook\' end) like \'%facebook%\' left join (select date, sum(spend) spend from SLEEPYCAT_DB.MAPLEMONK.SLEEPYCAT_db_MARKETING_CONSOLIDATED where lower(channel) like \'%amazon%\' group by date) g on g.date = a.order_Date::date and lower(a.channel) like \'%amazon%\' ;",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from SLEEPYCAT_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
