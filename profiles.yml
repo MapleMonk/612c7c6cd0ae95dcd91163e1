@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "odunkiz-oq10903"
+      user: "elcincoanalytics"
+      password: "fG1]($}!QR3Zn+7"
+      role: "ACCOUNTADMIN"
+      database: "elcinco_db"
+      warehouse: "elcinco_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
