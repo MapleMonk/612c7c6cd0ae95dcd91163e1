@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "uyjkxqf-ia15798"
+      user: "dressfolkanalytics"
+      password: "zm7JB2lH5!"
+      role: "ACCOUNTADMIN"
+      database: "DRESSFOLK_DB"
+      warehouse: "DRESSFOLK_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
