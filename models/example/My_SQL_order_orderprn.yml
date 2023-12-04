@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "My_SQL_order_orderprn"
+    description: "A starter dbt model"
