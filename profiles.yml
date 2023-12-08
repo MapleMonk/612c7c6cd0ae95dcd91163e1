@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "czkeguh-hc93650"
+      user: "Offdutyindia"
+      password: "Offduty@123"
+      role: "ACCOUNTADMIN"
+      database: "offduty_db"
+      warehouse: "offduty_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
