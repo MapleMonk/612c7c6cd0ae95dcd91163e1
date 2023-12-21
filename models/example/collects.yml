@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "collects"
+    description: "A starter dbt model"
