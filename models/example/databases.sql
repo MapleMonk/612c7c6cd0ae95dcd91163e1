@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "CREATE OR REPLACE TABLE SLEEPYCAT_DB.MAPLEMONK.SLEEPYCAT_DB_CLICKPOST_FACT_ITEMS AS WITH DATA_FROM_CLICKPOST AS ( select waybill as AWb, replace(A.value:location,\'\',\'\"\') location, replace(A.value:status,\'\',\'\"\') status, replace(A.value : created_at,\'\',\'\"\') created_At, replace(A.value : remark,\'\',\'\"\') remark from (select * from(select *, row_number() over(partition by waybill order by _AIRBYTE_EMITTED_AT) rwn from sleepycat_db.maplemonk.sleepycat_clickpost_orders)where rwn=1), LATERAL FLATTEN (INPUT =>scans ,outer => true)A ) select og.awb, op.location as order_location, op.created_At as order_date, op.status as order_status, op.remark as order_remark, p_k.location as pickup_location, p_k.created_At as pickup_date, p_k.status as pickup_status, p_k.remark as pickup_remark, i_t.location as intransit_location, i_t.created_At as intransit_date, i_t.status as intransit_status, i_t.remark as intransit_remark, o_d.location as outfordelivery_location, o_d.created_At as outfordelivery_date, o_d.status as outfordelivery_status, o_d.remark as outfordelivery_remark, dl.location as delivery_location, dl.created_At as delivery_date, dl.status as delivery_status, dl.remark as delivery_remark from (select distinct awb from DATA_FROM_CLICKPOST) og left join (select * from (select awb, location, \'DELIVERED\' as status, created_At, remark, row_number() over(partition by awb order by created_At ) rw from DATA_FROM_CLICKPOST where lower(status)=\'delivered\')where rw=1) dl on og.awb = dl.awb left join (select * from (select awb, location, \'ORDER PLACED\' as status, created_At, remark,row_number() over(partition by awb order by created_At ) rw from DATA_FROM_CLICKPOST where lower(status) in (\'order placed\')) where rw=1) op on og.awb = op.awb left join (select * from (select awb, location, \'intransit\' as status, created_At, remark, row_number() over(partition by awb order by created_At ) rw from DATA_FROM_CLICKPOST where lower(status) like \'%in%transit%\')where rw=1)i_t on og.awb = i_t.awb left join (select * from (select awb, location, \'PICKEDUP\' as status, created_At, remark, row_number() over(partition by awb order by created_At ) rw from DATA_FROM_CLICKPOST where (lower(status) like any(\'%pick%done%\',\'pick%up\',\'picked\',\'pickup_complete%\',\'pickup successful%\') and not lower(status) like \'%not%\'))where rw=1)p_k on og.awb = p_k.awb left join (select * from (select awb, location, \'OUT FOR DELIVERY\' as status, created_At, remark, row_number() over(partition by awb order by created_At ) rw from DATA_FROM_CLICKPOST where lower(status) like \'%out%for%delivery%\' and not lower(status) like any(\'%awaited\',\'%needed\') )where rw=1) o_d on o_d.awb = og.awb",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from SLEEPYCAT_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
