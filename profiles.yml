@@ -5,7 +5,7 @@ default:
       type: "snowflake"
       account: "czkeguh-hc93650"
       user: "Offdutyindia"
-      password: "Offduty@123"
+      password: "Offduty@32"
       role: "ACCOUNTADMIN"
       database: "offduty_db"
       warehouse: "offduty_wh"
