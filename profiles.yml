@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "twfdnzl-ta71507"
+      user: "rasanalytics"
+      password: "r33HEhI9ajkEENn"
+      role: "ACCOUNTADMIN"
+      database: "ras_db"
+      warehouse: "ras_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
