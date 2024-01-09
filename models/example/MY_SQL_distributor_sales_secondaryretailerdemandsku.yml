@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "MY_SQL_distributor_sales_secondaryretailerdemandsku"
+    description: "A starter dbt model"
