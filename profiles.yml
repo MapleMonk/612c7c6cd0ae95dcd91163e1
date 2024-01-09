@@ -3,8 +3,8 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "udklgrw-mi61423"
-      user: "marketingteam"
+      account: "eethavq-vq26191"
+      user: "techsleepycat"
       password: "6sUVuweFiyqcbvh"
       role: "ACCOUNTADMIN"
       database: "SLEEPYCAT_DB"
