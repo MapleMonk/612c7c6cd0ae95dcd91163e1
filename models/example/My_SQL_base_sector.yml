@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "My_SQL_base_sector"
+    description: "A starter dbt model"
