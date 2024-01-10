@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: "My_SQL_base_city"
+  - name: "My_SQL_product_product"
     description: "A starter dbt model"
