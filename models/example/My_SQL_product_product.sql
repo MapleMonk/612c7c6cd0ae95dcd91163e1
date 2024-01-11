@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "CREATE OR REPLACE TABLE eggozdb.maplemonk.my_sql_product_product AS SELECT pp.*, CASE WHEN pp.brand_type = \'branded\' AND pp.short_name IN (\'WE\', \'WEE\', \'WD\', \'FR\', \'CH\') THEN pp.description WHEN pp.brand_type = \'branded\' AND pp.short_name IN (\'B\', \'W\', \'N\') THEN \'Eggoz Premium\' WHEN pp.brand_type = \'branded\' AND pp.productsubdivision_id IN (42, 45) THEN pps.name WHEN pp.brand_type = \'branded\' THEN \'Branded Others\' ELSE \'Unbranded\' END AS product_type FROM eggozdb.maplemonk.my_sql_product_product pp LEFT JOIN eggozdb.maplemonk.my_sql_product_productsubdivision pps ON pps.id = pp.productSubDivision_id;",
+                                "sql": "CREATE OR REPLACE TABLE eggozdb.maplemonk.my_sql_product_product AS SELECT *, CASE WHEN brand_type = \'branded\' THEN CASE WHEN short_name = \'WE\' THEN \'Nogyo\' WHEN short_name = \'WEE\' THEN \'Everyday\' WHEN short_name = \'WD\' THEN \'Darjan\' WHEN short_name = \'FR\' THEN \'Free Range\' WHEN short_name = \'CH\' THEN \'Champs\' WHEN short_name = \'W\' THEN \'Eggoz Premium\' WHEN short_name = \'B\' THEN \'Eggoz Premium\' WHEN short_name = \'N\' THEN \'Eggoz Premium\' WHEN productSubDivision_id = 42 THEN \'Frozen\' WHEN productSubDivision_id = 45 THEN \'Eazy Eggs\' ELSE \'Branded Others\' END WHEN brand_type = \'unbranded\' THEN CASE WHEN short_name = \'L\' then \'Unbranded Liquid\' ELSE \'Unbranded Others\' END END as product_type FROM eggozdb.maplemonk.my_sql_product_product ;",
                                 "transaction": true
                             }
                         ) }}
