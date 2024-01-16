@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ksuestf-vy03541"
+      user: "databaseselect"
+      password: "eA55x^jzC9"
+      role: "ACCOUNTADMIN"
+      database: "SELECT_DB"
+      warehouse: "SELECT_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
