@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "myhcsso-mu32757"
+      user: "analyticsgbc"
+      password: "zrGWxiU16mJrH1g"
+      role: "ACCOUNTADMIN"
+      database: "GBC_DB"
+      warehouse: "gbc_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
