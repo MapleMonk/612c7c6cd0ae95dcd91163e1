@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "transport_costs_FM Vehicle Details after 1st April"
+    description: "A starter dbt model"
