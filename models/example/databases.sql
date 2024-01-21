@@ -1,7 +1,7 @@
 {{ config(
                         materialized='table',
                             post_hook={
-                                "sql": "delete from xyxx_db.maplemonk._airbyte_raw_fieldassist_detailed_visit where _AIRBYTE_DATA:\"VisitId\" > 958325899; delete from xyxx_db.maplemonk.fieldassist_detailed_visit_scd where visitid > 958325899; delete from xyxx_db.maplemonk.fieldassist_detailed_visit where visitid > 958325899; delete from xyxx_db.maplemonk.fieldassist_detailed_visit_sales where visitid > 958325899;",
+                                "sql": "delete from xyxx_db.maplemonk._airbyte_raw_fieldassist_detailed_visit where _AIRBYTE_DATA:\"VisitId\" > 1192659486; delete from xyxx_db.maplemonk.fieldassist_detailed_visit_scd where visitid > 1192659486; delete from xyxx_db.maplemonk.fieldassist_detailed_visit where visitid > 1192659486; delete from xyxx_db.maplemonk.fieldassist_detailed_visit_sales where visitid > 1192659486;",
                                 "transaction": true
                             }
                         ) }}
