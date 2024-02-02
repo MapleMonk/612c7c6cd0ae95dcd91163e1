@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "CREATE OR REPLACE TABLE RPSG_DB.MAPLEMONK.PRODUCT_FUNNEL_FACT_ITEMS AS with sales as ( select order_date:: date as order_date, final_channel, count(distinct order_id) as total_orders, sum(SUBORDER_QUANTITY) as total_quantity, sum(selling_price) as total_selling_price from rpsg_db.maplemonk.sales_consolidated_drv where lower(marketplace) like any (\'%shopify%\',\'%woocommerce%\') group by 1,2 order by 1 desc ), pf_map as ( with sessions_users as ( select * from (select TO_DATE(date, \'YYYYMMDD\')date, sessions, totalusers, SCREENPAGEVIEWS, checkouts, addtocarts, ENGAGEDSESSIONS, SESSIONSOURCEMEDIUM, replace(SPLIT(SESSIONSOURCEMEDIUM, \' / \')[0],\'\"\',\'\') AS source, replace(SPLIT(SESSIONSOURCEMEDIUM, \' / \')[1],\'\"\',\'\') AS medium, row_number() over(partition by date,SESSIONSOURCEMEDIUM order by 1)rw from rpsg_db.maplemonk.sessions_by_date_source) where rw=1 ), GA_CHANNEL_MAPPING as ( select * from ( select *, row_number() over (partition by lower(concat(lower(ifnull(ga_source,\'\')),lower(ifnull(ga_medium,\'\')))) order by 1) rw from rpsg_db.MAPLEMONK.ga_channel_mapping ) where rw=1 and lower(concat(ifnull(ga_source,\'\'),ifnull(ga_medium,\'\'))) is not null ), joined_table as ( select pf.date, pf.sessions, pf.totalusers, pf.SCREENPAGEVIEWS, pf.ENGAGEDSESSIONS, pf.checkouts, pf.addtocarts, pf.source, pf.medium, SESSIONSOURCEMEDIUM, ga_mapping.FINAL_channel as ga_mapped_channel from sessions_users as pf left join GA_CHANNEL_MAPPING as ga_mapping on lower(concat(ifnull(pf.SOURCE,\'\'),ifnull(pf.MEDIUM,\'\'))) = lower(concat(ifnull(GA_MAPPING.ga_source,\'\'),ifnull(GA_MAPPING.ga_medium,\'\'))) ) select date, case when lower(ga_mapped_channel) like \'%google%\' then \'ACQUISITION GOOGLE\' when lower(ga_mapped_channel) like \'%retention%\' then \'RETENTION\' when lower(ga_mapped_channel) like \'%facebook%\' then \'ACQUISITION FACEBOOK\' else \'OTHERS\' END as ga_mapped_channel, sum(ifnull(totalusers,0)) as totalusers, sum(ifnull(SCREENPAGEVIEWS,0)) as SCREENPAGEVIEWS, sum(ifnull(addtocarts,0)) as addtocarts, sum(ifnull(checkouts,0)) as checkouts, sum(ifnull(sessions,0)) as sessions, sum(ifnull(ENGAGEDSESSIONS,0))as ENGAGEDSESSIONS from joined_table group by 1,2 ) select coalesce(s_c.order_date,pf_map.date) as order_date, coalesce(s_c.final_channel,pf_map.ga_mapped_channel) as channel, s_c.total_orders, s_c.total_quantity, s_c.total_selling_price, pf_map.totalusers, pf_map.SCREENPAGEVIEWS, pf_map.sessions, pf_map.ENGAGEDSESSIONS, pf_map.checkouts, pf_map.addtocarts FROM sales s_c full outer JOIN pf_map on s_c.order_date = pf_map.date and lower(s_c.final_channel) = lower(pf_map.ga_mapped_channel)",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from RPSG_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
