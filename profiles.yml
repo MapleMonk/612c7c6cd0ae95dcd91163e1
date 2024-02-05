@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "klythqc-dx91203"
+      user: "analyticsavorganics"
+      password: "48OIU4sGcM8M3qm"
+      role: "ACCOUNTADMIN"
+      database: "avorganics_db"
+      warehouse: "avorganics_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
