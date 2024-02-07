@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "mbixizn-am31888"
+      user: "techconnecty"
+      password: "Connecty0207!"
+      role: "ACCOUNTADMIN"
+      database: "CONNECTYAI_DB"
+      warehouse: "CONNECTY_WH"
+      schema: "CONNECTYAI"
+      threads: 10
+      client_session_keep_alive: false
