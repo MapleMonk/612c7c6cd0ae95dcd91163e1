@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "eethavq-vq26191"
+      user: "techsleepycat"
+      password: "HelloHi1#"
+      role: "ACCOUNTADMIN"
+      database: "SLEEPYCAT_DB"
+      warehouse: "SLEEPYCAT_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
