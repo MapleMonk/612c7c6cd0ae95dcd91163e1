@@ -4,3 +4,4 @@ models:
     description: "A starter dbt model"
     config:
       tags: ['python']
+      materialized: table

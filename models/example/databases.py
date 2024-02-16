@@ -4,7 +4,7 @@ import numpy as np
 
 def main(dbt,session):
     dbt.config(materialized="table")
-    snowSession = snowpark.Session
+    # snowSession = snowpark.Session
     data = {
         'order_id': [1, 1, 2, 2, 3, 3, 4, 5, 5],
         'sku_id': [101, 102, 103, 104, 105, 106, 107, 108, 109],
@@ -21,4 +21,4 @@ def main(dbt,session):
     
     aov_by_order_size = order_values.groupby('order_size').agg(Average_Order_Value=('total_order_value', 'mean')).reset_index()
 
-    return snowSession.create_dataframe(aov_by_order_size)
+    return session.create_dataframe(aov_by_order_size)
