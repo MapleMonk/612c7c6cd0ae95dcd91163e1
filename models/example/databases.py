@@ -2,9 +2,10 @@ import snowflake.snowpark as snowpark
 import pandas as pd
 import numpy as np
 
-def main(dbt,session):
+def model(dbt,session):
     dbt.config(materialized="table")
     # snowSession = snowpark.Session
+    print("Entered nav page")
     data = {
         'order_id': [1, 1, 2, 2, 3, 3, 4, 5, 5],
         'sku_id': [101, 102, 103, 104, 105, 106, 107, 108, 109],
