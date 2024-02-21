@@ -5,7 +5,7 @@ default:
       type: "snowflake"
       account: "twfdnzl-ta71507"
       user: "rasanalytics"
-      password: "r33HEhI9ajkEENn"
+      password: "LyBXcrQip2xG2TC"
       role: "ACCOUNTADMIN"
       database: "ras_db"
       warehouse: "ras_wh"
