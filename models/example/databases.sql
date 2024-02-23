@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "CREATE OR REPLACE TABLE SNITCH_DB.MAPLEMONK.ORDER_LEVEL_GA_DATA AS WITH GA_DATA_app as ( select ga.*,case when gam.channel is null then \'DIRECT\' else gam.channel end as channel from (select TO_DATE(date, \'YYYYMMDD\')date, transactionid as ordername, SESSIONCAMPAIGNNAME, LANDINGPAGE, ITEMSADDEDTOCART, SESSIONS, ENGAGEDSESSIONS, TOTALUSERS, ITEMSVIEWED as Clicks, ITEMSVIEWEDINLIST AS impressions , div0(Clicks,impressions) as Discoverability_ratio, SESSIONSOURCEMEDIUM, replace(SPLIT(SESSIONSOURCEMEDIUM, \' / \')[0],\'\"\',\'\') AS source, replace(SPLIT(SESSIONSOURCEMEDIUM, \' / \')[1],\'\"\',\'\') AS medium from (select *,row_number() over(partition by date,SESSIONSOURCEMEDIUM,transactionid,LANDINGPAGE,SESSIONCAMPAIGNNAME order by 1)rw from snitch_db.maplemonk.date_by_source_discoverability_app) where rw=1 ) ga left join snitch_db.maplemonk.ga_channel_mapping_app gam on lower(ga.source) = lower(gam.source) and lower(ga.medium) = lower(gam.medium) ), sales_data_app as ( select order_timestamp::date as order_Date, order_id as order_name, discount_code, sum(gross_sales) as gross_sales from snitch_db.maplemonk.fact_items_snitch where webshopney != \'Web\' and order_timestamp >= \'2023-06-01\' group by 1,2,3 ), GA_DATA_WEB as ( select ga.*,case when gam.channel is null then \'DIRECT\' else gam.channel end as channel from (select TO_DATE(date, \'YYYYMMDD\')date, \"customEvent:order_name\" as ordername, SESSIONCAMPAIGNNAME, LANDINGPAGE, ITEMSADDEDTOCART, SESSIONS, ENGAGEDSESSIONS, TOTALUSERS, ITEMSVIEWED as Clicks, ITEMSVIEWEDINLIST AS impressions , div0(Clicks,impressions) as Discoverability_ratio, SESSIONSOURCEMEDIUM, replace(SPLIT(SESSIONSOURCEMEDIUM, \' / \')[0],\'\"\',\'\') AS source, replace(SPLIT(SESSIONSOURCEMEDIUM, \' / \')[1],\'\"\',\'\') AS medium from (select *,row_number() over(partition by date,SESSIONSOURCEMEDIUM,\"customEvent:order_name\",LANDINGPAGE,SESSIONCAMPAIGNNAME order by 1)rw from snitch_db.maplemonk.date_by_source_discoverability) where rw=1 ) ga left join (select * from (select source,medium,channel, row_number() over(partition by source,medium order by channel desc)rw from snitch_db.maplemonk.ga_channel_mapping_app ) where rw=1) gam on lower(ga.source) = lower(gam.source) and lower(ga.medium) = lower(gam.medium) ), sales_data_WEB as ( select order_timestamp::date as order_Date, order_name, discount_code, sum(gross_sales) as gross_sales from snitch_db.maplemonk.fact_items_snitch where webshopney = \'Web\' and order_timestamp >= \'2023-06-01\' group by 1,2,3 ), Join_tables as ( select s.*,ga.* from sales_data_web s full outer join GA_DATA_web ga on ga.date = s.order_date and ga.ordername = s.order_name union select s.*,ga.* from sales_data_app s full outer join GA_DATA_app ga on ga.date = s.order_date and ga.ordername = s.order_name ) select *,coalesce(discount_code,channel) as final_channel_code from Join_tables",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from snitch_db.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
