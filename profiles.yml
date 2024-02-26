@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "bnxexnk-yi21176"
+      user: "JPEARLSANALYTICS"
+      password: "cK@P358a8!"
+      role: "ACCOUNTADMIN"
+      database: "JPEARLS_DB"
+      warehouse: "JPEARLS_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
