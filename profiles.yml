@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "fb35933.ap-south-1.aws"
+      user: "analyticsxyxx"
+      password: "dA3DovuA31"
+      role: "ACCOUNTADMIN"
+      database: "XYXX_DB"
+      warehouse: "XYXX_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
