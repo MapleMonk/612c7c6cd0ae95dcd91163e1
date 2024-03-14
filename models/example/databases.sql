@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "create or replace table hox_db.maplemonk.HOX_BLANKO_flipkart_marketplace_fees as with sku_data as ( select reference_code, sku, sum(quantity) as total_quantity from HOX_DB.MapleMonk.HOX_DB_SALES_CONSOLIDATED where lower(marketplace) = \'flipkart\' group by 1, 2 ), abc as ( select distinct o.*, round(((selling_price - total_shipping_charge + total_promo_discount)/total_quantity),0) as item_value from ( select distinct o.*, a.total_quantity from ( select reference_code, date(report_date) as report_date, sku, payment_mode, sum(selling_price) as selling_price, sum(shipping_charge * 1.18) as total_shipping_charge, sum(promotion_discount * 1.18) as total_promo_discount from hox_db.maplemonk.HOX_BLANKO_Easyecom_Tax_Fact_Items where lower(report_type) = \'easyecom sale\' and lower(ORDER_STATUS) not like \'%cancel%\' and lower(marketplace) = \'flipkart\' group by 1,2,3, 4 )as o left join sku_data a on o.reference_code = a.reference_code and o.sku = a.sku )as o ), base_fees as ( select date(try_cast(\"start date\" as timestamp)) as \"start date\", date(try_cast(\"end date\" as timestamp)) as \"end date\", \"charge details\", \"type of charge\", \"type of value\", \"order type\", try_cast(\"start bucket\" as float) as \"start bucket\", try_cast(\"end bucket\" as float) as \"end bucket\", try_cast(charges as float) as charges, \"Postpaid charge\" as Postpaid_charge, \"Prepaid charge\" as Prepaid_charge from hox_db.maplemonk.marketplace_fees_flipkart_commision_example ) select a.*, round(((a.item_value * b.charges / 100.00)* a.total_quantity),2) as Commission_value, round((c.charges * a.total_quantity),2) as \"Closing_fees(fixed)\", case when lower(a.PAYMENT_MODE) =\'cod\' and lower(d.\"type of charge\") = \'fixed\' then round((d.Postpaid_charge * a.total_quantity),2) when lower(a.PAYMENT_MODE) =\'cod\' and lower(d.\"type of charge\") = \'percentage\' then round(((a.item_value * d.Postpaid_charge / 100.00)* a.total_quantity),2) when lower(a.PAYMENT_MODE) =\'prepaid\' and lower(d.\"type of charge\") = \'fixed\' then round((d.Prepaid_charge * a.total_quantity),2) when lower(a.PAYMENT_MODE) =\'prepaid\' and lower(d.\"type of charge\") = \'percentage\' then round(((a.item_value * d.Prepaid_charge / 100.00)* a.total_quantity),2) end as Collection_fees from abc a left join base_fees b on (date(a.report_date) between date(b.\"start date\") and date(b.\"end date\")) and lower(b.\"charge details\") = \'commission\' and (a.item_value between b.\"start bucket\" and b.\"end bucket\") left join base_fees c on (date(a.report_date) between date(c.\"start date\") and date(c.\"end date\")) and lower(c.\"charge details\") = \'fixed fees\' and (a.item_value between c.\"start bucket\" and c.\"end bucket\") left join base_fees d on (date(a.report_date) between date(d.\"start date\") and date(d.\"end date\")) and lower(d.\"charge details\") = \'collection fees\' and (a.item_value between d.\"start bucket\" and d.\"end bucket\")",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from HOX_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
