@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "qpooobb-mw70706"
+      user: "SOLARAANALYTICS"
+      password: "yOs3@89b4"
+      role: "ACCOUNTADMIN"
+      database: "SOLARA_DB"
+      warehouse: "SOLARA_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
