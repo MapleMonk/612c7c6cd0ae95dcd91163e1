@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "MY_SQL_warehouse_warehouse"
+    description: "A starter dbt model"
