@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "CREATE OR REPLACE TABLE snitch_db.maplemonk.ga_full_funnel_view AS with overall_session_data as (select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, activeusers as Users, sessions as Sessions, engagedsessions as Engaged_Sessions, addtocarts as Add_To_Carts, checkouts as Checkouts, sessionsperuser as Sessions_Per_User from snitch_db.maplemonk.GA__FUNNEL__VIEW__TABLE_1_SCD UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, activeusers as Users, sessions as Sessions, engagedsessions as Engaged_Sessions, addtocarts as Add_To_Carts, checkouts as Checkouts, sessionsperuser as Sessions_Per_User from snitch_db.maplemonk.WEB_GA_FUNNEL_VIEW_TABLE1 ), event_data as (select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, eventname, sum(eventcount) as count from snitch_db.maplemonk.GA_FUNNEL_VIEW_TABLE3 group by 1,2,3 UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, eventname, eventcount as count from snitch_db.maplemonk.web_ga_funnel_view_web_table4_scd ), collection_data as (select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, itemlistname, sessions as sessions_collection from snitch_db.maplemonk.GA_FUNNEL_VIEW_TABLE4 UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, unifiedpagescreen, screenpageviews as sessions_collection from snitch_db.maplemonk.web_ga_funnel_view_table2_scd ), sales_data as (select order_timestamp::date as GA_DATE, CASE WHEN webshopney = \'Web\' THEN \'WEB\' ELSE \'APP\' END AS TYPE, count(distinct order_name) as Order_Count from snitch_db.maplemonk.fact_items_snitch group by 1,2 ), impression_data as (select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, sum(itemsviewedinlist) as Impressions, sum(itemsviewed) as Views, from snitch_db.maplemonk.WEB_GA_FUNNEL_VIEW_TABLE5 group by 1 UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, sum(itemsviewedinlist) as Impressions, sum(itemsviewed) as Views, from snitch_db.maplemonk.ga_funnel_view_table6 group by 1 ) SELECT osd.GA_DATE, osd.TYPE, osd.Users, osd.Sessions, osd.Engaged_Sessions, osd.Add_To_Carts, osd.Checkouts, osd.Sessions_Per_User, id.Impressions, id.Views, ed.eventname, ed.count AS event_count, cd.itemlistname AS collection_name, cd.sessions_collection, sd.order_count FROM overall_session_data osd LEFT JOIN event_data ed ON osd.GA_DATE = ed.GA_DATE AND osd.TYPE = ed.TYPE LEFT JOIN collection_data cd ON osd.GA_DATE = cd.GA_DATE AND osd.TYPE = cd.TYPE LEFT JOIN sales_data sd ON osd.GA_DATE = sd.GA_DATE AND osd.TYPE = sd.TYPE left join impression_data id ON osd.GA_DATE = id.GA_DATE AND osd.TYPE = id.TYPE;",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from snitch_db.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
