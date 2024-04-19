@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "hsvevwk-lm32304"
+      user: "analyticsabros"
+      password: "JRjePsw3anXoVd7"
+      role: "ACCOUNTADMIN"
+      database: "abros_db"
+      warehouse: "abros_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
