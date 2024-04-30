@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "web_banner_views_clicks"
+    description: "A starter dbt model"
