@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "eeqdbym-sv31601"
+      user: "charakanalytics"
+      password: "5mc2EcjMaILrPY5"
+      role: "ACCOUNTADMIN"
+      database: "charak_db"
+      warehouse: "charak_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
