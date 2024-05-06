@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "oabofmg-hi57385"
+      user: "ttkanalytics"
+      password: "ctM^Fb{7TO^;T]M"
+      role: "ACCOUNTADMIN"
+      database: "ttk_db"
+      warehouse: "ttk_wh"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
