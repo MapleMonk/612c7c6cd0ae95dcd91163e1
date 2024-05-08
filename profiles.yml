@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "pkzgymj-ea99068"
+      user: "akhil2501"
+      password: "akhilSolanki@123"
+      role: "ACCOUNTADMIN"
+      database: "TESTDB"
+      warehouse: "COMPUTE_WH"
+      schema: "TESTSCHEMA"
+      threads: 10
+      client_session_keep_alive: false
