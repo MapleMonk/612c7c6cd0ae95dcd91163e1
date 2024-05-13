@@ -5,7 +5,7 @@ default:
       type: "snowflake"
       account: "wlpzemo-cn94827"
       user: "analyticsassembly"
-      password: "e{#b%t8piVihr[]"
+      password: "RjKQt@58"
       role: "ACCOUNTADMIN"
       database: "assembly_db"
       warehouse: "assembly_wh"
