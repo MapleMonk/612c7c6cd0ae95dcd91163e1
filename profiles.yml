@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "wlpzemo-cn94827"
+      user: "analyticsassembly"
+      password: "RjKQt@58"
+      role: "ACCOUNTADMIN"
+      database: "assembly_db"
+      warehouse: "assembly_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
