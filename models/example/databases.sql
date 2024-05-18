@@ -1,0 +1,17 @@
+{{ config(
+                        materialized='table',
+                            post_hook={
+                                "sql": "create or replace table rpsg_db.maplemonk.drv_product_ROAS as with invoicedatemetrics as ( select try_to_date(FI.invoice_date) Invoice_Date ,upper(coalesce(d.product,\'OTHERS\')) product_name_mapped ,upper(coalesce(d.CATEGORY,\'OTHERS\')) category ,upper(FI.pre_final_channel) Channel ,sum(ifnull((case when lower(order_status) not in (\'cancelled\') then ifnull(FI.SELLING_PRICE,0)-ifnull(FI.TAX,0) end),0)) Realised_Revenue from RPSG_DB.MAPLEMONK.SALES_CONSOLIDATED_DRV FI left join (select * from ( select *,row_number() over(partition by sku order by 1)rw from rpsg_db.maplemonk.drv_delivered_roas ) where rw = 1 )d on d.sku = fi.sku where lower(marketplace) like any (\'%shopify%\', \'%woocommerce%\') and invoice_date !=\'\' group by 1,2,3,4 order by 1 desc ), returnsales as ( select return_date::date return_date ,upper(channel) channel ,upper(coalesce(d.product,\'OTHERS\')) product ,upper(coalesce(d.CATEGORY,\'OTHERS\')) category ,sum(ifnull(TOTAL_RETURN_AMOUNT,0)) TOTAL_RETURN_AMOUNT ,sum(ifnull(RETURN_AMOUNT_WITHOUT_TAX,0)) TOTAL_RETURN_AMOUNT_EXCL_TAX ,sum(ifnull(RETURNED_QUANTITY,0)) TOTAL_RETURNED_QUANTITY from RPSG_DB.MAPLEMONK.fact_items_easyecom_returns_detailed_drv rd left join (select * from ( select *,row_number() over(partition by sku order by 1)rw from rpsg_db.maplemonk.drv_delivered_roas ) where rw = 1 )d on d.sku = rd.sku where lower(company_name) like any (\'%herbolab%\',\'%dr vaidya%\') and lower(marketplace) like any (\'%shopify%\',\'%woocommerce%\') group by 1,2,3,4 order by 1 desc ), Delivered_Revenue as ( select coalesce(return_date,Invoice_Date) Invoice_Date ,case when upper(coalesce(ivm.channel,rs.channel)) = \'FB\' then \'FACEBOOK\' ELSE upper(coalesce(ivm.channel,rs.channel)) END as Channel ,coalesce(ivm.product_name_mapped,rs.product) as product_name_mapped ,coalesce(ivm.category,rs.category) category ,ifnull(ivm.Realised_Revenue,0)- ifnull(rs.TOTAL_RETURN_AMOUNT_EXCL_TAX,0) as Realised_Revenue, from invoicedatemetrics ivm full outer join returnsales rs on rs.return_date = ivm.Invoice_Date and lower(ivm.product_name_mapped) = lower(rs.product) and lower(ivm.category) = lower(rs.category) and lower(ivm.channel) = lower(rs.channel) where coalesce(return_date,Invoice_Date) >= \'2024-01-01\' ) , Spends as ( Select date ,channel ,upper(product) as product ,upper(category) as category ,sum(ifnull(spend,0)) spend from rpsg_db.maplemonk.drv_marketing_product_spends where date >= \'2024-01-01\' group by 1,2,3,4 ) select coalesce(s.date,dr.Invoice_Date) date ,upper(coalesce(dr.product_name_mapped,product)) as product ,upper(coalesce(dr.category,S.category)) as category ,upper(coalesce(dr.channel,s.channel)) as channel ,spend ,Realised_Revenue from Delivered_Revenue dr full outer join Spends s on s.date = dr.Invoice_Date and lower(dr.product_name_mapped) = lower(s.product) and lower(dr.category) = lower(s.category) and lower(dr.channel) = lower(s.channel)",
+                                "transaction": true
+                            }
+                        ) }}
+                        with sample_data as (
+
+                            select * from RPSG_DB.information_schema.databases
+                        ),
+                        
+                        final as (
+                            select * from sample_data
+                        )
+                        select * from final
+                        
