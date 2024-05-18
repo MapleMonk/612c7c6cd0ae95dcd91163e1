@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "MY_SQL_retailer_retailer"
+    description: "A starter dbt model"
