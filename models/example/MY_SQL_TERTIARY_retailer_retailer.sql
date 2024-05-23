@@ -7,7 +7,7 @@
                         ) }}
                         with sample_data as (
 
-                            select * from EGGOZDB.MAPLEMONK.MY_SQL_retailer_retailer
+                            select * from EGGOZDB.MAPLEMONK.MY_SQL_TERTIARY_retailer_retailer
                         ),
                         
                         final as (
