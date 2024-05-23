@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "vonkurx-iv13956"
+      user: "analyticsfuaark"
+      password: "a1G92#sv)I"
+      role: "ACCOUNTADMIN"
+      database: "FUAARK_DB"
+      warehouse: "FUAARK_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
