@@ -7,31 +7,55 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table', alias= var('table') + "_test") }}
+-- {{ config(materialized='table', alias= var('table') + "_test") }}
+
+{{ config(materialized='table') }}
+
+-- with 
+-- input_data as (
+
+-- {% if var('customBquery', None) is not none %}
+--     {{ var('customBquery') }}
+-- {% else %}
+--     select {{ var('rows') }} from {{var('table')}}
+-- {% endif %}
+
+-- ),
+--  new_updated as (
+--    SELECT * FROM (
+--         select *, row_number() over(
+--             partition by {{var("partitionRows")}}
+--             order by 
+--             {{var("cursor_feild")}} is null asc,
+--             {{var("cursor_feild")}} desc,
+--             _AIRBYTE_EMITTED_AT desc
+--         ) AS ROW_NUMBER
+--       FROM input_data
+--      ) WHERE ROW_NUMBER = 1
+-- )
+-- SELECT {{var("orignalField")}}  FROM new_updated
+
+
 
 with 
 input_data as (
 
-{% if var('customBquery', None) is not none %}
-    {{ var('customBquery') }}
-{% else %}
-    select {{ var('rows') }} from {{var('table')}}
-{% endif %}
+select * from TODELETE_CUSTOMERS
 
 ),
  new_updated as (
    SELECT * FROM (
         select *, row_number() over(
-            partition by {{var("partitionRows")}}
+            partition by id
             order by 
-            {{var("cursor_feild")}} is null asc,
-            {{var("cursor_feild")}} desc,
+            UPDATED_AT is null asc,
+            UPDATED_AT desc,
             _AIRBYTE_EMITTED_AT desc
         ) AS ROW_NUMBER
       FROM input_data
      ) WHERE ROW_NUMBER = 1
 )
-SELECT {{var("orignalField")}}  FROM new_updated
+SELECT NOTE,ADDRESSES,LAST_ORDER_NAME  FROM new_updated
 
 /*
     Uncomment the line below to remove records with null `id` values
