@@ -9,7 +9,7 @@
 
 -- {{ config(materialized='table', alias= var('table') + "_test") }}
 
-{{ config(materialized='table') }}
+{{ config(materialized='table'), alias= "tester_test" }}
 
 -- with 
 -- input_data as (
@@ -35,27 +35,27 @@
 -- )
 -- SELECT {{var("orignalField")}}  FROM new_updated
 
+SELECT * FROM TODELETE_CUSTOMERS
 
+-- with 
+-- input_data as (
 
-with 
-input_data as (
+-- select * from TODELETE_CUSTOMERS
 
-select * from TODELETE_CUSTOMERS
-
-),
- new_updated as (
-   SELECT * FROM (
-        select *, row_number() over(
-            partition by id
-            order by 
-            UPDATED_AT is null asc,
-            UPDATED_AT desc,
-            _AIRBYTE_EMITTED_AT desc
-        ) AS ROW_NUMBER
-      FROM input_data
-     ) WHERE ROW_NUMBER = 1
-)
-SELECT NOTE,ADDRESSES,LAST_ORDER_NAME  FROM new_updated
+-- ),
+--  new_updated as (
+--    SELECT * FROM (
+--         select *, row_number() over(
+--             partition by id
+--             order by 
+--             UPDATED_AT is null asc,
+--             UPDATED_AT desc,
+--             _AIRBYTE_EMITTED_AT desc
+--         ) AS ROW_NUMBER
+--       FROM input_data
+--      ) WHERE ROW_NUMBER = 1
+-- )
+-- SELECT NOTE,ADDRESSES,LAST_ORDER_NAME  FROM new_updated
 
 /*
     Uncomment the line below to remove records with null `id` values

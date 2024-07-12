@@ -4,7 +4,3 @@ version: 2
 models:
     - name: deduping_generic_script
       description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
