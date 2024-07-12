@@ -9,7 +9,7 @@
 
 -- {{ config(materialized='table', alias= var('table') + "_test") }}
 
-{{ config(materialized='table'), alias= "tester_test" }}
+{{ config(materialized='table') }}
 
 -- with 
 -- input_data as (
