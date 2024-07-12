@@ -12,12 +12,12 @@
 with 
 input_data as (
 
--- Getting the data 
+{% if var('customBquery', None) is not none %}
+    {{ var('customBquery') }}
+{% else %}
+    select {{ var('rows') }} from {{var('table')}}
+{% endif %}
 
-   select {{ var('rows') }}
---    from "DEMO_DB"."DESTSET"."DELETE2SPONSORED_DISPLAY_REPORT_STREAM"
-   from {{var('table')}}
--- dbt run --vars='{"prefix": "test_", "rows": "Profileid, Metric,  Metric:adGroupId as adGroupId"}'   
 ),
  new_updated as (
    SELECT * FROM (
