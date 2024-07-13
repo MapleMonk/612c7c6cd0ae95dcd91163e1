@@ -9,7 +9,7 @@
 
 -- {{ config(materialized='table', alias= var('table') + "_test") }}
 
--- {{ config(materialized='table') }}
+{{ config(materialized='table', alias = "tester_test") }}
 
 -- with 
 -- input_data as (
@@ -35,7 +35,7 @@
 -- )
 -- SELECT {{var("orignalField")}}  FROM new_updated
 
--- SELECT * FROM TODELETE_CUSTOMERS
+SELECT * FROM TODELETE_CUSTOMERS
 
 -- with 
 -- input_data as (
