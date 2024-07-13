@@ -35,14 +35,14 @@
 -- )
 -- SELECT {{var("orignalField")}}  FROM new_updated
 
-SELECT * FROM TODELETE_CUSTOMERS
 
--- with 
--- input_data as (
 
--- select * from TODELETE_CUSTOMERS
+with 
+input_data as (
 
--- ),
+select * from maplemonk.TODELETE_CUSTOMERS
+
+)
 --  new_updated as (
 --    SELECT * FROM (
 --         select *, row_number() over(
@@ -55,7 +55,7 @@ SELECT * FROM TODELETE_CUSTOMERS
 --       FROM input_data
 --      ) WHERE ROW_NUMBER = 1
 -- )
--- SELECT NOTE,ADDRESSES,LAST_ORDER_NAME  FROM new_updated
+SELECT NOTE,ADDRESSES,LAST_ORDER_NAME  FROM input_data
 
 /*
     Uncomment the line below to remove records with null `id` values
