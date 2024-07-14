@@ -66,7 +66,7 @@
 {{ config(materialized='table') }}
 
 with input_data as (
-    select * from toDelete_customers
+    select * from {{ source('maplemonk', 'toDelete_customers') }}
 ),
 new_updated as (
     select 
