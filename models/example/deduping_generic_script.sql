@@ -63,10 +63,11 @@
 
 -- where id is not null
 
-{{ config(materialized='table') }}
+{{ config(materialized='table',schema = "maplemonk") }}
 
 with input_data as (
-    select * from {{ source('maplemonk', 'toDelete_customers') }}
+    select * from {{ ref('toDelete_customers') }}
+    -- {{ source('maplemonk', 'toDelete_customers') }}
 ),
 new_updated as (
     select 
