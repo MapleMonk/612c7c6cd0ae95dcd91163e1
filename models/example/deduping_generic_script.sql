@@ -1,25 +1,25 @@
+{{ config(materialized='table', alias= var('table') + "_test") }}
 
+with 
+input_data as (
 
-{{ config(materialized='table') }}
+{% if var('customBquery', None) is not none %}
+    {{ var('customBquery') }}
+{% else %}
+    select {{ var('rows') }} from {{var('table')}}
+{% endif %}
 
-with input_data as (
-    select * from maplemonk.toDelete_customers
 ),
-new_updated as (
-    select 
-        *,
-        row_number() over(
-            partition by id
+ new_updated as (
+   SELECT * FROM (
+        select *, row_number() over(
+            partition by {{var("partitionRows")}}
             order by 
-                UPDATED_AT is null asc,
-                UPDATED_AT desc,
-                _AIRBYTE_EMITTED_AT desc
-        ) as row_number
-    from input_data
+            {{var("cursor_feild")}} is null asc,
+            {{var("cursor_feild")}} desc,
+            _AIRBYTE_EMITTED_AT desc
+        ) AS ROW_NUMBER
+      FROM input_data
+     ) WHERE ROW_NUMBER = 1
 )
-select 
-    NOTE,
-    ADDRESSES,
-    LAST_ORDER_NAME
-from new_updated
-where row_number = 1
+SELECT {{var("orignalField")}}  FROM new_updated
