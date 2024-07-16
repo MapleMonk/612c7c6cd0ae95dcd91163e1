@@ -4,7 +4,7 @@ with
 input_data as (
 
 
-    {{ var('customBquery') }}
+    select {{ var('customBquery') }}
 
 
 ),
