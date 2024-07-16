@@ -3,11 +3,7 @@
 with 
 input_data as (
 
-{% if var('customBquery', None) is not none %}
-    {{ var('customBquery') }}
-{% else %}
-    select {{ var('rows') }} from {{var('table')}}
-{% endif %}
+    SELECT t.*,JSON_EXTRACT_SCALAR(DEFAULT_ADDRESS, "$.id") AS created_0_1, JSON_EXTRACT_SCALAR(DEFAULT_ADDRESS, "$.customer_id") AS created_1_1 FROM maplemonk.CHECK__CUSTOMERS t, UNNEST(CASE WHEN t.DEFAULT_ADDRESS IS NOT NULL THEN JSON_EXTRACT_ARRAY(t.DEFAULT_ADDRESS) ELSE [] END) AS DEFAULT_ADDRESS
 
 ),
  new_updated as (
