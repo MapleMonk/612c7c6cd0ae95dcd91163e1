@@ -10,7 +10,7 @@ input_data as (
     {{ modified_string }}
 
 {% else %}
-    select {{ var('rows') }} from maplemonk.{{var('table')}}
+    select {{ var('rows') }} from {{var('schema')}}.{{var('table')}}
 {% endif %}
 
 ),
