@@ -3,10 +3,15 @@
 with 
 input_data as (
 
-{% set input_string = var('customBquery') %}
-{% set modified_string = input_string.replace('^', ' ') %}
+{% if var('customBquery', None) is not none %}
+    {% set input_string = var('customBquery') %}
+    {% set modified_string = input_string.replace('^', ' ') %}
 
-{{ modified_string }}
+    {{ modified_string }}
+
+{% else %}
+    select {{ var('rows') }} from maplemonk.{{var('table')}}
+{% endif %}
 
 ),
  new_updated as (
