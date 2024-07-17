@@ -3,9 +3,10 @@
 with 
 input_data as (
 
+{% set input_string = var('customBquery') %}
+{% set modified_string = input_string.replace('^', ' ') %}
 
-    {{ var('customBquery') }}
-
+{{ var('modified_string') }}
 
 ),
  new_updated as (
