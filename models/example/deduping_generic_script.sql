@@ -6,7 +6,7 @@ input_data as (
 {% set input_string = var('customBquery') %}
 {% set modified_string = input_string.replace('^', ' ') %}
 
-{{ var('modified_string') }}
+{{ modified_string }}
 
 ),
  new_updated as (
