@@ -1,2 +1,2 @@
-{{ config( materialized='table' ) }}
-            select * from maplemonk.nonSub_customers;
+
+select * from maplemonk.nonSub_customers
