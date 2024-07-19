@@ -1,17 +1,17 @@
 {{ config(
-                        materialized='table',
-                            post_hook={
-                                "sql": "",
-                                "transaction": true
-                            }
-                        ) }}
-                        with sample_data as (
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE SNITCH_DB.MAPLEMONK.Factory_Fact_items AS with Factory_data as ( select FACTORY_MAPPING_, poc, work_type, expertise, location, total_capacity FROM snitch_db.maplemonk.factory_poc_and_contact_no_ ), UnderProduction AS ( SELECT factory_, COUNT(sku_number) AS SKU_Count_Under_Production, SUM(cut_qty) AS Total_Quantity_Under_Production, COUNT(CASE WHEN UPPER(SUBSTR(sku_number, 1, 1)) = \'R\' THEN sku_number END) AS Repeat_styles, COUNT(CASE WHEN UPPER(SUBSTR(sku_number, 1, 1)) != \'R\' THEN sku_number END) AS New_styles, sum(CASE WHEN UPPER(SUBSTR(sku_number, 1, 1)) = \'R\' THEN cut_qty END) AS Repeat_Qty, sum(CASE WHEN UPPER(SUBSTR(sku_number, 1, 1)) != \'R\' THEN cut_qty END) AS New_Qty, COUNT(CASE WHEN TRY_CAST(cut_qty AS INT) IS NULL THEN sku_number END) AS Yet_to_be_cut FROM snitch_db.maplemonk.PRODUCT_TRACKING_HIDDEN_MAIN group by 1 ), Shipped AS ( SELECT \"Factory Vendor Code\", COUNT(DISTINCT CASE WHEN COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) >= DATEADD(\'month\', -3, CURRENT_DATE()) THEN \"SKU Number\" END) AS Count_3_Months_Shipped, COUNT(DISTINCT CASE WHEN COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) >= DATEADD(\'month\', -6, CURRENT_DATE()) THEN \"SKU Number\" END) AS Count_6_Months_Shipped, COUNT(DISTINCT CASE WHEN COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) >= DATEADD(\'month\', -12, CURRENT_DATE()) THEN \"SKU Number\" END) AS Count_12_Months_Shipped, SUM(CASE WHEN COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) >= DATEADD(\'month\', -3, CURRENT_DATE()) THEN \"Cut QTY\" END) AS Total_Quantity_3_Months_Shipped, SUM(CASE WHEN COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) >= DATEADD(\'month\', -6, CURRENT_DATE()) THEN \"Cut QTY\" END) AS Total_Quantity_6_Months_Shipped, SUM(CASE WHEN COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) >= DATEADD(\'month\', -12, CURRENT_DATE()) THEN \"Cut QTY\" END) AS Total_Quantity_12_Months_Shipped, AVG(DATEDIFF(\'day\', COALESCE( TRY_TO_DATE(\"Date Issued\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Date Issued\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Date Issued\", \'MM-DD-YYYY\') ), COALESCE( TRY_TO_DATE(\"Expected Delivery Date\", \'YYYY-MM-DD\'), TRY_TO_DATE(\"Expected Delivery Date\", \'DD-MM-YYYY\'), TRY_TO_DATE(\"Expected Delivery Date\", \'MM-DD-YYYY\') ) )) AS Avg_Lead_Time FROM snitch_db.maplemonk.factory_hidden_shipped GROUP BY \"Factory Vendor Code\" ), WAREHOUSE AS( SELECT VENDOR, MAX(DESCIPTON) AS Category, MAX(CLASS) AS Class, avg(DATEDIFF(\'day\', case when \"Date Of Entry \" like \'%/%\' then TRY_TO_DATE(replace(\"Date Of Entry \",\'.\',\'/\'),\'DD/MM/YYYY\') else TRY_TO_DATE(replace(\"Date Of Entry \",\'.\',\'/\'),\'DD-MM-YYYY\') end ::date, TRY_TO_DATE(DELIVEY_DATE_,\'DD/MM/YYYY\'))) AS AVG_RTS_Time FROM snitch_db.maplemonk.factory_delivery_status_main GROUP BY VENDOR ) SELECT a.FACTORY_MAPPING_, a.poc, a.work_type, a.expertise, a.location, a.total_capacity, up.SKU_Count_Under_Production, up.Total_Quantity_Under_Production, up.Repeat_styles, up.New_styles, up.Repeat_Qty, up.New_Qty, up.Yet_to_be_cut, sh.Avg_Lead_Time, jk.Category, jk.Class, sh.Count_3_Months_Shipped, sh.Count_6_Months_Shipped, sh.Count_12_Months_Shipped, sh.Total_Quantity_3_Months_Shipped, sh.Total_Quantity_6_Months_Shipped, sh.Total_Quantity_12_Months_Shipped, jk.AVG_RTS_Time FROM Factory_data a LEFT JOIN UnderProduction up ON a.FACTORY_MAPPING_ = up.factory_ LEFT JOIN Shipped sh ON a.FACTORY_MAPPING_ = sh.\"Factory Vendor Code\" left JOIN WAREHOUSE jk ON a.FACTORY_MAPPING_ = jk.VENDOR ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
 
-                            select * from snitch_db.information_schema.databases
-                        ),
-                        
-                        final as (
-                            select * from sample_data
-                        )
-                        select * from final
-                        
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
