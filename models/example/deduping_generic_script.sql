@@ -16,7 +16,7 @@ input_data as (
 ),
  new_updated as (
    SELECT * FROM 
-   {% if var('partitionWithoutArrayObjects', None) is not none %}
+   {% if var('partitionWithoutArrayObjects', None) is not none and var('partitionWithoutArrayObjects') != '' %}
     (
          SELECT *,row_number() over(
             partition by {{ var('partitionWithoutArrayObjects') }}
@@ -40,7 +40,7 @@ input_data as (
       FROM input_data
      ) WHERE ROW_NUMBER = 1
 
-    {% if var('partitionWithoutArrayObjects', None) is not none %}
+    {% if var('partitionWithoutArrayObjects', None) is not none and var('partitionWithoutArrayObjects') != '' %}
        ) where ROW_NUMBER_1 = 1
    {% endif %}
    
