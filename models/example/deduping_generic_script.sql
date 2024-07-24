@@ -16,7 +16,7 @@ input_data as (
 ),
  new_updated as (
    SELECT * FROM 
-   {% if var('extraScriptFlag') = 1 and var('partitionWithoutArrayObjects', None) is not none and var('partitionWithoutArrayObjects') != '' %}
+   {% if var('extraScriptFlag') == 1 and var('partitionWithoutArrayObjects', None) is not none and var('partitionWithoutArrayObjects') != '' %}
     (
          SELECT *,row_number() over(
             partition by {{ var('partitionWithoutArrayObjects') }}
