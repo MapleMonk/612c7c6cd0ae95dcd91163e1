@@ -1,4 +1,4 @@
-{{ config(materialized='table', alias= var('table') + "_test") }}
+{{ config(materialized='table', alias= var('table') + "_final") }}
 
 with 
 input_data as (
