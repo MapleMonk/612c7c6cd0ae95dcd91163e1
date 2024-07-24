@@ -1,0 +1,1 @@
+create or replace table ..Shopify_UTM_Parameters_fact_item as select * from ..Shopify_zoukbags_UTM_Parameters ;
