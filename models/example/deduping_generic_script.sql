@@ -40,7 +40,7 @@ input_data as (
       FROM input_data
      ) WHERE ROW_NUMBER = 1
 
-    {% if var('extraScriptFlag') = 1 and var('partitionWithoutArrayObjects', None) is not none and var('partitionWithoutArrayObjects') != '' %}
+    {% if var('extraScriptFlag') == 1 and var('partitionWithoutArrayObjects', None) is not none and var('partitionWithoutArrayObjects') != '' %}
        ) where ROW_NUMBER_1 = 1
    {% endif %}
    
