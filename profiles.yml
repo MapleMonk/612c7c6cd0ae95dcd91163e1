@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "dpsrcjp-en56858"
+      user: "zavyaanalytics"
+      password: "z5S26az%a4"
+      role: "ACCOUNTADMIN"
+      database: "ZAVYA_DB"
+      warehouse: "ZAVYA_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
