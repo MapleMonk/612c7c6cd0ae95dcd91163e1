@@ -7,7 +7,7 @@
             ) }}
             with sample_data as (
 
-                select * from maplemonk.information_schema.tables
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
             ),
             
             final as (
