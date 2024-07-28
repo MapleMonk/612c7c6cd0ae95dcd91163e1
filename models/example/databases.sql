@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE snitch_db.maplemonk.Product_info as WITH master AS ( SELECT * FROM snitch_db.maplemonk.availability_master_v2 ), occassion AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, producttype, REPLACE(A.value:key, \'\"\', \'\') AS key_type, REPLACE(A.value:value, \'\"\', \'\') AS occassion FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => metafields) A WHERE key_type = \'occassion_new\' ), print_design AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, REPLACE(A.value:key, \'\"\', \'\') AS key_type, REPLACE(A.value:value, \'\"\', \'\') AS print_design FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => metafields) A WHERE key_type = \'print_design\' ), collar AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, REPLACE(A.value:key, \'\"\', \'\') AS key_type, REPLACE(A.value:value, \'\"\', \'\') AS collar FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => metafields) A WHERE key_type = \'collar\' ), material AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, REPLACE(A.value:key, \'\"\', \'\') AS key_type, REPLACE(A.value:value, \'\"\', \'\') AS material FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => metafields) A WHERE key_type = \'material\' ), sleeve_type AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, REPLACE(A.value:key, \'\"\', \'\') AS key_type, REPLACE(A.value:value, \'\"\', \'\') AS sleeve_type FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => metafields) A WHERE key_type = \'sleeve_type\' ), fit AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, REPLACE(A.value:key, \'\"\', \'\') AS key_type, REPLACE(A.value:value, \'\"\', \'\') AS fit FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => metafields) A WHERE key_type = \'fit\' ), color AS ( SELECT SUBSTRING(id, POSITION(\'Product/\' IN id) + LENGTH(\'Product/\')) AS id, REPLACE(REPLACE(REPLACE(A.value:values, \'[\', \'\'), \']\', \'\'), \'\"\', \'\') AS color FROM snitch_db.maplemonk.metafields_products_graph_ql, LATERAL FLATTEN (input => options) A WHERE REPLACE(A.value:position, \'\"\', \'\') = 1 ) SELECT master.*, occassion.occassion AS occassion, print_design.print_design AS print_design, collar.collar AS collar, material.material AS material, sleeve_type.sleeve_type AS sleeve_type, fit.fit AS fit, color.color AS color FROM master LEFT JOIN occassion ON master.id = occassion.id LEFT JOIN print_design ON occassion.id = print_design.id LEFT JOIN collar ON print_design.id = collar.id LEFT JOIN material ON collar.id = material.id LEFT JOIN sleeve_type ON material.id = sleeve_type.id LEFT JOIN fit ON sleeve_type.id = fit.id LEFT JOIN color ON fit.id = color.id;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
