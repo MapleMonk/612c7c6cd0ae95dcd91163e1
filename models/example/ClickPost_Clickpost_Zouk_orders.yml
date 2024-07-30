@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "ClickPost_Clickpost_Zouk_orders"
+    description: "A starter dbt model"
