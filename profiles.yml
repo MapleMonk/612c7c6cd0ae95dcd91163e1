@@ -5,7 +5,7 @@ default:
       type: "snowflake"
       account: "dpsrcjp-en56858"
       user: "zavyaanalytics"
-      password: "z5S26az%a4"
+      password: "8ewnv7Ft"
       role: "ACCOUNTADMIN"
       database: "ZAVYA_DB"
       warehouse: "ZAVYA_WH"
