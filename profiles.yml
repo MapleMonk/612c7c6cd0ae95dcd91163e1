@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ih51306.ap-south-1.aws"
+      user: "d816b2974"
+      password: "qPPd8ODyt3gQ0"
+      role: "ACCOUNTADMIN"
+      database: "d816b2974_DB"
+      warehouse: "d816b2974_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
