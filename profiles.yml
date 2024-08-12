@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "wwnfowb-cx62968"
+      user: "mindfulsoulsanalytics"
+      password: "ge4!C1a5E1"
+      role: "ACCOUNTADMIN"
+      database: "MINDFUL_DB"
+      warehouse: "MINDFUL_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
