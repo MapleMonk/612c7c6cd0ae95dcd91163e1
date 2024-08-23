@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "xwxpwlf-at17393"
+      user: "orpatanalytics"
+      password: "sNgD2!s{IDh9"
+      role: "ACCOUNTADMIN"
+      database: "ORPAT_DB"
+      warehouse: "ORPAT_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
