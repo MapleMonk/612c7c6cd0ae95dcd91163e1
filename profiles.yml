@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "vjwjvtz-jn98360"
+      user: "analyticsandamen"
+      password: "jGgymC8LenPKgOG"
+      role: "ACCOUNTADMIN"
+      database: "andamen_db"
+      warehouse: "andamen_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
