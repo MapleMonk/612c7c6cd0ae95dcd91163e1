@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "select REVERSE(SUBSTRING(REVERSE(null), 1, POSITION(\'-\', REVERSE(null)) - 1)) AS size;",
+                    "sql": "SELECT \"ITEM CODE\", \"BRANCH_CODE_PRIORITY\", \"BRANCH NAME\", SUM(qty) AS qty FROM SNITCH_DB.MAPLEMONK.JIT_OFFLINE_GOODS GROUP BY 1, 2, 3",
                     "transaction": true
                 }
             ) }}
