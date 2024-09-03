@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "select concat(\'vamsi\',\'A\',null) as stringq",
+                    "sql": "select REVERSE(SUBSTRING(REVERSE(null), 1, POSITION(\'-\', REVERSE(null)) - 1)) AS size;",
                     "transaction": true
                 }
             ) }}
