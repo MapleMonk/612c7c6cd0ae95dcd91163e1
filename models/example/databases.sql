@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE snitch_db.maplemonk.warehouse_logistics_performance AS SELECT awb, marketplace_mapped, shippingpackagecode, order_id, saleorderitemcode, order_timestamp, shipping_courier, warehouse_name, uc_status, delivered_date, uc_created, tat, created_timestamp, picking_timestamp, picked_timestamp, packed_timestamp, rts_timestamp, dispatched_timestamp, shipped_timestamp, latest_status, try_to_date(\"Pickup Date\") as pickup_date, cp_delivery, item_status, sla_status, CASE WHEN packed_timestamp IS NOT NULL AND order_timestamp IS NOT NULL THEN CASE WHEN DATEDIFF(DAY, order_timestamp, packed_timestamp) = 0 THEN \'D0\' WHEN DATEDIFF(DAY, order_timestamp, packed_timestamp) = 1 THEN \'D1\' WHEN DATEDIFF(DAY, order_timestamp, packed_timestamp) = 2 THEN \'D2\' WHEN DATEDIFF(DAY, order_timestamp, packed_timestamp) = 3 THEN \'D3\' WHEN DATEDIFF(DAY, order_timestamp, packed_timestamp) BETWEEN 4 AND 5 THEN \'D>3\' WHEN DATEDIFF(DAY, order_timestamp, packed_timestamp) BETWEEN 6 AND 9 THEN \'D>5\' ELSE \'D>9\' END ELSE \'P\' END AS O2P, CASE WHEN dispatched_timestamp IS NOT NULL AND order_timestamp IS NOT NULL THEN CASE WHEN DATEDIFF(DAY, order_timestamp, dispatched_timestamp) = 0 THEN \'D0\' WHEN DATEDIFF(DAY, order_timestamp, dispatched_timestamp) = 1 THEN \'D1\' WHEN DATEDIFF(DAY, order_timestamp, dispatched_timestamp) = 2 THEN \'D2\' WHEN DATEDIFF(DAY, order_timestamp, dispatched_timestamp) = 3 THEN \'D3\' WHEN DATEDIFF(DAY, order_timestamp, dispatched_timestamp) BETWEEN 4 AND 5 THEN \'D>3\' WHEN DATEDIFF(DAY, order_timestamp, dispatched_timestamp) BETWEEN 6 AND 9 THEN \'D>5\' ELSE \'D>9\' END ELSE \'P\' END AS O2M, CASE WHEN pickup_date IS NOT NULL AND order_timestamp IS NOT NULL THEN CASE WHEN DATEDIFF(DAY, order_timestamp, pickup_date) = 0 THEN \'D0\' WHEN DATEDIFF(DAY, order_timestamp, pickup_date) = 1 THEN \'D1\' WHEN DATEDIFF(DAY, order_timestamp, pickup_date) = 2 THEN \'D2\' WHEN DATEDIFF(DAY, order_timestamp, pickup_date) = 3 THEN \'D3\' WHEN DATEDIFF(DAY, order_timestamp, pickup_date) BETWEEN 4 AND 5 THEN \'D>3\' WHEN DATEDIFF(DAY, order_timestamp, pickup_date) BETWEEN 6 AND 9 THEN \'D>5\' ELSE \'D>9\' END ELSE \'P\' END AS O2H, CASE WHEN dispatched_timestamp IS NOT NULL AND pickup_date IS NOT NULL THEN CASE WHEN DATEDIFF(DAY, dispatched_timestamp, pickup_date) = 0 THEN \'D0\' WHEN DATEDIFF(DAY, dispatched_timestamp, pickup_date) = 1 THEN \'D1\' WHEN DATEDIFF(DAY, dispatched_timestamp, pickup_date) = 2 THEN \'D2\' WHEN DATEDIFF(DAY, dispatched_timestamp, pickup_date) = 3 THEN \'D3\' WHEN DATEDIFF(DAY, dispatched_timestamp, pickup_date) BETWEEN 4 AND 5 THEN \'D>3\' WHEN DATEDIFF(DAY, dispatched_timestamp, pickup_date) BETWEEN 6 AND 9 THEN \'D>5\' ELSE \'D>9\' END ELSE \'P\' END AS M2H FROM snitch_db.maplemonk.warehouse_sla_performance WHERE order_timestamp IS NOT NULL AND packed_timestamp IS NOT NULL AND dispatched_timestamp IS NOT NULL AND pickup_date IS NOT NULL;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
