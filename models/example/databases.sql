@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table snitch_db.maplemonk.marketplace_catalog as with inventory as ( select \"Item SkuCode\" as sku, REVERSE(SUBSTRING(REVERSE(\"Item SkuCode\"), CHARINDEX(\'-\', REVERSE(\"Item SkuCode\")) + 1, LEN(\"Item SkuCode\"))) AS sku_group, case when sum(inventory) - 2 <=0 then 0 else sum(inventory) -2 end as inventory, from snitch_db.maplemonk.snitch_final_inventory_wh2 where date = current_date and facility != \'SAPL-EMIZA\' group by 1 ), live_products as ( select a.id, b.sku_group, b.price from snitch_db.maplemonk.shopifyindia_new_products a left join snitch_db.maplemonk.availability_master_v2 b on a.id = b.id where lower(a.status) = \'active\' ), live_inventory as ( select * from inventory where sku_group in (select sku_group from live_products) ), ajio1 as ( select replace(REPLACE(ajio1_sellersku, \'four\', \'4\'),\' \',\'\') AS sku, from snitch_db.maplemonk.ajio_1 ), ajio2 as ( select replace(REPLACE(ajio2_sellersku, \'four\', \'4\'),\' \',\'\') as sku, case when ajio2_status = \'Live\' then \'Catalog_and_Live\' else \'Catalog_but_not_Live\' end as status from snitch_db.maplemonk.ajio_2 ), ajio as ( SELECT \'1\' as ajio_marketplace, t1.sku as sku, \'Catalog_and_Live\' AS ajio_status FROM ajio1 t1 LEFT JOIN ajio2 t2 ON t1.sku = t2.sku UNION ALL SELECT \'1\' as ajio_marketplace, t2.sku, t2.status as ajio_status FROM ajio2 t2 LEFT JOIN ajio1 t1 ON t2.sku = t1.sku WHERE t1.sku IS NULL ), flipkart as ( select \'1\' as flipkart_marketplace, replace(REPLACE(\"flipkart_Seller SKU Id\", \'four\', \'4\'),\' \',\'\') as sku, case when \"flipkart_Listing Status\" = \'ACTIVE\' Then \'Catalog_and_Live\' else \'Catalog_but_not_Live\' end as flipkart_status from snitch_db.maplemonk.flipkart ), amazon as ( select \'1\' as amazon_marketplace, replace(REPLACE(\"amazon_seller-sku\", \'four\', \'4\'),\' \',\'\') as sku, case when \"AMAZON_STATUS\" = \'Active\' then \'Catalog_and_Live\' else \'Catalog_but_not_Live\' end as amazon_status from snitch_db.maplemonk.amazon ), myntra as ( select \'1\' as amazon_marketplace, replace(REPLACE(\"MYNTRA_VAN\", \'four\', \'4\'),\' \',\'\') as sku, case when \"myntra_style status\" = \'P\' then \'Catalog_and_Live\' else \'Catalog_but_not_Live\' end as myntra_status from snitch_db.maplemonk.myntra ) select a.*, coalesce(ajio.ajio_status,\'Not_Cataloged\') as ajio_status, coalesce(flipkart.flipkart_status,\'Not_Cataloged\') as flipkart_status, coalesce(amazon.amazon_status,\'Not_Cataloged\') as amazon_status, coalesce(myntra.myntra_status,\'Not_Cataloged\') as myntra_status from live_inventory a left join ajio ajio on a.sku= ajio.sku left join flipkart flipkart on a.sku= flipkart.sku left join amazon amazon on a.sku= amazon.sku left join myntra myntra on a.sku= myntra.sku where a.inventory != 0",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
