@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table snitch_db.maplemonk.cut_size_analysis as ( WITH live_date AS ( SELECT a.id, a.status, a.published_at::date AS live_date, b.price, b.sku_group, b.price, a.product_type AS category, b.sku_class FROM snitch_db.maplemonk.shopifyindia_new_products a LEFT JOIN snitch_db.maplemonk.availability_master_v2 b ON a.id = b.id ), first_order_date AS ( SELECT sku_group, MIN(order_timestamp::date) AS first_order_date FROM snitch_db.maplemonk.fact_items_snitch GROUP BY sku_group ), final_first_live_date AS ( SELECT a.sku_group, a.status, a.id, a.category, a.sku_class, CASE WHEN a.live_date <= b.first_order_date THEN a.live_date ELSE b.first_order_date END AS live_date_final FROM live_date a LEFT JOIN first_order_date b ON a.sku_group = b.sku_group WHERE LOWER(a.status) = \'active\' and live_date_final is not null ), inventory AS ( SELECT \"Item SkuCode\" AS sku, REVERSE(SUBSTRING(REVERSE(\"Item SkuCode\"), CHARINDEX(\'-\', REVERSE(\"Item SkuCode\")) + 1, LEN(\"Item SkuCode\"))) AS sku_group, date, SUM(inventory) AS total_inventory FROM snitch_db.maplemonk.snitch_final_inventory_wh2 WHERE facility != \'SAPL-EMIZA\' AND REVERSE(SUBSTRING(REVERSE(\"Item SkuCode\"), CHARINDEX(\'-\', REVERSE(\"Item SkuCode\")) + 1, LEN(\"Item SkuCode\"))) IN (SELECT sku_group FROM final_first_live_date) GROUP BY \"Item SkuCode\", REVERSE(SUBSTRING(REVERSE(\"Item SkuCode\"), CHARINDEX(\'-\', REVERSE(\"Item SkuCode\")) + 1, LEN(\"Item SkuCode\"))), date ), Final_inventory_calculation as ( SELECT SPLIT_PART(a.sku, \'-\', -1) AS size, a.sku_group, a.total_inventory, a.date, b.live_date_final, b.category, b.sku_class, CASE WHEN b.live_date_final >= DATEADD(day, -60, CURRENT_DATE) THEN \'New\' ELSE b.sku_class END AS class FROM inventory a LEFT JOIN final_first_live_date b ON a.sku_group = b.sku_group GROUP BY SPLIT_PART(a.sku, \'-\', -1), a.sku_group, a.total_inventory, b.live_date_final, b.category, b.sku_class, a.date ), total_size as ( select sku_group, date, count(sku_group) as total_size, count(case when total_inventory = 0 and size in (\'S\',\'M\',\'L\',\'XL\',\'30\',\'32\',\'34\',\'36\') then sku_group end) as cut_sizes, count(case when total_inventory = 0 then sku_group end) as final_cut_sizes, count(case when total_inventory >= 5 then sku_group end) as sizes_above_5, count(case when total_inventory >= 10 then sku_group end) as sizes_above_10, count(case when total_inventory < 5 and size in (\'S\',\'M\',\'L\',\'XL\',\'30\',\'32\',\'34\',\'36\') then sku_group end) as cut_sizes_below_5, count(case when total_inventory < 10 and size in (\'S\',\'M\',\'L\',\'XL\',\'30\',\'32\',\'34\',\'36\') then sku_group end) as cut_sizes_below_10 from Final_inventory_calculation group by 1,2 ) select a.*,b.total_size,b.cut_sizes,b.cut_sizes_below_10,b.final_cut_sizes,b.cut_sizes_below_5,b.sizes_above_5,b.sizes_above_10 from Final_inventory_calculation a left join total_size b on a.sku_group = b.sku_group and a.date = b.date where sku_class != \'4-New-Not-Sold\' and a.date = current_date - 1 );",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
