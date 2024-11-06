@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE maplemonk.CC_GOOGLEADS_CONSOLIDATED AS Select \'DE\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_DE_GOOGLEADS_CONSOLIDATED UNION ALL Select \'DK\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_DK_GOOGLEADS_CONSOLIDATED UNION ALL Select \'ES\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_ES_GOOGLEADS_CONSOLIDATED UNION ALL Select \'FR\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_FR_GOOGLEADS_CONSOLIDATED UNION ALL Select \'IT\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_IT_GOOGLEADS_CONSOLIDATED UNION ALL Select \'NL\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_NL_GOOGLEADS_CONSOLIDATED UNION ALL Select \'SE\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_SE_GOOGLEADS_CONSOLIDATED UNION ALL Select \'UK\' as Region, customer_currency_code, ADSET_NAME, ADSET_ID, AD_ID, AD_NAME, ACCOUNT_NAME, ACCOUNT_ID, CAMPAIGN_NAME, CAMPAIGN_ID, DATE, AD_TYPE, AD_STRENGTH, AD_NETWORK_TYPE, AD_FINAL_URL, DAY_OF_WEEK, YEAR, MONTH, Channel, ACCOUNT, Clicks, Spend, Impressions, Conversions, Conversion_Value from maplemonk.CC_UK_GOOGLEADS_CONSOLIDATED ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
