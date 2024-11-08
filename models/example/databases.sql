@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE MAPLEMONK.FINAL_SKU_MASTER AS with lisitng as (select upper(replace(SKU_Code,\' \',\'\')) COMMONSKU ,upper(replace(Seller_SKU_on_Channel,\' \',\'\')) MARKETPLACE_SKU ,upper(Channel_Code) MARKETPLACE ,Channel_Product_Id from maplemonk.KA_unicommerce_get_product_listing qualify row_number() over (partition by Upper(Channel_Code), upper(Seller_SKU_on_Channel) order by 1 desc) =1 ), COMMONSKU_MASTER as ( SELECT UPPER(coalesce(SM.Product_Name, UPM.Name)) as NAME, UPPER(COLOR) as colour, UPPER(BRAND) as BRAND, UPPER(coalesce(SM.Group,UPM.Category_Name)) as CATEGORY, UPPER(coalesce(SM.Category,UPM.Category_Code)) as Category_Code, UPPER(coalesce(SM.commonskucode,replace(UPM.Product_Code,\' \',\'\'))) as commonsku_master, SAFE_CAST(coalesce(SM.MRP,UPM.mrp) AS FLOAT64) as MRP, coalesce(SAFE_CAST(GST AS FLOAT64)/100,SAFE_CAST(IF( ARRAY_LENGTH(SPLIT(GST_Tax_Type_Code, \'-\')) > 1, SPLIT(GST_Tax_Type_Code, \'-\')[OFFSET(1)], NULL ) AS FLOAT64 )/100) as TAX_RATE, coalesce(SAFE_CAST(SM.Grammage as FLOAT64),SAFE_CAST(Weight__gms_ AS FLOAT64)) as weight, coalesce(SAFE_CAST(SM.Length AS FLOAT64), SAFE_CAST(Length__mm_ AS FLOAT64)) as length, coalesce(SAFE_CAST(Breadth_Dia AS FLOAT64), SAFE_CAST(Width__mm_ AS FLOAT64)) as width, ( coalesce(SAFE_CAST(SM.Length AS FLOAT64), SAFE_CAST(Length__mm_ AS FLOAT64)) * coalesce(SAFE_CAST(SM.Height AS FLOAT64), SAFE_CAST(Height__mm_ AS FLOAT64)) * coalesce(SAFE_CAST(Breadth_Dia AS FLOAT64), SAFE_CAST(Width__mm_ AS FLOAT64)) ) / 1000 as volume, SAFE_CAST(Packing AS FLOAT64) Packing_Weight, SAFE_CAST(Gross_Weight_Including_packaging_weight AS FLOAT64) Weight_Incl_Packing, coalesce(SM.HSN,UPM.HSN_CODE) HSN_CODE FROM maplemonk.KA_unicommerce_get_product_master UPM LEFT JOIN (select * from `MapleMonk.KA_GS_SKU_MASTER` qualify ROW_NUMBER() OVER (PARTITION BY COMMONSKUCODE ORDER BY 1) = 1 ) SM on upper(replace(UPM.Product_Code,\' \',\'\')) = upper(SM.COMMONSKUCODE) qualify ROW_NUMBER() OVER (PARTITION BY Product_Code ORDER BY 1) = 1 ) select coalesce(l.COMMONSKU,cm.commonsku_master) as COMMONSKU ,l.MARKETPLACE_SKU ,l.MARKETPLACE ,l.Channel_Product_Id ,cm.* from lisitng l Full Outer join COMMONSKU_MASTER CM on upper(l.commonsku) = upper(cm.commonsku_master);",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
