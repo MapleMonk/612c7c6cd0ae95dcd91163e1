@@ -1,17 +1,17 @@
 {{ config(
-                        materialized='table',
-                            post_hook={
-                                "sql": "create or replace table snitch_db.maplemonk.Search_Result as ( select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, EVENTNAME as Event_Name, sum(EVENTCOUNT) as Event_Count, searchterm as Search_Term, audiencename as Audience_Name, from snitch_db.maplemonk.app_ga4_audience_search group by 1,2,3,5,6 UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, EVENTNAME as Event_Name, sum(EVENTCOUNT) as Event_Count, searchterm as Search_Term, audiencename as Audience_Name, from snitch_db.maplemonk.web_search group by 1,2,3,5,6 ); create or replace table snitch_db.maplemonk.Search_Result_count as ( with audience_serch_result as ( select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, EVENTNAME as Event_Name, sum(EVENTCOUNT) as Event_Count, searchterm as Search_Term, audiencename as Audience_Name, from snitch_db.maplemonk.app_search where searchterm is not null group by 1,2,3,5,6 UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, EVENTNAME as Event_Name, sum(EVENTCOUNT) as Event_Count, searchterm as Search_Term, audiencename as Audience_Name, from snitch_db.maplemonk.web_search where searchterm is not null group by 1,2,3,5,6 ), total_search_count as ( select ga_date, sum(Event_Count) as total_search from audience_serch_result where lower(AUDIENCE_NAME) = \'search\' group by 1 ), dod_web_app_search_count as ( select ga_date, type, sum(Event_Count) as search_count from audience_serch_result where lower(AUDIENCE_NAME) = \'search\' group by 1,2 ) select a.ga_date, a.type, a.search_count, b.total_search, (a.search_count/b.total_search)*100 as count_percentage from dod_web_app_search_count a left join total_search_count b on a.ga_date = b.ga_date ); create or replace table snitch_db.maplemonk.Search_Result_conversion as ( with sales_revenue as ( select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, sum(purchaserevenue) as sales_revenue, sum(totalpurchasers) as sales_qty from snitch_db.maplemonk.app_search where audiencename = \'Search\' group by 1,2 union select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, sum(purchaserevenue) as sales_revenue, sum(totalpurchasers) as sales_qty, from snitch_db.maplemonk.web_search where audiencename = \'Search\' group by 1,2 ) select a.*, b.search_count, (a.sales_qty/b.search_count)*100 as conversion_percent from sales_revenue a left join snitch_db.maplemonk.Search_Result_count b on a.ga_date = b.ga_date and a.type = b.type ); create or replace table snitch_db.maplemonk.sessions_vs_search_count as ( select a.date, a.sessions, a.engaged_sessions, a.type, b.search_count from snitch_db.maplemonk.ga_full_funnel_view a left join snitch_db.maplemonk.Search_Result_count b on a.date = b.ga_date and lower(a.type) = lower(b.type) where a.date >= \'2024-03-21\' );",
-                                "transaction": true
-                            }
-                        ) }}
-                        with sample_data as (
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table snitch_db.maplemonk.Search_Result as ( select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'APP\' as TYPE, sum(EVENTCOUNT) as Event_Count, searchterm as Search_Term from snitch_db.maplemonk.app_ga4_audience_search where EVENTNAME = \'search\' and audiencename = \'Search\' and searchterm != \' \' group by 1,2,4 UNION select TO_DATE(DATE,\'YYYYMMDD\') AS GA_DATE, \'WEB\' as TYPE, sum(EVENTCOUNT) as Event_Count, searchterm as Search_Term from snitch_db.maplemonk.web_search where EVENTNAME = \'view_search_results\' and audiencename = \'Search\' and searchterm != \' \' group by 1,2,4 UNION SELECT TO_DATE(DATE, \'YYYYMMDD\') AS GA_DATE, \'App_2_0_IOS\' as TYPE, sum(eventcount) as Event_Count, searchterm as Search_Term FROM snitch_db.maplemonk.search_app2_0_eventname_eventcount where lower(operatingsystem) = \'ios\' and lower(eventname) = \'search\' and searchterm != \' \' GROUP BY 1,2,4 union SELECT TO_DATE(DATE, \'YYYYMMDD\') AS GA_DATE, \'App_2_0_Android\' as TYPE, sum(eventcount) as Event_Count, searchterm as Search_Term FROM snitch_db.maplemonk.search_app2_0_eventname_eventcount where lower(operatingsystem) = \'android\' and lower(eventname) = \'search\' and searchterm != \' \' GROUP BY 1,2,4 );",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
 
-                            select * from snitch_db.information_schema.databases
-                        ),
-                        
-                        final as (
-                            select * from sample_data
-                        )
-                        select * from final
-                        
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
