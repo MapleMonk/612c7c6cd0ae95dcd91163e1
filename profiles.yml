@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "tlqzmny-wm69639"
+      user: "adminlagorii"
+      password: "Lagorii@123"
+      role: "ACCOUNTADMIN"
+      database: "lagorii_db"
+      warehouse: "lagorii_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
