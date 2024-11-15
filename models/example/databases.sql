@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table maplemonk.KA_AMAZON_VENDOR_CENTRAL_FACT_ITEMS AS SELECT NULL AS customer_id ,\'AMAZON VENDOR CENTRAL\' AS shop_name ,\'AMAZON VENDOR CENTRAL\' AS marektplace ,\'AMAZON VENDOR CENTRAL\' AS CHANNEL ,\'AMAZON VENDOR CENTRAL\' AS SOURCE ,Concat(SAFE_cast(DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") as string),\'-\',ASIN) ORDER_ID ,Concat(SAFE_cast(DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") as string),\'-\',ASIN) reference_code ,null AS PHONE ,null AS NAME ,null AS EMAIL ,DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") AS SHIPPING_LAST_UPDATE_DATE ,ASIN as SKU ,ASIN PRODUCT_ID ,upper(p.name) AS PRODUCT_NAME ,\'IN\' CURRENCY ,null AS city ,null AS State ,null AS order_status ,CAST(DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") AS DATE) AS Order_Date ,DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") ORDER_TIME ,SAFE_cast(orderedUnits as int64) AS QUANTITY ,IFNULL(SAFE_cast(orderedRevenue as FLOAT64),0) AS gross_sales_before_tax ,cast(0 as float64) AS DISCOUNT ,cast(0 as float64) TAX ,cast(0 as float64) as SHIPPING_PRICE ,SAFE_cast(orderedRevenue as float64) AS SELLING_PRICE ,null AS OMS_ORDER_STATUS ,null as SHIPPING_STATUS ,null AS FINAL_SHIPPING_STATUS ,Concat(SAFE_cast(DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") as string),\'-\',ASIN) AS SALEORDERITEMCODE ,Concat(SAFE_cast(DATETIME(TIMESTAMP(startTime), \"Asia/Kolkata\") as string),\'-\',ASIN) AS SALES_ORDER_ITEM_ID ,cast(null as string) AWB ,cast(null as string) AS payment_gateway ,cast(null as string) as payment_mode ,cast(null as string) COURIER ,cast(null as string) AS DISPATCH_DATE ,cast(null as string) AS delivered_date ,cast(null as string) as DELIVERED_STATUS ,cast(null as string) RETURN_FLAG ,cast(null as string) returned_quantity ,cast(null as string) AS returned_sales ,cast(null as string) cancelled_quantity ,cast(null as string) AS NEW_CUSTOMER_FLAG ,cast(null as string) AS ACQUISITION_PRODUCT ,cast(null as string) days_in_shipment ,cast(null as string) AS ACQUISITION_DATE ,p.commonsku as sku_code ,p.name AS PRODUCT_NAME_FINAL ,p.category AS PRODUCT_CATEGORY ,p.sub_category AS PRODUCT_SUB_CATEGORY ,p.category_code category_code ,p.TAX_RATE as FINAL_TAX_RATE ,p.commonsku ,cast(null as string) AS warehouse ,cast(null as string) as pincode ,cast(null as string) source_pincode from maplemonk.KA_AVP_GET_VENDOR_REAL_TIME_SALES_REPORT fi left join (select * from `MapleMonk.KA_GS_SKU_MarketplaceSKU_Mapping` qualify row_number()over (partition by AMAZON_ASIN order by 1) = 1 ) AM on upper(fi.ASIN) = upper(AM.AMAZON_ASIN) left join (select commonsku skucode, name, category, category_code sub_category, category_code, commonsku, TAX_RATE from maplemonk.final_sku_master qualify row_number()over (partition by commonsku order by 1) = 1 ) p on lower(AM.COMMONSKUCODE) = lower(p.skucode) ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
