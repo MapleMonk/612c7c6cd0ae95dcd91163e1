@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "Create or replace table maplemonk.cc_bing_ads_fact_items as With Ad_Level_Data as ( Select distinct concat(cast(CAMPAIGNID as string),cast(TimePeriod as date)) key from `MAPLEMONK.ad_performance_report_daily` ) ( select Brand as Brand ,Country as REGION ,null as asin ,CurrencyCode ,upper(cast(AccountName as string)) ACCOUNT_NAME ,cast(AccountId as string) ACCOUNT_ID ,cast(upper(CampaignName) as string) CAMPAIGN_NAME ,cast(CampaignId as string) CAMPAIGN_ID ,cast(null as string) ADSET_NAME ,cast(null as string) ADSET_ID ,cast(AdId as string) AD_ID ,cast(null as string) AD_NAME ,cast(TimePeriod as date) as date ,cast(CampaignType as string) AD_TYPE ,cast(null as string) AD_STRENGTH ,cast(null as string) AD_NETWORK_TYPE ,cast(null as string) AD_FINAL_URL ,null Day_of_Week ,null YEAR1 ,null MONTH1 ,upper(\'BING\') CHANNEL ,upper(\'BING\') ACCOUNT ,sum(ifnull(clicks,0)) as clicks ,sum(ifnull(spend,0)) as spend ,sum(ifnull(impressions,0)) as impressions ,sum(ifnull(Conversions,0)) as Conversions ,sum(ifnull(Revenue,0)) as Revenue ,null as Add_to_carts ,null as Add_to_cart_value ,null as Landing_page_views ,null as Initiate_checkouts ,null as Initiate_checkouts_value from `MAPLEMONK.ad_performance_report_daily` prd left join ( select accountid as map_accountid,brand,country from MAPLEMONK.CC_ACCOUNTID_MAPPING qualify row_number() over(partition by accountid order by 1) = 1 and lower(channel) = \'bing\' )acm on cast(prd.accountid as string) = cast(acm.map_accountid as string) group by 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 ) union all ( select Brand as Brand ,Country as REGION ,null as asin ,CurrencyCode ,upper(cast(AccountName as string)) ACCOUNT_NAME ,cast(AccountId as string) ACCOUNT_ID ,cast(upper(CampaignName) as string) CAMPAIGN_NAME ,cast(CampaignId as string) CAMPAIGN_ID ,cast(null as string) ADSET_NAME ,cast(null as string) ADSET_ID ,cast(null as string) AD_ID ,cast(null as string) AD_NAME ,cast(TimePeriod as date) as date ,cast(CampaignType as string) AD_TYPE ,cast(null as string) AD_STRENGTH ,cast(null as string) AD_NETWORK_TYPE ,cast(null as string) AD_FINAL_URL ,null Day_of_Week ,null YEAR1 ,null MONTH1 ,upper(\'BING\') CHANNEL ,upper(\'BING\') ACCOUNT ,sum(ifnull(clicks,0)) as clicks ,sum(ifnull(spend,0)) as spend ,sum(ifnull(impressions,0)) as impressions ,sum(ifnull(Conversions,0)) as Conversions ,sum(ifnull(Revenue,0)) as Revenue ,null as Add_to_carts ,null as Add_to_cart_value ,null as Landing_page_views ,null as Initiate_checkouts ,null as Initiate_checkouts_value from `MAPLEMONK.campaign_performance_report_daily` prd left join ( select accountid as map_accountid,brand,country from MAPLEMONK.CC_ACCOUNTID_MAPPING qualify row_number() over(partition by accountid order by 1) = 1 and lower(channel) = \'bing\' )acm on cast(prd.accountid as string) = cast(acm.map_accountid as string) where not(concat(cast(CAMPAIGNID as string),cast(TimePeriod as date))) in (select distinct key from Ad_Level_Data) group by 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 ) ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
