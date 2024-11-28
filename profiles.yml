@@ -5,7 +5,7 @@ default:
       type: "snowflake"
       account: "eethavq-vq26191"
       user: "techsleepycat"
-      password: "6sUVuweFiyqcbvh"
+      password: "HelloHi1#"
       role: "ACCOUNTADMIN"
       database: "SLEEPYCAT_DB"
       warehouse: "SLEEPYCAT_WH"
