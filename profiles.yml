@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "qjeorkn-oq80724"
+      user: "ANALYTICSREDTAPE"
+      password: "}RX~TlRJZ.4QA{w"
+      role: "ACCOUNTADMIN"
+      database: "REDTAPE_DB"
+      warehouse: "REDTAPE_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
