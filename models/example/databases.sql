@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "create or replace table redtape_db.maplemonk.new_products_inventory as select sku, location ,product_name, first_date from (select sku, location, \"Product Name\" product_name,\"Report Generated Date\"::date first_Date, row_number() over (partition by sku, location order by \"Report Generated Date\"::date) rn from redtape_db.maplemonk.easyecom_redtape_inventory_snapshot )where rn = 1",
+                    "sql": "create or replace table redtape_db.maplemonk.new_products_inventory as select sku, product_name, first_date, quantity from (select sku, product_name, first_date, quantity, row_number() over (partition by sku order by first_date) rn from (select sku , \"Product Name\" product_name , \"Report Generated Date\"::date first_Date , sum(\"Available Quantity\") quantity from redtape_db.maplemonk.easyecom_redtape_inventory_snapshot group by 1,2,3 ) )where rn = 1 ;",
                     "transaction": true
                 }
             ) }}
