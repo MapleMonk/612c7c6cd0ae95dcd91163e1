@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table ANDAMEN_DB.MAPLEMONK.ANDAMEN_MAGENTO_FACT_ITEMS as With orders as ( select ENTITY_ID ORDER_ID , increment_id Reference_code , CREATED_AT , UPDATED_AT , upper(case when lower(status) like \'%cancel%\' then \'CANCELLED\' else status end) Order_Status , coalesce(OD.CUSTOMER_ID, CD.customer_id) Customer_id , warehouse_id , coalesce(OD.customer_email, CD.email) Email , CD.Phone , CD.Customer_Name , SHIPPING_AMOUNT , GRAND_TOTAL , TAX_AMOUNT , DISCOUNT_AMOUNT ORDER_DISCOUNT , rewardpoints_spent from ANDAMEN_DB.MAPLEMONK.ANDAMEN_MAGENTO_ANDAMEN_SALES_FLAT_ORDER OD left join (select * from (select parent_id order_id ,upper(concat(firstname, \' \', lastname)) Customer_Name ,right(replace(telephone,\' \',\'\'),10) Phone ,email ,customer_id from ANDAMEN_DB.MAPLEMONK.ANDAMEN_MAGENTO_ANDAMEN_SALES_FLAT_ORDER_ADDRESS where address_type = \'billing\' ) qualify row_number() over (partition by order_id order by 1) = 1 ) CD on CD.order_id = OD.ENTITY_ID ), order_items as ( Select ORDER_ID , ITEM_ID , SKU , PRODUCT_ID , UPPER(NAME) PRODUCT_NAME , parent_item_id , row_total , rewardpoints_spent , tax_amount , discount_amount , discount_percent , qty_ordered , qty_canceled , qty_refunded , qty_shipped , amount_refunded , cancel_reason from ANDAMEN_DB.MAPLEMONK.ANDAMEN_MAGENTO_ANDAMEN_SALES_FLAT_ORDER_ITEM qualify row_number() over (partition by order_id,SKU order by row_total desc, product_type asc) = 1 and parent_item_id is null ) select OI.ORDER_ID , OI.ITEM_ID , O.CREATED_AT ORDER_TIMESTAMP , O.UPDATED_AT LAST_UPDATED_AT , O.ORDER_STATUS , O.Customer_id , O.Email , O.Phone , O.Customer_Name , OI.SKU , OI.PRODUCT_ID , OI.PRODUCT_NAME , OI.parent_item_id , OI.row_total , OI.rewardpoints_spent , OI.tax_amount , OI.discount_amount ITEM_DISCOUNT , OI.discount_percent , div0(O.ORDER_DISCOUNT, count(1) over (partition by OI.Order_id order by 1)) ORDER_LEVEL_DISCOUNT , div0(O.SHIPPING_AMOUNT, count(1) over (partition by OI.Order_id order by 1)) FINAL_SHIPPING_AMOUNT , (case when OI.discount_percent is null then ORDER_LEVEL_DISCOUNT else OI.discount_amount end) FINAL_DISCOUNT , (OI.row_total + FINAL_SHIPPING_AMOUNT - FINAL_DISCOUNT - OI.rewardpoints_spent) SELLING_PRICE , OI.qty_ordered , OI.qty_canceled , OI.qty_refunded , OI.qty_shipped , OI.amount_refunded , OI.cancel_reason , O.warehouse_id , Upper(p.CATEGORY) AS Product_Category , Upper(p.sub_category) as Product_Sub_Category , upper(p.collection) Collection , upper(p.launch_date) Launch_date , upper(p.season) Season from order_items oi left join orders o on oi.order_id = o.order_id left join (select upper(commonsku) skucode , upper(product_name) name , upper(category) category , upper(sub_category) sub_category , upper(collection) Collection , upper(season) season , try_to_date(launch_date, \'DD Mon YYYY\') LAUNCH_DATE from andamen_db.MAPLEMONK.sku_master qualify row_number() over (partition by upper(commonsku) order by 1) =1 ) p on lower(trim(SPLIT_PART(SPLIT_PART(SPLIT_PART(OI.SKU, \'-\', 1),\' -\',1),\'-\',1))) = lower(p.skucode); ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from andamen_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
