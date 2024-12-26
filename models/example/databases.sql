@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "create or replace table snitch_db.maplemonk.snitchit_analytics as ( select to_date(date,\'YYYYMMDD\') as date, operatingsystem, itempromotionname, itempromotionclickthroughrate as ctr, itemsclickedinpromotion as clicks, itemsviewedinpromotion as views from snitch_db.maplemonk.snitchit_analytics );",
+                    "sql": "create or replace table snitch_db.maplemonk.snitchit_analytics_table as ( select to_date(date,\'YYYYMMDD\') as date, operatingsystem, itempromotionname, itempromotionclickthroughrate as ctr, itemsclickedinpromotion as clicks, itemsviewedinpromotion as views from snitch_db.maplemonk.snitchit_analytics );",
                     "transaction": true
                 }
             ) }}
