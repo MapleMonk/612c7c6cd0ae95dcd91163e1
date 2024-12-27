@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "ALTER SESSION SET TIMEZONE = \'Asia/Kolkata\'; create or replace table snitch_db.maplemonk.offline_master_Daily_Report AS WITH DateCheck AS ( SELECT 1 AS Exist FROM snitch_db.maplemonk.offline_master_Daily_Report WHERE DATE = CURRENT_DATE() LIMIT 1 ) SELECT *, current_date as date FROM snitch_db.maplemonk.offline_master WHEre not EXISTS (SELECT * FROM DateCheck) union all select * FROM snitch_db.maplemonk.offline_master_Daily_Report;",
+                    "sql": "ALTER SESSION SET TIMEZONE = \'Asia/Kolkata\'; create or replace table snitch_db.maplemonk.offline_master_Daily_Report_1 AS WITH DateCheck AS ( SELECT 1 AS Exist FROM snitch_db.maplemonk.offline_master_Daily_Report_1 WHERE DATE = CURRENT_DATE() LIMIT 1 ) SELECT *, current_date as date FROM snitch_db.maplemonk.offline_master WHEre not EXISTS (SELECT * FROM DateCheck) union all select * FROM snitch_db.maplemonk.offline_master_Daily_Report_1;",
                     "transaction": true
                 }
             ) }}
