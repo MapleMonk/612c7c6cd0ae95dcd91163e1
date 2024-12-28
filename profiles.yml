@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "smpbqhr-hk11939"
+      user: "analyticsgharsoaps"
+      password: "4c6Tq&E3R5>g"
+      role: "ACCOUNTADMIN"
+      database: "gharsoaps_db"
+      warehouse: "gharsoaps_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
