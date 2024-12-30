@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "selvel-global-data-analytics@selvel-global-analytics.iam.gserviceaccount.com"
+        client_id: "116392655137204790091"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/selvel-global-data-analytics%40selvel-global-analytics.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCQJ2QPQDR6DfUv\nQKlQCuZcIEnxmwAqgp/D7xobMZ4nzhxhv3yBPeT77bkUmNdVcohlRc8dS7EvyI6v\nVXXVL67gYNHhqX5ab+mth/+t5l3AZmBBTrwEbjA6yrebOtbm2l2fWMKEdtYEevRm\n0skOWwW5qxf2l6uEL1DrSEzftXvr4LFz2fc8HhIKbGce8pu0j6dzpqLMOdb1gzR5\npIjO67LwWlrn1QfpGaKqPa8Pi8Vs/zQgy6vbH7WKbJU+MmZ0xxtMguNcmS6fUs4Q\ndnYcJuBWNk4H/PaVag3coSLLwdA0mMldla/M0xoukM+fMqQwlW6GiKAzlPK7zIVi\nm5Dt5jYFAgMBAAECggEACa5bje/7QOcxvDFU2EdNyTTHQoPtCEMq2kxzLbhbWBkD\ngZ0L44d18BAQX02/HcH0tGMdJxPaRndAUzjOEmSCvhbtLCvnNx5PoeksRqWIo6SR\nz6ZWAjDUPwk2OM/uzCTbfMQdQYApnLYVNoKZdhlZfRVR0AHHnGJWcOFeKE1WkTS1\nZWvPIAQdZkCtgv+4EQaUhXJe/wlJzs9ZgGlSl2TojrzUB/a5LCVndr+Ky62152TJ\nFVFLs/Y4m6b5Xy3rACWITI1KPPyUtM5y3SCCNFOKad75aSrhZIbHOB+PSNmH8/zd\nV5ISi2iEBQtroy+T0nYtEit/DWl6ux6HdKsegCnSAQKBgQDGNVnMlpr8GutBnY2I\nrEBuBP7axXl1c9/ScmV39TyhcaXelSCXhUFTIUPWsEtU0JJCgQ1KK5Yjg92pOWMo\n6Fu6PYWqGCkdNCLw7kDlcCoBBkYlLyzudQDq4V3StdWrZrNVMLeitKylKm3UUv1N\n5+PsRDVCOj6O57PZ8M2sMTTNpQKBgQC6L07Pw/TteH79HplmIAqn3XblzVik+J0V\nQ/XqHCzcZGlou9xP9h0fSef+9fvehBKlMLSg0VDYuMw0yutXt/kKi0phiiX8FrRD\nwovXlWVok0AUhR3mgOAxs+iImPA1FFf/qp0YLP0nrvB0l8o3r/RO+hds914jCZyX\nZ7pSNH4Y4QKBgQCC5qUhuq0splKMiRL6GliK0H3H2fc3HInLIIXmzW13aekTsQVP\nTFAyKJv244M8xmpxxW0TeOm1FteDdUUJtTsvKoZmKYKtqMsStybg4Ey9VHlrAVb5\nPQiYFrKyACjXBAKX1o7Qw+XpRrY2LYDgvK8IUJuj23eJRXjADIqol+65iQKBgQCC\na6k1ePsVbhbmkIy8MS3FsSkciN/TkCPZRaX5vIrgR6ZfK1mE2c5EoKzWuNEaakH1\nXUzqajXL2oeRY6O/6quVa0VLVk6NbAoSfTEgbxJ+UsfMmAL9+METkAcPyLJbPEj4\nWzd4O+uJ5M2jnsCUibkFqcLHHfDfclgy5wJpm0PJgQKBgG6HldhvHGbWxB7Dyc/u\n2VQsuTTfM7BzwXB6T/fR614Jix3l6Uh2gFNCXhPvC/X4IFcqaw6FSSWuVxxDForf\nzf4fO0eBwHgapufeb3Ji5YQphz7DXFZkUyWYohc6JJ3hy3UKKJrICW7L5cqliwGK\nk8FcL7/pwdccIdKbbEaFTgEn\n-----END PRIVATE KEY-----\n"
+        private_key_id: "e874c99c4b3fbd528d72fcf5961b644cb553bbcf"
+        project_id: "selvel-global-analytics"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "selvel-global-analytics"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
