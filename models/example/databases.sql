@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "Create or replace table maplemonk.Zouk_Product_Secondary_Sales_Cost_Source as select Date, MARKETPLACE, COLLECTION, PRODUCT_CATEGORY, FINAL_MARKETPLACE, channel, SOURCE, TRADE_MARGIN, REFERENCE_CODE, SKU, COMMONSKU, PRODUCT_SUB_CATEGORY, PRINT, category_code, BAU_MRP_SALES, BAU_DISCOUNT, SALES, Spend, Brand_Spend from maplemonk.zouk_secondary_pandl",
+                    "sql": "CREATE OR REPLACE TABLE maplemonk.Zouk_Product_Secondary_Sales_Cost_Source AS SELECT zp.Date, zp.MARKETPLACE, zp.COLLECTION, zp.PRODUCT_CATEGORY, zp.FINAL_MARKETPLACE, nm.channel, zp.SOURCE, zp.TRADE_MARGIN, zp.REFERENCE_CODE, zp.SKU, zp.COMMONSKU, zp.PRODUCT_SUB_CATEGORY, zp.PRINT, zp.category_code, zp.BAU_MRP_SALES, zp.BAU_DISCOUNT, zp.SALES, zp.Spend, zp.Brand_Spend FROM maplemonk.zouk_secondary_pandl zp LEFT JOIN maplemonk.zouk_New_Marketplace_Mapping nm ON LOWER(zp.MARKETPLACE) = LOWER(nm.marketplace);",
                     "transaction": true
                 }
             ) }}
