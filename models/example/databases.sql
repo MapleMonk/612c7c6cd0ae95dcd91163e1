@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE SNITCH_DB.MAPLEMONK.DERIVED_CYCLE2EXCESS_DATA as select try_to_date(date,\'DD/MM/YYYY\') as date, category, quantity, updated_by, bin_mapped, not_found_helper, not_found_marked_location, status, sku, sku2, value, cost from snitch_db.maplemonk.gs_cycle2excess ; CREATE OR REPLACE TABLE SNITCH_DB.MAPLEMONK.DERIVED_RATIO_DONE_DATA as select sku, size, sku2, color, done_by, remarks, invoice, final_sku, qc_status, box_number, erp_po_num, scanned_qty, vendor_name, variance_qty, venedor_type, try_to_date(received_date,\'DD/MM/YYYY\') as received_date, try_to_date(ratio_done_date,\'DD/MM/YYYY\') as ratio_done_date, variance_status, packing_list_qty from snitch_db.maplemonk.gs_ratiodonedata ; CREATE OR REPLACE TABLE SNITCH_DB.MAPLEMONK.DERIVED_PUTAWAY_DONE_DATA as select try_to_date(putaway_assigned_date,\'DD/MM/YYYY\') as putaway_assigned_date, try_to_date(putaway_start_date,\'DD/MM/YYYY\') as putaway_start_date, try_to_date(putaway_done_date,\'DD/MM/YYYY\') as putaway_done_date, status, done_by, po_number, total_qty, pending_qty, vendor_name, assigned_qty,putaway_number from snitch_db.maplemonk.gs_pputawaydonedata ; CREATE OR REPLACE TABLE SNITCH_DB.MAPLEMONK.DERIVED_CYCLE_2_ERROR as select try_to_date(date,\'DD/MM/YYYY\') as date, location, \"Actual Sku\", remarks, qty, \"UPDATED BY\", \"Physical sku\", \"Actual vs physical\" from snitch_db.maplemonk.gs_cycle2error where location is not null ; create or replace table snitch_db.maplemonk.inward_inventory as select serial, sku_number, repeat_case, new_style, qc_status, online_qty::INTEGER as ordered_qty, vendor_name, try_to_date(planned_date,\'DD/MM/YYYY\') as planned_date, CASE WHEN delivery_location like \'%2%\' THEN \'SAPL-WH2\' WHEN lower(delivery_location) like \'%yel%\' then \'SAPL-WH\' ELSE \'NA\' END AS warehouse_name, erp_po, delivery_status, \"Vehicle received time\", try_to_date(delivered_date,\'DD/MM/YYYY\') as delivery_date, invoice_number, invoice_status, sku_received, quantity_received::INTEGER as received_qty, try_to_date(\"Ratio start date\",\'DD/MM/YYYY\') as ratio_start_date, try_to_date(ratio_completed_date,\'DD/MM/YYYY\') as ratio_completion_date, try_to_date(po_received_date,\'DD/MM/YYYY\') as po_received_date, po_number, try_to_date(putaway_completed_date,\'DD/MM/YYYY\') as putaway_date, vendor_remarks, remarks_qty, rca, clearance_status_remarks, ordered_qty - received_qty as short_excess, timestampdiff(day,delivery_date,putaway_date) as delivery_to_complete, timestampdiff(day,delivery_date,ratio_start_date) as delivery_to_ratio_start, timestampdiff(day,ratio_start_date,ratio_completion_date) as ratio_time, timestampdiff(day,ratio_start_date,putaway_date) as ratio_to_complete from snitch_db.maplemonk.gs_inventory_in_sheet where sku_number is not null order by delivered_date desc",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
