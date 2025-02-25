@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "maplemonk-bigquery-connector@mydesignation-wh.iam.gserviceaccount.com"
+        client_id: "101751831024164114406"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/maplemonk-bigquery-connector%40mydesignation-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZkzkIh/Xwg4TH\nfDchy3moK7IexamdEvLpkOyX1yRArwQ78P7LC5CwjxzxeKJvNJHvg8p+NG6FaEY+\nW73pFPyGC0ze7qA+hf24EknNX58jE4b0ePYI7IDfpHpzRPGyGlw2kPsFYVBBJcxy\npAkYu7B1QqY7X3GPv+WTfEIil8IVC1xP280FVw32eVwwyeQDmtDljC9u3AheFeCn\n31n+cQce2x2BqsCO30oadth8kKXbLF5oSuwf7lgfhEQ3tDvh9XPy2LuAH90cj+0K\nkdOdF+QpUwoHvSBXksi5ilqWRnZEq5mmWBJImAbg7qaUZiJGT57V1DFus2dvNvS0\nr9yxaLnTAgMBAAECggEAYU3XxGp1wbY35DU3vNvwkRbVprB0viQy0eU4AmI7utfq\n11ncwXbvIx8l7RIr5vsGRy1UGqQdR3mObKX/5WU22EXmf48NyFiJU1COhBQ/KeM6\nSExukCghLKO1BacwRpxGYDrvoITYbQJYEG8vCEosTQzdJhF1yrmiFRcNxsXDDUB/\ne0/qgOcIui9KggqNtA7pEl6DHe5yL088sWT64sXoFze87+Ffvitj9IU/Eu2xGagS\nicHn/BWIgz9qhMJfTpxy/E50roB0F5lvoexkT51bv9W9oVtGotCrnBunyCYFb/NK\nhrkNW2anbUdVfMMc6TlathQegpu2iT9C945nPIcVUQKBgQD56OgGiDM8IAcrRiMu\nWrROs6AQzyqkH1ZdCr8KA3Nv+yqFBHvtfP91K9lZhC4fKnWcR7tQTTxBxiSsTOo/\n/hN9gDFWc9Ibq91pEOIGcdXw4qiRgRh+pXDoOUN2JVMfjxB0n7kvhke+iVwOIMix\nEEHyQUS6nIfK16cjn2tatdQ1AwKBgQDe4JejWh+eCD/QXS4acdaE6LFR6ZpFTAik\ngZpLT0iPBQ0YfFvx9oEIPjAcOyXnrZTETbR9503iwdHS1DUNuvJh6LDPeyi/TeCk\n4iAkDvTvqaXyW0Bmgs1vCOpCzf/fLOlBnQNAcJ72miFwftMfRWW68c9dMB+/yH03\nC5qqVgxG8QKBgQCkykbNn9whBoGTsHEcbOU+jEW9L85PYPai7aYhZTsmmTllcxqA\n9I7C5cIxu+5p0KazAb3rarKUMKMYFrPUtKaHeBOQjVj7tC2QzXgthbzsVZmQMM9F\nG7TC/JeWfXA9fCn+rSAAzYvbgVn5WvbbgvvpUc6POw5z3BYzcDjrHMEsnwKBgCvN\nV//ypmQYmvIIXhc0aESWtsKydm9IEirCjeBfJJN3GqvFRQy4tYM5NZtWxIxTwPkT\njHVyEAyQqvwUWJjqNNipMpaUTd3LIGtHRanQhrLTVJnc9TswWc+IoQGgGrlxyiXr\nBciUWal9gTTqt/NdYDDtdSOLYbH/ZRx8W1k+sAsBAoGARu200+VBf6wH64y9zNAl\neljVyHIhuL9rD04r4hTHelioz95IwEewHuQAxASbib/ZOAQFl+4KJMm9f0DBvMPI\nAl+jXfEuvPv97Eu1fLKvviDTKUcFyQgaLI0xu8/OE2GQo5fNuo8AL/GcMNRm1Rhx\n2wGQZ0/fxqMtQ2ITivDl9KQ=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "0b2e257390a5f3b463a747cec0707d3218f75390"
+        project_id: "mydesignation-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "mydesignation-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
