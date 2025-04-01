@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "suroskie@suroskie-wh-455109.iam.gserviceaccount.com"
+        client_id: "108485742238853854246"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/suroskie%40suroskie-wh-455109.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+ZbcfL+V+FkSF\n5iBmnoWIG510/1EMHvRlgzKbQENVhakqlPc0JK46t7I9ZZDeEkKtcyeriESNtBqW\n5uYMZHz1pSCR+dWj8g8PoZywlCMHHCUJalMlOufEqS6E0b+bGkEiF+bzx58klgwX\nmer4T3Bkkh/SEjXthUEItnrwDgdHO2pGasfpfxIBXgZvFVCHIiuV4iOKFTBmq9sH\nmIPY3lV2WoeaEbcCZxEuUuifaRbbeTZWOgUsXzuyP3E+5qq6OJJmc52eKt7WJrsJ\nwlv5KQOvx4NjwZaL9nlba1gzwgLnXuaRLzFBYGQILQlLscTn3um98dfHD1nMwxwX\nDDC/bgmtAgMBAAECggEAB52u+Qbj8aq3W/nMEv7FTZ/5KOxrlAYK9aKNXCtyZhHe\nJe9mggXzmDKv5QfShyeI1kJUdGaTg22QYLfkvNsqKnNL/brWImQ02QW4bFHIouir\nzJgdslAMZE/2Jebz+KLQtynomZjDE2YTHsCP5xXaY5N6xV7oHFOnuc7+1OpivSUg\nHbmQmKG7Z4ZABFRyBRBQXRb2RL+m7W4TciBTnci+tXPebwO51QdjSf/rRqsqCWwa\nFSUizMRE0QNW5G3DK3cFtcDzJTwDdKE0ygV1e0y0Ltun/24nA8moqwsNN2WwYY0z\nqe/OcuWa+wWyyTdZk+HSlvCOplkVO29+Iuy6V9xyGwKBgQDfio5hZWzTxwKXp7Lx\nqXtl843h+T2Q3lE9eoEYC+Dyjoay5mdiqlo5pytun8NK4Xi85t/Y4f/e5z8QYy17\nMftwk8dR4XQSa5XcMvRliy8Cfx7jjxuvUyQIrReTUa2QPhLl2wfO3ZkRQqRIcIfS\nouv+F3cnxqgIyjX+tM1i6Ug5kwKBgQDaCyNpkqNzeSI0FLrcGzCRpIsaSc6GLvON\nwqDL7igo1LqAMZMaUAVjn6UhXnm8GW7SqqfctkYDXPqgQiW37sG6rGCGs8Ngl54P\nylRVkXSo56ER+tDs18kq1q+J2zRahGylork95Wi1Y8PaTaZgsYBHB2Ly52GlChjy\nxA8favG3vwKBgQC9Wac7NueVB9jZTzLTYwVkmYaQaEfPI5HbKp6ZGM7FhxbwCRx/\nxd7BQSoX/Xo2PoDAOixYkS7kyCpyHiBTX0Yl2PeYEwn35Gu/ZuX/8YKzcaxfg0Qn\nIZy/QKdcoW4MZZgqXXrirnBO34060x8pu9l8lLHY3nxNXcOY6dujsgj8wwKBgQCi\nPT9wQogUV8G3duVC+Yg+FmzadqiQ90aJ6JO0qdR/7SmIUVrfbUNVSWiZV67E4zeu\n0QRuGcImpnxl2lIudhz4RWLdV8y8hpQ5s5bkxIJFW3Rh6HqkgDtTAMNElDJ0V6xv\n4pBrGdO7hCwqtzRhJjIIp9pcWwYwwz6lBHUsL2sECQKBgDEeh6rgmUy43IdTK1W8\n/TSYFWLZEJti+p61fgKaDObYDB/v4EG7BS33TIIhtbGercGV6/lxrC+ZkoCT+GrO\nXseCabSu6H5LeqT9E2U89I0jlSTgi5rbu8IBAykzB9hJLslcttkP5Yi4GT3K/EEB\nBa5/yCN1NbK3ij/YXODHq1RV\n-----END PRIVATE KEY-----\n"
+        private_key_id: "e92f65918afb537c6153511b3e3393eb569ca97f"
+        project_id: "suroskie-wh-455109"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "suroskie-wh-455109"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
