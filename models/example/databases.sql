@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table emmasleep_db.maplemonk.emmasleep_db_pandl as with ads_data as ( select date, sum(spend) spend from emmasleep_db.maplemonk.flipkart_fact_items group by 1 ) , sales_data as ( select ordeR_Date, sum(selling_price) gross_sales, sum(b.cost*quantity) total_cost, sum(case when c.order_item_Status = \'CANCELLED\' then selling_price end) cancelled_sales, sum(case when c.ordeR_item_Status in (\'RETURNED\',\'RETURN_REQUESTED\') then selling_price end) return_sales, sum(case when c.order_item_Status = \'CANCELLED\' then b.cost*quantity end) cancelled_cost, sum(case when c.ordeR_item_Status in (\'RETURNED\',\'RETURN_REQUESTED\') then b.cost*quantity end) return_cost, sum(case when upper(e.zone) = \'LOCAL\' then 150 when upper(e.zone) = \'ZONAL\' then 190 when upper(e.zone) = \'NATIONAL\' then 330 end ) forward_shipping, sum(case when upper(e.zone) = \'LOCAL\' and c.ordeR_item_Status in (\'RETURNED\',\'RETURN_REQUESTED\') then 151.2 when upper(e.zone) = \'ZONAL\' and c.ordeR_item_Status in (\'RETURNED\',\'RETURN_REQUESTED\') then 189.6 when upper(e.zone) = \'NATIONAL\' and c.ordeR_item_Status in (\'RETURNED\',\'RETURN_REQUESTED\') then 290.4 end ) reverse_shipping, sum(quantity) quantity from (select *, case when warehouse = \'EMMA SLEEP INDIA PVT LTD (CBT)\' then \'TAMIL NADU\' when warehouse = \'EMMA SLEEP INDIA PVT. LTD. (SONIPAT))\' then \'HARYANA\' when warehouse = \'EMMA SLEEP INDIA PVT. LTD. (BLRFC12)\' then \'KARNATAKA\' end as warehouse_state from EMMASLEEP_DB.MAPLEMONK.EMMASLEEP_DB_sales_consolidated) a left join (select sku, cost from (select sku, bettersleep::float cost, row_number() over (partition by sku order by 1) rw from emmasleep_db.maplemonk.mapping_sku_cogs) where rw = 1)b on a.sku = b.sku left join ( select distinct order_id, order_item_id, order_item_status from emmasleep_db.maplemonk.s3_flipkart_sales )c on a.reference_code = c.ordeR_id and a.saleorderitemcode = replace(c.order_item_id,\'OI:\',\'\') left join (select pincode, state from (select \"Destination pincode\" pincode, \"Destination state\" state, row_number() over (partition by \"Destination pincode\" order by 1) rw from emmasleep_db.maplemonk.emmasleep_zone_tat_mapping) where rw = 1) d on a.pincode = d.pincode left join (select distinct \"Warehouse State\", \"Destination State\", \"Local/Zonal/National\" zone from emmasleep_db.maplemonk.flipkart_zone_mapping) e on upper(d.state) = upper(e.\"Destination State\") and upper(a.warehouse_state) = upper(e.\"Warehouse State\") where marketplace = \'FLIPKART\' group by 1 ) select coalesce(order_date, date) order_date, gross_sales, total_cost, cancelled_sales, return_sales, cancelled_cost, return_cost, quantity, spend from sales_Data s left join ads_data a on s.order_Date = a.date ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from EMMASLEEP_DB.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
