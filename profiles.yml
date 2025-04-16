@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "sweetkaramcoffee@sweetkaramcoffee-wh.iam.gserviceaccount.com"
+        client_id: "113124183490696243505"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/sweetkaramcoffee%40sweetkaramcoffee-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDm6Y5TOUCxO95V\ngnyB3Oa2ZJizKqbmIMV2OJkRUc8F8CMZxvnTCJdnbtKthO86XV3iF5pus65tnEcY\nudYTI8euzURSCJsWZtdXcvUrfUa4IHT3vy0J0X9QgO/WzXsORTyniJAGl1Lfp+1l\nWV8XTtpzDTnXRQ9bLUz+CqKu/vkcZW4v+Ef5UKCLuVbZePjKITYsIphrK+aipxDL\ncQCS5uHhhIoS8ZWC3fxnDHX25U2B3pVT3n8LFxmb32NeFsrK5eBQIptF1O6eDelz\nbmC16YJrYiGIlt34Gb/vqUMIpRNXt85C5QaG42f8yCf6TCN9LLpzJvRAqIydL1Fx\nEeHlvlBbAgMBAAECggEAHGi5sPWHRwblmMGgDd4eqGwB+XES7Zc0lBHsixv0i3d6\n6g336IXTEs+ord6ADD82cL2Uq3AB0sx6VsluVBZ/17q7YBhc9Emczs5+6WXVUIv1\nuBFWOjIDJuVmHJhVPnE4QChmB9mQQaIIbAKt11FFQQhsiFafyAjvwwWN9Fe8UEjS\nhuUpNu78jHXUtFuz7IrQ/JcH1uSnlcW9bBAz6VzMnylGLtsAWIVevhgVpXgfiM/h\npNHvoclRzCBjlsCNO8rMMjW8f2SXBim/0Ke3bxTC5OrXnjezhU15UvR6V8GTANle\n+1d9SKZ5AvG4z+dRw/sdrmWSNtaZJKMlR5eqDzCE8QKBgQD6M0x9RHkpbcnvMX7n\npX78vbEblqLyH7wb2zIIZ5IcKP0tU9gPDIj/ERxVzqv9ZSpVQDeRQJblC2VgMTHv\n5IvsLMZjoMO7CzVZoz7OySUkeZn4hjgcxSqrApSzh+jsTGqF17e/iiUbTMQy+Wb/\nMKAEYBsRXrwtUafuh4eJzaMOwwKBgQDsQ80H0nU/UWvsTTDToriXXd6I/izdcoZF\nfo+turkibpYddvU6iA638oCo4vwJDsjPT3NaQfo70ilQIf/PrmAMzr+q5KC61hl9\nvBI677au+weMQfyn1KL9KdslrDwtEC3zdwEwP/c87SSCLP3akOk9yguUw7wtJ4Pl\nghnNMVROiQKBgFPWLKMs9oxzRV7o7uUgB1UZGudrql4HVDjhUfqO+d6FvZAasCMa\nyCzvxtbZ0beu1miKhBQf2HAXSXjaAymnI1uYBUIM9IkQUGgg00LnE5MNTBKCpvq8\n9ncm/jzKJbpIQMloZyG/YH+tUXDjMSgBWx0cNvWzEMr+uY6ryzbZuPGRAoGBAL/t\nHAM8rc4v4FHnKsDhML6VnI8Am4WQ4Q5XD3R7eKVF3GA3IGLZ38sCDg4jxcW94ta1\nnek2K4ao5LKZy+rzpkcBNKYob4EXJ0ICo3SJAogGmE0R1aKok3bAp6tkzMV2nT1n\n8Ok3LSqrIbs1vUnt6est1FaW4qhzryujkj4j0m6xAoGBAJyBAr1wKwwhligtqPT7\n5pXTsTvY4Obb7x8bzKlgxKmsI7D2KAmOeyRCxXl8r8wr/FhzR+gwcbzgIKJThfkZ\nMwQL2MA3PXaM0oCrfytZ/X/wEluGrYRTnIsdSsoHTE8q0dux+H0m5wwI11BCKbrc\nr2c5mHoqQON/EVINsgToJHeh\n-----END PRIVATE KEY-----\n"
+        private_key_id: "b84517a01bf492db5dc874f879a3b17d41ee643c"
+        project_id: "sweetkaramcoffee-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "sweetkaramcoffee-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
