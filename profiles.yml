@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "pu28729.eu-north-1.aws"
-      user: "POMMEAMALYTICS"
+      user: "pomme_legacy_user"
       password: "oqUuqUKL234"
       role: "ACCOUNTADMIN"
       database: "Pomme_DB"
