@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "mexcgyc-av40653"
-      user: "EMMASLEEPANALYTICS"
+      user: "emmasleep_legacy_user"
       password: "Ic515iZ4#M"
       role: "ACCOUNTADMIN"
       database: "EMMASLEEP_DB"
