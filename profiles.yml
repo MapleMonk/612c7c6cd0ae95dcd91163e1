@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK1"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "mamanourish@mamanourish-wh.iam.gserviceaccount.com"
+        client_id: "116694581030025801703"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/mamanourish%40mamanourish-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCziFkkha2wNTXl\nuY+14PnAM0Ke4PUOTIt7BP/HYCU4kwlwu53cckE/zjFmPGPHd2kly3mL8fCniA/R\nwi+bOzf+hA2g5YEyhjXsyuzb9//5mwqcmKum2KuQz2Vi224PaGH7RxGi+55ZO8sM\nSUAD050L4LsEh/ltMtVODgzoc3FA08OfEwozRBojIgSpMVAwS+uPkrgNq35dvA5C\n5yAPE4oUq9tXPxfHtcuGwIR3mSEShJVqeSlObiGW9l2sXf2+KrXa+E35m9JdJ2E+\nApNmQPpqF1xRpCTq+q0khbfTP7nrHuYizqlVHSl4IWeUTBQXzNI8m++s1ogRadFH\njtqL+nilAgMBAAECggEAEpFVdtuEfSbjriCk5lCgQ+qJR1lIvvPXsR9xPLOK5fD/\nFvOwfe4rJWgz37j7MNP+wfPrXDfnhcwiprUIq2tSfTY3Gp7h39HVnenW2WEqzivk\nyxFXH2hlRhLND45WMa3ABHbzMgIH/H6cn2asAjlOkr3pWayedVa+jNYTK69U1Tll\nDCgwfWiXWkqKxlU2HOmqL/RfpP/Xh88DWVzUE+UZoKGGYIWekUQwTj/ze8wpZPUB\ncChXSwQ5OxCghO6b3EVOehyMk1gkpPWpLpwFyXEj2kmNpHs6KgByfftKd5RrymoO\nF2hpt+52lpUf8QxaIyncDF5ahESptqMYkZjtWm3G+QKBgQDqAGZpm7RYR99jb9+u\ncpnhPJgviiCm8KTVwhFs8/skF5kBI0cYcX+FeZgv2OEVx6pfgPB1mAJgbS9cfXa4\nDX9RXqOXOMFECeX0csFGa0c3FpLGsl05fz7fUOGrY4ihtSftTtqXQqkjM+h9y2lQ\nM+7z+DNMYG21oxdRXtDHlzWkZwKBgQDEaRIgaxqk0P2yypR3b0t+Nu7DryXAP79A\nCvzs3Y/+b3iQjRq0N9EkzEKgxbXO+Gy9iRRkuTvt6KsliK0T4IRPlV72DwJKJdhr\nzT/GZBcZPDLuE5LPujHtdg6Kei54HPeh+pwtQMBf0M9xEVDuXG0ed2HOVPnuohxx\nroV1tZNzEwKBgFfJ3KIkSy2PkUxR7V4aGob437N+I6/dukmDrFvu0LqCq+FUZdjS\nw9/EdYcF27P7G30G9692XvXkII+XdlGopqpVUhRqs38eI4po/v+3QZl2O4yV4Amx\nJlpLks5k4h6gwyDxo2p6FNBjKgb/qDvxr+URqdUunBo33IinhLZMkVBjAoGBALuR\nA8iFv+oJ01187I+qb1PXLekeSFTyC7gjRisF4889sMuKlSfp7gbQMgjLBrbisyXF\n1P3jj4HBoj+z6GWFEZXWtdsRtkQNJEK+vdq+Fvj4bkLB2oAZ9jgpd/VyfRIjx7Ce\nXasxnQVjqdb2jG01QtfHdlXO/OeRVMyTt8wTXP6VAoGBAMC5jFhe+tYch1GilYLS\nHGXrIO/c9JuFQou/L+clP11BPrJH3tnsW5SR38VclimknsJDoo8Tpa81t820gtrI\nejXhXh1ysYHnpsjqsIMKAJLwOmzmM7vB1xkn58LlhU2aHtjhq9IHyHzaXVvoSXgq\npZjR7kA2H67GN7ZXAl1fxNbB\n-----END PRIVATE KEY-----\n"
+        private_key_id: "927cd9a93dda46cf9312403e8f83f5ab67f473d6"
+        project_id: "mamanourish-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "mamanourish-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
