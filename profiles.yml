@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "themomstore@central-segment-458312-c3.iam.gserviceaccount.com"
+        client_id: "115767161659449213646"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/themomstore%40central-segment-458312-c3.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDVlH1QU45/9lDK\n22JidBVvos3+kO1cvxy5f5xZO8arDVn9W9Z2z7rRkQfAp5BLBxMqu2boVTRER+jr\nYCV8a7druQqImOQ6Q0SV57HahA4jEq58o40M+OGnPgbOeYeXv7KS7NP1RpMBhNvT\nr65a/bEY9/tZQpyyP/sRpF93+nRmoXGj4d910dRGv2Z0xLHM4FcsD5P6d/RSR99Y\nHm8SBWnDt33X19JGBIlN4Br2eTBTdMSuO/OZ+6LzP3bnL4+6DfCr2iCLuCRstwUh\njHYS0YSqPHHqMa4t675EMlrT41TpeUQs9KQSGSsXrDbHWkWr/J6IA6Gtz7ci5Igi\nHYidHEO1AgMBAAECggEAZjA8Pv0jjqUPJegOrDWHdhjqv5SfBQOpnjVo3KcFmJz0\nRA03UTR12cQu9eYWW1eAu67bf2kY71yKnGett9if82ofGJkyhY/e1mx7g6YwT2am\nVps4Jw9DhC3gutSZ5CjDq5mlllLUjmL/fMqvPPjpzZ0ExUHiUETdfyTqyrBqFhnj\nh+qruSc75rNrvT0/4yQ/r0yHAQvHGnO8nUPXMhcM3x3V4gi2CQQ0Yz7PkifpHSKV\ntj5eJ5AW9K4h3Bifu+FuPAO+sR4bbMaxg0/vjOi5I58Ey7us/CqV5lyv8ntGLUXG\nL6wy6gtFAhweNt/H3pVa5GhYSBoHit67JPDo0g1gBwKBgQD13A7LAPLRVFXq/Fdm\nrxEC5hVFKpQbwZI+9+QZgiU/pwFS+8VARaA4vEIG6QgyYeNpB3X63FsGgsXMgwiw\nRkO9pBUzVEuETUSCcQ16AR6HRS8bYrxWoueEvtMsNC5aZmMUiY4K6VtAekjr7G8F\nVXAz6SfAvmiyogmZozx9eMmWSwKBgQDeY5qBTo2MhaFCrM3mKtOYrTADb4rSkzFU\nW/ZjYFmXMkmujY+bst78gLEIcHHE+ksvIBzdIlazXcIW9OHmMiT50wybPbqMUUfN\nJIFcjf0FrbZEipkEg7/zg3sogewW7EpnjROnU3rVx+Ks5yQJBuJ8zdmXVNso9Qun\nwoGwGXFN/wKBgGP0Nz9o/08DTnreZFomym+3QuZ/zP8Lz30yItYMB0C9kNg/642Z\nwO3P+7f7fY2eJmpI0jpO4+Ldv7TJgPrJVjj/QG9B0gHTuAqgE66KTfMIuYIUviUq\nzZ02R3wtKrst7RIoaksdXC/2hzcDRI+SkK9KFxNRVhdpsSV5K9qHBM3JAoGAMYvN\nW2ut25XWBK3NPa9i7wv+u3U5X4rNnbbTYPaRXz8j7VC6ovyp82WUi4XJwxHkeD5W\nT+obmOCVolmyjn+zfzlHALsy+ZoOPiUY8Q7tRTubdQ/P4ZKczFsJsE+p0r2YIhPr\nQgc2QbTDyrPAcoZnJVkTVkTggvJ9Q0XxcNNqS+8CgYEAkZi/iPVNTePWH6ey/uF1\nHIKG1oH4+Tp4xi0E6iYYIA9ZsQ6O6dKrdYzAQu5gWKm54nTk6saHIAORoeJMNFx+\nEl0edqhV9EzGKOyFhHpg79PzuSyZOdgVudLGrgjwsnHKIH+JZ3ToG+TAvWTX/tF5\n+XMbH9Bw5o5x9rmmNlwi7p0=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "7e13f5c5cc896a736d8073bde324d2876a1ac659"
+        project_id: "central-segment-458312-c3"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "central-segment-458312-c3"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
