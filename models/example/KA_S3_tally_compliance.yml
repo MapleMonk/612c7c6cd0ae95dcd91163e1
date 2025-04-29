@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "KA_S3_tally_compliance"
+    description: "A starter dbt model"
