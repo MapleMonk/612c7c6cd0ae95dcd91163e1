@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Google_ads_The_Mom_Store_-_Google_Ads_ad_group_ad_report"
+    description: "A starter dbt model"
