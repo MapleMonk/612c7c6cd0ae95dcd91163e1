@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Amazon_Seller_partner_Business_Reports_TheMomStore_-_Amazon_Business_Reports_GET_SALES_AND_TRAFFIC_REPORT_ASIN"
+    description: "A starter dbt model"
