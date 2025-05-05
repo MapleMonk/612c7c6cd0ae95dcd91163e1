@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "maplemonk@powerbi-425707.iam.gserviceaccount.com"
+        client_id: "108825405749765443401"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/maplemonk%40powerbi-425707.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCj6v2eMwvjoW9G\nGfLsuxCgozmi8IRWWWaB2eJZFQMKrNtts5gQi3LOx8C0D1t1B8ZjbWKXf9e0ZGQE\nEZdAZqUm1f4Pfjj/5Cv5g7mL9lxqBfcQW+zv1Sw9yuJVRSANVSr6ZLahXmVjIlqL\nYHG7/8Y7y4JFVDXYC8ss6ttEHZzwmXEyoz/U/na6TyoULDEP3PbN8q9WwY1tDuRo\nnf540C1ZI+Yj50LeYaqnBUbjLfYgh7l8jTpSpPI8uf2VK7fElUZ07b/3oOWVg42Y\ngu2ILI4U8JSNHxohsXfHDc0n/9QdxL17wK8O/EPvBS539EMGEFtglonYsbpJ4hM5\n6TsBJOrLAgMBAAECggEAF9NyZepZkg7HE9N1wf823YKcQBjhw4NfKQS4p+Yr+QND\nKeDu+4ipeXEDi6inzI0CwzUFHaxReEEXYJgF+jBxVQHJ2gqo0lkiIzSIZdW7fRW8\n4b3a5MmBksHIwEg57nYwtxCokzAbYJt/ub6dCYyWDd744obpBKxCLhc9I9uCEl6f\nzYsdQDC/4FCzoXXid/Y56AMs9nVQ9ATvJeHETxYBcxxrHXGM3V86KnHnI2xSlkUd\nW4ftHUJuEko+NodcUFecjmWOrKyZXLcqGJ6N91bdhYYg/0kmKIPqZjdqvQrISwLf\n9LX0VThTPaOz9jvEEibaeXOspSRPKSTkK3Z8gSW2AQKBgQDO9rSP5x2eoe5jaCyz\nsKrtXXdlCQLgnZNkw0ZguaWZ9SaLRZ0Ts5mtCtm+amRXnykcnsAyN7mebXxC4Zny\nXh2R1TnkEziyHcCJ7vfy7rqj0fU1y/bZIAcJlZDGrWVTToTigqZgFf8okLv9J7Xl\n8bfNcB+peKOJlNaiIuWyT7O2gQKBgQDKwVz0vrAX3XSAveiz4EdTETYyxaX3iZ0P\nPNUO3NOZAQs3PMKf2eN310plO0LR30ZULqgW9h1G5Ahzrhk/CgYPFLVIBrexXPs2\nZ+ZHyKq0BRLzizDQk1HiLVrQ7xZoyjgyfD/ZnCYaneXS7y7EwskxUu0QnmCGBPdO\nCXOnBELzSwKBgDsz0STU7OEi2yludFMWd16c/PlW4Y7VJIOPZINot5lZyiPOzwcC\nujQIxY61qmxyJ/V65+m1jRBnq0MKe9ob2AOOZhf6853n6trKE/1XEuanuagg50Tm\n53xzX02l7jUtYc/VpbgYsrus40mgYWUchwJqT3RQAR/rBpasut4N9I+BAoGAGiOd\nmUvwJdN+Do7tLitu5o2kgB0tDWGnZux/xz++483XpVJnAPa1NaECzVQ7hBUV2wp8\nzyEBmz8Qu+EpDhB7wXv49wUur2X+WQBCFuUO5NB2pgE+1NT5TIBuYdtA91eCsTeF\nf8d6vhm3JF+DlwhJqds4Btl0NjLzsxLS3yhUfUsCgYEAzIc1X0qoLp9IENoQI+/I\n8xaAEIY34xkl0a9jefj0gucx2PnWL/cJmkjxnNcI3/Hs+M7gw15bK/HIitzXGFxY\niQnLwQzU0Vx4roLd8Sv6ndTp7e06RLNy801IJyABsKm2DJRIJwd2c87bXCQGPQlp\nUpJ0m+AOXMfN1xX7kPbF/XA=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "c052457b4b2fe178c9a7b4b1c9ae5f3e2eed45c8"
+        project_id: "powerbi-425707"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "EU"
+      priority: "interactive"
+      project: "powerbi-425707"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
