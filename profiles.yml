@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "zqrbphp-tv81740"
-      user: "BSCAnalytics"
+      user: "bsc_legacy_user"
       password: "lI4:0{]t1K2s"
       role: "ACCOUNTADMIN"
       database: "BSC_DB"
