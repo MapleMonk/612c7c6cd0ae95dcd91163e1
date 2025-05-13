@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "unito-retail-private-limited@pronk-wh.iam.gserviceaccount.com"
+        client_id: "101839991587610596387"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/unito-retail-private-limited%40pronk-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDJ8/bRdVcQ2gTX\nnAtwDJIUpL7swDA1asaxdAwi1hSFrUuJTdqdA6wp2DkYDS3JK5xiPxVuFHvTJ3mX\nyRJKkLN1F4P4ek/qc11+nZKipE7d7Egw6LW57jCit9xPxpeZ35xQPoBIjUu/Adw9\nwVLOChLt+JGnWYuKfTXANm3pEyUESUlwLlvs4+Md9GDhgEmKZCE9JKKRTwiOoNzB\nhukLLc6ov1hfO1k8tnelQFl02cI3L+u8Upqrxh/nTPDzji++dYG9aLtD8teLw3oH\n/ScO1O/gIHLg09eOQYKa8RWzW0kWSwsAH128cMb4bYG22XGZZdIoThDH8s9roCmo\nyu+zj6FFAgMBAAECggEAB/c4gBCJy59d24dLKDNGu8u3wCzgeerpRWyXYfRhwNgS\nB6treRABBXGC5wD2El5G/9UPKlVigPSopiUHNKu6eF7iFLX2WwAL6weaFhI3DifY\nvR0gteHAR1rLNNZXenlIeB3O/42bNECFiGYMtxXMo1hPnnM4vtCrgxZihXP83MtZ\nSt+CBXG6MBcjiE0HD3TvCsShiYoeeWJ7pceKdk4GJ5s5t62H5yF/ZZn5FT9DP3vu\nVIYVKpnR0L28MqZh4AWz0L9mhxVYpnqmlunMkLg2IIrBIXzI/T8P5L01jjBUSb5j\nBWwuQRy8iP+om0eOtpC6NUU1F4CpCeSdX7nFNUoaAQKBgQDmYwfDWqq3RXzd6Ptn\nRCR08EM2JUgaQDPEmtQ9wkWanqwiWEO8CidIm9tzS4FB/xqhNX1krNkmujLJsrze\naKW+z6vDiDAV6kS7YuTIWnRcJX9z7E4Xd0i9optnUebrsHAvS0Xg45vhwJUlhErF\nSzKcxPyV3Nvd++qEub8FVwjSgQKBgQDgZ6/EWTSNm+znJgTMcG/zoi4kzefVTNiK\ntMqccfUhjosbmFKqsxB36kLc7f2jf/ab/FgQZQerxqXLtWvBy+aOGX1DJgkYmVg2\n0KGVBbSSd0xa7slxDvHsG5SJsvhUFODSz/butK9+8YM7IGsFnvec+gFToYhhlfh3\nDD84l2ukxQKBgQCPD7+qV4ra85NuWVaD8ZSR6QBThyMW6fc7hsl08EY4lX9edGDb\nS5LJS78iASjqynbG1GhhM9REcCtJhGwzz9fcfSiz6sWxViAIHIjkwQawkbhrS7nS\naIgK+gZ2Si2S/aUsORnTZINP1D7JZTTo/qEXKFuQ0+zUE7K1aIJt1nXsAQKBgDFS\n+RJaXS/HFxJTi/h3ulO90RCr5Yo/wtTyGhq6/Ztrnm3pVDpK85K3/gxbj0WRyd3N\nYHnyCvaZyjV1YgMN01Zmid7pjFRI2FfsEagUwfTznefa1pIwK8Ku6T4/BVBN6oDL\nz0X2lyB661JitMNehqSNWx9LwRNaCGv6WCcTOUjVAoGABud3K3jgkb8Hw8U3/tQP\nAfQsUebxBogSa7yBcULD/RVpJiAO1ZUjZSt0rBXtjr4lvEEUtQa9F1T1k/taBM1z\nYmKA0ufzR2tOLNNhbDzMg9YnRYl0yUkNaw0Al2ZkgmeROTwRTDzd1nPLsbyEnH1p\nQsRIKGOHxk1gr2HtoIrqRUQ=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "f5bc505da505957b9cb7d2078357a7dac3b7a741"
+        project_id: "pronk-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "pronk-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
