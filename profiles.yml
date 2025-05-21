@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "eethavq-vq26191"
-      user: "techsleepycat"
+      user: "sleepycat_legacy_user"
       password: "HelloHi1#"
       role: "ACCOUNTADMIN"
       database: "SLEEPYCAT_DB"
