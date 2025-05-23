@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "sudathixmaplemonk@sudathi-wh.iam.gserviceaccount.com"
+        client_id: "118247289891887496570"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/sudathixmaplemonk%40sudathi-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDlmQToVSmowADW\nJxR9A+bqRiTVlGnFXOspqhxR0bIuDx4JAYBHBOZD1npAQhtOlgMjYuDBnbhxrGUi\nCMX9WCmAZOEOCEy16dzbV7w9A36Nl19TLl9VLI0JeepCHhS4lLa+CgqskYtnw66T\nh95l/rT4lF/M4DFhkp7ry8T/KaWYxiH0wBg84HlgK/6M83XcofGGHYdG/VYo/QRv\n8yOu0zr0k4gpm/wrgFBg/ATBC6AhMf9oS87SQl90/HZ+MSQBk9DnjU4TpZpzhJly\nZSZKazf8wrRQAqItZ5xg+CyIEtITUdiUXglhtwFJMB6gF3Cvew4g5vds0DKubEuV\nfxsm4GZxAgMBAAECggEANqNPk6qQm2P1zwDF02pWTXIb2efTs/AE1olw69enO2bF\nkwcUa9IyqfokZZ5VuUHhxU4GhozuE78e4haMZ1nPpopbNGetOa1JrbkXRr3KJA/d\n04G5lh9gAN1ObiWScMqTIm5pU9/e+PaMWPeAaW1Py8gjdDH2Dm5B+4MmgkJ68fvh\nKT6g4s5oSzpM5wuIY0R10OtMnnnXvReB5KVXP8Kc560vCx6eI3je2r3qGdrMqjWa\n6Tl1SNieDgu9ruEWd1W6vVnRc+OohPy2uJwaUE8IlpcxtCqMKCkXLAk5YEuvqJ+w\nHt0GvvwbEMAnFhCF0Os7fRtJzkw1U6Tggu973Fui8QKBgQD7eZ/p3Wd7n1RA1tHJ\nT2ncAQ3YQ7ufOJbKvJsKnUfy329bFv53OfAq7tjX1Sal3peB0xBn0rsiMFuZh5IL\n6vsKycNLeN4rRJqQl9fJd8UDMdRLc9ihASAworec1j96+Qnfe/LvIifZz07uhFO2\nn0cTt/wTSyUaTgVDBZvhthq/EwKBgQDpup7M2POGCDxkddhovyu4/DZD5Ua74YHi\nTrQFSZXXcRf8FkPPXYVXFu0PP3ZNf25ZnyPr2hJzuGtbPv8hJGG38wljwA3xs1Nr\nlNfFRxqrJayMyQ2zY71JpfPIufMekO+FCTuKMdsFYrcamhjBdX7z53XXTV0IwJ7n\n3hYQNcEA6wKBgQDoKqSJi9/TEQj/B5UM7yVDeTGn/PiGCf+lUrUs+oIHZ2LuTO9H\ncZUafgJyWRZiQnvL3umhgLtF2DFpL/GU0S9OCXIlBoTOm3q7jYQqO0oHJgTiWCSi\nmGB4pnEv+dkHlk4YJt3lCrqR60PrDv4edzRurwipY1Hw1CElfFMq8i4FQwKBgQDW\nO03u6TRdOBNS6YlQiVlkFxkOJostDsfkTMtIxWforyqSzz2cRlY/uy3SehLPeewF\njY55Ucrz8qfEXPuwvw4qc0O6AIFHd10REL6tfjz9fmyoJmi+cr8/UDMhWv9yltpU\nEGBYjNX6G79FTNVADZgtq4whqjGKIjQEx1Vlyj97vQKBgQC2zCtlt51ufdrUDHbk\n7rwyIqv3bVa8p3qFKHRS/ixFh5JwEuBL8V+IDj+Zr+Jxnvzg7H1xhGINO8WtEATL\nkJBJ/sWLcBGSzsZReVfZN5vV4OV2vL5OlYLgbL2Y6AyrFIZcR4UGioAEja6OTDDP\nu39dFBLY4vlF2UV4xkmRSBeR5g==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "34a0142fc9ac6202b22cd77ba6b57f8bb1b8559f"
+        project_id: "sudathi-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "sudathi-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
