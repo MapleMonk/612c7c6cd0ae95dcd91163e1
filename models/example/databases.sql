@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table maplemonk.saadaa_easyecom_returns_intermediate as select * from (select ORDER_ID ,INVOICE_ID ,replace(JSON_EXTRACT_SCALAR(RI,\'$.suborder_id\'),\'\"\',\'\') SUBORDER_ID ,replace(JSON_EXTRACT_SCALAR(RI,\'$.suborder_num\'),\'\"\',\'\') SUBORDER_NUM ,REFERENCE_CODE ,CREDIT_NOTE_ID ,credit_note_number ,cast(ORDER_DATE as timestamp) ORDER_DATE ,cast(INVOICE_DATE as timestamp) INVOICE_DATE ,cast(RETURN_DATE as timestamp) RETURN_DATE ,cast(MANIFEST_DATE as timestamp) MANIFEST_DATE ,cast(IMPORT_DATE as timestamp) IMPORT_DATE ,cast(LAST_UPDATE_DATE as timestamp) LAST_UPDATE_DATE ,replace(JSON_EXTRACT_SCALAR(RI,\'$.company_product_id\'),\'\"\',\'\') COMPANY_PRODUCT_ID ,replace(JSON_EXTRACT_SCALAR(RI,\'$.productName\'),\'\"\',\'\') PRODUCTNAME ,replace(JSON_EXTRACT_SCALAR(RI,\'$.product_Id\'),\'\"\',\'\') PRODUCT_ID ,replace(JSON_EXTRACT_SCALAR(RI,\'$.sku\'),\'\"\',\'\') SKU ,MARKETPLACE ,MARKETPLACE_ID ,REPLACEMENT_ORDER ,replace(JSON_EXTRACT_SCALAR(RI,\'$.return_reason\'),\'\"\',\'\') RETURN_REASON ,cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.returned_item_quantity\'),\'\"\',\'\') as float64) RETURNED_QUANTITY ,replace(JSON_EXTRACT_SCALAR(RI,\'$.inventory_status\'),\'\"\',\'\') INVENTORY_STATUS ,replace(JSON_EXTRACT_SCALAR(RI,\'$.size\'),\'\"\',\'\') RETURNED_PRODUCT_SIZE ,replace(JSON_EXTRACT_SCALAR(RI,\'$.category\'),\'\"\',\'\') RETURNED_PRODUCT_CATEGORY ,replace(JSON_EXTRACT_SCALAR(RI,\'$.size\'),\'\"\',\'\') RETURNED_PRODUCT_SHIPMENT_TYPE ,cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_excluding_tax\'),\'\"\',\'\') as float64) RETURN_AMOUNT_WITHOUT_TAX ,cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_tax\'),\'\"\',\'\') as float64) RETURN_TAX ,cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_shipping_charge\'),\'\"\',\'\') as float64) RETURN_SHIPPING_CHARGE ,cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_miscellaneous\'),\'\"\',\'\') as float64) RETURN_MISC ,ifnull(cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_excluding_tax\'),\'\"\',\'\') as float64),0) + ifnull(cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_tax\'),\'\"\',\'\') as float64),0) + ifnull(cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.credit_note_total_item_shipping_charge\'),\'\"\',\'\') as float64),0) + ifnull(cast(replace(JSON_EXTRACT_SCALAR(RI,\'$.total_item_selling_price\'),\'\"\',\'\') as float64),0) as TOTAL_RETURN_AMOUNT ,row_number() over (partition by Order_ID, Invoice_ID, REFERENCE_CODE, replace(JSON_EXTRACT_SCALAR(RI,\'$.suborder_id\'),\'\"\',\'\'),credit_note_id, credit_note_number order by cast(LAST_UPDATE_DATE as timestamp) desc) rw from maplemonk.EasyEcom_Saadaa_RETURNS R left join UNNEST(ITEMS) RI ) where rw = 1;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
