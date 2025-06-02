@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "house-of-pathona@izf-wh.iam.gserviceaccount.com"
+        client_id: "112115113249020101711"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/house-of-pathona%40izf-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDq7r/R2sXpDWCL\nM9O47ZY7Wh61jnZ95UMJ0QQahljSLEv49gJLydXtJwufM0Q9Gk/vFLbaWsJ80lTV\nJkCi8ZM13kRsPgLCCHC1g+IldycwiAlhhczMLXTIBy4H+4aA29d4zQ8EJ5UqSHRQ\nafFosJnKBPZa34+KCoNHsObIv04u2fPuJZvgNutGS2HwrHMEArxAkUy/VcsxbmuU\n0/AsoV+fs2Fw72PyMxqqco3tF9Kk9WG8r0ORZ5Gia4AEkYhgVRKpHMkPrN0nH5IR\nH6So/ANlDTt8EynnViETHZvo4a0uepx0vQgMiPl77Utm1fFMzRIZPVSQBhAADhOA\nfHGMclJZAgMBAAECggEAAUBtYt5XW0MC0SsLr+VgKAfLuGw+Ywmo05wP+V40NJvK\nJH+XCoqplPO2IvkrHhI4+81F83WJVLtAJXSTN+sGku0Qu0I8pzD+p2ZA+wcep9UJ\ntmx351yUozOFQhihIlL0MRoSlZM/vwkXdDg5nN+tVL9gWqKXSVp9/DtL4iTsHeFx\nHDx7AEbub3jkG0F66FhG4+53z9r443SXfL/ccuvKbIf3fDfD3LX1h7po7GPlDiXV\nLUo/NctQ0vYazZ2FaABKePhf8Oyt1lGkDDBvkez6xPNce8mU39m02+xOVhX84q90\nxj4CGS/Pv5KvGyCHc5iBzO0XJdQ8UdANbVn/pF45QwKBgQD/VYSYyrXIMb9GTNWw\nfjfi2tLy45l7Fm0Ip7GOTCnMTK3QrcoLmczVgpys5NidupAKQBGNaGPehPjN9hS7\nk/HMoeiGowB8CWV815bOg0l/Pn7+IFVHsSgHBEPtnayJ8gzakFnAkrKMx3ZVnMqQ\nG41YgUGHL3/m3j3n8DA+JJeldwKBgQDri5wSiUX18EKcU51z1bH+RRlUnHlqTvP8\npIn7JdIdK2NmWOWAE5y3BuL3DUSfj6/D6BT5dbwBmx4QeYmdXsGBd9u7i596qBGM\n+p2qA5GAqHnhmkIaWW9x8aWOuW9S4zhD4peS2ZU4Ptb/NvGpMkHBld0y+xCfI0BK\ny0AbrN76rwKBgCwMasWZIucYffD4zFyYSbffHEk+rnmnksPNejocNZHDILFBafu6\nWrXyxGinSh9b0gGSr/R/L8txkSKm80iw6yPsQpsHf8vmKxXwc1nJGGLVOz9IAK5P\nh6I+QCG788oQcds6z+EC7b6PooB+fguCVU4RbmaN8Ti42mEq9Iej9G1dAoGABj8b\nknpFerI2cgLdqBbAs6eNdmr35VPWsJqEdj6YheGCr1IoM+9RNqFeH4MgkMK0vJNJ\nCxyOMdS1RWaTubKrmw1crGqVfiE65ew3hiy2DR1qrgrzOdOpWvI3m8NbKm2QLmyx\n7FkM1gMEnJwOaJhGmiWpShLSbAX5TIJ7XsCE4U0CgYEAhl8sdOVbb8xZ933ikONW\nh/4dF3K/8FIaQEsoiOjHRpn3CynK3LbQoCoq8uZ8sf8W1gF8z6RVQxkuNV44dC7l\nCy3/qwSbEliNWZFaWr9YM5a/9R7sBcjhvYSSwaw8Wcqk9c9XcBK0xOemIiNbhyxj\npz1cBkt84VmBHFUnU8689is=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "926ece650c0fde26ddf6a3bd41b3d30f7d79b804"
+        project_id: "izf-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "izf-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
