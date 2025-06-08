@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table hox_db.maplemonk.HOX_YFL_7chef_secondary_tax_summary as with product_details as ( select distinct o.sku as sku_id, o.PRODUCT_TYPE from ( select distinct sku, case when lower(CATEGORY_NAME) like \'%spareparts%\' then \'Spareparts\' when lower(CATEGORY_NAME) like \'%packaging%\' then \'packaging material\' when lower(CATEGORY_NAME) like \'%apron%\' then \'apron\' else PRODUCT_TYPE end as PRODUCT_TYPE from HOX_DB.MAPLEMONK.easyecom_yflhome_product_master union select distinct MODEL_NO, case when lower(CATEGORY_NAME) like \'%spareparts%\' then \'Spareparts\' when lower(CATEGORY_NAME) like \'%packaging%\' then \'packaging material\' when lower(CATEGORY_NAME) like \'%apron%\' then \'apron\' else PRODUCT_TYPE end as PRODUCT_TYPE from HOX_DB.MAPLEMONK.easyecom_yflhome_product_master )as o where 1 = 1 qualify row_number() over(partition by sku order by PRODUCT_TYPE) = 1 ) select case when lower(marketplace) like \'%zepto%\' then \'Easyecom YFL sale\' when lower(marketplace) like \'%retailez%\' then \'Amazon Sales\' end as REPORT_TYPE, null as COMPANY_NAME, null as SELLER_GST, lower(marketplace) as marketplace, brand_name ||\'_\' || sku || \'_\' || marketplace || \'_\' || order_Date || \'_\' || city || \'_\' || quantity as REFERENCE_CODE, case when lower(marketplace) like \'%zepto%\' then \'B2C\' when lower(marketplace) like \'%retailez%\' then \'Amazon B2C\' end as ORDER_TYPE, \'Shipped\' as ORDER_STATUS, \'Sold\' as INVOICE_STATUS, order_Date as report_date, quantity as PARENT_QUANTITY, quantity, sku, brand_name as brand, 6666666666 as MOBILE_NUMBER, revenue as INVOICE_AMT, revenue as SELLING_PRICE, revenue as ABSOLUTE_INVOICE_AMOUNT, revenue as TAX_EXCLUSIVE_GROSS, revenue as ABS_TAX_EXCLUSIVE_GROSS, 0 as TOTAL_TAX_AMOUNT, date_trunc(\'month\', order_Date) as REPORT_MONTH, date_trunc(\'week\', order_Date) as REPORT_WEEK, 0 as COST, 0 as COGS, 0 as weight, 0 as TOTAL_WEIGHT, 0 as FINAL_SPEND, null as sku_type, a.PRODUCT_TYPE, 0 as EASYECOM_COST, 0 as INTERAKT_COST, 0 as CLICKPOST_COST, \'manufacturer\' as PACKAGING_BOX, 0 as PACKAGING_COST, \'sales\' as SALES_TYPE, \'sales\' as SALES_ORDER_TYPE, \'shipped\' as NEW_STATUS, quantity as NEW_QUANTITY, revenue as NEW_INVOICE_AMT, revenue as NEW_SELLING_PRICE, revenue as NEW_ABS_INVOICE_AMT, revenue as NEW_TAX_EXCLUSIVE_GROSS, revenue as NEW_ABS_TAX_EXCLUSIVE_GROSS, quantity as GROSS_QUANTITY, revenue as GROSS_ABS_INVOICE_AMT, revenue as GROSS_SP, revenue as GROSS_ABS_TAXABLE_VALUE, quantity as RETURN_QUANTITY, revenue as RETURN_ABS_INVOICE_AMT, revenue as RETURN_SP, revenue as RETURN_ABS_TAXABLE_VALUE, product_name, quantity as NET_QUANTITY, revenue as NET_REVENUE, revenue as NET_TAXABLE_VALUE, city from hox_db.maplemonk.HOX_ZEPTO_retailez_secondary_sales_consolidated o left join product_details a on o.sku = a.sku_id union select *, null as city from hox_db.maplemonk.HOX_YFL_7chef_tax_summary where lower(marketplace) not in (\'b2b - zepto\', \'retailez\')",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from HOX_DB.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
