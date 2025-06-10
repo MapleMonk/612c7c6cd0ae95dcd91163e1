@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "victoir-perfumes-private-limit@oscar-perfumes-wh.iam.gserviceaccount.com"
+        client_id: "113483400309846310508"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/victoir-perfumes-private-limit%40oscar-perfumes-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDF3HWW9wGVztJ+\nzUqz0BqHvWSpFSoMBCTrT/rgiQYgBL7JaAvrcsEbGH8ZLdW5Hn/Ckvy0oBDy4XOY\nyEZlda97B2Slp4ZpWC7S20LRUwifOyCxsbPJlNfH2VigrDUNVcwayxc1gPAcxIza\nnIv/yIiy0SBjyUvy8LpaQvz2WR/8Td09blLPqfseI8NkA7IDK7qu+YUtfklUwSmT\n8hRUnwxzIUNHGXZhjiAb36x0nswdHRBa9eadLdGP6I9NTaUBOjg3Chi/tfD8OKzA\nePE1iZDpC8ftHYh/MoY7lp2xrBKINSOPa0HVMk6giwm42HV6kAklKZLtARcpbNYY\n/p0GgO5xAgMBAAECggEABHDpVsUejP1CbkQvXA/cuJVAsCbgdbqWFY4LBIUu1QMm\nQSELu3Is8W3AVJFZzbjohzaDY46AMuNqk9BS/C4DDVDiKnGzK6QmEOeI/WfOtrw+\nBJ8HeQvVOBAh1CFpY248kZFjaPkG6q5itvlyjwAySUk2X+cBxGcw15vPT7w6YpBW\nv3NOTO5B+O6tBTehhP7gwfz2dXpiQupbHeA+PAoZF+Q1Ow/Py6m51V/zlIphmC4+\n+6D/YG94s2GxyDl42/49dSgv8GZTXR9ffNaBihoTV1GH1YsNWjgP8+tVRJ2iAEWS\nKUev+tfNT5QMaF55KXvZnbwxL07/uYqI7616IM52kQKBgQDiMy+RwBT4/7VfkLvE\nwHbWCxyfHHzJyFJ9MC1NPdFelzfvF1SR60t4NQ147TfpinwU+D1OapjyhXZsRaHQ\nUnpHyi2khxd+7em5ljk4HdCl5xlY8A+xC1b0hS7SBMahzTFKFcXYnUeE78P/hP/F\nxkH198OxMJ8Bg+RJmGzt3OwxtQKBgQDf7YVHuEuVfYN0uZXDu2pG0SjfYGQ4JMa6\nRZlAKmk9b8kcn6nxQfXSWQXlei6mQpoqkeMOozTIRK1z9/bS3ICv9u4Dsd9mfeiD\nZnb/0U6B/4hsBGIXRl0EwBn4lZfjm5cBLiSVJ/G46tdmtummI9te9ABC7qVtyVax\nXB/mzZbvTQKBgBtwdh7KHEEwU8Ip/n0Zk9DXPDuY6xJXOJpzE6vBCfrdgS2BuQKS\ndm84kE/RBu1PnUm160nt6GvTANCVidGJj8fRoMPKl3EQTz/yFzLVexAE/rApPt4N\nMBktZsaXSbkq+QWxqnRib+CSbUY7zgMhz7KUwapm6YL3iuPal6wrFoPZAoGBAIVQ\nWj3lmZIpRF70shXyeQYqNeQu9dt7AZkaIG/UEA2UhK323G0WsOwHNfx1rlorYq8f\nZYdsYNsuD/nv0VGeFzsrjm5CslbJdOjt0sDgcpXwdN6iCWgD6xMN7yhQnznRgqgg\nOYVXX5CQt6aeFSJlTJAOQi2W+IQRDvzOdOuq0EYtAoGBAJFGX+V9TJ7KPaDZYa/L\n2RQuCK3k/nJiaV6yO3gU3FLIOZ/FwNQLjmRX2mdm/0G0wD/B+P/w2WEScjkz6dDp\nyJaxxyWcUjazsMJODCsNyZqF0f1ZI767BaJBysD1XH9YhQb7iuciIwWFESqY98Ds\nyKrxmwaUjdLroqYi/n8v6Vd6\n-----END PRIVATE KEY-----\n"
+        private_key_id: "aa61244c169721de5c3775e74a2edb20589fd94f"
+        project_id: "oscar-perfumes-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "oscar-perfumes-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
