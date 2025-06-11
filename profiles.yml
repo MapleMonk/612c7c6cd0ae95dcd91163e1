@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "ikcmrrt-zb39179"
-      user: "bummeranalytics"
+      user: "BUMMER_legacy_user"
       password: "9U7!6pS!i5"
       role: "ACCOUNTADMIN"
       database: "BUMMER_DB"
