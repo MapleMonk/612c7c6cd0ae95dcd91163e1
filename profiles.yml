@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "iambydollyjain@iam-by-dollyjain.iam.gserviceaccount.com"
+        client_id: "109840375166825585767"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/iambydollyjain%40iam-by-dollyjain.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDgmeOnWJb+DfeF\n8FfQ72RTPqkBDzk3ETpsMRGtl0KM8/DYt4huobrbBSJhEHcceFwPpN6D3rHI+OuH\nNUMRZ4hK17uVD3NtRbkbr5BLXmT7BQk2m8ZqvyhM6ivUrClA1u3Idum9VpVhwxRa\nb/vQEVdQqjL5e4nZghHup9Zx0gGW/2hgX7IUtkCneo2zu89saHXvonpdnO+nN8kg\nbcEdjZbtb7LsLPuCBk1mxNy8ZvLbDKU0p43Y1UFHZRSfnnOpF0BMELWZROPmbjNx\nMf2ye9sQV7TpQIWbHk9cLAMLsJ8eDjyh5w69A9OQcdvY5m6s1s0e1fujsZa33p//\nsjYImV+1AgMBAAECggEAEAT0h3dlGu0KGNksmkVeJXspo1607lLh6jI8bYzap/ev\ngkriMJSDzE1QchXc46tIqFZSXJt3Q2X6/o4eS3vT7RVNVsi0VeM23Fz9m1053Jbe\nXQZn9Nh6L7TgDW9+ExbWp4lRCzpwCySr1fYjbWgJ5JdPGBuR7caThYRzt3M1aSc0\nw3+yE6fOXJtgwsdKqteHZLf96y+BRFStLOGJNBJmj0A5fJxad5pixVLGpW0Q95n9\nxt007x0xQCUepmxbTzCZCvVfVmyPstFmCVttwC2xkw/jPerPBXYetKLwaKbM2IJ8\nH5ytP3S10u8LKAIKk9piBDT6bcS7hjJErkLcEwY7YQKBgQD+0GMnQ3FJRot+2ol6\nPwsJgWwV86QwbePaFXm/AwdBkILm1IeeES/eOhNg/N/ufJMLMSNn3rIg+xyUjeoY\ndN8WbRwZ0iY+sjYQoeHPyaizVUBMy5pYR6bFZYjVpJmM29/D1fiSrClU0ScFCi4h\n1wwWWzWfmMyfzFID/JYBbcSWLQKBgQDhpYDKrM0GeMWUQK94M98ZbStGrxU4KKna\nnuB4UAkjO818GtTKAotrVqt17oiMGavkx2H8FLXrMR3dulBiYpNkll3DdWmiFGmZ\nRC3aSIPnAmjULp/KeYpn/A+BG/4uBtm/tvwlyDKxAai92V7VUhjkXwT38SnKc/xS\nqw0uUBysqQKBgQCNPyY3VYMugxRANROP1/JeSoeHg4636bIr6UubPip/hYOKQLUM\nQaqvHLIxSPs4T4WS5qIhqahD7+5fymrBM8eVvtWc2oioqFCf15w8eiQxhEgoSZQ8\n6zreoPHAu4UCN79J5wnrA9PFWEqw2HvJ9lKU8eo/lYuX6MJtw03DbP1T4QKBgBr6\nyvdwyeLoNdeQFGru6NIFd5MwA/1+/zAgpv47s5v+3obkPmUZAMqIxl+HcdQujZsB\nK/oUD9xbNxL33/yjhLQWNofUVhkHD8k/mavr17mbVCVqnbh758yfGst5KV8fepGt\ns2BhG46GgEKS5v/inQ9RPSrYLwMB8z1/LkhHU+ZhAoGAReYL/zQrR8Vv60YrlzWr\nceLgzwP1YGUfLeaPch9Cq8kfkoOq5SEI6TNTD02TMOSpCFbUVdbcWNug+G8swQ3/\n+vSXxV2jbUeeARoDmUT7ABYPB6e0aZ04b09zSBgVGQ/ofeDkIK4tBXHIhxsqAQyH\nkjUb25M1brtLfbMXyl8XlIc=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "e61baa9aa0487971d639683afc2e0fac085f3fbe"
+        project_id: "iam-by-dollyjain"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "iam-by-dollyjain"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
