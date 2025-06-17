@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "https://jnmiiik-gf40513"
+      user: "RashuToys"
+      password: "Rashutoysprivate1"
+      role: "ACCOUNTADMIN"
+      database: "Rashu_DB"
+      warehouse: "COMPUTE_WH"
+      schema: "MapleMonk"
+      threads: 10
+      client_session_keep_alive: false
