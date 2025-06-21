@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "pre_SHOPIFY_CD4C68_2_UTM_PARAMETERS_SCD"
+    description: "A starter dbt model"
