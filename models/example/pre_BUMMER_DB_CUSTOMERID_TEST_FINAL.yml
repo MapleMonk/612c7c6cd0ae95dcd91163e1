@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "pre_BUMMER_DB_CUSTOMERID_TEST_FINAL"
+    description: "A starter dbt model"
