@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table snitch_db.maplemonk.replen_reason_split_sv as Select *, CASE WHEN final_alloc > 0 AND coalesce(socialistic,0) = 0 THEN \'case1\' WHEN coalesce(final_alloc,0) = 0 AND socialistic > 0 THEN \'case2\' WHEN final_alloc > 0 AND socialistic - final_alloc > 0 THEN \'case3\' ELSE \'other\' END AS status from ( WITH table2 AS ( SELECT branch_code, logicusercode AS sku_code, sum(final_alloc) as final_alloc , final_ros FROM snitch_db.maplemonk.store_replen_2_May2025 where final_alloc > 0 group by 1,2,4 ), jit_qty as ( select branch_code, \"ITEM CODE\" as sku_code, sum(qty) as jit_qty from snitch_db.maplemonk.jit_offline_goods group by 1,2) , table6 AS ( SELECT branch_code, sku_code, sum(socialistic) as socialistic FROM snitch_db.maplemonk.store_replen_6_May2025 group by 1,2 ), merge_ as ( Select coalesce(a.branch_code,b.branch_code) as branch_code, coalesce(a.sku_code,b.sku_code) as sku_code, nullif(a.final_alloc,0) as final_alloc , nullif(a.final_ros,0) as final_ros , nullif(b.socialistic,0) as socialistic from table2 a FULL OUTER JOIN table6 b on a.branch_code = b.branch_code and a.sku_code = b.sku_code ), Warehouse_ as (SELECT sku, sum(units_on_hand) as units_on_hand FROM snitch_db.maplemonk.live_inv_warehouse_offline_replen group by 1), offline_in as (Select branch_code,addlitemcode, sum(stock_qty) as stock_qty FROM snitch_db.maplemonk.logicerp23_24_get_stock_in_hand WHERE DATE = CURRENT_DATE group by 1,2 ), exclude_list AS ( Select * from ( SELECT \"Branch code\" AS store_code, \"SKU GROUP\" AS sku_group, ROW_NUMBER() OVER (PARTITION BY \"Branch code\",\"SKU GROUP\" ORDER BY 1) AS rn FROM snitch_db.maplemonk.exclude_list) where rn =1) Select a.*, case when a.socialistic >0 then \'Replen Logic\' when b.sku_group is not null then \'Exclude\' When c.units_on_hand is null or c.units_on_hand = 0 then \'No Stock In Warehouse\' when a.final_ros < 0.61 then \'Low ROS , Dont Replen\' when e.Total_replen > c.units_on_hand then \'Insufficient Stock\' when a.final_ros is null then \'Not Sold\' when coalesce(j.jit_qty,0) + coalesce(d.stock_qty,0) + coalesce(a.final_alloc,0) > 0 then \'Inv+jit+allo > 6\' else null end as reasons, c.units_on_hand, d.stock_qty , e.Total_replen from merge_ a left join exclude_list b on a.branch_code = b.store_code and CASE WHEN POSITION(\'-\' IN a.sku_code) > 0 THEN SPLIT_PART(a.sku_code,\'-\',1) || \'-\' || SPLIT_PART(a.sku_code,\'-\',2) ELSE a.sku_code END = b.sku_group left join warehouse_ c on a.sku_code = c.sku left join offline_in d on a.sku_code = d.addlitemcode and a.branch_code = d.branch_code Left join ( Select logicusercode , sum(final_alloc) as Total_replen FROM snitch_db.maplemonk.store_replen_2_May2025 group by 1) e on a.sku_code = e.logicusercode left join jit_qty j on a.branch_code = j.branch_code and a.sku_code = j.sku_code where a.socialistic >0 or a.final_alloc >0 )",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
