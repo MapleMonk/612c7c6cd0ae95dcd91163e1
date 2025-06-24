@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "pre2__AIRBYTE_TMP_RBI_AMAZON_ADVERTISEMENT_AA_BUMMER_SPONSORED_DISPLAY_REPORT_STREAM"
+    description: "A starter dbt model"
