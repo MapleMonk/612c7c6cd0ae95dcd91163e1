@@ -1,0 +1,14 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "DTXDSOF-OW66442"
+      user: "prudvi85"
+      password: "gyrSu6tipgixmyjhyb"
+      role: "ACCOUNTADMIN"
+      database: "test"
+      warehouse: "COMPUTE_WH"
+      schema: "maplemonk"
+      threads: 10
+      client_session_keep_alive: false
