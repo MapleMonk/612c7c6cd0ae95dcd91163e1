@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "earthful@earthful-data.iam.gserviceaccount.com"
+        client_id: "100440557702944845782"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/earthful%40earthful-data.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnRWSmdzububAF\nCdB88HpmVmLwJeGf4D7qWunJxIUv7cRNYGRUBp+kXTNd/vGkL6Z3tzXpDHj9y9H2\nyFuhIxLJ1r7xxVBokpxBoekSNH7msm881JEelMfQk6L3ApasoYTBYurikQahJ0is\nYTZLFVWE+/tfIWkNtM5PBWc1HioUo37wmhQGTsjTn0QuqlG3h6t688Or+GOGqc6c\nlHKqL3gJXTAv3RLviw6/x3Se+LjH73i39Wz0EJNaB4pg0V/aFsY0ys1plvZSLQsN\n+7y3hZ1YLj4h8tbh89Q9M+V9dgYlpbtmjselgeSvrHw0LXmpBeBaqMEez/v2nWFY\nO+beJ5XpAgMBAAECggEARggdJD7uU3wSUIGz6uNJ87e+U5oglS2vWbI3iJTBSHhN\nRDITv0RIqWml/HglVl7m3N91cD2bGHMx1Jc9GcFT9/JzXkkEqcucJTRzHv6glNjn\nDrpWic2zvMVbKPzJ9bvoF4lhGvuqIWWPnTBUKWpktDlFnKYh1C27ZMU32TroVlwR\nznR/eM1Z/GrboWVFms4zAyUK3rGM4siQgF6I2e4ddxxh/WzRiLD4yVWCkIXPpo9A\njVdRqaE4ez+URZYO7sSUv9DSYpQMPo92/GsJgl0KnCKLbQUEqjY5omWJuiePOHY6\nW7IfGpYdhZcj19xRrX4jQiLbCp9lU9ixICdHGW5pewKBgQDbtwB4+4vevDIcBdr5\n7m4PC8MnURqntzpxv/xvPjK0Az/+PYXydNCqk2wu8ES9Sagpy1sEHtSrGPcFRtVJ\nYGMfXq3kxzJYSXjd4ldOdRWqibN57P9M9Y4xLRlG0SD6IfnYudrpXeNb8N7I5oo0\ndSW3VNz5IfZSszNDtK2avqqZiwKBgQDC5TLKSnHUal8EUhiM56mCOSjbgKc4/erV\nLUA9YAubIhwolfiMq2NvspRFFJGUy4R6pyIt0kqfzEpM1x+IOSI4ieHBQ0sdlAHn\nZJBsXJ8Qoy/m/QJp5W22pmc+3xM+cUtSc+9HVUfsVNPkNf1PB2H+Wqyafrp9ghyU\nVgZaVdI02wKBgQCBJJKhifFPrTyi3go056FHNLmzjWdmdztiCt+cn2l8B4EAtjba\nKTFRYa+v80fkHrw6PK41wM1t+BGRx22sYHxCvwrlMvRzklP5z4VTt1xRzfhxTQ1O\ntfKrEwANcPS6MWhCrBNxId92diDs4x0O8mCF3tq3kO/Q8kXKoRN9pl5uOwKBgDpc\negYbntSV+dgIYXOoV5k4VqTMdMbbOnwVrdvzK+aLo1T/+8rb883Z8w5wp1ugSg6U\nh+aix1fsy/8QmE+plDbMCz9dUFwOGzfYZGsenT9VLp4D+7oMSvtb/yTTliantH9/\nWhLJVd1OVZlMFYuZ0V1id7dX5a55zOcaj5JzipvrAoGAThhBtJIWFPJxL0FiULVR\nvNDlrvOUNaPNNcz+DlwELBYkZPCOnQwn6BLqJdUwVXtChRfxmZBpEsMbAhgwDTOq\nP1+CpJ65iRjAUgJalPNuyYIj32aAFL2pf1U/QqYSV18LV1WoPZYaq+6slNPCUH6P\n8zhILsFWkOS4nOjaq9jwXzw=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "45197a637eca8d6cfc270125ea6deeb891df566f"
+        project_id: "earthful-data"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "earthful-data"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
