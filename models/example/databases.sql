@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "create or replace table ..Shopify_UTM_Parameters_fact_item as select * from ..Shopify_freakins_UTM_Parameters ;",
+                    "sql": "create or replace table freakins-wh.maplemonk.Shopify_UTM_Parameters_fact_item as select * from freakins-wh.maplemonk.Shopify_freakins_UTM_Parameters ;",
                     "transaction": true
                 }
             ) }}
