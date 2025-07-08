@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "oma-living@omaliving-wh.iam.gserviceaccount.com"
+        client_id: "102821087023050422522"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/oma-living%40omaliving-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9NrMfw1ATjlll\nLkGtcexjlrXKXLrLJYvLp1bKDRjqV6una04+Xl86TiWF8kvpG4m69Hficv16vQmL\n+xsN2ymEch5shEaHpYlLkxruHb4BSd0KrfED8WMFxdzbwOj0sul0PVvEeotqwGsD\nRZAdlTmdAjxrbmSTb10ZNdV5Poyj+kPs9j+4i86vDnrBaZs7VPUyfu6Mw4i4m9hc\n9YPl/960M/9cTw8G5XH5r4t6niNEfyqGn0CT1UrrhubTeNw1yQcDQEPY+Z1kJHLM\nFg53K6V1rOLCtiMk6Ei7a62dccZ4RtxBhKOPpciJ/7FZe4CY5/IbPDyxAX8wVuwy\ne7YQlUOpAgMBAAECggEADo4C3N5gDkUMrNsQS8h/49A/xyN3bfGDLaT/aNb1k+8v\nAdegAu2s+xXwTnurKbEH2PT9tNJeG78nWRh1hg0WBj1mCDhrmXsbEtBryaXJjB1T\nrsLfD4vVr2e/O7s84DfT+/BNWxGHIGzRPoTvF0t3jVOS9Lue6nVuTqZkt6kfVeyk\nLZyexrClTYNNmqm5qE8vtZ3GdISQsdvkPsPJmRgS90pm7UC1xENLGtpRpfW/EKyH\nehMAE5DF0nScTHktkNPdd32bkCs94BnlHGKLoSVW2++Rbl5XqS58+IUSrfCO0dpp\nXGbMg/7KU4a6r4db3HjovEpAD6v2jU9qYiaWpZqjIQKBgQDuaxrqZN72ADQNOJYq\nmWhs7+oh/jeZwe0mVh0kZuJourOKXHZj/eraf/xhiEhc5yDoH5PRAeWCtc1laFOF\n3oAp4vgLTSKbuz8JqWUuv+g7qmtZYBPEF/WkkcEurQiWch+KGmhixUqndZxUfNvk\nWihqJmjXwYUiNhqbB8IfZP12eQKBgQDLKrOKEpctDDV1rIIfi83Vi9ItUWR6fQgx\nFfAvAbPYjCoHgfDDQk7BXMIuqvR24jtnOeoG5O7pa/mUDQl7XC0CE58EAwutSEV9\niQg98W9DL7eif+8JV/ghbTCcd7e4Uy09HQ9vYTyBLe2duLTRJ6RKCAwPkFVj220E\n2jAIb3qqsQKBgEeITRAMabTnRLa+xpdLZcBhjx7Z1jbEr3F0HtRAJigD9EBME51W\nnrMl+UQODqAJHJ9ocgIgjorUHycQ0RZ2Nn/awE8runl9CaHNeDU5kOTt8b1kDSol\ngib5MDvf4Ja68OmPmMghp49swxW6TINL5ZpLoeMyBc7I6tyezEh9FWsJAoGAEoHX\nTRKYduAP1qJaUClaHMPZ54rsjkPphR8se/u5uFY8Vea+WesmZXLftYSZNGMzahna\nebpNETJmz9fIL1acOv4ylBj67VQSEHd1Kr9dlU85eTISQlWjIthhfz9gmwforRKC\nn3DKJDJc3OtAfXURADVvc9OAE9KfQbvmeD4/fGECgYEAzJ2Ze9HtjprmoBnYgkK1\nN+Ph5NEyCeeUU8C+czGkAIamDLCx5oBbHrBSHieM8vwzddYI65zcMeBWWVnFXkWn\nSPu4DLBsiWp9u93SrjRQmWxGzc8CZJ4kfHsJHQ8+PzEfUywJLDz1jVhOgyK681le\nsM/F0MYP8gsbIMCEw3ARq88=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "398b0c3076ecc9205ca9770c2271c5af757da719"
+        project_id: "omaliving-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "omaliving-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
