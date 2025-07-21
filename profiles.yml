@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "google-sheet@zeta-scene-459108-r3.iam.gserviceaccount.com"
+        client_id: "109922118421305936764"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/google-sheet%40zeta-scene-459108-r3.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+BNL/uRjaENAp\npf8mdLWTMzD3Xa3/ODr9tWD2L5ntVC0SeuTeVwYu8NdK4mGNYTV47VtkGlfZdAGH\nYIlhJoPoe1r9Fx8FXnH5J8RGR8ZcCsNVjnP+d563PiTEP7GivhREzfoPlZ93jg1y\n97paPe0DTfUmvCGFemTao380GxHI+9J7NI0iOpaPRMO11rG9/svNLo3rJJMItK80\nhy+zMB16bMKNlqSPWKlR7cUtnMxtd0YFLdmYYpVk3Tgs8eTVUC8iEoDV++F28wgs\nMy1wT7Bc5yWBVn7hKVDQ6zi6ureYL9tIVRXcrx1NLDyNbX4cziD38Chn8cXSvNtN\ni1RJHOytAgMBAAECggEALngJjaYbcMCp13WT1zi1auEa+XN8aKy8qGzh4HK1pvdt\n6lYJgGIxzeryC4sfJi7+n6sULX/PugsHkK7ICe0cVw9Lqhcsa+iz4KWb9z/4P2wW\nZubmcPWZ5+AXp7KX41+un0DsBUGm9NrVaScx+H2qZ6N571YUsIrE/T78jaaNC+Q1\nqz1tmFaC6TRFDK/Zr0jfMbjEIdL3LNsgezRjZcYN8ApMFK+3xaynBoMPYV4yJKZU\n0sZ89EaFIRqkl/OJ3wm6vfibAMBwKgLsAM+/vErIXfjlZfaGbqRn/pSEDVhn4KP6\nl/WbKv5TOAn25HY+S5rPBzkQYrd5CPB9PFZtg8M9lQKBgQDfvfqmYexkKFIXnz86\nkPq2hFWW6s89e9bT59gLgXr9lwDLJkdQbzkW/uBFeFJ6vDKbm6xktAFc/r692orv\nHN3GlBShNtvLGz79RhVRxfRjHUluHl4ijlGhKCSlAWWw5oWCt2rTdltIKwvOAf8m\nluGR3crBurz92X922nAxTTKrBwKBgQDZaiovwHKQQ6kcvzBSVwAM343INPJt2R37\np9gqoPPa9pHWKfXrj0XhNnGSW5vB6+nmNqiUM/tajiaxWwJxvfKxA18+4Q4WSYI0\n2S6zbb8jg80Bsgm3jxhuRA63mgSEuHjjwZTt6KCxAy8Ynmu5509fxgO8dJFprZlc\nxPUPLKcZqwKBgDKjvARGa4truNDR4SyvPZ9rqjeDI66lxcSmV7aa8qxMrghMvJ1O\n3xv+SeJPTlOrHsUrYcRVHW3f1mn/+awO238jatvmH68DlqkaYJ7mb96y9TiwNNwb\nXAxempSiEVMNibBBNTNxOU3HOF/DAe3I/nrWORrJ2haWUIwk+nmeIFanAoGBAKl7\nKQewbZ4oIFxYbcLCLzfZzRyUqacX6VeTr98LOQ0nyOe6LgpC1aaKWl5NK04wKVVc\npm1hWD9vMJpw56bi+50hk83ggqq9AtNPuigFFUsKI3V+5DRDSDgstYxKc9tCMnrZ\nHM+Y2Csk4EHAvRleR3HRWng+JlzLBxJaNu5tUJWhAoGBANeDaWexj3d09jZHpB5o\n35xZsgZmtYwWwXpV0FQb0RxGFZOcVMCMzKulaLrd1jkxXNRa23+2lR4qfuOfXNf9\nFZIOPIxU28uVJirfM5WIZL8YbWp/ZexvlblGguMeumrXVbTfdkpayJBoVKnQ3wWk\n9wjl01RQvSLzoJ0iRFk1/haw\n-----END PRIVATE KEY-----\n"
+        private_key_id: "dd61f47c4b090d8a2cb68ecb75211c43cc890cbf"
+        project_id: "zeta-scene-459108-r3"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south2"
+      priority: "interactive"
+      project: "zeta-scene-459108-r3"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
