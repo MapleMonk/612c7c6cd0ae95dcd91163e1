@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "maplemonk-test-bigqueryaccount@eighth-alchemy-465205-f9.iam.gserviceaccount.com"
+        client_id: "104105951351689391841"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/maplemonk-test-bigqueryaccount%40eighth-alchemy-465205-f9.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyfOisjHkjPqb3\n6W4ioKJ0UCzzLdB0rDYUTutvIu3OftJsfFdP4+ozL5wpq2DhvpCno92DKEYFWYgd\nGqG8kYqfZJZEFYhhwjWNbk8IcqjymUzytRXOSlqkItr7NcsVi83Nmz/A55nZC3eA\nmUs4KbA3fB5HN2Wf3r1erXEI231AJtvkBbnRJFmR3BVKc93i2GZ/I+Fd7uTXI+Ws\n81mQVa0g3Rw4/8PTvrJqB39WX5MaOjW2NUUK5fLM1VZ7HVQC2cca8tjFjXz1nMbD\n4L+ZAX6jz1C/i8XGcExTt/3UuAhc8HVHCGjasfLJL+9HkR+gXZGTDMTGOFHrhEWC\npratwI59AgMBAAECggEAO6WMZ+VFsiaEy8JBYOcHgxEsBFQiHmtSYzUAbpJgoCo3\njbN7xiHnKRXW/QHdjXMOikczhloWFEGYQAmfVRHaHmwR30zG18x78viTBsKyfOgI\nE++6CsdERSe0wFB4vomKzBP+mSuMeUDgvaP8xBcCYXhj8e6sUmGwLQyPAqO+1onW\ni6kdnqkj1GPqKmZf4iWnF//yFiFVCgelgorJR87L27E6urQIHsjwIDPXdYrIs/fP\nyguo9ACryoinqp/TG08Cp7OsWYs1FFFjPKTmwSkXxVOlVZzL+Pur9CQwQORwzKMs\nWnYGVswWFhKjTBmkvUL0OeuH9vJAJkjwpNXM80/4bQKBgQDnnpn61xtYeyxa46KN\nMlG9VgjuvgcodcHv2oEGTS4uRhy5cHyqM8B3SbFqJ6xS1k4iJTLm1VnH7AruIB9L\nKISWNbzbFKhVyApAt1xqq6XuwmBsjh0QRm6NGnrDMrKJJSR3QbklqiGUoeC57U+r\n1navpwHUmwXrssUNCpQ8U29SGwKBgQDFRpUBOH37Tt3YpiRipj7CV7hro7v7ai0q\npGx1nvVgjQ3PAxyXBr0H7VB23NPuNjF9A6Y8UKuZ/bE3MDp1Pjms9CVDcr0He6ws\npr1Pj6wihoL0H0Qqf1g+/HR0bBSaSedDQj1hdFreZytgndGOQ+o1SglZjQTwluCL\n8UsRFKbrRwKBgQC2OrhW/GqNYMty7unzQQXCezAn9eZX1N4ywa0Fsi+FRLBQzcmn\nd3QT5izpojEYM3fhsXas2mr6uiGXXDqCvWwjakAd9dDDPNGkPR8+5bF1egS3I9CF\n/4P3DEBN11NUR567HUB3+7TT5dCTN7yZK/DRHgp4pUcxO8OBETOzisloxQKBgCCA\nIVpDIVY+xwPDU2lBNEO2SfbJ0dV4x5on3op+NrTCaEz7mUE0Zf4hVclPVkb/fKW4\n7TEwpSTIi+KoumjIaJ4a1uzGwWezM0lj6vpplBVYDckEQamysyolU1Y+3CITHNuS\n1SPyFGphmt7fAUAr5jEDUokDV5X/dVz40sIsoddPAoGBANTjoisp4nyibQ4ltBUQ\nysGnY1Z1UMK5dRgkbByBXi9XrGA0uW1D0PzrnwLnZLkxY/YgOR80V/hJv0fXOxoy\nqnmJgmZBuKOUjjjPXr+xMn4TnCQDVII8+zpOayuIU/eZvdAk8EeP3qvo/wQFXoaC\nDTCKShSqVguAOahX3yLIMEp7\n-----END PRIVATE KEY-----\n"
+        private_key_id: "fd4a9136142d2bb280bdff3edde7ff16f0e89cf8"
+        project_id: "eighth-alchemy-465205-f9"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "eighth-alchemy-465205-f9"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
