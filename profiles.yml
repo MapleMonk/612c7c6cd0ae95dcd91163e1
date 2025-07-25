@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "ugckdhh-yx45543"
-      user: "Zeprocas"
+      user: "Zeproc_legacy_user"
       password: "Zeproc@2013kgp"
       role: "ACCOUNTADMIN"
       database: "ZEPROC_DB"
