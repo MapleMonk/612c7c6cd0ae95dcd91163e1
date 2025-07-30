@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "dks",
+                    "sql": "drd",
                     "transaction": true
                 }
             ) }}
