@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "pre1_customers"
+    description: "A starter dbt model"
