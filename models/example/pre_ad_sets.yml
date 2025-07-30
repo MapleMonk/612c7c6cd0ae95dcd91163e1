@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "pre_ad_sets"
+    description: "A starter dbt model"
