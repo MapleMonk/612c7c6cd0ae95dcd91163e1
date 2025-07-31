@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "pre_products"
+    description: "A starter dbt model"
