@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "freakins@freakins-wh.iam.gserviceaccount.com"
+        client_id: "100317019320927569918"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/freakins%40freakins-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAMNW+l7hIhLfD\nrO6bdZsXZpoqXU1j16CB+tined/BPJ1fKKOdr37392sxWooJRdUpNsJqXVmX3Fc2\nHCjQIiqv+aX/oZXYTGQYCn/KRxEa9HrjPzBeHVqfwEF8bJN0WCzAJpyAtJvVlln8\nVnsjnnW4unpfv6AIp3BTL/AAvAhyfwE+7bBsR/hEdFc6rEm41vYQRYD3dxsvggBx\nuUn+5M4mPchHWHX5EJ3F18wHtdIKJ2pp5VVf+01hpKDw2dW2JqprDqBDKdksCsYW\nnzxEC+ipvRUTlrx//6LC3GS+nZYCUfBYu7mh77JAx/+7EDG+QNDhE043zR+DJYLD\nqD2qoqKhAgMBAAECggEADSxLukCT9QSDw/m6cRVih/wUXQsAHvPMoJwc9X25BHmv\nH7KdZFV/Emf3BO77vx72OVjzgm7bkTkdESxk778nxeAKrLbamnTB95PgpnCwj3Rq\nZ+EQ46KHb6Ox2WFnyfWxO4pp97hpZf5kNJOI5SwbTYoakS2FPpKbdFg4zxQUUCSd\nxv+lzT8Gp6/jeuTI+Zdc+kOh5p5/Nob7er9mxUGWQp99eghTgxMNWHscZA4VNcbF\nOtgFnl4O3Wqg1xV9HnxgOHzDuGvc/SmT5RONwi9FQwMNvRNYJwwkyhUcj//j4CPn\nT8kCXAQ4X9ar6pvvLARbzYBz0fPQqvLph7SbE+e5MQKBgQD5hquuzd43UTd+RsYM\nVtcxR8GiefhMim6DWN0Lxqmr1Ss41J9vKd806i0Tpeo5WURuRhu++r4Wejp1mha2\neX+rCXuIxFpun8KVeg+X65KQTRfKMkPLZ9oJu0F5TqU63URUnEue4YEbSwJe57ny\nalyOldtypKzqQh3/5wWu+PCHbwKBgQDFLVk2dGvPnOxsvaEs1Y5TZNyJVR+kpERi\nyHQ01fWiMNSMoDZRKKKupAS3D9D+009SrEO/hSwME8gwQag2CNHtjQ8XMyalE1EF\nJdMvTXkmFJeSc9dRKFCxERI4bMC9n0Cz6uxy6gB2W7mPbXJpuy9EsgOUUFqlBnej\n/rUXcQXu7wKBgQDUKvNePkQ9yvwhjjImGcz+ZSI7cfRzuJ2BZ5UEx1ZL+oS23Ov4\nDKVzC89qToBbZRDvpwM+n1v0JtgAWRYI8ERi/TwiLbsrJwLAMLqDldXYhwS8c4L7\nuIFIFwX0DLAn3i6UtxUBsoMh3uTUJ7sPaerrfnbLA0TYJ4H0rs5BWgDDVwKBgDir\ns/xmsaXWIE2QowZTyrhFQO1nvdSAMfeCTYPyCss25aAVXAcverJfCcvji9nxuda1\nFDOzftlpxhu4gzQkjNGNvUyZsv22845bNLtftPYw7O92w+fbgnWhxm7ZMvxNDTeo\nyZStlLxv2IFUn5Gr7wX7c/PotGTB2xkTV9EI9v+ZAoGAOlXueIEwR6pyCtafK2Y1\nFdOT/m6lZLslIccZ7R1zE/6JD5MaPTMiNY2TaDrKY3OuedWdWGMHq1MxwZOCG/yb\nyOKakjB1hP47f9HgD19x3qKUrg/ePGHaFTm1HyoRrRcV5WMBdJP0k3G2RLO9gqmi\nFIyPQeMz7syO/lNh34hw964=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "cff3323efcc610860cedde3f88beae2b427d2b84"
+        project_id: "freakins-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "freakins-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
