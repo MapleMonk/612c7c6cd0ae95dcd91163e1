@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table eggozdb.maplemonk.ims_egg_movement as select pp.id as procurement_id, cast(timestampadd(minute, 660, pp.po_date) as date) po_date, pp.procurement_bill_url, ww.name warehouse, pp.epc_stage, pbm.id as batch_id, pbm.egg_type, concat(pro.sku_count,pro.short_name) as sku,pro.id, avg(pbm.expected_egg_tray) expected_egg_tray, avg(pbm.expected_egg_price) expected_egg_price, avg(peq.egg_chatki) eggqualitycheck_egg_chatki, avg(peq.egg_loss) eggqualitycheck_egg_loss , avg(peq.avg_weight) eggqualitycheck_weight, avg(peq.egg_color_unit) eggqualitycheck_egg_color_unit, (peq.haugh_grade), (pec.remark) eggcleaning_remark, sum(pec.egg_chatki) eggcleaning_chatki, sum(pec.egg_count) eggcleaning_egg_count, sum(pec.no_of_eggs) eggcleaning_no_of_eggs, sum(pec.short_loss) eggcleaning_short_loss, sum(pe.egg_count) AS eggsin_egg_count, sum(pe.egg_chatki) AS eggsin_egg_chatki, sum(pe.egg_dirty) AS eggsin_egg_dirty, sum(pe.egg_good) AS eggsin_egg_good, sum(pe.egg_hairline) AS eggsin_egg_hairline, sum(pe.egg_handling_loss) AS eggsin_egg_handling_loss, sum(pe.egg_loss) AS eggsin_egg_loss, sum(pe.egg_melted) AS eggsin_egg_melted, sum(pe.egg_missing) AS eggsin_egg_missing, sum(pe.egg_very_dirty) AS eggsin_egg_very_dirty, sum(prm.egg_pid) as rmstore_egg_pid, sum(prm.egg_good) as rmstore_egg_good, sum(prm.egg_loss) as rmstore_egg_loss, sum(prm.egg_tray) as rmstore_egg_tray, sum(prm.egg_count) as rmstore_egg_count, sum(prm.egg_dirty) as rmstore_egg_dirty, sum(prm.egg_small) as rmstore_egg_small, sum(prm.egg_chatki) as rmstore_egg_chatki, sum(prm.egg_melted) as rmstore_egg_melted, sum(prm.egg_hairline) as rmstore_egg_hairline, sum(prm.egg_missing) as rmstore_egg_missing, sum(prm.egg_blood_spot) as rmstore_egg_blood_spot, sum(prm.egg_very_dirty) as rmstore_egg_very_dirty, sum(prm.egg_handling_loss) as rmstore_egg_handling_loss, sum(ppc.egg_good) as package_egg_good, sum(ppc.egg_loss) as package_egg_loss, sum(ppc.egg_dirty) as package_egg_dirty, sum(ppc.egg_small) as package_egg_small, sum(ppc.eggs_used) as package_eggs_used, sum(ppc.egg_chatki) as package_egg_chatki, ppcl.package_count, (ppcl.package_count*pro.sku_count) eggs_packed from my_sql_procurement_procurement pp left join my_sql_procurement_batchmodel pbm on pp.id = pbm.procurement_id left join my_sql_procurement_eggqualitycheck peq on pbm.id = peq.batch_id left join my_sql_procurement_eggsin pe on pe.batch_id = pbm.id left join my_sql_procurement_eggrmstore prm on prm.batch_id=pbm.id left join my_sql_procurement_eggcleaning pec on pec.batch_id = pbm.id left join my_sql_procurement_package ppc on ppc.batch_id = pbm.id left join my_sql_procurement_packageinline ppcl on ppc.id = ppcl.package_id left join my_sql_warehouse_warehouse ww on ww.id = pp.warehouse_id left join my_sql_product_product pro on pro.id = ppcl.product_id group by pp.po_date,pp.id,pp.procurement_bill_url,ww.name,pp.epc_stage,pbm.id,pbm.egg_type ,pro.sku_count,pro.short_name,pro.id,peq.haugh_grade,pec.remark,ppcl.package_count;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from EGGOZDB.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
