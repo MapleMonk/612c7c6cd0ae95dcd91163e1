@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "campussutra@campussutra-wh.iam.gserviceaccount.com"
+        client_id: "102827356248493193774"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/campussutra%40campussutra-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCjikNxqthJeyys\nixImD44D1+b0PpeW4AU1+jFmcKX3FIdxrMnlOFyQkf3uv1pqlFUC4RqN9dNNfJa/\nuFH56AFmzmKI7phbWrOOVg+3wpWNJscAVIdCmpTl5JlUPXdAPG5pdomBNhFuqjPO\nCer6viOjMHNcPADwWxRbOfKR6SDmErmd45ZAXnOA7xmrWyzu8bCnGCSgAQGkZDJW\n3tWFcn9DKn0HsEe+thoPLQSxAayo6xGW+GOxocsuXEfPphaIkh4G3S2Rqf7u1V4m\nctVXn+i8jwaB5itYXQgZqjO0MS7Goti40GlyAsbUvq1ZHRsWdUEAIyp4sMXb1DiR\n3dNvEgr9AgMBAAECggEAGK48mHJqmshSiSWh0wmk6pKSQckScowTbT55ZxbYDS5V\ndIPZolS7r3vA4V+SgyQoojsbmVIAliCX1Y45HOh1EbFS8IxlhN/u2ivFyns8u6Uf\nAj8/fH88umch9rMiBJk6JoNjpBLnVZatI8qeYkIAudeNiV1q3Ns5+ryHjZqrwtzR\nyzDldu+dRqWO5n6dlqXXB9TGG2y3tsaxZPc9fTWaxzMo7NDCawl3dUbf/Uv69yFO\nD4casfvJavyb/JiDDEWJRnmfXnRKx3jlcXycPWSqP3nBYT8ivWiqZwxUvddFrPBz\nD5V15ZMvNczFs0XtzB4FnNl5CHQRHxQsrkiHiof5IQKBgQDSTGbF7FSgS77Fyd+A\nXkAYPL4V7mYcfZe2JaTOz90tGFLcYv08DRa5eNoR4VpzQcTmihf5qqaaNRsOiTge\ngVzN4ikI5MZ/a6DRRN5R+k5GDnWQJbL0ERPScefOQg/YkWnMOfS6jy56VpvMdYum\neokfdQV1uVIU+dwHQsePj3YcTQKBgQDHFIpE5gtzQEwMLq4UdFcdgOoMaTASFdj4\nLsb2bhChQlvmyb8qgBj9nZoBKLgHWr5yxxCT06RUPuS3kWaj37HtdmhIcbpZsKOa\n9vv9PI2NS/ZeP+wJcBFYWLSRKJG1jpUGip8hHyK0i2OWR18PA/PZ7WSn0hgNmzWi\nFYec+cBBcQKBgQCLA4okZ7cBR1DSekHOH3+LBgw5fx/s0XDKLVQmie2Q87VCjgUL\n/zL4Y9TzYN5jtiQsqTh0B8Sdx2EdWMPKFoV8a3XotSIp9MGX1EiKNEYttT0tjl4f\nTHKn+Dfddnn3FRi0sdL+x8tXf4z5uPIZmIKwUrDLQzfpOcmi2xgD5DeVOQKBgH05\npmAAdGNipnNjSY0EQWgFlzOHVv2JUJmMkwqf4UYOf9CERwNs4Etnv1/LRTcbFYEN\nRpg2IL/9b9EoXO/n3fwI5z/qidWxDriDc66vUDr49VgDzW2CWObBpZNJeZ5CuesL\nd11WQHZg15vH+TtwuQr0EMSfmxGz9+CkulE7qHuBAoGBAJJ+EeIA684z+lK1uDri\nFOWASSGKd9tenqgf2FT0ocvYnK6sguR/kk+nirO+ay15AKBa2bnJ3GCUldaoypqH\nmoGqKkVDvMN1odu8AbANXBz0VyXFPMInZy9FytZSkGSC4IdgSUcq0UvGSF2XEDzU\nW2+kC0+oLApcE/vYqBSDTUAP\n-----END PRIVATE KEY-----\n"
+        private_key_id: "7fe69ac572f2130d47598bca3ff30ffb27d0bf8d"
+        project_id: "campussutra-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "campussutra-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
