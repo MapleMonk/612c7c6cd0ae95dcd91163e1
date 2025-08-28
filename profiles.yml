@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "ras-bigquery@ras-wh.iam.gserviceaccount.com"
+        client_id: "109218054150950495652"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/ras-bigquery%40ras-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCSTlYpkz0NllGg\nEGAutNh6qWW66mVl1Q7gmFyAe/Z4wi89PNkt9KOhgaluCBkdLPd37wtm59rqC+Mz\njxDW/BSornJ+mNW0e/8hdE7jwJ6kmwOe9pN/WgwFY3TWhsOwSrMyUPS60JHV/b+M\nGknfsvewH45FpJfubLeN+nuBS85IWZEAQOGH09jGq8ukqagCmlPCxjdtPA8+Tvln\ntoJ9BmwoXleDssEUiiwrNLEPfDPhUFHvQzEppeuQtNTE/C1CXlZlDyUSVzhit2lI\naoDHl5xQin4ASM+g69TUbnuRoyOzDWLotXeFTyhT76Jb2ELo/voUAcqc64TxO0Ab\nsoINqQY3AgMBAAECggEALBH2uE1GvboC2mE0Z71H3CL8psIGSxdThOnAK1+rzZJI\nonyautIPHA4vmBpOXlB2NqVF3PiII6nzBUvZ+bgzDOCHUoT9EoGrR0t+m/Igl1qu\nS4rgwSLBrjnYLuqnNYo60jQ6k69RzpDByxT8HasOGvpWY7oBnesXm2fRHhBUkcwc\nUbKeUYI5UaYNAboo0YFWi5uNjcA2MzPhD/kt2ySGhSvJbN5oWHY4PMAHRaCmgeU+\nhhmD0oWgYNPtzk4ZESuLZ+reM8Rw9BxcO6vTUfSBS8VAnTQfYtuBPatxnYxlqOHP\n+h0RrCRtIh0zndP0U/Q1HnolJxQs/BiUyknQGimS+QKBgQDHVilt3g8EaMDB6p84\nMfV7bE3Nk7Dy0Joh2Q4ISyHOYX1VUMnVG7Ub9/ZP0tt/g9vjqzPeU2mBzm1arPbz\njZ7ZpQ0PP/DTvMpwv7Ic0HNDAXkuuqb5v8kkumHWOkEiE5AppIQgWifQfto5LiNV\nIETENKBBBpGaqTDb0uCMyAPvTQKBgQC75RwHfve3zNdOJf8lyRGRTNV7dM/AP0EW\nOGEaoUhbaTHRKJo+Fi8xv6Tgyzy1AaHQJLPwhsaP062d/G0HZmNHHyMqNlKRnSEc\nRfXpFYczPpC28dmJvrUA+wIcuWhEZCruVq81xf1SyzXwHAl6TkpIgvfT4LEwRA1W\nQT0ypkyRkwKBgDI15eGi2a2GpWczLj/9dZRNR5vM4/mFyg1Um1BDfJR7whJHc0+W\n1xvgbc7Vkiygjjbe3QXXhPAJi0oX32yh861nAc8hkAwFtgiIgNj5OM9cA6Zdpcmr\nIYN630ITEmz++IVEx3NOwlCmY1mb4ZKDuk6h4uv+N5b5nzEAAUf06ejRAoGAM4u/\n68KGPNMiQdskqv4FJsJYUp0SHWB8/5aJ9R9H1WP/eazU27GEUvaLSewXhGSlOo/H\nGXYv5OciWxQT6RLKq4k8QWlTr4TWv4Xl14LDa2h/lOC2WBaMW2+A/dZTZ2e/a1E2\nkd72Bw+ehXd7liUCNfBQAr1CfsY8jmwpWMrMeKcCgYAXTY3auaByx6ymq7tNcmg4\n2643VfXeL/cXHxQdrvJA8fKXdOQeycxxSuotFF7xU+8L5eoeiIjqJXIWBs+9fKiN\nVPMC+hDIYzthhbWnsE+PvYB1HoiUHNB/NFSCpnlEuNf0zL3olVbfdP4eO+jc3+Gn\n6fZuxW+YboUKIomgSfMn8A==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "cc09594240d50df066a5f29c17d671b6cb1e46cb"
+        project_id: "ras-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "ras-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
