@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "neshanka-private-limited@neshanka-wh.iam.gserviceaccount.com"
+        client_id: "106083624138824477692"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/neshanka-private-limited%40neshanka-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDFHd94KABQuvYB\noNJmhkZv6e3oC6YSc4rYm6QsE6zw7XsTEjBlih087OOq7/Rfqq3nr6Xc3AS9bG++\nMzvtbbXGnIii1kQq7X3El09eMhYWj5ulym90G1xAumkbgIcxlyqcbZm1X/fEbmv+\nwl532P9CVEILW71sRgF638MvZWNj5ADpGbpUlrMCOcBB7kbeIBXyXb5deG2MqAg0\na3YcXnVser0iu8inoe5hA5Stmb8nSAwDkqV0y4ATwELrsgZy3mXxL4CZO2Zi/jkn\njhXlszbIaDdJ80qqOfphJJUrpcOt2zef9fUk3b/NEw3NV35c0jxZ3VkOc6n167av\ntAEJrxzFAgMBAAECggEAJpwsWpfTP/zvFPCQZd6lS2SR4iLt+61AJB+Qb8XG2UZb\nFig47Jq6EWYBTklEH70J5VjlbzZ1gzkLRkE42s/jjCy7ItI/df0g5nIQ7M14wCCP\nB1F4tVBqqI8a6XUqhg8rHIrnUbyjholug+9Em8sYbMCeUyU8HEo2HgBYdh8w8a6u\nEzENzO06ibAceGkwGy0RFyOdhP1elJSVk/euoEwHv9RNH5HknzAuZ6kou9MIM1E4\nNRmKNOWkhYXS+fNYYq75uflhFYBwR+GHsmBh+rwyhbauu0dPlEtIsZTfGTDQuqTI\n8+B14GK+LiEGewTimHftzRamB2LU6GA42pd8QBQZ4QKBgQD2QGlQI8wUOciermBu\n8QdOuOzejgVsbc5pePzztPfP6iyWXVOY0p/L1C4wQ5K+AFT/XMQ35yjZlNM+FvCS\nWq0L7J9St4xu4CmesyKncS26WECkcWTqZUGbLvaOlLRpX/WQizEGwNX/h2Zo66q1\npQrRerspV2Wfmgm2R2wSgqZR6QKBgQDM64Nsza1qVhRbLe9FgIwPRaGuFP2Nb5fo\nJh46xXnUhBRCflofqD3e1Dxi+ojJ8dq/yZIn8huh3apDCShjpDiFz+7nfMjgVOgx\n9WzXHDusnuAcfSO6KFDWHW2wKID1kPkQiwTpRMSsc7eZpzJYfsX00AId4sqMt8tm\n/pmE4a9ufQKBgQDfJ5PIOghws8SoeCGPqAEVR+Pv8wfbMM8DKc8hEvgXhIEPaled\ngBGrZwbMWhAa+rYMDAcNGgAc3Q9pjuRH3MBAtBfVn9w1hhJxbKiU0K291sgNvWzU\nNRp1BOQOZZfwfjNM37Z4Bjxnqk4V+qrinUPmfbAqULcZIUB33NWFGLycMQKBgE/q\nEMjftR9hDnM4iLVcGkLibtkKyo7b1CvuoZ9d39Mm5xe/Wro5zFcYAay/85R9w0dD\n/sGhQ3FulrWp3pxtMLXOj2arXVNPCXZiNd313rfFBbVWgBZbHptBwsMOKKybquXu\nsS2faeuu/QzpDVNBrUV50TmCdmdGTgaOh6Qwt0+pAoGAPChEpgnMpQJAIYtwo+/J\nJ1yTkCCOzFsoEdZsZB6xNPvdupZaCJ9YxeFijXRiEAkrOTEcSr/08EErb4qRy3V0\nPYZmsK0SEGiF9LgqweIlI8XQyXlrTPa8N3J0NFETzRamQnuTfXqc0mg+h3L+t/Lf\nZ5DX4gOlJGWsUwl0D+14i28=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "5544e83da5fc015e2937531e35c5cb861782adbd"
+        project_id: "neshanka-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "neshanka-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
