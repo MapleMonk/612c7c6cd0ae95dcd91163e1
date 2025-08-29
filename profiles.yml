@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "tvarra-service-account@tvarra-wh.iam.gserviceaccount.com"
+        client_id: "110358191221876228224"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/tvarra-service-account%40tvarra-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCUR5C1OqqxsAHu\nYdPcc9bx4xpXUgvnBcNp8qYnIaeAdlhG6Xj+O4LCT3AZDbWsy+mOCP9yUJD3U4P6\nFMtXirDfAvmovZ9TiIinvkdTOEx1TMsaAyjTLdzcSybft3beKiBQJq59htssnlHl\nos1V/gwQFhs/MBOCZW7fgpyQCEqdWgvbP/vplJ/hUHdRRtp4bkprv5t16QiDAOaT\nkn3otDOk/dapblu2Wy1fzGFg9sr4gKY8boIcx/oDaHaMq3MGgiI4rGiRMs86P8oX\n6eiFBdKx2QxCDrrOmPAsWfKCG6rGVvsD9GF8EsjWwU1OG0RClihlRil/M7t9pvGk\noGUSgNrhAgMBAAECggEAD3bjRbNnp/52RRlY0i4WpcWMsryw1xhHyB3xbDVbVc+B\n52tkHgew3HkSdNp0LyBZLGIN2itC4ziHlCZlCq1BQxD5XrrgCgM8VVpH8Ar4Fme6\n6uyXbmbjGOqRlFV7BTKZiiJuolLVOvMMEYoIJkbHlUno748hCcFwbckecPscZQqd\nbmE0jk5pdZPLxAotGY4BfimiasQ17uZPIjJ/BmmcroMHGTwgiktWpy3ycuQ8p3RR\nCZYzMzhoJYwYMimc6osC7AH/sBBmS8Fx+3mosxnf9kJekl1LHLzs+ETfeC9gpChJ\nwK0rFZXui+whhVwLbIQkrYzc/kNkV06Mp81E03QC/QKBgQDNJAzguzkZS7TD53vs\n0AQGoMSCiXJTnFXNnazqt4BG5B1PZqLhJxvoYG+eliN246+sBLmYJXxqCC26112b\n6fZHXx7rJsqlfuaXv246wa5YZMqZVwVnUFDHtGW+wXzYmvTFRRdiBifLSPMLi4ZE\ndXtIIJnFLWoeRWcZe5aIC+lnkwKBgQC5Cp+52w93APrlkhh9rf3oZeyn3yTXxFBO\nnRGwEqda+gsNtkIHq+d6iaiVERBlW/sFKGqc1PbdU4AIhG7yaOsVbXZt8daaKexT\nrtQjpAInjznKMlElRgYssZCCN4sgZDRU8kDlvR4vfGbKoxlogJojb20JTQQ1G60G\nZzco1/eUOwKBgA1ebxRqPyNd4q7ttA7P06NW8NeM+41lX9Yhk3ZMdSipjxtwlebU\ndKYlOsD8Cd2iov0z5aB7uOr0E37csDYL/kfSdCJhCc3VQlPbXuSnYKRUFTv/BtQf\n0NPi9sqCs48uMgt1IDv8KLW/0E8NTbfCbEFcFolaF1NXtItdmYbON+zPAoGAWRJn\nHrT3Ncav/3Aa/+yQK51clNZSStbB/YWYLRRdoOp6Bai1EjJKo+69yrvDE7d6FtqE\nr2fISXPXTsJJEcE1YEQn3Par4dvKWeHvVhStwNMt80nTS8jwUfVLZZNNElOJ6VYP\nrUciz6LnbCWkpmw5RlNtvitnmhTvbgSjRbLoB18CgYEAv9xPjK1EHTkN0VjQn+lv\nET1/uaPN2XdRnxVVo79zEvpKwYML0IqNVhA03wwcpjTCsgNorEMrOMxtYGBUfse8\nkhVa0BNzczkuS6ce2FCj2xlxiJJ2m5ZZ0jRb0oAyxjRnj9tns9LBuUbkLuIOAM+B\nWPJoF9xVH/s58GjBEKBEEUs=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "c3dc340fc3772348772dd5446f4457566ae95d85"
+        project_id: "tvarra-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "tvarra-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
