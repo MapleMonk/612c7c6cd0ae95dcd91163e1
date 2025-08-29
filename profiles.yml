@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "eszett@eszett-wh-469613.iam.gserviceaccount.com"
+        client_id: "106343574378371008676"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/eszett%40eszett-wh-469613.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDTNJAd06ryVKVZ\nYHlwwqwsWfeCQDXaB7pfPyg8eRqWnk/lWKcnti7XpF+ySX7+HhqZiiime8SLQmlY\nBE8JHznJ6B/2nuDEqo1ueUNQsSW0eqJbLkQucWwqt65DE1ZNYWyDpZ0Wtr4PZAZP\nKdtKMwNpoFSzH1Y4WlWaN9K4X+QakaqWJqAnq4PhasAwsFwhK6ax2QuAv6az2/vu\nTy+h0UipH0SV9PrXF4jLjkR1BUK7AO6Fh+Y4Y0PyGv7YcPy30JSzSq8kPcW7GIcx\navi+EDL7fUszXGbvAgyQ0PsDysFRF5sedETnLsend2w3tyelrFZBFXO66tP/lu53\n71nTRCM/AgMBAAECggEAB+t1KgEpbFvbNW5GL4HFRgZ7nwE8Y7gdd3vdTOM3qYU3\nNsDrx7PvrrtlsUBLSEklszM4kgGbHaO4YooK0qs+lgEjzbIoeIdytT1L1mdGJC3j\nD6s8+EbdiP6JRM+hUVaBZLBdox/oIZidGfPWWsJt8tSFyI+4wnU0t4s3Vh2WZp6V\nNX/TOWQ5aVB1kBaporuGnT4uF2mypIriXzwm7axdQ8q9G8Ubr9rz1jJUdaKjwgFZ\ngbF5WG8tzvY7XAL24+to6v/F5iSf9dIAGWXQVY9Cg7O80ipgPbP6coftkF+5bmPL\nDEZGXYEHGV2Vlad2fRsBoTtdzHcFqD7x6GwieRZJEQKBgQD+xxUNG1km9KGez1oy\nqbZF0Nd4yrHLPDHBIxX0C8es5My4Sne8H5AfvVJw+10OGpWKppM1rwMD3wlurtOk\nyycYWfuOcZp9rBHI3IeE5+oZI1Wj/PAHXW+6Cu7nNbSjsN+3U1vhUuWkvEpjCfgA\nIMTAYKgpG5YD8EBcuCRRHIob0QKBgQDUN/cXepeNkZj20klTWrDFlY5F7XFjBVWm\n29YY3P/f+4hc2Bju0lajbYhgHAyV2uZ3gK7kHFvMOMY2z4Zvoqtgs3L5HyEb8rIq\nQ2WXAeQMg7K4C9lYh2ReCGwYC2m7sXzA1kKQSqXjzV0rAmgazZ3O1VVG48pOBtZs\nUEYSHj7iDwKBgGunW3HKWIVpYNFl9ErsAyTE9gcIPtANg0iEtsYEJD8d/pLwhF9t\nRszihm9PBybqfL21XQaWCMQd/jJSlQNRBBf6DZ1Gy2zGxE0HQgwaooQ0tf8w5Yt3\nI7qM3B2+R7HTDvS7uFshV/+fwB7RG4WSUxCmxud3zI+leMy00kOjt4fBAoGAS5q0\nmNS/8VuRlz1LijqhB4NEcH0rDA/2d7+SAsGZFv7RkeIa39pnq0l2cGcNxMV7nc9m\nfzXrLlJ7q0M7rcHSNF059K62aPKJrqzcIHQ3/o1culzeTb/ObgGqINbQEGInA7xR\ncn5lo0aijpQI6qOeOPWfr+WvSST+dxASJppH5NkCgYAk/SjOw2WOw/Mhkgo+YYPr\ns2XffumAS33YslLreVIQ7XnlBS9DXtigQSHymeQdQ4zIGEdTJ2hx2l1+j16yK4RC\n4u13tueZ9KpafLZHyU4IdaOCTe0dybcfPy1g4y0sXZbNON+wMnn/UnUc8HwbtxkS\n19pWMLW1U+FXPhQ/kp2pcA==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "775822eb367403563cd4de6f315b81de8256d48e"
+        project_id: "eszett-wh-469613"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "eszett-wh-469613"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
