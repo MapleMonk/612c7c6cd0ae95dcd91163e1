@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "fs03183.ap-south-1.aws"
-      user: "SnitchClothing"
+      user: "Snitch_legacy_user"
       password: "4MClothingLLP"
       role: "ACCOUNTADMIN"
       database: "snitch_db"
