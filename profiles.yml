@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "habanero@habanero-wh.iam.gserviceaccount.com"
+        client_id: "114819623963250410116"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/habanero%40habanero-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDe535wQVlEmw23\nzlhDrw3tubDXlu/9Y23/RWnbJ1gKEnBseOKtk+TCPg3KZYJAYwKnGkDOz+yAutSg\nSq3YrlGkJMccxhk3tGe0PJzjveG+0gWhk+ivpMLxm7Pxa2xq/LHbqNHZCNUJ/BWL\nXD3PRm1ODyOjpTjzUMDvZf0bPmTg09mCc8WHR26X1UPfVpOhaePvm/o9y1dk+Et5\nHR9ANM3siiHte7ud2POtjeZeHSfFGeI74hKvIEMtFZZLHFV7jrpfu+pFnN9toIER\nMN4KSl0qKO0wvo5qS6DpCwj7VducRpySWi0P0HWPJ29/qcBadqvbgkIAMDgSik0t\nQAR5jMinAgMBAAECggEAOWplniKnDM3npa3H/H8t1ksbaxzc6mbfIX7Oun2S5t1D\nCh3FPbK3nPUA9l5ZQ559Q2+2u87A+5OkSzmROBwGuYIjq5y3SCr2/20ReHQjntRY\nUPtZV0zYTgWuPwRNo+09HviIPSBSR8UgA4qZ/TcF1rJ9mpxnY/0sBT4/CPJ0Z5iO\n2rf9Hm+2tiKVf/zM8wHpEen2rXFENoR++OdVq14aj1dyW6xLcZv82COF3dyO1iST\np1VYGxWrt3KCjz00A3TX5EcUGrCAHKN5tGLGup+zhoMw7o4VOmLBYejCes0ziTPy\nGCJlsXdDY5P+7yT1AzPngG0MFUlwpZr7vAC/QZH+iQKBgQD6+6/t+NvzhgEgDHPK\n+8h+tkCewm7zkNXOzveZVVi7Zfh10LE63T3X8w7+jJ9VRh0WnvG6JOfyhWcM/ru9\npqnaXqEQ3spH9yvO2IuFJx1YVfDVsKB/8Guo8Kc9UQOuXSqzgl0axhBPFv1YXRmS\nGC8AMEskRs5Rg1pXJLoTEG+UdQKBgQDjXB+blmoRcqcPW4huiiNy91fcRZoWGKOr\nhLMYO9BSE0jmb2ZhyXSogMmT63pS30N/YUuGtfWL8sKZd9A73HaqdHcfUNMBDeos\njyuCkeKSXEiZh2GW6ITQwjvI0ioLizb5sn0wEv2SFR25IAwm6qhxWr3ZZp6EG4t5\n/8foH/RVKwKBgCxht2GIgTSV/LrzGMLLNVAa4GByl3YgpX5VoPkPW4p/5KjIx55W\nIyp9w6gFq+NDa79lSe+VuSJsrqVgokhOIXkJBMhb7T8+mRORvVJFcW3+fID9I9Sb\n6h3MuHYiTllWBkgKBHbIkXe64//tLqlj92O8Jn16u980MBR63SCj5mdFAoGAOOiS\nMMuReRSNpFZw69o/zUMEBuqVCvrX3NK2UVaHakPRd3xi0A8w2AyEaDYExEGGD5g2\n410gPQtiki9fO9yPB1NnjbsZVaY5+zVK2r/RSnk24tb0ImXI+MflVvrj80fBVvbK\nRwI53hrS+cd/wy3xQ45G/uekvcR3QO45B20YJ0kCgYBwHGLFDaUHbGB2taB3ycb3\nyxrIUz3VQZHdSyl0sq8xcBCWNA1k055W3BcLCdf5ytgvvKEDJgI0ebE7FV/OPXN7\nOQAvV4SqVY45q7abyT+ub1as4p/XrXaVI06rl5QZuR0kyabEgrNN0YqMGMGLUicb\nuKuGETJssRXCd3a6Z2P5Rw==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "51b2c7252da36721618559604e4cab0bdce11d24"
+        project_id: "habanero-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "habanero-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
