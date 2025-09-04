@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ikcmrrt-zb39179"
+      user: "BUMMER_legacy_user"
+      role: "ACCOUNTADMIN"
+      database: "BUMMER_DB"
+      warehouse: "BUMMER_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
