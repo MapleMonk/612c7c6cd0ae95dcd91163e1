@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "symphonylimited@symphony-wh.iam.gserviceaccount.com"
+        client_id: "111320083868610579637"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/symphonylimited%40symphony-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDKEbcUIUcL1wUk\n6/hJm+42Qm0xd32EEFEyuNw2ccwdGFLz+LFSKK6lNzE+AfwhKnCT8VC7339glNQt\n8SCclq25+yj0gtZnQM6+qtAl0GMwmTeAnwoKYz2hXS7GuO+LMOEPBCKakNpb/Cmp\nMYdnJjgtsfJxYNIQLFHiSZ44nZ3CnCIUjh5xWW+j8H8EkRUpoJ1lSIiYRyIDTwaz\n+g7KoELPQ7Sagz/ezetxpBvVnMQBufd5PB0JZIW3wEDFI1KzI4skWAWl0y7R7o2d\nrJFDSucEd0vAIs3V3+/Znj3wYbZWGHWOzEXSZ026e+3fzE78OcqULU1i48hIuXh8\n4ZbeTo0/AgMBAAECggEAXOr4fNEwkkk1nFzFt1N0no69F1oS5X97Vw+ac46whVCC\nFJ3vLBB4/o/6nMDc54NUcTMuJLYJJKhLSTTwAhFnoXXUx1rCrIgoiZSSUlEYy2gp\nFYQMYepwlJr8v3Sa8i5vzy/fmaOyRUoW/i5ATTZN7vU8vtX+wmEe5idkEjSoLqw6\nzEtoul3wPSYW1h7PyjfAVoKzRC7uwCacVBop8ob8pD2+mqKHMM4Z6eMQr1DWnTdG\nQqrOxPqm3oCgTWyD3q4GQTKdBPXJX61N3HRJuJvYw9g1v6NKThxPS4ZOezxNCHga\nKC2nVS2Q3vB2wfBcxi70qK+uF4iqS1mUWdI+72YXQQKBgQD8mriHu95OzLwebSA/\neNsyXPDJYCqWReo8NKCatubArmRL+PLvV+/PAbMyVBaT7mXKMinLF512k23jA2l2\ny3ECFl8IkhtwfaKcpfZvqQmMsXQUmSSrHlE4zbvuChaC5/pitgxiafcuaR/EKG+J\nQoTXCk/hTyW/1jSuA4XKDjRX/QKBgQDMyRbar7c/3xoch32PjGrOvhsuReNvi3dx\nCnk051b5tUYjT2Rl1mb04q5Kdm8Zdjn7uCVEsb+edOzHPrqYdoe/XC+BqvhAFXI5\nDob7xqcko700XgfE7Bnqj3jkLBBHTS6QtB8aOfsL1+gb99zROQeQmAgK5ywK3Bfs\nfg9Fsn9o6wKBgBKvn1brHtbVblUR3YDUf+KJ3YYIBx52rY0ml3rabNd0DxdPoyjx\naFv31Dm03rayu/TpIQ5VAOD0pvxUFEklY4a0APOxWzZHFPBhlolMB9jQh7W+XmgK\nJhf9oBlLxb6JSoxiyye8jvxv6lmoZBfTQ+BkcuRH5pL6VYtJ12vLATRBAoGBALrb\nFY5vXP7bvIChpJER5/dDAZwkSxVhpZewnc4G9JaesCPR8mL10jXKjIwHKvKJrPih\nGuhmY9jbCZ33/9zT8qNKI1LmxOP8bZ/gQIyFw8cr3J1m2yH06OTdCsrv5d6Zb067\n+9E7bHVvCSxT6tnBdsSZ5GTGcKpsDyxMDfVjnNwHAoGAdrBETRvBymZbJCSzl7uF\nxIO0UZR1cyVAbTX3t9V9098Z4lm402/pUf5aXd+0CVvZXzxSDQeolGPreP43DBhf\ngbNzGlQ8n/S8fLBF+W31w3E9hJ5JzO75RnQ+G9v8fe87vUdNwlnB+nR09s2KLjq+\n/6srULQ2OEFnFCK2RcOOPyw=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "4521490fa065df350990779946a2d9cc6cddd7b3"
+        project_id: "symphony-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "symphony-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
