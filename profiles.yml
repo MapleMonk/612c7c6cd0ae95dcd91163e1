@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "bakedbeauty@bakedbeauty-wh.iam.gserviceaccount.com"
+        client_id: "112389531905356527620"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/bakedbeauty%40bakedbeauty-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbB65Fem03SVw7\n+3JzX9LBC3dc8Ccsve9aU/JX51OICUuPHq5uc9lJsz0EgfL0VA0RfXWuIePZOoYZ\nuBqHID7zn4JsHMBOgniSLmWd/F8HmUQehOKejyWKuKB04KZ1meY98NojUjgNsDib\nsBYJBE6EoHabCpX8u4FZRJ+mUxQI31PpACZN5zKxmfDQphn6pPxOu+g1GdvJPYxt\nMMnOI4V9pKkqJSwCXxF1khBEMfsR71n9FiE9gb4TFmQ+LFA5jwyBMjrEy/8TFMNr\nLqeiEA+J8gkjybJHYi9/EB9VPtonnzPY8zIpedLiPw7wotGTMuzeNSEolLDtC+3x\n7jGtFkGhAgMBAAECggEAGVmgmc2/P4F7/Xy/HLub08g5FM5+SDtE7TxPTY16YWGr\nBznmuCWsIc+vCZslNJJYT1yJDuIBAiK4A9jHKDnLE20UHiFvP/7xh8C7Nd9wW7up\nUstwQ6f/cThoaNKZ7X1GFMfwJVumHW52hM1q5XkEQe0lARGG9cD5aeyreid+J38D\nvV4a9aalQnsnawrzqctqhVbj8XDsImxFn4G/i2Jhr2kNCj3btS8r1ePo0k4KEPzP\ngkgGVxW32wq3wBeYYy+oOcNmlueVg509e+bWOjPwPBOKLD2J3ZOtQvt6kR4GD1ET\n0uBpgoVMMbUwqDa6asubh8CU2ttg/tr+fLuDalY6mQKBgQDy5QCMiWqqEjkHZFMD\nmIwfA+FFK712+hAKyFNiRDOEmN/g0y8AbfaYrr62pyDP4ZlIEj3rwD3hb7GqjpzJ\nQJBg1zEYsscxU4rr2VhmRyPjT/LQPHI4CJh5iDCSqkIs92cFlHP6Snh8YwlbxT9n\nrmfUuqZTGNSfBBgLTL+IQG2cWQKBgQDm2QxK2LZEO1h+mM690G2klEBQCrpl/MGl\nv1RUiYOPwLyMl4MuOTTP5qGUALGxjDePU3cM7Akkg2mgSnidn0oQLeVt2KeCD40/\nXjjRj26v6UHOr7SojzR35X3/NGPF/M8XHuMQVb7DL2x/fQi7Dt/3Xi638Lequj0K\nRee+SG+GiQKBgBs7udgIAEGZUXOWuAgLLoq7sKJEyTVxzCKpW1AFPZF8Yn2esAJo\nUeHElfV8v50POlRuVyr7nvSLxWvOGZ4m8wkol4ShZtwM9eKDt/mfuFJgQGVAob3O\nmOnnbyrClDDefFqPzoEdoGyx3fbAIt/JGjMrykI+4ngByYBa1o68So3hAoGAbv6X\naXlvkbkTILOqXBvWTBa4IYQ3AYiZN2+aRZdk+X6LafIDsfrxiLD0qav3xE2N/Uz9\nZeorrzG8XMTR37/SJZtbwAg26lM97+UG3sPfTZeS+6UB8TYB3VAr18RB4NVgYVaJ\niLYhpcmsmlPtGbvaNh9DyU9lkCJB7SmVdqlvbjkCgYEA4QetKTGYrP5BltQiRjcN\nFN+3ryjAtPJtbwMHQXZg3l+zBYI5SWHkx0nmI+LD8Z2ZFoiuwyAVKhxL35NASDje\nk3yjllbrd6t1lTkgYAQfMjjB/1PEHo5lEvF/nFnluXB+ERXkqfbDEA0idJ4pi/Sb\na5Qtz2cx2+TgyDf8cQhlelU=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "40cbf9a774b98b9e65f4027a30e91d4f804755c9"
+        project_id: "bakedbeauty-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "bakedbeauty-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
