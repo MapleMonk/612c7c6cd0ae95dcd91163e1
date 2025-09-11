@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "healthy-master@healthymaster-wh-471810.iam.gserviceaccount.com"
+        client_id: "114238956332841713932"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/healthy-master%40healthymaster-wh-471810.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrO5OE9LzYSHPw\nH18n3Fw+uR+Djxu4sbnkfSPJWkZ8576fG/Vt8iOaqICy0iknWth+u6u6t4kIzmUF\nSzhEIrOyLZvrtWYRMqSGraDLkrBnGeQ4OMQOIRRy9IjrB/0sJv2Q3TD8Gjm8Gfkv\nOUTS6I8B/0q+Ht84jQvjGdw27oDK4EavE2spkJIPs2RSfpVPSKG0rcjKZdM1n34e\n443/BwYEXe3cB8SNSeDJu2jNQIOwiELAtCe5+oLeOYuhUg013aq8dUewszoJ3JLA\nOUCON0eXicAJNgw5Fed6vqmd+ft86paJm8eHXXGE1zwjBXhtCBC4RAFYz73qfc1s\naiOure/3AgMBAAECggEAAXLGjlMCSei1pQFO7RJjFrC61de0X1KO2kzorD+pkE2R\ngjJarWxlOrNUK1m1uWco+kwcvr6QrSoPFrAKhiEDrhfOqtFk+fOYtVRAo5grtSOL\nQk0l82H6P01W3yNj09Icm54TV6k3yyHZHA968oxpsUBMjIvMTY573EGQEvLff1fK\nEwscWDrb00ENaWVizo0jI0WXzoyfZWBmqg4CpFDNZoixTARMX6dpkEcUS2AqTIed\nRtD0QKVpXPl4uSd2t72w+4dpEMn/6P3Klty17iJAwZVIQH+wQDnimHYzhbLzQ//4\nd7/GKjt+jCu3Bll6G+N6OJPr+RtpjV6QhFY4Wx8CeQKBgQDkmENwHbaUIu5L5jpE\nl4HYwl4AhflEiRnUCj+6dfYNxZKpQPo2tcuMehZx+lVfFbbLb+eU1FllTWA5+/SH\nxFA0C8mau0JVS2Tn3RFN/WDaLu1G6XvTj+NwVHtuhUEGAO7y5lC/gyUo6Yck3O4l\nOJg/MdiZqetxAjs/j3dHKwjcLQKBgQC/wtSS05HsUuNEjNdjEMdj7YKLtCOdmziF\nsc7C6deugd5H0ZSIKwbtKVMcymTAOULatw/QMfvvXB/O+I9NeCMQ1b4HEx77r12J\npIS26M5Rxn7+OmLmV9rNgLfset7/g2q4jI1rJmXMEi+saRyAS0G9fM818pnMKVJ2\nWyVXWoc/MwKBgCqiV1mOwSGpziXrv4xRcY862Qth8Vad92o7qx0cqRJyeeMFUmVn\nzJnbn1oMpWWBiEEzEs8IN9AT+VF3M2kq7QZ3+FbafAmqcRxpd7PDARBQVkK2gzi3\nCmVF7Gt1gOYcwHQfDopZbFHQFDuE1QmuH38RzeMC9P1zvBcjq8xjM1jVAoGAFuJc\nVe1Ts70sjAi2x4bAFMfKVXu46F0WwLW4dABOEfBDo5R6QknIONM+rOfmYB41QT6p\nb3IXm7gFv8Bf8aHNpXusgtGgV+7UndF5WQ6tWIr0qsgy90Qyw2WCDYGYTSvUt5Nm\naQwbB+B/ufaNRS41+TQE0m5SNlAUHDXCXgtaqosCgYEAo0slHgdXcdMBts0MVauc\nWWLMwd/2U/X9o+528q7mTIQDIeyMM+tYlqVWAB8MypzORmcFQxm3vasRLD8NDJDw\nqy4lkcQiBASzbX3emxPvxmxWRWNRFskamJfHleUjQB2Q63zUGbr/Fgna6Usk387g\na7SUHxQPLM7eMVHoITB7oiQ=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "dafa23ec409c26e507d2f4e84ccb41ba5dd5786e"
+        project_id: "healthymaster-wh-471810"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "healthymaster-wh-471810"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
