@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "joyford-retail-ventures-privat@trase-wh.iam.gserviceaccount.com"
+        client_id: "107405912386673237898"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/joyford-retail-ventures-privat%40trase-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDEojM2skyjJT1A\nT2BVj7sJicJDflneS7G/aaFZ7Efh9Bd1gNsHy60AIt6469+ac5H+Kw/7lgKBe1wj\nir5dPVO9tmr7jHwNYSefwTQH3uHVjT4yFT/GYpjVkrZ68Uc5zFDqxbiQXXc6wBYW\nQFGPXP539XWmYBxiJYx+wXHyEODT8HKcJjU8NS6L/Ly+Idb8Qmb2Yiv7U0cRB9ds\n7s1w9ocWCZfFql8SNT/FveLe5KnNnTrw+2I7ubyY/PTsP8HBs9qz8p8Xj/uYXoU2\nW+fD73grY1JDYZsPNQowzC/9ztrVy25dME1+9HIxIWwm22nL25Hy6e+Yb+rDJjGm\nctH4b6nFAgMBAAECggEAGZORfslVX5kt7OoGOUrfRL/W9Wl/bgNBhQjL1IL/3Juf\n24hdtRdgktZ2Su5fYNssf7eBNjPOcqIlm3fmCAG8nT4Xj024KxNakJSUXHu4u0rK\nbsBF0dusTodtVfOBVLrHQapjNd/6bLlkhhNqqG+rp9XVLkVtG7UPn8Mwu5BHdjmj\nhOpQTBDdfvulsljFudy5K2WvlbXYMvKA+5p238Rvr6nvh8ldBmSdc+kP8Hi/Ru/K\n9gkiNyOom9iWOvTO5Y3cIlfYEaEtyyP4KaVTluQqoKwU03Lz6qG4/EygaxWGAaXK\nrI0BjcoRDtWU/0FSQ90FMpdi7VN5jwfW3bGlXOUUcQKBgQDlhFqhfLXOnb11jNOm\nsfbeoXuSnFb2hLz5CoyAMiDmwZEhdiPIXg8Tg8GpkY2w9sCpAESvLf4tnJLQrHf0\noTOGkYCQXtq7Zm2RYQDNx/qoG3VmOfFE+02qupLW7c7LGlNvCp2K1B5RVacsu6cZ\nUedoz0tI2BeWsPXCEP4gN0j6SQKBgQDbUoLSCT/Ag+NFwFRT6wXf3l9W8gUZ+Qdn\n7GiQW6PWDXVZHR8q0wgpVDay6Xc7o0+m+3JqjOcvrqSrfis9FkSbLpgBIhwUWukm\nejY7NQH3PhxlKpWy7mu7PHSyo49KwNXZkC044DaMOLCYE08Oco66l2MVi27mdRmC\nn12g90TTnQKBgQDBAtnYnfCibcKq/R/sOhLaTECIHZOAQkZMxJM9J2rFw5hR5HDZ\nCkhxZ8bP28ilPgzs0n3wN6ReJSLN+4vxHDMhgnD0d+BH4i5YKJQteXQQNO84ZZfB\nI/i/j6D2wAu8f0oUwn+UBSftzDMHClPOljMdz92Gx7qmjfBOIE4lN3jWiQKBgAb6\nQAk4nBue1oswjD5DOuOdaoEUoA7sekzXG5iEIdk8gmA8afJt1lOiRz836EAweOdC\nFqjHJM/CiaCfGfcOj040lEds82G+Zq5/stv9Wrun8TVSvoJ7zVeem8PXKkbhjawn\nRxkJIRMi9pNQAfLeuCW9jTxxPCz+yrn6IftuAnWNAoGBAM4p7asIKHKEnOAvfOvU\nSTCQqGnXTNT2LQTDOlNgS45UZhR3SBKM9CL6Ut1a2lE8kBaitZOFP1lXuKIiG9xe\nHsBA3U3MXyPZbu66RqYXm2UTcRZQPzivbDGpI9HtvVJ+PS2rZfEh5KU2pudDa6Np\nzJFocynhz2JVhx1kMdJkRowm\n-----END PRIVATE KEY-----\n"
+        private_key_id: "60fe12e88f13675856b42a99edcf75bc358cc0b6"
+        project_id: "trase-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "trase-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
