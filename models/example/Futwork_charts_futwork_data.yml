@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: "futwork_data"
+  - name: "Futwork_charts_futwork_data"
     description: "A starter dbt model"
