@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "enrico@enrico-wh.iam.gserviceaccount.com"
+        client_id: "101330780545999684716"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/enrico%40enrico-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCiwDm0uk/teB+C\nWeAEIhnUm8AF3qEi8G/Ay41pfkiBi6KhU9fGRQbcdoWrrMRtuvywEZfQBSv5AwnA\nS21TmJ18leDp6psWUtZaTY4ZhK+3cpkhHjIJupq9I8nZlvl304AeLBpWuJqmPet2\niGvBD7yXgvMO0Mu7oR5WfGzM5HB5XwG1WjpNRvKpE+NDTjL/+4RolVRMRl90KFuf\nqEIrIwhQEJPYPXeI/ffeQvWe7YPAQuasslzrNwF+mM17jeIFrrPgl8oXJLYQZqAn\ndwoj+/oWKrIhb0/a1lIK6kXmGblnVTxtKv+6ksVNaSI59r5qyQ4RBz82Jga5TMHY\nj5geK9hhAgMBAAECggEAFxKfW7LKIAVWmjk5m/xloxGNkId2WqixfyicXKdNiigM\nn0hun6orhde7rZHpqxDGQAPOfOwuxreai0tmLWLGeOIap67d27VUtCqoiY+ZBa3W\nba6FM4Hj7AqF1DYmGcm/MQfZmA/FxOmkVwKSHCWp++TRpnkNWQVHcsVi+00rcNlA\nTkH0Tqa8+Z48e4M4twKQLUAZFR5zkoe/+1MPzOI9sKzeleFZSE0KzGVTcNDIMPeH\nqbkvi4ebBgWePnNHjbDMfnUTOkGuAeISD8AIIpNqJ5AuYtIzulamu9NcH6i6qXYj\nGAxM4AYjbfRyUFp7yJ6WU+X4f9P2YaLiZQB/60UL3QKBgQDUR2Of6Td5HaXmrul4\nWh64MI4Y3F5hRTI9oDQ/Jm5fDfKB6jWqwJvDn5HZaISCRFdiuRcLpO3/jCoc53DR\nz8zvbrPaJGpa7P0HKt1XAOYFnToT+wUjpL808KZkdq+FKhCj9e8qlhn+QIjPAJRZ\nUS7NzBgE2xwmoY5SVzvk4U+e+wKBgQDERWzDwnUoXLFoSxv0M2zJlC/yeChWxMLa\nfVgYu2mBv7DsWonD+ar/cLK2ex9h7aswJ36EQabsIoXwCFHpMgrRKuWSVvFYeklj\nl8eGQ10F4woUImAu5Ypzair5Pa9MrI/wcGrJM+3QAKxoJI84g/oARszGanSx12Yn\nNTMNJrxXUwKBgGX+uyZ9hxLhpPHW/wS9wF7drZjSYWK5Pa+QhyoEjCmN6QR1BT46\n91yiEhD1AB4bOiWMKz+ECnqr3RwwM+wLvTsZ5L6emp9/mP/Vn64LF3qBFgO9q7V5\nlgmYy0ogIKuKD57ILxc2Md0RIurbK2xS7nshYjULFlaVb22uzm9ltrz7AoGBAKrA\nm3dT3glXWyCY96DkfGiC+5O+5ZlXZQ4grlwV8BxpYMq/mctdkl7Y9SG8y/iuhJhI\nQ9FcLJSTFGNXWau/VZnT8BX4fc+z09VJXtR4Fp3ggAw0O+mQ2Xq/itN7zt6t4iwU\nIVMaUnL7owKXi+JnL0C+V7jnNM7jzoOdzORMJt7xAoGASK/OrMpZNn+v3EPHmiX/\nz+ANAKhXcPdzOwDk0nB8evQ7Sah6uwJebXOq9d27ubJ/pQ2jdgJHIf6SB5pjFf5B\nRu8Z6IsOn7MXSLf/8u7zI5z+MryZFt3YYdPFRvhwkqjlbBg2dEI3S0CQmjs0aoGJ\nFfAVOorI+WBQrTtRKtOexIc=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "273747f3a73f4de4e18b22751b43de77f716f095"
+        project_id: "enrico-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "enrico-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
