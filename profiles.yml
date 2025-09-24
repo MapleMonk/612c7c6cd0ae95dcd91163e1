@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "ananta-svastha@anantasvastha-wh.iam.gserviceaccount.com"
+        client_id: "101552860833869425227"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/ananta-svastha%40anantasvastha-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCMwK/uWFcstIjZ\nVFYTmxQgaCu9fk8jpgr4yj936ln84tPshstOdi4IGKkRL6HQlYEMNgK/APTMh4vZ\nxH0Gq4MDRIo83BHw4QUcPxMGqoe9vMGx6Z1jgBLxH1CjlHgr5E40/v6u4x8NB66H\ndkskgpFNn3Nqqf986z/RBOI+x7ovhEvwTAwkDYSVR/PtYTRiaRizQuwSOTxsIQTY\n/KK00khnFsgdGxM7k+ccpHx0NeAU38h/dHqPfcBO0MHNg4mezU7oxCKxTICIq2GM\nKrT64gjEH6TrHTvsls1J6z3Ad1M0I3eIRCpTe/PHL4Bg4R95uX78QsQuMUdQmplt\nGKf6n3dtAgMBAAECggEACf9CSloGRbvEP+IbGQUPRBFSEKv7gACHpU3BffQXFHyh\n6RoBL7Sk0Vi7DWhGLylR7frvbVSVOT+5YawbOzw3BSY68VaqLuM0ozchqVFhwcq5\n2+Kda1dJ68wPGgdDanlVSrNVMI5w1/0/MAo+t7xPCLs2Dec+08cRFHirKc1dfoll\nLv0HzKktE+zXZwngReQPYqp3kt8087ym8SP1g5a6rUByBE1CN3deA7fV4kD8q4Y6\nvt3PnELGSWUQGNRVJEWPa+sILORatmiglALoyUTtqNgkxGmeukEbVX9N2X3+QL7F\nq0Ch/wW4V9UKDTCyxId1vVeJSRazEx+lb+57NNfrKwKBgQDF5wcFGVRgpJEzZIxo\nCvbgebduZV35ShN42EifyULiGVdx8KhdyI65sxZ5mlR4VdnIWPquSq08xjcPKMH2\n1sfUF3VxK5KdSGZV/8v/v7pb8YZjLe2wMllDUDy8cVnpJODJOlNw0IpyX3ieby6B\nzozypWXjqMMrPRmeWBjV7BRinwKBgQC2Eq49Dm16vNjsclvmB1Wf4YWTJFSRIWV6\nAw4dZfzPVs5TpgVwTmNLxAhKXC8HKZEJFPvWsiUYkKgPwjz6aFNMaSyEX9TzDqmU\nYaNmkSO4ILa87aTYiYNqnMQ4BzJ5QyFLIpPGoPpbsWOIUIaOiDYOl2CBH2vh6vfl\n/ueBI5KWcwKBgQCKpx5H+EMhoqsIcr3cdzIYe66Ebgi1C60w0XewW3W8qzyU26Na\ncZVtjYeFkxbzaFK5B346dp+BIO6adFfQ9RH0CquBqqGCCKOKRTlL6axLlqAtBJSv\nCdd4TdL/w/rWWbwTwAWN2M3m6/S6K/NNhsVBi5gjNK3osVotklN0LX7qyQKBgEdE\nAJc9cnS8PlwuVvIupMEz0MjLS56S59leIMQ5Cz9Mxu3O6goPZKZfUK9qba3sAyz+\n3aQnjoWS+XVRnfSVqSUbdaVKrVuFvbKqlP6siMKla2F/0yo+iQXN3q/fgU4djIaQ\nPi9dCyGgyUit3D0l66LCda+U0PFYuzd3Er5lYhcpAoGBAKi0r8mgg398PA0q+UJz\nQuEVPjnnT7LpA1WsgWE6TDTDJB5Lxdhk2DY4XZ8XjaOik2l+NnZg3ifWcGLdnHPx\nHVJuYNWxe1d8tcyoyMMnUaVKEpJKEhaop+RH82rmZP9S86guDdUfEPo5vfLwiCgt\nC1sgIcMJMHA9GqF+zSEN9hEK\n-----END PRIVATE KEY-----\n"
+        private_key_id: "292fe77389622f06af5f1d96344b56526693a7ec"
+        project_id: "anantasvastha-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "anantasvastha-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
