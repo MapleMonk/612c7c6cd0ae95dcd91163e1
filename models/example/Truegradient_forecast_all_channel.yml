@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Truegradient_forecast_all_channel"
+    description: "A starter dbt model"
