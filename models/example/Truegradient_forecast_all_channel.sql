@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "ALTER TABLE TRUEGRADIENT_FORECAST_ALL_CHANNEL MODIFY COLUMN pred FLOAT;",
+                    "sql": "ALTER TABLE TRUEGRADIENT_FORECAST_ALL_CHANNEL MODIFY COLUMN pred FLOAT MODIFY COLUMN actual FLOAT;",
                     "transaction": true
                 }
             ) }}
