@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "wondercare@wondercare-wh.iam.gserviceaccount.com"
+        client_id: "104256103830010783966"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/wondercare%40wondercare-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+cSPG66S/+Ej/\nGJBjugrImspgzfH0jAeeqQKHGFduBjECRq5vLi7Z+0CsgQBVqkeBzV3gWf1SGC9u\nshj3IL3cAys5HallaZIOjUUwq4FxkHMIBgevx5TDBCWQ8q850MUtUM9pVlkbdxIT\nF1q1B3DzPaL38Jvd0aipWBB1KBufInvHYNKZ2ZhBd5WrgiTkrSxyZxPCnBpUFxeg\n4Qe/W43MFDzqOl4nKhSWX2Y3gweodn75iXsgRYd85X/yRsE1hhhr57OoAjke+SGQ\nHTvXgNhCu0VTjHYZ+uz+pFk0Q6PTpSCuQlvGlEpVkoaEetYRZlb3st/EDiuLiawh\n23RXGYUHAgMBAAECggEAC87ZEIro1qxO3l5ICZ7t7z1FwhXS5D5QdKJ3EShNt3kz\nzbfTNfqPlh1xh6CiBC3ALEivAuuhfNcaDcuGJ8CEdSFPK0XvDGYs07EnsppXttJl\nh4BUNq5xx1u49pFNkxCiQSqLCbV8ZesOmFdw3Nuewb43HhdxmqHWytU2hAUeHVI6\n6SPbEXpIPbXYNEAcF16xGBB0f+Audo6qy7ov/s39Ba74ollvBSJimvlFEVIGie3f\nSvMPD8Zg/IR/wpxQf3q+2Jhk9IIWMbbf4b2EQQU+qfHhWhwFU2N9Hmik6sydtbsE\nRdArSGr4N5nFDlzIsR3h6DXIE1VtX+8sFtNU8NTXkQKBgQD8Zxar3QKRvEQ9r/tY\nCeBRznEMoNN5BeSeL/VAOjDxY4k2Ca1nCf7L7QDqVfs+0+8R+FIVirzPCmi3IT1q\nRf1P+0uWkZYs3eRHWNcR6PwoW2VZ2UQn5Xx4GKHdAJrCu0Fqm6mCX+ApPkEullp2\nVMeK2ErXL/uDuQepGRuZpG5RUQKBgQDBJ/uDrEfIDnC+EV4kzcXdBLG7YqF0Tvn5\nBcJf2rintL3pJwsRWV8WDNJ+3idvX4s5KsYvcjn0Ran4J2+lAWkzE8Oso5IWSKMZ\nnjjnFiUy/pRtsvV2+MASDuFLkceHNECu3rBXlZ9kz8Auj/u0YiXWChGsl2FUSw4f\nQh2k8uEa1wKBgCsmZJXVHs9TZEc3gry2U4cox+Lky8Jw43i3sjHcwOlDnv2CAgcP\nimPKjNGDCYTgLorf7QiJw2WR3f0QzbMRbBD0YSPIl+frt08LPRluv00W8ui9YA2C\nChlt/J4PsGWCJdjX687CHUxvvCz+v1BjhgmSmJjZNyJ5y3l5NWK63bFBAoGALaRC\n/GQzOgSfg2obMtskzAsV7E9sE02uJ7fCrF/EjmxZC8TcCqdxnoY9HxljfB+5iDKh\nTgjRxPTJKwg2i2j/8L/U1vB3zqgvUhhfHcvP0nLxo9JLymcRC7NUbUTvPvWL60ZX\nqPqEBZBJuzbupTsj8aXDc2L57q8lkSFQW+/AXVUCgYEAhbIj2sCEmgiI2lv/nuOA\nE0zib6hR3jFxuTcTay0voANKuBDUiNKTxhAKpiUreyRiiDzWL+I1gTQZmKHA5NCK\n+MgRqiakH08dJG9VgzgwAj80J33sY8DKzVrN9FPjVKTjsJ7mQTpc5S9KobSSETfh\nVKY7RgSDXTXbBJKqnxSaqXU=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "b0c060f139583444357b18d6c38ebad985e00d19"
+        project_id: "wondercare-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "us-central1"
+      priority: "interactive"
+      project: "wondercare-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
