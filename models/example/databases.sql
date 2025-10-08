@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "Create or replace issues_factory_sorted AS select CONVERT_TIMEZONE(\'America/Los_Angeles\', \'Asia/Kolkata\', TO_TIMESTAMP_LTZ(CREATED_AT / 1000) ) AS Created_At_date, CONVERT_TIMEZONE(\'America/Los_Angeles\', \'Asia/Kolkata\', TO_TIMESTAMP_LTZ(LAST_UPDATED_AT / 1000) ) AS Updated_at_date, * from issues_factory",
+                    "sql": "Create OR REPLACE issues_factory_sorted AS select CONVERT_TIMEZONE(\'America/Los_Angeles\', \'Asia/Kolkata\', TO_TIMESTAMP_LTZ(CREATED_AT / 1000) ) AS Created_At_date, CONVERT_TIMEZONE(\'America/Los_Angeles\', \'Asia/Kolkata\', TO_TIMESTAMP_LTZ(LAST_UPDATED_AT / 1000) ) AS Updated_at_date, * from issues_factory",
                     "transaction": true
                 }
             ) }}
