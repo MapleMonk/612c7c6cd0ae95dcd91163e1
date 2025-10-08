@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "yashaamm-fashions@yashaamm-wh.iam.gserviceaccount.com"
+        client_id: "109483449217917037895"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/yashaamm-fashions%40yashaamm-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCOsWSQi7WsFxjZ\nq2vE/tTjY8YQolowVI6CZhCzvnwrKr238TwvRCXa4P0fv5plcnPYm3e4OryAXJZx\ni0ApeVsx2DBn2IIvR/Ibp06N8muJTt22Gu/pyJM4APsP2Fh+LJ8kUQFKUH9W5dt0\ngKOX8Krx4p/xwSRIVXSlWxgrJdit06feiIdUkmF42tdkzn/KowD53Vm5C3fMFBVy\nZAc/cp23MUZxKIGmIfpdh7Fu5ob8B69hPpnu95oLZVGgB0bxst7TGAxz83ZwDAv5\nfgABsQHe2TUdkcVSgGP8NSnprU7P5FryoZ+90szzmtxOONWVSBTKMBJmyRjAYifP\nJGcVDiJ9AgMBAAECggEAB4xRNEc7qziGjz8e4osTYlrtB4S7Dhru9e1lvUhag6MN\naZ1IcHyjnv4vTZ5iUbL590+UB+oNfiHHsIZr9LWvcgXMW7XrfwpIf5d8U4xrDVaf\nakpm/gAm73u3zCkG11fPbEmfrplu/v8GOpWyca9gr45sJQrxOyVQGA4nS2MDYQCA\nwlgDM+Dae5sw+a07s+eRkOECn4dod0lfrZGWojwbVC6kie+EM8dKEvq35Vc06yVy\n3uRKHtFY5aWoDniGn2mLD6tnNimwfxjTaiCgqPAlwY16Fble8qrwzlIqnOSDBAXQ\nsUwTidxL9H7nkzmI6gDe9iUMrE7FaYcyLLywAvzLUQKBgQDEzWeLmEt/G5No3y7A\nja5Lx5OM0ncJky8sYUQHfKEYOHWYOr8OGtAVqdhDvj3E1BLa+vPC1Eo5nmlR1eHM\n0F+ChpwXCFVtOxQ5wQ9V2NCOs1ZCg8L1IZRqiSudtwWkCRYWXOaobCr05J6mcT7d\nlAqCynJEgs6l1afJGt+CxYnv7QKBgQC5nVbZcVuNbYfH9Q7pAWFfOhwzip9vCeK3\nVkK1nagusCfT54FPtTopzOZleHTAuhqsdig00sFV8LNIyzrBfKPx9zJTfkU1Nyja\nXX/BxD24LmSINpB1Gei1cBXnK3bhlcRgFWfnPnfgkONIXr/0KYBm7ZfmDFagmr8e\nMAYkhhoK0QKBgQC6PbgzvtgTXcFOiYbw6iN7y06zAaltAkCuOw3qF+NLzIJcoZuU\neYNaPPVQhoRl9FwzpzFvuv7TMDpzG3koHjmEiGbG1TgiuroVPcKJdzlHEigboh2p\nZTHS8CS6iC1qYr7oQtp1oIe2YXRSBvF7N1ILHBKvCysMfPjfs/K5Cr/SsQKBgDb0\nyt4engjFwUoG2J9MdVQIlIj+Ji5uMt4tgBrdzwnjxicLiFHdSpdNv3mTrJ3TfEpL\nwaPCMtQLLEoFQiQ/jxr5IcFuxXb4GfRtcoIgZFXABqv928+QGEKAKTwEtnIcMcRx\nEg55hGzM+T5YL2VPVGElP7AxPwTWTHfXqDnwKo3BAoGBAL8rDDlaM3NDhOVZTj4R\nQOwNCa/qRwBxcP4nGBjjML4mK1b62VqGYf1LvTh/dv5NUGiZ4x9IuhFpKJ+D0Cmr\nx33KfeogXyBoUpo8NH8z0Ca07nkUBH5l19PvsMqjHbNSb+ejUFZo/mVWlRN3r+8/\n6N3TY/BFCR+IlPDSQzwk5aGC\n-----END PRIVATE KEY-----\n"
+        private_key_id: "108e75ed2fd98adfcc613271f0eb2b0b3bad6179"
+        project_id: "yashaamm-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "yashaamm-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
