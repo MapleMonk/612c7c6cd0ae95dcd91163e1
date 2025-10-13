@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "wt08714.ap-south-1.aws"
       user: "HarshitEggoz"
-      password: "Eggoz@123"
       role: "ACCOUNTADMIN"
       database: "EGGOZDB"
       warehouse: "EGGOZ"
