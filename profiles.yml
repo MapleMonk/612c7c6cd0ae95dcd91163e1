@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "oabofmg-hi57385"
       user: "ttk_legacy_user"
-      password: "ctM^Fb{7TO^;T]M"
       role: "ACCOUNTADMIN"
       database: "ttk_db"
       warehouse: "ttk_wh"
