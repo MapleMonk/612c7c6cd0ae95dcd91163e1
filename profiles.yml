@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "plaeup-private-limited@plaeup-wh.iam.gserviceaccount.com"
+        client_id: "114049719545248417398"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/plaeup-private-limited%40plaeup-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6mDJP/4bowDBY\ncpJBYMBdp2H0E3UclwpQ+G6YTobcaScKY993wzDcSalUqQVxPsCHrNw4KRbTJ8uc\ndT45eJAI9cP3IyAI+RjpFVk0DiyQa8VqkQJpOuXD3ytW8Dy18O793zwz3A/+63Qt\nC9RcExXMtydS6fcs/A+3zbM+7p2/wkWlfhB//unSy1eO/rIbbuucvvajDAWrBDgK\nnhNGLNLShs4l5aG5PeV6mSZ1+mJQk+6ZgwvLw6ju9oY3HMFzwLFypMq0eg7FgIdY\nbVgWLVpDK8pYrnRBlFrWVcZVboyjjzXeVSFV1XE4HEl9vbpVSZbH+pN5e6VHzSOw\nTGGjs55BAgMBAAECggEAFWg4H3bupJ3F/iO41VDTCPuW0JB551uJtrPlxkn+DWPv\n83B1VxFY9fDqgRi6E92x627gvf2yzWtbn/nQd3n2NlzxzFTmjDj9y2HkX8U/hhsj\nJUB5MRbtfM0J9RmvMWVwmcYma0G0QRgEtlVM2fpjjh62H3xRnALYD8uE5LOt++2M\n103gl3MI8P16J88fHHj7Z6pKb3rjCZ07m9Ob9VCUXPfkaavQXG6DjSBfb3RdE5HK\nKcel/9I3ttlfogTGKlzUMiqrT+ypPXFBHOUabcSBYKtvQCViLpeNuBImjnzDy+sY\nR4PwlHq/ot0wd8f09qzGVgwgrOkSpJ6hhL0zmTLdhQKBgQDqh7d2bwJROI4x2eW7\nkKBdYYuV0a7MplusqWQfKbbckOnJDoykUZWPiIWDC5yASJ0sUcud9DZuwibcVEwN\nI8d+EFdF7WCRG/J4dELyqdKpXR9okumSusSdb7nIG3DBgLdskVVeee6/pVOl0Ods\nI/Wn4/Wf4fT6lkB+DW2J1XrdbQKBgQDLrRgkb4jGvKoUYCnPpb6McE8qp6lAdSuF\nNN8EorqHa1J+DcfmnBrFuJsdNAy2ACMquH2Y4UYH/oUH0fbs+yJNrYlz51XrvJaK\n9TdmbG7gbIlkhOlCQidcYE5tSX93B+Fjw+etZPN3X2TXXIDAP+0qsaVwTygYlgvP\n+Jis1xEjpQKBgQDafpXtQH5oLMhMqTPeCl9coAPrD+5JurKtqSId5j72PguPxH5C\nl78+eXHpJGgpG31STOHlxh7wEPEjU2WG2E6Co7aq7vuINQEwNyAn8w7PunIIetYg\nXN/PzMbIJshlfgVkoAFogzBqWxwS3wy7MsUqJLYwvdH9ov1ychAa2UgeAQKBgDkb\nHCTDHN9T8H/sAm0U9JsdtiSog5zt/TjI/SqokZH8dlGffYfcBume++axPEsfOLz2\no0hlCSSeqR/rL8d8Fj8fQ+W6W+3Pn4nwfQr7pg7If7EuTtRkBfMxkWu06sct73Tw\nbZnBLz4uAfEcH4FHqzCIRHF70Cssjr1N30i+uDB9AoGAHgVr/GOTxqDjQiZV0475\nU48Gu2HubQaY35U3KLPhlDK3k1WXEdUppDAS9h42IYGaMzMeskxz1/yRkWIqBRzj\nPpWZ6wu/q8bVahkdXRuQc0UceKuclawWN0T0xMBK6MedqDo6lSv54LP2K6hZnZPd\n/Qt28r8oBPOCSGn1N0bj2OQ=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "1c596aa3ba68dd50cd3c3201c7f8df6754d68a27"
+        project_id: "plaeup-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "plaeup-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
