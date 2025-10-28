@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "create or replace table long_tail_revamp as select a.date, a.sku_group,a.image_url, a.type, a.category, a.channel, a.gross_sales, a.gross_quantity, a.price, b.PRODUCT_NAME, b.online_inventory, b.offline_inventory, b.offline_jit_inventory,b.live_date, b.days_since_live, b.days_since_inward from horizontal_sales_categories a left join category_journey b on a.sku_group = b.sku_group where a.category in (\'Shoes\', \'Bags\', \'Perfumes\', \'Sunglasses\', \'Accessories\', \'Belts\', \'Caps\', \'Socks\')",
+                    "sql": "create or replace table long_tail_revamp as WITH Product_Names AS ( SELECT sku_group, MAX(PRODUCT_NAME) AS PRODUCT_NAME FROM SNITCH_DB.MAPLEMONK.category_journey GROUP BY sku_group ) SELECT a.date, a.sku_group, a.image_url, a.type, a.category, a.channel, a.gross_sales, a.gross_quantity, a.price, b.inv AS total_daily_inventory, c.PRODUCT_NAME FROM SNITCH_DB.MAPLEMONK.horizontal_sales_categories a LEFT JOIN SNITCH_DB.MAPLEMONK.dod_all_channels_sku_inventory b ON a.date = b.date AND a.sku_group = b.sku_group LEFT JOIN Product_Names c ON a.sku_group = c.sku_group WHERE a.category IN (\'Shoes\', \'Bags\', \'Perfumes\', \'Sunglasses\', \'Accessories\', \'Belts\', \'Caps\', \'Socks\');",
                     "transaction": true
                 }
             ) }}
