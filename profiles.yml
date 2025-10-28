@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "stag-global@stag-global-wh.iam.gserviceaccount.com"
+        client_id: "106473740180112011804"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/stag-global%40stag-global-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDssDWm/RKRVaEy\nXPdOtIy0Bv6LkY3UcTwM7p94KBjIRvE57bltVFBuDngwhFKJGoLD6tyQw0xeCSem\n8RPkBAAZ4sb5IMFnkBiGWhx381PLEO2Wd4+3vdAmANTUq5/iAPWVVYCXyYqqANFZ\nZQxqNWstq94DBZ2FypRs8tqcl6OM5ck9yoerjVeJvI4yzatGKTxsXX7cK2z44NEr\n051kjqrWDJEMFENJLiS2phWFe6NrdRje1AcnBhoH+kPSeYzwnWL6SLGVKEcDAbMT\nAM8IIHszKYZR9wIpMexa1h9VD2axW+MwUlENzdftfc1U/KY4aZQx9ibfE/FN8Uuq\naiOmQkKJAgMBAAECggEAE7HM4RaFTUEUDvID5RFqdM9xLlFf/Rmn/sZ7T/78Iuwe\nRez1RTbjE2lSUG0uRfjGAUHhdQ0/JUL7QO2l807u6DiByHiUh0bK96D3ZfbCFe9U\nabUMqSQa9hKTIxgdz2s3hCPPdbHgPymeweLB3/OOdcgritJUi22yIIerr6SBiCds\ntiKKUFpoO+XIOSw2fgUEVlw5XuUK2ggMMKXR2cV90sdykeNpOKrPf/7ILuvr+QhP\nndeh4CAqjMVf+/j2x/B9FWQ0FZdojMBR+080Nym/XOXJgVw8capfa6kXYT+Bkx8T\nhWgXgeQq/cvtjJMAkGxeMRKp/sxgQODgPVOTh2f7QQKBgQD9aLBvvX6lHtRv9g4Q\nrYr4Kh+tKoOYd///KmERhDJiMpfWqnk7ZWpBWHfyQua/IB3T9hc4exR1EVSR0N3i\nkbo4b73bEOAgfUtZ81uI59JdBABaP341ZEShEZEyb/xHnZSxwaj+h/KRtdT62nNE\nUyMdk5iTpt5Lw5j0h+8NzTon6QKBgQDvG8DXugJSrvm3dFhvhoJLYGmDepgCjXDJ\n5ggKikKNwGVxZuxGW37fNe+BYs3XI+fr7i7iSEdhV8dmtuj7n9WKGjDSs0wNTj3j\nr5eWpGid6dEY3WzNkmlaQos8DP6dbx/+XoTZvErL4bs7Tjr6hwCOwDgiNtesT9ug\ndtZCIQVBoQKBgQDlF2/qlPWZcXW8gkXU7g9kqzBX7MdrX5EfrcBzhX/HJtX+S7+t\n4tFcog5OBg11XCObLC9x8FNeQnyiFqGB4xznSJ3rHiaBOMSWXVuzOWEElkl7TUtc\nGXmx45/QaU05sUxsJxgQg/bXo/sXjcYHTuHAK18UnRb6h6oP55RGdfLNgQKBgQCj\nSjzEFk+Hz97Rni7W2vEYMNtd4tb0x0sDVoifShRxYbblXvh0g/98yASsQ6F3DxpP\nUPXLqri0jZGrX7Z0QI9AJOq6uZ9yZsB1QXEwe07GqOsXJAAt05MHBPK5K9amBUHA\nISRw3dnmql2G/sHgXVnQIw0ysGlRT6gZSY7A0nQYgQKBgQCEsQYp3ORrjdGIwuOh\nMgnQBgzfzurhOsB4YG7dONiqUUbrweQftciC4Z8nSxHvWpd0Ox9AkjUREJB95yS7\nYK6agCHb4zPNy2pFiYQhPl7H2j+na8/eGNJrFgDu/OXKO0ScriTS7m+ljYp9vdd1\nN0h51Et6X4mYOmvmkVC4bImgOQ==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "0b8a1e6a117608a671fee2ec782a22ae1b533030"
+        project_id: "stag-global-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "stag-global-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
