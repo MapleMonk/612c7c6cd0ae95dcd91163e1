@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table maplemonk.myntra_style_advertisement_fact_items as select date(cast(start_time as timestamp)) start_date, account_id, adgroup_id, adgroup_name, campaign_id, campaign_name, replace(product_name,\'IZF \',\'\') Product_name, product_id, mm.article_no as sku, SPLIT(REPLACE(article_no, \' \', \'\'), \'-\')[OFFSET(0)] AS style, safe_cast(budget_spend as float64) as spends, safe_cast(ctr as float64) as CTR, safe_cast(cvr as float64) as CVR, cast(clicks as int64) Clicks, cast(impressions as int64) Impressions, safe_cast(avg_cpc as float64) CPC, CASE WHEN campaign_name = \'5th Aug 2025\' THEN \'1. 5th Aug 2025\' WHEN campaign_name = \'14th Aug-23rd Aug-Pants\' THEN \'1. 14th Aug-23rd Aug-Pants\' WHEN campaign_name = \'14th Aug-23rd Aug-Non Pants\' THEN \'1. 14th Aug-23rd Aug-Non Pants\' WHEN campaign_name = \'25th Aug-3rd Sep 49 Styles/Options\' THEN \'1. 25th Aug-3rd Sep 49 Styles/Options\' WHEN campaign_name = \'3rd Sep 2025-17th Sep-All\' THEN \'1. 3rd Sep 2025-17th Sep-All\' WHEN campaign_name = \'18th Sep 2025-27th Sep 2025\' THEN \'1. 18th Sep 2025-27th Sep 2025\' WHEN campaign_name = \'1st Oct 2025-10th Oct 2025\' THEN \'1. 1st Oct 2025-10th Oct 2025\' WHEN campaign_name = \'Z1-11th Oct-20th Oct\' THEN \'1. Z1-11th Oct-20th Oct\' WHEN campaign_name = \'Z2-12th Oct -21st Oct 2025\' THEN \'1. Z2-12th Oct -21st Oct 2025\' ELSE campaign_name END AS final_campaign_name from maplemonk.myntra_izf_consolidated_product mp left join maplemonk.gs_myntra_sku_mapping mm on replace(mm.style_id,\' \',\'\') = cast(mp.product_id as string); create or replace table maplemonk.myntra_placement_advertisement_fact_items as select date(cast(start_time as timestamp)) start_date, account_id, adgroup_id, adgroup_name, campaign_id, campaign_name, placement, safe_cast(budget_spend as float64) as spends, safe_cast(ctr as float64) as CTR, safe_cast(cvr as float64) as CVR, cast(clicks as int64) Clicks, cast(impressions as int64) Impressions, safe_cast(avg_cpc as float64) CPC, CASE WHEN campaign_name = \'5th Aug 2025\' THEN \'1. 5th Aug 2025\' WHEN campaign_name = \'14th Aug-23rd Aug-Pants\' THEN \'1. 14th Aug-23rd Aug-Pants\' WHEN campaign_name = \'14th Aug-23rd Aug-Non Pants\' THEN \'1. 14th Aug-23rd Aug-Non Pants\' WHEN campaign_name = \'25th Aug-3rd Sep 49 Styles/Options\' THEN \'1. 25th Aug-3rd Sep 49 Styles/Options\' WHEN campaign_name = \'3rd Sep 2025-17th Sep-All\' THEN \'1. 3rd Sep 2025-17th Sep-All\' WHEN campaign_name = \'18th Sep 2025-27th Sep 2025\' THEN \'1. 18th Sep 2025-27th Sep 2025\' WHEN campaign_name = \'1st Oct 2025-10th Oct 2025\' THEN \'1. 1st Oct 2025-10th Oct 2025\' WHEN campaign_name = \'Z1-11th Oct-20th Oct\' THEN \'1. Z1-11th Oct-20th Oct\' WHEN campaign_name = \'Z2-12th Oct -21st Oct 2025\' THEN \'1. Z2-12th Oct -21st Oct 2025\' ELSE campaign_name END AS final_campaign_name from maplemonk.myntra_izf_consolidated_placement_level;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
