@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "bwbzxrw-hi65788"
+      user: "HOX_legacy_user"
+      role: "ACCOUNTADMIN"
+      database: "HOX_DB"
+      warehouse: "HOX_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
