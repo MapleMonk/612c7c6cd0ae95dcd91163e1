@@ -7,7 +7,7 @@
             ) }}
             with sample_data as (
 
-                select * from STV_TBL_PERM
+                select * from SVV_TABLE_INFO limit 1
             ),
             
             final as (
