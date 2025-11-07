@@ -7,7 +7,7 @@
             ) }}
             with sample_data as (
 
-                select * from SVV_TABLE_INFO limit 1
+                select database, schema, "table" from SVV_TABLE_INFO limit 1
             ),
             
             final as (
