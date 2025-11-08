@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "krvvyanalytics@quick-cogency-477406-p1.iam.gserviceaccount.com"
+        client_id: "103182595414411836298"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/krvvyanalytics%40quick-cogency-477406-p1.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDK4AbvErHOdGZz\njbxDsu8WiGC8kZrIxRChZsfracVMS2ko7rugssAy/35585yin9icSYdmkSVkZmGR\n34MKd1Qzud/JXoTpfPutaODq9A78fx4wsOnCXW/d99gx2lgA6qfEZDNg20KOtFgp\nezgyslXGk/6D37aR28y5FPkFCfCI6FmndGoY3koO+0+Q1y69oe32tW09ZY1tGUw+\n9gFAMrR+75s6uZWf5NQiP5WCHMS/rCWnxm5JVNkwIeBOpyPu8F9J5bqHjCCAzUIV\nXFhTw0PCVBUx5tUS4p8JLnyaWOAJOvyX5Fee7QZegCJ1qGJvRfZbqiw6qtbjF7DU\nzdM9HxkVAgMBAAECggEADfYIxB8HOWvtOPqCAC6qIWTVM2TZwAM/t7u4+kxXFX8D\nB5wWMWLbsya972qCVvalE2xD8xz988DP6hf1jpzToJOkANmOT/sX3sEe6UxOU7Xz\nv+oMzCFd92p86EFcWQPM88jpeDreg6+JeaFPJr37BSVeGHkmuTblCb+Vu3EJqoIj\ndmM/hRQ5Fvnuu0DDPqJ0P9a/TGvzoICvRG2vDtXl01Ka4gaTyHDzAruV7r9bf48W\nT1zgNV8aypexlf4XeipTqAJmS3kgtzJqhwf7sPYCZC0pDieHPAgMchXn9H3p+BuV\nszXQC9sdnc46jihalYDCseOiu5f53ug+zdgJlYxpqQKBgQDsPkCryuMCYc6f1FRt\nakx84Y5ORscO/w7BCgHh10Q7RADe8PNPrpqZk/5ApAzU3jNVtBzC/NdbauQ+jYWT\nQAXpb3tSEDQJjELbBQhJ/kRrd12MM7jhjt3Uzki/GGWH5S+6ykKzmG5nXEkyXdK8\nrJa4jbS0Xa3Rh1Dt3dWHIQ6X+wKBgQDb12Uh2RCc+sSZpSc5sl8nnXC8BCvUkeXG\nSlselfJo0DG0MSuMf2HfhrqJ+nvixfcscxWn/hVEANBpAm00CCh0ldfUUpg4ilR+\nXi2Ho5429ml3b3HfyYl5ZG2Ds1dyl0w0XLOBpV1GSv5Epc2om1QRuEG41/P4I7Av\nt5MttVL2LwKBgFndrHgtK4GidxkxihQ9FW+D1cBNCDfaKmCgT+r7Gkd5LOOhwMyU\n3NaDB3rLbN4k0F5Pr4k06S8rUDvDVgaXmigcckrbQxBGvL/YADk1cg13UKyemDul\nPxlOhzm6LBUvx6JEgm8TExxabLWuHxYKiSMXNKBP6mkEEnMJqcpHdue1AoGBAM8N\n3o1zoMcJFHPVbc1Up3RrP4uFrjZmN3B8BbgX6Bk5xSZ+jRKlwuvBPB3KUjYy1+sA\ndWwkzaifz6qng2zXJiswGfg61m2iM5RVZTJ0MwZ3LLw1tZ3ddmJj6RV6qykdQMOs\nb9Dyi5gx96t2Me3UZejOju/mTTzvd/hpQPBy8DE3AoGADAB0p7ZbsJmX2ZweWz/C\n1Xg9euQ+Wsk4CTd6lz1KkNwk9bRr9cuCsWBuzBZXtE2Ufm9ExSGnBvx1IM1eapUN\nBE53O39043EESlKIOx2Pn9rc625XeU8SMxMS3/Yz8Vlf4ehsK9EzsKPrIAtzJlNq\nKml18TweAxJYwQnCDCuvuk8=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "244bd02d6d83759167d14d1da2e2273e23a512e4"
+        project_id: "quick-cogency-477406-p1"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "quick-cogency-477406-p1"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
