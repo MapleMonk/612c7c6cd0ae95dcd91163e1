@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "maniac-clothing@famous-empire-476707-c4.iam.gserviceaccount.com"
+        client_id: "114338215452739896615"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/maniac-clothing%40famous-empire-476707-c4.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC3u1NTp7oH1MT6\nep0lLGYkTdKqWspPRA/N2H8a6O3LJvSmfoNI6Z7S+yPboor4N4fsxObohh7nNXKw\n1kD2Vl2zpWCdTqv5MGiBIMnr423KaE1WmJ1ztOLXU31xJDOueE64B5o3AWFx8Izi\nOHO/z7SyQVk01jgng2Fz+1n+AhFes0Z6i/xrvJB+zyaH59wk/F4z9/T/af9xKvLN\nLI7QbKfTDTgaCFfOmIH5ndlXm5Lhap+a81RnOqC6rx2es3Jw4/4Z+4+7j+Cl3NZz\nwgcmrd5Glq2hX8NRAzYM7sNsRXrVSrdk8qlhppc1NEzHpz9y0Ow53Iai09IIxhpF\nNl5qaj+pAgMBAAECggEABpTepSVh2fg2lqjoAm4C2ivR/zF5pAmCfeuSkQiVRRTY\nCHNJeWYJ/xGJPSvHSeE2XKZIhb2RM5PT8A76vIBHQsFKstPfv/FKmw6NQSaQVyLx\nm0ekA0Iwaol2ecQz2Dz9x+SY0v3ZC2N0LoHabp1uggCqhQSj9hFkHysatAlHrUJT\n9NdyKuqvZxChbpe8VnIfrzqZiHENHuHE315f5BlpQFbzJ/8HHvGeyiw8LPuNcGgz\n5Cnh4KKrYZRa29h5+3iQv28CZXR7IrWX0sMTu+2hfDiKWZydcy4oA+gSenXQGoDp\nscCnmfhYBYr6WB4QOryxPZ7FNqUoDXW3iy69Sr/poQKBgQDld3RnWf6to2D2+OCs\nP6/vt7xdEIobgpd+cM+KgErFUhwU4NuEpCI1a8S78yeFpZGF5MJS7OQshO4ZV4Et\nLrIMU8qmJdLYWwwWQrMuamQTbLU4OdwrD6rQfNZ1ugfGfecbbYY0N6KHvRXnweJv\nlylvJRDglhFO/fbjc9lKTo8MIQKBgQDM+g1KQE6VSMXmeSjc3UYzpMDfxsp0ub3O\nEE3GzNI6o+yEZzanThgOuFiiQVs9EZO93kpouq7/b190Ri2rIJOLWjv/yxpMTYRD\nyRfX50foOl7MuGOtppHUR2tsSzqFgyfigGAHVz+yMUCUT53tJSV7AKXh1/7ccpQc\nUR8WpTSCiQKBgHR0R1McTS/6Nn+glwVT3QofiS0B89U6VYAJ6Io1ybySi0XdSArs\n8Z+C7fkk0e31tQDqs+Q57SLa46tgyWIQzLOM4s+nanX63wt9Fkp8HAXvqZi7ZI1G\nCj583Koqmz+VLfCxiOZ/RbD1uWRA9ZYEdTa+7O3Nu0MHiICujpwzek2BAoGAY0si\nEvzx1EkrbMj2bX9XGX9O21gODNtJQcAOHSZtFHECCuWAyS0AZGkSro7gZsXT/t7m\nxrLgQOavo8C3MLWYI6IzfGbjt2C5mKiaP0FPSQS1lZAg4SbWb7GlLRGIKNLvCD7N\nxeCS/3vyX6Xtx8n9zQb0VGHwmNN8QfdeCvc+Z5kCgYABR0WyW9jG36jg3lU69PHP\n0wyUJGXnfGC4ZolBNlmpyFeF0no2mYmpiITp82OrsED9oSc8wAAkAgmiPpga6nK+\nOeB7sRewwjwdSb7r2DLUr7FATseDDk3+MueVprrcrhZUGwGHGdKwwWgrcIOpGGWj\nvOMClffcpybJt00HfZhwEQ==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "582d85881886d76360c2c855949627d2c8f999b9"
+        project_id: "famous-empire-476707-c4"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "famous-empire-476707-c4"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
