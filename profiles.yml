@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "analytics-deodap@deodap-wh.iam.gserviceaccount.com"
+        client_id: "112230697542015056401"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/analytics-deodap%40deodap-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC5CoN686fR1iRl\nkRTfrRCOVqSmkKvugiW0J9Q4wIJcX0O7al2LaQ9H6P46HGQZGW+WGu86B25qesTi\nr3S3Sy9ZeUj0g3JK5B25gvvlOMjQZcsVA2REi9Ko4Dqf2IIzS5RgF+8pBqU8NpaO\nVDBUM2gQ+S11vQyYB9i25s/NSEHmwiOs8RQdgMk/d5K12BEYBbEtZGwwicrDcZNt\nNllAFiYtQXoFfbTFEBUyWngC9HiVyvjGhwUfpGgXz0s6XBJBdvlpO63G03QfrGLF\nrjDSBGxLewyQJhDNWMTFxngTJK/tvcqBt6pxIPoVbMBxdVXfg7icurdirwO75oXn\nS1tv7sPhAgMBAAECggEAC4hMtnp+EJVkklHu95vNJtnejCUDGivRVr+OufTBiylC\nyujvqJMlKSmrwopncKsFqdjG5Rp2drttDuW5g/zzGAP3mImis2kxMxEnStt1pItb\nk1UxSBZgzDahYLn5L2I7/psvRCLOZIjQbFFx66WCjGBDRY3BPa5rgsay18vzk4KV\nlXnmw+DfuW2loPmfmEYPGojX+c0l6EuuVNfzA0MuAQw9veNmMCQcC+Kuc9oerefR\n5sAedDjGrQJI1Mt7p7X6v9SfFP3Aol/5ljmr01J/nY07T5yXEP0M3mIzoUH79Qbh\nCRbfo/NG8wd8OE9Lt/R2AQDKEuYTHdgF2hRPp3L+GQKBgQD7kXj3KvSbjoFAgdqS\nmBco2b0sRAgowncZseCqYMtEv2QSUIgCoR0g5TLMZNIqQhPig0JneA8PZPFIb7Jo\nLaunDR3Yz6run9NYLCcODbMaeu5HTihe4GtvyS0vZff5aYtMWkAPaM4Oe52Jeqzh\nzUK2luxUTxAvaAV7D8M22cclLQKBgQC8TQP1mcoomHbFnPzs+PsTTgwQN+XWr76s\nt5Z/wgrHF0tCB879GS50ERDVy+oNZKNDGl7lRZs+k4gfnhydf6awqvCN0jifEC8J\nBTBjmwZ1AQoRg0449LkRtUzpkXb4c2kMXjBkK7WsL1O6OGdd1kMEH+Rxsx8YRgTZ\ncmTXepFyBQKBgDdMZPDACoDfNF4/rRIoSH78Te8bDUgYZyHIzf/lwwjboV29QgiB\n7es7No1jZCdR2xkhjUk9ROI3aCpqEyd/UoooAfWUwJgvnb92BSe7rzEU8KfP8GPa\npQMvj7UpjvbOUoZ4GDjK6vCYD6sWwkXoXs/QISbvMjmZfgrtDhZSjMoJAoGASsxJ\nA1l4vVF69JqcucFZctyw3AxoRzR+iHtQ1CUPRPCS24LgjRdgpYhV6KdcrL9KPxCN\nm4Nf3KacDvsuoL2hSFJOxfc4uK6kEHA4PYjKMtYb2sMO4n8LuOYMzEcVPDIUC26q\nyE+4ldIi7zkSjmrbKhtFEok1k93UdVAEkLfGaMUCgYEAzRTSGY0vUUiBkNvPvWlW\nNgUpfiqEeL5IQM48plMxdtQ6YZTvWxQdwt9U+EGairUB36JH/hUd8TSRlxPDEm04\nsbQX5+jbqsnl+Oh1pavKFtt+1xIzAPwEU7SoBTH+WgbyJ2wzPq2Vn9y2jyo76/EY\neyN8K463yfPH/EKLhLw8rNs=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "f52e920f9a9f219036ff8713bced2c1dff645c5b"
+        project_id: "deodap-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "deodap-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
