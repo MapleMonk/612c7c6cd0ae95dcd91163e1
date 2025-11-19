@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "zoom-shoes@zoom-shoes-wh.iam.gserviceaccount.com"
+        client_id: "110735503825433845232"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/zoom-shoes%40zoom-shoes-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbrSY3QO7ft3kJ\nLeBV4CwEZEZsxhNl42UGqMJ8SxytB4FyVuaXDgcwl+TztWaY9epQ5TvFklUhwqno\nwnKw/sxV69S0CU9hb4PocNaBECB4Zv40GK9idFtaLEIPPW7TsroP3pQtPwjnO7cy\nGYl7A7/4yXviALj38q5+KJR6Y3BtVx8WFcTeT27n23T2ls2McZrM8kayh2S1HlW6\nqUmlBRhNCTgMZ91LoMDaXq7ukQd9f/TQ1PVXJ1OG/twYIU7CWeGoumM8DbFxE9uV\nub/2ogofpk7YdAagAM11muWKErWnyBf+BNdKTAa12LGdMzzAWqbxvCZFZQFN6sb2\n7Q6ezu+JAgMBAAECggEAGDJSQJ5zsUtRlvk+pIw0olHej/dMBlpYXmC9oK3aqBRo\n5bc8tEFkpALsbQumFA3CPswrxpn/q+BNPB4Zk/VSJy9QFnnlYc4ZXBj8XOrx01FE\n3r15VAGNA7msQmbPNkeRcai1RDvqjHhqDVKoGgH9EIzg4FvurnZEp2YWNK+PSqZW\n9mDElro7m+y6oI2Rxf1Ujsmft2cTaw96AyvnWJVegqRCtkYrlLwh378ANA8HvFL7\ntqt16DsMHN/pzde5hY1hV0VuhFTWR+YKahV4YUGM9eJHADOWVSGu0THeaBfhz/R/\n24NSo54hS3ctiSyE8k0vwi6C3c3tgkm5s4s7bqV4IQKBgQD97ExhDR5obaOEaDAu\nSSU77ysBcE5mJ34QTEFzkIpdKqPItkQVbwJfgk5n+xn2Fwvm1VAmrlggwdoHt1pp\nQqKdTDbtNKbtJ0p/XA9W4ry1yBjVndGtdGSsf8x5oycJaFkBY4p3MBykefj0ALEZ\nSSoBMkIi6BY82N8PF4xTwkMF6wKBgQDdeSPh5XigUB9/W7Re1E4r77dvlufA6aJc\naY/YMMcUsQDoG0lCUi3MEfTaj3AHopkHrqm3W+PxtX3d0ewt8PRl9TFDj46tVDmg\ngAeRmUPeJmdIiEdUape7qyqkGfROQFhNvLGratNh5MIzDetFpaSESu8BglnPIswe\n3HXa8tU/WwKBgQDYL3ez5UxvUnE2SNJEhggKaAzwU6Kb/KGq1JGhB32V5ri9KNj8\nep/FmxaQFsw6pdJ/PDvaQvNLKGAt06BJH+99Bqd4+yvnm10k48c3jSFnjy39qTkc\neY1BBCmdoheZPdsRgKMh6LdqHWKks3YUdiMqE5UVTQ2pzmbS3ZSetzUC8wKBgD6M\ncPrigQ/dsReaAbXqhe1YtVjZqLhOA6HP2mU3WXJZjyT+V9FYPkDtLVbwvbYaUNff\nl2UGmbjxBgw4tlg/PfbxqakoCSagq+nNXtXbEFTUScUtX9/SfunsrI1OGzZia84A\npbkA4ZQ7NDGRE8pGvtDyDNBDTTP34ugwYUSl4l4TAoGAUGQACrxwobsnrp1lwP34\n98KgO7Zh2WBeSx+7SM50+aqGGn0qAMoAqMebwgJBjdSt5J1JtQ4LPFVManu4weWz\nY8StaxwPn4Moeu6UlMVYyMscsJXcD7beN2ushad6knnwED4inlEQAWBrzTPWMYGH\nwWUn2LCwHAoATqSQDHgP3co=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "61457963bccb9eed6a84e83bac126356f1e7d8ad"
+        project_id: "zoom-shoes-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "zoom-shoes-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
