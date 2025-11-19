@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "mexcgyc-av40653"
+      user: "emmasleep_legacy_user"
+      role: "ACCOUNTADMIN"
+      database: "EMMASLEEP_DB"
+      warehouse: "EMMASLEEP_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
