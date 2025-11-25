@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "DK99371.ap-south-1.aws"
       user: "drv_legacy_user"
-      password: "p5GbRBVl43"
       role: "AccountAdmin"
       database: "RPSG_DB"
       warehouse: "RPSG_WH"
