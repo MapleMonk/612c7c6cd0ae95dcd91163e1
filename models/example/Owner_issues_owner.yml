@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Owner_issues_owner"
+    description: "A starter dbt model"
