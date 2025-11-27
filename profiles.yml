@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "mexcgyc-av40653"
       user: "emmasleep_legacy_user"
-      password: "Ic515iZ4#M"
       role: "ACCOUNTADMIN"
       database: "EMMASLEEP_DB"
       warehouse: "EMMASLEEP_WH"
