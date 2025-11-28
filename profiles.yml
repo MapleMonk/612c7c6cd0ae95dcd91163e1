@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "bwbzxrw-hi65788"
       user: "HOX_legacy_user"
-      password: "Houseofx24!"
       role: "ACCOUNTADMIN"
       database: "HOX_DB"
       warehouse: "HOX_WH"
