@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "aopgsbc-lv22439"
+      user: "analyticsminimalist"
+      role: "ACCOUNTADMIN"
+      database: "minimalist_db"
+      warehouse: "minimalist_wh"
+      schema: "maplemonk"
+      threads: 10
+      client_session_keep_alive: false
