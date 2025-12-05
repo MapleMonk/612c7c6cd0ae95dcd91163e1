@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "ugckdhh-yx45543"
       user: "Zeproc_legacy_user"
-      password: "Zeproc@2013kgp"
       role: "ACCOUNTADMIN"
       database: "ZEPROC_DB"
       warehouse: "Zeproc_wh"
