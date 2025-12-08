@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ugckdhh-yx45543"
+      user: "Zeproc_legacy_user"
+      role: "ACCOUNTADMIN"
+      database: "ZEPROC_DB"
+      warehouse: "Zeproc_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
