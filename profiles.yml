@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "vjwjvtz-jn98360"
       user: "andamen_legacy_user"
-      password: "jGgymC8LenPKgOG"
       role: "ACCOUNTADMIN"
       database: "andamen_db"
       warehouse: "andamen_wh"
