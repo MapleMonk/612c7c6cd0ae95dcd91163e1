@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "geek-maplemonk@geek-maplemonk.iam.gserviceaccount.com"
+        client_id: "102020924494315012591"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/geek-maplemonk%40geek-maplemonk.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCoHk0qyN+Pj7DH\n9AgToZBR7M2fDlzmNGRsoOKvJ9lq1Jw/1NIkIw1GuLeDXA+xc8M88jkg7iOuXtHZ\npQryjc5CQUdBO8el9hsgLcLI2IA653kGbFt7581etN3YxcOwNS//6HzR8sfz17zN\no8sI4VfMpfyYEMiVRre2a8GtaMO6q8mYpseqy077UKIqr1Lbk8K6klvLw/gNOX1i\nx5kMyXwgtT57ou6HH42/6pXIZ97BU1mBb/NPrbavCJ3e1pH2Wvt9osZ1vUy/mV0b\nK8OGqKc8i6r5Ur3IexyNwg2JwmiSdZ+CFnVTfz6380+bIf3r2/g1NwNfeBKkkZej\nS3La6Fv1AgMBAAECggEANHzJYNs4GQ0mhzbkMqTVdw50n/0O+fxPgi60tzS8x4K7\niZ47QXcEFRlkigl7CM74nJWPSn2u/Ci0YbwKb/Hf/IV+5pnwWhs9Gs3Oq4AUgM91\n1JCN+2BCmRfkz2HnF6NzafU+yxl+Xd30H0vM/ufDzqvf8eYDib97aeO4oxg7S5MG\n/uE176mETLomehWcjpdkQmDHLiFvI58M9Q3chSTsks1jFUmrLHXuoEv7zhNcKfXz\nvPhu+gEcZS4AuStx12+dtTEeIAiB9ZpmYIxcHvvEqhJ5YPib2ThfPtHKdCWPzekS\nI7e59KtbIrPej4DPmzeRuiiZMMjHO7C0oRECoQvYfQKBgQDZSZ3BUKbr56tdFzL9\n6fwdJz/sSnuKw9+DAo+gqAgeikKytafAnUUA6FIXsk0rewn+hhdn97lZIc/u+7ao\nwtwE+pJRw/arvhOhAuxk1+JTQZZ6coF+ECKhXv2ltN1Nk4Sl9FiedZiJDN1Hyi39\nWhguhNtA8hLuOt/wbFtT0EHJvwKBgQDGEhnkjB7OrGtQQjC9vQggxIRmYpv53cME\nq+27UwiI/m6RmGeMkx82eMAD8oG3xlQxuDGleY9EQxXNUDLg3rL1mdzUN/rgo3sM\n0fxTBIFxjBc3KitI4XfxKizMjQP8FhbfMcIFtI8X4jmCmbjlYZ4w8CarGdSYbVkd\n9xIbSZP/SwKBgQCIH89dyUoZZhR8CEmgutJ/7RPl0y+cWmOPLq6OJlaX02Q/kwAZ\n8izFicXMJJ6ly7oSIy1Mq+wJA97BSB5BkXnHALdj1BGXvEeNykgQURLvt5ou8cdg\nE3mugNUE188Ah5dFZFOUSfWafl2uWOIA401c70xwXncvmeCrPSbl1gUw/wKBgB2s\nNIjSnQLlPaZmZBroqMEP763O9AL4v/CBOToo9ExhoXraVBjxKWnlqQ5uVBSN96sD\nJxzdGyNk0W1SqGybsD+u7zAzurfQheyjwKNHN4UlMY0oGhfu/yL36II0VfZ78K07\nLQ/hvtYbI/Z2xQZIG4TFVWWolvrG1uTwUJwZ57wFAoGBAL2qz8x4jJY7NIgf2ZjR\n71lHc53qZQ1rSna0gL50zpr87xmn45G/pBa52oUAyKoeD5fn/7EeWkBUZ8FONh8R\niOgd3qyXWCdECIbcTHRIJWtLkJIFRVMWP4q5BgqbAYoHWSFc1UdYuQRFBpUEcZCo\nLAvRqp51I6bvAJ3Btxh6+evx\n-----END PRIVATE KEY-----\n"
+        private_key_id: "dfb48b4414e3d24d1c9820fde46f252d30c13c80"
+        project_id: "geek-maplemonk"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "geek-maplemonk"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
