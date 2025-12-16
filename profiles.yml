@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "progressive-lifestyles@carlton-london-wh.iam.gserviceaccount.com"
+        client_id: "103637826096725281910"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/progressive-lifestyles%40carlton-london-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDA0qC8uIRz8BbB\ndccyKzeMCcEN5ExI9knjWnk2eEKjjbDNd69A1j8fpr1egBsjllXTyv2PNZ/K04IO\nFMvo/CCm0B8N8NdXpCchxMNmaqXpnsH31HzCxzEVr0/b6TkSE0AAQGnR4Qvmx1x9\n9p8APaAI5LYmhWb91R86YljukLl/ZMeSgPOFYzqETeNIS7IFVnEvZr7dcJIF8BN4\n1wjFTSmiUotpTfE5NslP/Ig+4JOXSnVfXLz8JwkOrOdpCILzRkW4LFzF9VzKxaAu\nlIqbc2v74TsTHslTO03HHD58LOH4G103PpylMTPWOPsYCn/lpHyrrkZePmWKbARU\nN9Pj1kQ7AgMBAAECggEAJWHQQrYdC6MMrlXol9vUCYSslkZf2bdRzM9x93LqLG4g\nTD07Tz0aAMdhKCx61nPjUMumS7jQMVC/An7ap2EV7XEkzB2YigerhHryjOz5HGko\nXqUlyNc4N2WE/HPjGhN8UXArc8KG/adB0bPZ0ICiAYdhnuc299f1FWsSpbGOHNm1\nBy9WR/rVFsI2BR5m/vM7Ca9fufGEPtKfV3WajV+FYRFyLPvvNBj/ouGEmHrFpFLz\n/0C5vPBbjfMAQMIQSvGTrBKYmbzBoA4HdBdUKGPUeh8GRFngHWGiCavnua+Ntuu8\nqW4Nzl6IapTQCkAXroJM35aHeougyYukt+mw7kt93QKBgQDv0HseUO6AbcRbk/oh\n5AtdkyEqGbE9NOgZT0SyAqqVxwznzODfZcWWLhZJsrqt6+HRTncosr2BT5/eaOfB\npUcslLuCdABo6k28QZJwn9anrtfLSIjlTDbbZttwtAuWKWbIXBfC4Tlg54lpsqQV\n275WTUXspfFFz77kyiJm6e/AHQKBgQDN1jmBR2nlQ9XttfuBX8KJ74nOfANPNVWW\nPjmnZ/lp4odzOaeWgT3D7H30cL0CptAbvEHpPZz68MwNJVtBh/y6d2zuLhrirHDt\nxBxR8Q3+0u91Bb/cfJH+UCKiFlyvxBPxoKz8eSiy9s0X8ClvdOY7m5nx/h1TC2np\nZgeBjF+WNwKBgBKuKbj90uY8Jqx/hV94dQ4v9MhjwfOjmGTIUPCQ1preK3ou8mFU\neySsqF3LR1Fe63MzaoLIEYzuF+TqRQtHhZjKaSTLRnDlt3JvpSmSudTMANE78DX0\nTt2eUH+h9rkWtoPq8IrkomSTBJgwKynsuRHd6RF7B6VJfnQx7qYXmO5dAoGADio1\n3t2pPevDJw6k9iw+2PsxApKqL6M99o7lrM2M7mp2Y8mN7N+L/pWhvVacyzfrjl0Q\nNBrXWLWFdUoi04mmLLbXOjTWCM9RHiumv0TVb7nYXLc+ks/HxDaDi5/6VOYrcS9b\neCxmTpqJVqJiV5c12NhGac7Q+cwJR9SLo7CjS1UCgYBhBDk5Dj6jdP2Swx7leWwF\neyyBy7/3HO5lqIb7cXPjAqrL+nMH52KdpBxY63sidI7a9TCUskrRzDxvuT5q4Ro/\nEUc8ESx6TOvYU6RWMR+BgWLCrECw3AZdHr59wAmdJgF3ZXs+NOFUZxVx4VU1gpdK\nTbhL5x7bsGcAESnRTFN97g==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "c423528d1cce20771e4b12d1b8a3467d1ed10750"
+        project_id: "carlton-london-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "carlton-london-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
