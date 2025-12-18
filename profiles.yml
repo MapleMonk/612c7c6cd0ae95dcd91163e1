@@ -4,8 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "vonkurx-iv13956"
-      user: "analyticsfuaark"
-      password: "a1G92#sv)I"
+      user: "fuaark_service_user"
       role: "ACCOUNTADMIN"
       database: "FUAARK_DB"
       warehouse: "FUAARK_WH"
