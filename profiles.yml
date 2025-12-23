@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "niconi@strong-province-482111-v9.iam.gserviceaccount.com"
+        client_id: "102165252683564202733"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/niconi%40strong-province-482111-v9.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpi/GM1ztRVlS7\nzSUvnBOXP7hoFSdu65mCXjkR40NfM0+r8X9VCpylPvF84vg+9WNVor5Xl4QEgIh7\nLfkdZTc0K3494X6qDX19lgo6Vzv+ufGZvnYzJz1IsBmfsv81LikbdkusjK5pirK8\nKNSNCHeWz6JOLu9ohwWCss0HKUFdaBy325tmjlc/d1h4RiO3YPvbjNxIx9C8vJGX\nGBd2h/qqVCJptJeTA5IS9UDwJKUGwB+UtaqyAQtloKUwEk9xitYgHRbm96CQuc30\nJxtH1CKWuj+jjuKCSrVHjrRuVPcxvSwRQvgA1aIMQRGhyL48JoUP7xH5RXkWC4MJ\nnCkkoLB5AgMBAAECggEAPcOj1sVvsAVNr+6fXdUzU9WcNZqDN4avcQ0nKCuM1wkH\nvKEo3E+V2iLwcSjz+2eEbOVxBtLE/qjeT1Vjm4BMWH6BqkRT0tpAPXhjuHYf/n85\nkuMOBzuDuU+hvgpEq1hqFD2Hes/zF7K1wxLyv3/2pON2AppZj9AkQ0UkqLewPri/\nYxqyRoMkhTGDRJ/oasZfLbu6rCaLWshWDqjpP4nQvyaBMa6JSqmS7m5u0lW5fpDY\nGdHoUp9kwRN9nKwaAEipbTxV3pbD0ZaVUzwIG0gcDyWqKF/4yoqHVVnbtETF/Zm1\nfRfK2o+d+DveF1M84xkrkZd3zqXJQ43pkcsBp8/LGwKBgQDXEQb5k7Ju1qWETevf\ndjTy770jND+tT6RWwdCL3fW6eZtmXEHx8lAlQorHX9pVTUgWN6NIaX4Ckno2eEEq\na9AJ8cWMiEiscUaU0WJlgybF4Z7bHhrAG05cMOmQOwLlk/WF0D02+LQ/qdct/fVW\n86QMbS7jlaPXx71Wxz3xwn0b0wKBgQDJ0P3TJsEs+62LHuS6mBfA134pVnwqmJ2+\n5lb10OLs8didbSgSFKsxwNOWTvTFyhiidKgIxl4fbby5yUK1D+i/Y9A9aIEGFGQA\n0QvtQqwi1uW2HDVmM7eGhEGXRok1LJ2GMfQ6cQgA1f7qa4XEv+77ycEX/laIy6Ae\nvbScKFgPAwKBgHzYaZAf6QjmmZbAFRjXac1M1iLFheF5xhCG2iUXaDojtc4p6C4n\nV9cJVb5/KiMyhZJAIg07D+c2WLOeA1Y417+uFduKkYVpDGv/UHtVMwDUBH92blju\ngQKLckpDt17GEVTomWB750a9tSgBsJYVQTnld76tczsjvAnQB2l8WVv5AoGBAMRU\n+FlOPmeQgAfzifistY75FNcKN8kIp41rb/W7vMddj6m242CTkufX+v8i2KUCMmz4\np+/BaxeQHiVvUeHrFDX82DylSb+sXo0c0UmDrwpFnTtIvforHcNTLqwIBrsgKC7A\nsiOYinylslRDPeNmBQwV/i9lUrHJxn+hde7koKYZAoGAHhLF289BTsvkvL2pd7lU\nEkkmB1VV5SWYaS0EfWOV8EaALG2QCD0gFUdtjCPk/MMQrr+ahjBCDAAMRoj/THQG\n8E4D23ErtfRvF1Gl2gh4oxZh8y6GEOxnIoSjzCqQzSHwLVGmmt2BIkuXJtDQJK/D\nRhA9p32xVhIIlD7RqTuQ44g=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "50084ffd691608542e30489f2570954ecb8537d4"
+        project_id: "strong-province-482111-v9"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "strong-province-482111-v9"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
