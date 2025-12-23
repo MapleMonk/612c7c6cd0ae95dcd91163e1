@@ -4,8 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "qjeorkn-oq80724"
-      user: "ANALYTICSREDTAPE"
-      password: "}RX~TlRJZ.4QA{w"
+      user: "redtape_legacy_user"
       role: "ACCOUNTADMIN"
       database: "REDTAPE_DB"
       warehouse: "REDTAPE_WH"
