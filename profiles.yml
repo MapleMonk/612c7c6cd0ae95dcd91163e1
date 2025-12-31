@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "trybuy@trybuy-wh.iam.gserviceaccount.com"
+        client_id: "111008440777064345267"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/trybuy%40trybuy-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDGXOTkONSzH9uZ\n3sOmwJE4uEIB6Aj0Ms9NF6su6czq6rbB2v/4xIjruBsAW6mKzkESwR/riLAG+ACM\naDCc6NBRxfJmbQ7NRphzUUZtBgVHiEj+gZ64CefsNJ0DoKo4gnRvPEa4bUoh+Y5Y\nnAdc7yEYFHpRXInc6uSUoMEkimyjyZJ3JZBxC30v9yBGiXQ5RpeGRfqw4DSjGLlT\n/qAGnrlL2idklpHVujnMQrBHllprur2oY80DWsAD/gf+wOlNv+Vqk8B+jVw90Oja\nhB8GxfPvoRvE9984DH1Ldjs2GMXdFXJrvX5cNLHmAirQHHy0GHAS1uKLmzFGVyQq\n9XdvOzp7AgMBAAECggEAAPT2C/2BnuC6m3ayoqIBvwveyRK2MFiF1FZf5E+dRijV\nIADYTdWfKJvwUfpDymTpLE6zngDSp2qF/idmg32LcpKuBWHllRjGzFjBBcnmXFWM\nZbzCDIjw11NJE8JnFGFHAjnJyGdmj7hAm62tAbPnUfchm+xLpD3kHvZIIWEjR5ix\nSIccdkCwRdW3BwZgAa/OpFI9zT3HsyqNlrAmBVS72yIZ5KCJF8ZdiULEev2QQ+PV\nOIiU9ooP/T9NCVfe1htlzv7xZU+yZ/1J0h7singwOnvkCARujcdh3xdIqK7k3W+v\nlsxH7fZy10uVFEZWOP4RhjZolq3o2vWpvkBY9NJocQKBgQD/ZK6ZD2tJQ1t9OrpW\nYGGb8xiWz6eWQO62wwId/ZkAK/nbFcRH0SLoGb7ASUsitE1ure/3zdtsYqruruzu\nFqFiLhUz6mn2O5jI0h59VLz+a3/6Y4aQnv2uq2+WPeRpoDvrxBfeFndTua3xPY+V\nGNdWKLYU2E/I035eZ9znvzHewwKBgQDG1Ydmt80fuBlggmb6oWc0J3U+WwYdNlkP\nGIt+LTKSP33VQwWlgDqjjfIopCS4cr/QeYNlBFAMWg/j7KZfpNNjkX0w3q1JV7kH\n3xMUIad0OEMvkWv8aPyU3VOK999asqDwHD33TEI2PVaVE1AAU6Tcm6LB8g1u6rv6\nPAYdmwjp6QKBgQCXFoYgMLoErp+KV1rzTLOSId+TIKgBQMq4PmebPHLuYhW/YYIs\nBnKDIu/xK6sSjd4dMzN6w0MjPL/o0n2CYMr6nU6X1v72180MSRoWhTIFxa0BgS2T\nkyt60RsDo/vj7RJl6S1BisLvOjLIO+Yci4ShCRanAE06/ruMuB88zqR/JwKBgBjZ\n0T1+VW3UdZ+BTNugVqTHFblAaSg3hbQETlLr1TlAJDsGUGtZ9npAoHaB5XEELoMg\n3NJAUrzoeLn09upXUHBOW8ZC3oefJiocsGbAugwliAgm9ccrW/5DF1D0H/9W+hRo\ngzooVtIuomapbkNMMPu9m/7/gLxPLEVfQShsGxYZAoGBAO0lTxIoa3bZM4HPgg+x\nUzd9MjfzBmuSSuhcDXeZHHYQ3syei1Y9Z/uoso1Zv4kDFqKFyej3BV+TGKZOh6fl\nYi3YrTwcHLZk1bN/8u7UL9bHqUGjkxjbaFdUQmew52OsaYFAl0H5+MVmhXDe8i+9\n0VoriQ+c5UPDZlI2KeRUYtqn\n-----END PRIVATE KEY-----\n"
+        private_key_id: "3caeb04fba5fbbca424da4d8b3a408ea310acb98"
+        project_id: "trybuy-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "trybuy-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
