@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "samandmarshall@samandmarshall-wh.iam.gserviceaccount.com"
+        client_id: "117592033340105153670"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/samandmarshall%40samandmarshall-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCJ95NQn4Adh+LS\nmgPPuJdoIIV7ZdMYsZHxbhd3IjiLrBH/EQK/AdS/hd1Bbldvat0Q19vPJoTCSgxx\nR81fan7JTxCF71jtr8iWRxUelqxByO2tm/YWZxR0f8Br3o1pRpbrORNF/SP6EB2i\n+3mPk6d6SZ+AaXLoVnAbRgui1szr+yWTlYv5MfPQE55HoylP+tueGr0w473Bqyj2\nbkB4OEEwZMatEuDHr+BRbrMSZMNF5xTtoNIfkZ2G94ZqFByYkwQFAJGwYtk+mOQl\nEIsfPtxDJb0ZkxK6QEdWtDvgi8izvB87t9my1cKBt0lOJW8j6nTbWzU+GJTgEOfa\nIzMWn5ulAgMBAAECggEAGsYOsoChbhmmrNPylWbvCuf0v2OdOZeMCNwidZ4Qdxpn\nS6ZTcBm83YXuz/nHwfls+Q3KvEJvVPzluT4D3tZd0Fclj7hI+6c3N+KHeK4os4N4\njE5NzT8nuwvnnYdMzfdC5lbnJJfhWW+zMKO4jWJMB/EtoM/V2rybeM95BprEna6Q\nPyojs4rLdu3SoopWpkqYHDFTKg68vshuct5VVDm64iVS1w/CSw6ZltPaE2Dw8o5u\nYfhx/x51a/OoP+V2btb4VvlK4rCil46ivD0iHDsbdr1Gu/g7tjuKPOJyCpNouSax\nwgpII9hDU4xQFYnZ1C9JrE8LcpeDYpxxd8lnQ4IOAQKBgQDAvbeybnzzsFbFeGCq\naBkGJGEyC1qrofJjCiRmh1wQTIXLIrZqkVjKUKfTQ5thjEBzlYahRZeHkeDZRSB8\nfxvtcfcrctnsTx5oKVjzSP3ucoAF+/gS374YY7IMXIA+UZ6iBWUqWw2bkGCfgtIs\npe+IHfV3/eIbnhJ6isroK4qsZQKBgQC3P7Jk4X46vrsA+syYvRptrL4vpyCqeC9Z\nHrdEsY2qbmTw55YfwxqlVSstwzZQJIIEVIr+f2MwMoAblKxSb5a/ViyWbe88PVpP\n9rpS2QHFPPdov6oP8oRtqZrI4LrWa05DbWUekqvJd7oG9DqDjFRrwvqT3350i4xq\nPubyDP4eQQKBgBPRrlj/uYOJZ3LIzQ/YwnH6PbBasIkjjvwWJ+YPFy1p4PwhZqaQ\nqZOsNYWo1wpx1JLOFljxAgLjwj41OID0xRdmd6cVGUmOXS8SyV3C7LGfPoDfBwRR\n04dIgR96R4mg9PHuIhf34u9TKkxctGX47ieOBRbAmYaDe5z0NqcnCwxtAoGAb8FI\n6n0annjzUwWhAQVSuNBArI8gPNZPCerRmfMukmIA7WpPA8/Y0DvAuYfz96xMHpfw\nrITD2QDzX96ruRqUtNu5FYS2AebozRuLRjtR+RfVSuyYqmEcokRtQVTMnTeT40s0\nABEy8wsxSExp4xAR7CZc6xHB7RGt8J2r+rIxyAECgYEAgl/wXqeAwyog4aQFsy7e\n2uRPoGF77WrLWBYF3l3xxHXR1LT1E/eOoBHVCo/JZI6hmF50zTArjFRTa265P7gD\nCViKDcJxU0c7aLo1zs+eeM6KZFraYW/cJ+xGZlcLZVLlsAKUURbFQdRT0EYt5UM0\np/JtlRJ1D2VYH7FDaq1l/Kw=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "93671195b84eaaf5d08bec2e1f416e322824b9c2"
+        project_id: "samandmarshall-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "samandmarshall-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
