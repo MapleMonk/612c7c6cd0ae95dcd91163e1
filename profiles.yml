@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "maplemonk@beastlife-wh-474411.iam.gserviceaccount.com"
+        client_id: "102217881267791870971"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/maplemonk%40beastlife-wh-474411.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDUAVyhi5T3ReJj\nRpk1OE8P88F5GRxb6oYLg4vo61rW+khThJpVQ/NKLvnS9Z/MNZhzmPyld0+d9f0J\nABD4B1c0UHjteXCr1jgX1FICYjG0TpFPNogDl5p8KYL9eNjk8DI6423YzVYh1Blw\nVHKTFFId2E1YkCBLRSy5yPlNJBnZSUOt/yim6Ym6GRpv2Yt1qm1SXIJHitdz25uE\ntugoKh4LvIz7Wy/JC+jsWKCrCQtGZZxakHAz5FTUbXsaLMbMJOkUIaYdr3jy43FP\ndExxHaD4pyKW7VR6xuZV8MSBmwHvWo3cc1ev/9zPwvucjRSLSRwEIpbXRE2IWxTm\nRf5OwevrAgMBAAECggEAUepmysqel/6qLzbHmu8zaVQDhRGFSiSvf4JoDGrn8hnJ\n2W9qnJiBSEAnanJauLJawguyTxLvMfcqupAKfnODp+SSHRvnw5Wlndt9hos/bk5P\nSh6lZlHtMJ1vjhXkJG2E0wkuV+9bIP4NiEAw9xCKfBqoJBioSb0kP3LelQZmcHRw\ntK4FD7ho2jW/PZRPsJsoQRN3Q49U7o25FfCGYsy1648Trt66UVF2/ZoASES0KvBf\nL08YkmE/c+ZzcLElxzpG1usc4SH6jPDzUYDRCWyRq1Fk7lsM1J0ZyUM+FFMk0CT8\n7Qmgp7ppuQ8p1TFYT1QmpcYwsSVxMXErpKWnYDiFtQKBgQD3cQc3DtsAKzk7vo3j\n1hXlKuZqlO4cYg7C020PTyU7wOPF6taqv9/5N+s6Bt4j5ElFRGGFqochGs9zfBGD\ns5SAH6bAGY2Pkpy6alLLNSafo0z0J6cfup9jmCJPZ4zVMQvtGLHt4vdPGiqWBXzY\n6YuaQzarYxWfdp6uPieF3Mh+7QKBgQDbVpBQHwkEStYCLIVP5KkZ6Wvt0tNRSf4k\n+lL1ItkxcpzlZNE9Su00B56FALDPnoUnthgHfZ0OTtiLsBNNFJcpme8dg+n9FJnV\nNDyt0fRlX7vy3ITEcQmTxby2LnrCrP3OYkiNHXrRUUduJO3vpsUqRBhXc35YWezB\nGVK7VN1jNwKBgDZagbc6cCjtVbkl9o0hrdWVQuAOru9VKuDpCH/gZtFlYaNMHrOL\nSmu4ONeaQpmnv+CTUMjH2L8Q4JkBm+dOP0SVr09rTYlIL11TlbRFjKJsgK7xNujl\nWbXK6V5/5JPAHlqKnisfPCwIF2q08ePECYJtWUj0jv9kUx77UDs7cF9RAoGAKkQ7\nGQVyAl69cLvNkMC6iWC+yJyI1jBRBiUq2Uw22F2CuH2+CHao0Q7q0Cx65fdhJ27i\noIbnPfuZpQlwHrlqC707I8/oxjkzD6+6RbCgzOwu1rUB7KzvsIc5P04jn+IgIqYz\n3uWgZjeocSQyqazUb7mhizCZV0M06V0M4UaQRu8CgYBoObZv7Oh+TlM8hWngIY3f\nq8103qFKJeKwUgN/aFk77p5MpzymSmxKb9a7GwMs1xNZYHu5z5mTS58RVHKnbLsM\nWXmFn0KSgByoClf1ANuaxEJjj5g3tBzvKTEcbxa0QY4gWdnQXDH/v4c0zQZfEkH2\n4cxuoPqjM//Fb9eHnBD1nw==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "9642711f7f0b681b59fae37335f292d1191e75a8"
+        project_id: "beastlife-wh-474411"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "beastlife-wh-474411"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
