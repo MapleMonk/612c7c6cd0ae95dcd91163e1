@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "gs_Master_Data"
+    description: "A starter dbt model"
