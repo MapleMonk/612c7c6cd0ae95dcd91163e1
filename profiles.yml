@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "aopgsbc-lv22439"
-      user: "analyticsminimalist"
+      user: "minimalist_legacy_user"
       role: "ACCOUNTADMIN"
       database: "minimalist_db"
       warehouse: "minimalist_wh"
