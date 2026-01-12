@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "botanical-luxuriate@botanical-luxuriate-wh.iam.gserviceaccount.com"
+        client_id: "110887529320588473375"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/botanical-luxuriate%40botanical-luxuriate-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDUs7dMMuO+M88c\negTgTmv6QGTPlxSk7Wy3+2STgKOnfzD1IfJl2iJYeKes0iwBkTwNIAqB+aMth9yn\nmaycpUaZZVg0mJo0BiWD5vkPiB7ElETmx/FsbQlQTHRAvzuyeWRhDAejzwOHb2qf\ngVD17rQegahtNOVFmqfz7EgCYTykNCmM8fHPfJqe7l00j+oh3spq3yzWj3uQtYUH\nbUZC0ZhlQTVdwh6XC6/hrBb37qDNPFamAAYQn/3HWzNYTUH3ZDc0aNQ8VCPX6tmG\nNhoVMmfuaKWSRVXRV5BOFBliwlts5Zex+pqyzYq8eCehcDbnguK+y4VkMpnhUjqU\ngX19o9zxAgMBAAECggEABd8r9MfdHQCiw5xL9wn9LbpyOf+XhZ3LC/lt92s0QV0H\n08WPErAa1X7HsLP43GZ3LhzTw26p+jlbXlpV/zlKDZUkUifiDmR6y8VQG/VX1ZkK\n/aS4gcPxD1Eb/rdUwV6b5nixu4w9AoOxMaPtEWv4d5TgWprspx8vyqJbwsqOxTDh\nRX5XOS31m4RHyG50BOnDBss8v3LqTr+I4vDbz1lcfjbKMWMk59O5efQ062/yj0tv\nE/wOUqf6O3ezFpi8ELlKIUjDakEMpAyhzaNoe+VLG2eeP9nQTaUJUOW1OD+PTsDk\ntoGN4YguBYniaNHeacUUwwvItG/PE64l0c7bDTErwQKBgQD9A6EsKDVwdrwk/C/z\nbiq+0Hh66gcQs3FRMIlMMKIrzar2oCxS4H83ZyFK5/L97KxSkfn3wUxL3Z25Ibff\nBiFN36x5nKXKlke00QOHuZsnEvfeorktOZY0NTu9mTNRZ1n7vTATyOJjYh4Rt4jj\n8z31DsJVFqwEGvPhJJb12Kx7MQKBgQDXNk0SPMhAa4xf5g8oD2ZVwkjVJhdpPY/Q\nr8+J8DN2Kwi5D1eVL8TuLnE9J1Kda/Vo6tZIXZf3gOFv4I8VouHPYcBL8M9Odj7Z\nf2gPIGnXHqyZ1kWgI799jbG4qWhUu8lca1SO/Be8f5ap7dySjDJjMbkU9kxCM/bA\n818Q7ZGNwQKBgQDmUkaG1veGsF+nX3cbJ5974nS6l43k8yTlnsRtehw2udu29KpE\nq57DRXt2H94Ar1FTPRWLJwiYS17H59zlBkSNCl+MuT/nQpR2EosfI6QMluTTY9gk\nRjbowcjnWK3xnZ65XkiEyirkA66RvDy+HXC6Qzw+jwv6FLsLqe5OUHb7EQKBgQDM\noAPN6F8a6WdyM0OL+oB54B3yFKLD3NXmPZPeerXjkG1d0BmdbusW8K+Yzs+9gE25\n8TfHXL5GhZNUFbbWgqWj0jTNv+zMlJ+Tm5FseIxKDw9bwiE3b2X+UgB+LQ1XK6n8\npsyim01SXBn7/n7wFD9Ak6GALeM6O0BOG9jzNn9jwQKBgD6OvP+7a1jGxS9J0o4H\nPc4WsX4ONBLkqxox/oxUJFiMqLW0drBDcEsPDYsX1MkOAYwAVjLyOTNqIz9sP+iT\nw+4Fq2Bg+POpiSv6Q4pU/u+OsfeWitJMkdkY4qQ/Ji1rnHmGhHRULGnKkL0uVf4t\nUbc+ml0izMc1rwExFpMIKNJ7\n-----END PRIVATE KEY-----\n"
+        private_key_id: "e14156140e24a4f656b4c87e9cfec533184f1b67"
+        project_id: "botanical-luxuriate-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "botanical-luxuriate-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
