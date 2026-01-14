@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "crest-aquatech@crestaquatech-wh.iam.gserviceaccount.com"
+        client_id: "111028255357045578470"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/crest-aquatech%40crestaquatech-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCo9AqlC1NdR+VW\nEQ8dHsXdgfzhCqa/DWGYMyxDrrwa/LPDFMZTooxGbFqsagVyonxUnzx8fDW2vmhT\nnDDDfo6ca1uUf4Hxls3nrudC+0OJdGTF9wmAYv8aAhtXw8Aw8LZkCEJ67GfzIydR\ntGy/3dayPZmbaGjI4Kj0BGAX7BCxtykifd4Cah6ZgljUdSPg3Zq4F8iVDxx5+mdh\noOZGnI0Sfk9rn7XuDzHn5zDBe+GG06CAnzegQ8ddxdfD7lo+HTjjs7utHFUz7TXN\nsYmoOQxRoZ6q9BeTz6RRza5v3YNtPT+xYFWijsEOPYlkyhlzmnsc5jxEeq7ub/yH\nf8qDxCqtAgMBAAECggEAKOiiVTEnV8xLQuoxgycK2OYbEXBvTI5UZbJqUt8Ry+UJ\nL8Ctft26YmjlEZ9AP3AJc8H0tt2qcdurzibhBcz0gfpau9ud3p3ZsHIArA7D3Rny\nNp7ozY3q3+THsxoCRLdcKl93nWT1jIEkCZwKwvBXhmP0+BSxXoZLUn5muBQgPK9M\njkNfXyl/DVJl/0CRc0yZ90l1MqJdpjOzOYT2ba9O+5TX0RNWHHMSRk7qU/QxdOBJ\nZEmHdXbtR47quzlN48MXLL1//miSpQERQ8JGnsSBaT2j+P9Umdv8gD5fSN332dzq\n7hwV3QsZgzTCekHgaYuqmxqBXjkpC+Qz64YQtmVEwQKBgQDRyvMK7Qp8xPWfD6PN\niUtvSh3BTKsM+ypn2LU/Q+B64HU/LWxGorIi4CZPkRl4A+DqFE9vPfiJzwYL9KlW\nIz3X+9hSyPxrC+DlnMvcdqlvJnVYB/NLPzYXXWfsdC5uKF3NfyKBjMx7dh+kIGDP\n93OzgIY038cWU+4AcQqRF/6fIQKBgQDOKmFYcWdv1pt/erYsvw+KL6hfo7VXCtRl\nP03y9/Za/Mrn/lRbvLEnf08aNCSaAUU5+aBYTYqKch5mqgLEBncVFdL15kTsBs2w\ntP+MDnqIqP+NjamyXKw58NN/zatxEPIdZRVHlY3Edspfy0IEgNYz/DePjHnabHYZ\nGTmR+0FWDQKBgC1ivIWmllg7u+93ULaMdzdST3GcBn0+cQQaS8uuAYhTusm6J+x4\nEhWdbGxWNa5TGHtLfYvRWk1l7ibz/RZXdW+eWkQ+mu0FmtfRvgCp4ynaphQvVCD5\nQdh4Kp1q3QiTzwc/89UXAr3K5jl5j7guDmfM7DvQFZ/s9FZAHksZZ8pBAoGAFQBU\nMkI7GzVtWasSa7R6zMTWDggLLPa5dCbiteF0gwhFUyShS0cJdNCPKkgtglKmzqUT\nJGuhtUCywBqJdZaDAu7aMppmYvS+d0W40neXG9y7S5wmsTingq95nAdDc50aTMxD\nQquFaYIAU4nNC9BkAZ+ruT/CGfH6hcwABVLm8PECgYAOxeseeqftaMM+/kzGtMSq\ntyKHFqYNUOSm3erIxbqG6AGBWXvwfGcn9+cHwanGx1JTQcwdNTH7N8kwctOFQQbN\n0kqmH9O+VMmshk0pUKSTir8gPwliGD2O6x36CSm6Pxusm11OBVrHv5AOjYQah2/r\nvbU4gUzoXMZ3zjIOPtC+WA==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "2a38477c0c2a0a4f9caa433aeb3b88d6f1fe226b"
+        project_id: "crestaquatech-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "crestaquatech-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
