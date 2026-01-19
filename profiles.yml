@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "marico-marico_analytics_ky"
       user: "elt_ky"
-      password: "AnalyticsKaya@Mar2025"
       role: "PRD_SYS_ADMIN_KY"
       database: "DATALAKE_DB"
       warehouse: "PRD_BI_ELT_WHS_KY"
