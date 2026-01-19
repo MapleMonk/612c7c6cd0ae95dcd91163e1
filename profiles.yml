@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "marico-marico_analytics_ky"
+      user: "elt_ky"
+      role: "PRD_SYS_ADMIN_KY"
+      database: "DATALAKE_DB"
+      warehouse: "PRD_BI_ELT_WHS_KY"
+      schema: "kaya"
+      threads: 10
+      client_session_keep_alive: false
