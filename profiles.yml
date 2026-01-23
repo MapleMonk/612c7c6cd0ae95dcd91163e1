@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "carlington@carlington-wh.iam.gserviceaccount.com"
+        client_id: "106572293690147833829"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/carlington%40carlington-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCodXyeymn2cEua\n2nnYDlinWKV3jOlOWgQn3FyY9KFUx4nd/B8E+cJ5mzvZEhA2PfQlKyV0HqTK3vDI\nVC6mZjuPYojX3yqzsIFSQ7KBsjq0k1NxeLrojeETIqf976Rtl2nizEShhjXvQYPJ\nJzqCyShXxP4eQSdSx8mfN8OBAQQnu19XGF2ibfcl3kX0VLmd+RjJNUgfAXyt6WcN\ntN1LSQvtwDT/Lu7/Kxh38DGO9oZH763Fm2xzELdeQVNUv49VBhaLulr1A+QfAOuY\ngC/wKf+EXzbKNoSjKuTNh5FFcNjQIEgZhhfNX50HBaodhq1CMMzGCMUeNT/6Q6TQ\nxvEX1jDjAgMBAAECggEATh6ZiWuVgvZlYSzSlxpkC0rFBPEgGjkNN0zt1fKPxCh6\nayppWh3WjR0rPkktonHNf9UH29cAFaIYJ9Y+AeVj1mTbz7vKaiS+e98v7wwvRCET\n74mMp55v0zddjxlr93RhYo7Wfs8lwMtxaT1bWV4easFMFMyjBzTl74NlErRdcGyn\nt7KGxZ5QarykBKmfiCzPSKjWg5RQQhHNe5IY+8s5iWjcVVeQJDhznbOS5UpAT66l\nnLvKLd129a6toAoDTaTanLSCE8CSBiQNrwGcrQWHVaxrcWJBfwebX6l5j6FOOGW8\ntczv41mVzocq+WcpXreJ2LKZkYwRSzrZ+Mg6lDlE9QKBgQDRU/6eUIU/UuHblIrt\nN+s6llJ7W3ZtWPlbygi/Uh8E6SDhwExfEdSKuZFqIQ74gMOUcBXhlLbGgDNxai3D\nSgMmhaKCe+GUbmfdP7shIMZgNye3qk2EL1CSrXdW1ou+YyEJtd15cD5QixRx5S/C\nBciVrvNKAtfgNup9Ouqw0zRHxQKBgQDOBMQv1Ie1p5rezMpKIM1t4rGudy2UChL5\ntgYMlHKsHIuzZ9LaSm/hSjff6+i2EEM0wv46xOHHOrCCuLXQCeGkVJ+h/QbJFP3a\nHe4E9B81ZHWDUA+XJRjoVEXgA/PVM1OYRVzV+QON7LX6TrPZC/CH2hCwn6/ZWBMv\nE67uGSB4hwKBgBzmU8jXpQ3RC42dPHDzv24fQtP1FKyUFBkwE3UWiWHMLdX9Do4x\nj/53EDRuy/pTDK15rAuw1GsjV/bYiejkVvsCiCUrpUEw3PYWzmcMd1bhRoJ86KbP\nQXh+qnM6u6BVX0JP8XvKm0/TY8c1tRo8Yi0IMl6NdfBmpIkVkUFIZ3dhAoGBAIcj\nT0GEqsR4vbj6IpN/cuFqu1yS5n3eIdZVFSC5W4MUcnrrVr9D5qGkWoRyrcKHZl48\nriEEtolGMTR+Txy47p8pt1C9te6+60lhKplrPPF8BS1undtqRS1Y4kDwtsgaE/Kl\nRSFCZ5d4N2KKr6RnFY83do01IldyU5sk0TFzn/4PAoGARUa312tdCkN9B5kxviXa\n8lnrszgFj674RmUUQWW/eQowFn+fegCYJU3DNoR3Ob2lRHqVaB2jODuy3+jNg0Fb\n2pY/jh+1wImgpLSuhlbEK1T/+GJId2dXqebOw/FuKQuymT0igbSVr+asanGT1hsY\n55ZxXLnif+AsuvQg/4qdics=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "abd75b397d8c519efe3412503bf035fc03ad7e17"
+        project_id: "carlington-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "carlington-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
