@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "sirona@sirona-wh-485107.iam.gserviceaccount.com"
+        client_id: "108070198415251079450"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/sirona%40sirona-wh-485107.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDA3C0fXUS5P6Wp\n7KErI85P0q2C/NZ+J9aMLUZmle4GIICZQ3vAd6ern8BJZLMNw1JmLeWI3xTONiI2\nDW31TK3s+cfGb1zG/4XNVN2qbAeoH4gvdwWyn5/Fnl8CjoZ2onMUhOKIrrGTYJYx\nTSwzbBXjzWFUpuhtq76eP+ln4SCTM6ZDqFma8pA/XeSYFnnd3wUlhVJ8rg53jWIx\n/0oMbTFZ8FiSX7LBofu0fcZogSU4MAmjM/kt0ljMR+FL6+osneuczOFTMceC2Q6i\nnO6hnTPX49DLVyzMqgbh5RTQBWpI/UknpKvEOKnMr4CAmuqI5SgyJlJir9GufKDA\nFKTGQuIZAgMBAAECggEATe7rIPh8k+s/U4o2mosujJ0S1pK7TmFk1mJZR40gkUND\nFCvr7xurGrREbKQPoukh+/5h+cxDyQyhCHymyXBB/Df3XZ2UvSl2dUHtDTf4ZBzR\n2HRdThAo7R+RPyQ+++OrY0hLjnYhde+a4bNQwDrWIabVxPJpjB/RuHsVI5AarMCF\n/S7xsuvxoVBQYwa9Edn6/pY8T6H4cxwDtClejWZK4GQ6O/P7KN3aSDQRYZE8ZFnv\nd12OSiRQNZyJdVfkpURA7XJYfKWpNXpfvd4K4/o3K8+mt1EOmbOQgr6Ftsy9mjnP\npHKK99wxAISL0DIsXHn/WfloT8qhLt4XMc4gsRUX7QKBgQD/uVeoZy98pKI0MxOG\n1VrCxx3ICVOXgLVGmi5umqmen3otWNNw1kKTRDArJ/s4Od/pk2bNmsXx+xCP0OXL\nWXkPUriR1gxgF/Sh9ezlHI+qKh4npZoaSv/Vebu+qwHrZ5JIV0NRxaw0/sDLjIje\naNTRE6EHJJtsJJMWYYVp/hzuQwKBgQDBEXbbY3Dnw5WsXD4jCp0iAl3iiKLvKtiL\nahAvi71TbMye5LFMeg+ZaLYlFObN+jOXXR1Rs8sA+wbIHqCaI8iXVLW+NbzXjGuF\nwcq4IvmJRcVngIKKveLRWNvkovIIrY2Dnp/mY0hT2pciVU6GmDJUZL20jtW4Alh0\nSEFtncgecwKBgQClkpqoBc9gU7RWOe/dsEyoqoWk3C0MfiBhCzkfEfLbKoTP0aBt\ngbzvXwoVFzj4abiJoo/AdgLOL3HEvEvdAxx4CGZKvp2apkgViYaNvZVjZwvJPdbu\nSTsmPECMLmr6wT+cqSuESYm7cmrgICkKYDPS/3OWjWQ4e+HkbtYUD50pwwKBgCtu\nmVVbNm/80LPYgGXzokufSq2GXVj+Q36BWqjHf8y/ofxwp+3zW4UASFFpNU7K5UY8\nvTa/AoDy96CXOzvRpvNcLBJhFl1LCnkpkkgAHjCiUHkrMLKzas37dmQlv9rx5+7f\nBUuXtBKhDvS7ShH/NPtFOmPe6fceF/X4tzdIklc/AoGBANDrAshGuWV5sNuvxWgy\nLOs7Qm3/TAW5dXGs5ZhPw72vX1TKkdYtDryzsXDmwXVTSWb/GHo7jyTU1g+OwVj6\n1NmoMB6K+mnr7m5ye2Xb5F2rT3XcmHIzH9R3L7z4QRVj2lpYAw+HINS4U0+Sl069\nXobgITbprQ3n6PZxzx1UVuxT\n-----END PRIVATE KEY-----\n"
+        private_key_id: "57ddb571681bde65a5fe9d4e025d48649e0a2cf3"
+        project_id: "sirona-wh-485107"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "sirona-wh-485107"
+      retries: 2
+      threads: 8
+      method: "service-account-json"

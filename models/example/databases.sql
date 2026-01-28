@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table maplemonk.sirona_pandlsummary as select \'sales\' sales_type, cast(invoice_date as date) invoice_date, ordeR_status, invoice_Status, payment_mode, order_type, reference_Code, subordeR_No, parent_sku sku, cast(tax as float64) tax, tax_rate, zip_code, city, state, awb_no, a.mp_name, company_name, customer_name, cast(item_quantity as float64) quantity, cast(taxable_value as float64) + cast(tax as float64) selling_price, cast(taxable_value as float64) taxable_value, b.customer, b.model_name, b.channel, cast(component_sku_mrp as float64) * cast(Item_quantity as float64) mrp_sales, cast(component_sku_cost as float64) * cast(item_quantity as float64) cogs, null as return_amount, null return_quantity, null return_tax, null return_taxable_value from (select * from maplemonk.easyecom_tax_sales where lower(order_Status) in (\'shipped\',\'confirmed\',\'returned\') and order_type <> \'STN\' ) a left join (select distinct upper(mp_name) mp_name, upper(customer_mapping) customer, upper(model_name) model_name, upper(channel) channel from maplemonk.googlesheet_marketplace_mapping) b on upper(a.mp_name) = upper(b.mp_name) union all select \'returns\' sales_type, cast(return_date as date) return_date, ordeR_status, invoice_Status, payment_mode, order_type, reference_Code, subordeR_No, parent_sku sku, null tax, tax_rate, zip_code, city, state, awb_no, a.mp_name, company_name, customer_name, null quantity, null selling_price, null taxable_value, b.customer, b.model_name, b.channel, cast(component_sku_mrp as float64) * cast(Item_quantity as float64) mrp_sales, cast(component_sku_cost as float64) * cast(item_quantity as float64) cogs, cast(taxable_value as float64) + cast(tax as float64) as return_amount, cast(item_quantity as float64) as return_quantity, cast(tax as float64) return_tax, cast(taxable_value as float64) return_taxable_value from maplemonk.easyecom_tax_returns a left join (select distinct upper(mp_name) mp_name, upper(customer_mapping) customer, upper(model_name) model_name, upper(channel) channel from maplemonk.googlesheet_marketplace_mapping) b on upper(a.mp_name) = upper(b.mp_name) ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
