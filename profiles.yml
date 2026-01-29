@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "nootie@nootie-wh.iam.gserviceaccount.com"
+        client_id: "111296322669869599041"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/nootie%40nootie-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDrYK6PnvbBB3HK\n2YJxPN/l5SknPbEUq6aaN0QpG58dW9lpqiOaVCkZgSSSCIUfIbyx6gO7YOX94XdR\nz5JpGQJ0I0QAyKxjV7X6UNYpMFqMnk4sngEs5lp6NFEi+jBOL6cmIAIMfUbFlNvJ\nXk5T/7mlGqty8nbhqxv+2i3TEcxeC5z/5anS6kUJ+aosNJjWe4OeitN8dxk1EJk7\nOMHxrcoZbYCH/gqBWJJ6qhcVCBMH6jxORyzLIfzEKLoZxSXd6rZ8ula6Kixs12Jb\nU8RjG/o6pM/hSZvQAmSXZPzV+Gz0VkzR/BewVcl2TaXTeXXKhpnbMBcyWAN0vprh\nalFfhpDnAgMBAAECggEAAl7hAo/le+JVnEiCQSiNnkGiV6df/VfEMdCCZtpjoAux\nPBiL7H2H/FvA/47O2Ywef76MK1rR3Ti2K8wRDs/2NhrLJJAUC5mdnCsiTBb7hgGP\nrpmjHMsdil4lcbFwn4x9HhnsJZmdfNcHRVcmMbqVzXRGfWv8LbG3OiqxiX+dsSLu\ndgvvpn1nxqqipUv0rZQtgJlilSuRFYbuZHCaCjMg6eC1v/jrBOMFoJ25fpfTqmBF\n72wGp/XdJaEYLXYfgyV44s70MOLec/a5lPgO8TlWsnUXK/xaGZCmvE4iAlVG88Zn\nzYUfCTqpFBvBCDw7J6ko3fw5C2fbg/lwiXNfMS2nIQKBgQD6abRceUXKXIFPWk6G\nX04gNlcjbw1l6nPUaNl5c+CTfcnfSSdgSeFPAvxiHk9UzFS1UqqBk3IyvxyHVY6+\nKapvqNnv+RjCaJm1ja2zPmsdEww5lpSrFwQJ9bAUcumoQdos0+FcWHvQ7faCUnqM\nlr2QI+XcFSWSIjSFJ/RpniKaIQKBgQDwoRmNQbbWYenvEoNMVXmvN1SrUJVvkZD4\nilAsQ3txZw/N4KrDrD7ByfN11tkg6h83ENGcNpfNUa1eLupvzm3EE9zxKvELhnLU\npRx2phkvhMbAnWDIqtU8EC1AA5Vs8GK04DczeETNoDoG5Je7nE2xYPuwVSOIkqrW\ndpPSjU0aBwKBgFIiib4rKPEPFnrorAj3CbEXIc3Fhyd+ly98lJh5oZe/Eo/idr/m\ne7hmylGEj5DI1KAE1Vha/IIYnUrmjUNidzzYrWNA2RYrKP+b0PWR66BFtyTMd0cG\n7ZQ2ueJ7Lpi5wM4jUS/w9eu5obltRDUI3HSC0co2RXSBM6jZShm6fK8BAoGBAJhK\nDQbWUSXrAAfbWpeD/ShER2TI8lqS8QIrX0Q0TTrfNCRjDRAbwfgZnOi2WeK36ZuL\nHG3WK0q5Z5SU8rBiIBwZShqjx7w4khI8kQASbRwi1zruH2PAooWJ42mBGx/AH2hE\nAwujEUBmKHNWVyVYbd9V9tSJfZyg3lgu4a0+2k4fAoGAFAkr73xXMA3bftTihP5h\nc6ded1KhZP+rlnlwW4bRIGp0q1CeUvOuFXcaJ1PTV6O6I9zUpDPyH3AEPFscuup8\ngTH98G7y3ZeVaklZMb9XeteMjgW3lPkH2e2uOW2ZYpuY3BhQAEBvPzus/X7R2MDF\ne6t33iIwxZjqJcPOs6q0Du8=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "1bf2fc266c38eebb2d55c80c971adfc8a777860e"
+        project_id: "nootie-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "nootie-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
