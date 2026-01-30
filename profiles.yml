@@ -3,7 +3,7 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "mexcgyc-av40653"
+      account: "vavqosp-av40653"
       user: "emmasleep_legacy_user"
       role: "ACCOUNTADMIN"
       database: "EMMASLEEP_DB"
