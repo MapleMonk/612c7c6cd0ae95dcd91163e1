@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "Create or replace table maplemonk.sg_db_OMS_guru_Fact_Items as select Channel, company, warehouse, upper(coalesce(buyer_city ,billing_city)) City, upper(coalesce(buyer_state ,billing_state)) state, upper(coalesce(buyer_name ,billing_name)) as Customer_Name, upper(coalesce(buyer_email ,billing_email)) as email, upper(coalesce(buyer_phone ,billing_phone)) as phone, upper(coalesce(buyer_pincode ,billing_pincode)) as pincode, invoice_id, order_type, DATETIME(TIMESTAMP_SECONDS(CAST(order_date AS INT64)), \'Asia/Kolkata\') AS order_date, DATETIME(TIMESTAMP_SECONDS(CAST(invoice_date AS INT64)), \'Asia/Kolkata\') AS invoice_date, DATETIME(TIMESTAMP_SECONDS(CAST(shipment_date AS INT64)), \'Asia/Kolkata\') AS shipment_date, DATETIME(TIMESTAMP_SECONDS(CAST(last_id AS INT64)), \'Asia/Kolkata\') AS last_updated_date, coalesce(buyer_address1,billing_address1) address1, coalesce(buyer_address2,billing_address2) address2, buyer_address2, DATETIME(TIMESTAMP_SECONDS(CAST(delivered_date AS INT64)), \'Asia/Kolkata\') AS delivered_date, shipping_company, shipment_tracker as awb , JSON_EXTRACT_SCALAR(item, \'$.channel_sub_order_id\') AS channel_sub_order_id, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.tax_amount\') AS FLOAT64) AS tax_amount, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.selling_price_per_item\') AS FLOAT64) AS selling_price_per_item, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.promo_discounts\') AS FLOAT64) AS promo_discounts, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.cgst_rate\') AS FLOAT64) AS cgst_rate, JSON_EXTRACT_SCALAR(item, \'$.sku_upc\') AS sku_upc, JSON_EXTRACT_SCALAR(item, \'$.channel_order_id\') AS channel_order_id, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.invoice_amount\') AS FLOAT64) AS invoice_amount, JSON_EXTRACT_SCALAR(item, \'$.currency_code\') AS currency_code, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.tax_rate\') AS FLOAT64) AS tax_rate, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.sgst_rate\') AS FLOAT64) AS sgst_rate, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.igst_amount\') AS FLOAT64) AS igst_amount, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.shipping_charge_per_item\') AS FLOAT64) AS shipping_charge_per_item, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.qty\') AS FLOAT64) AS qty, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.igst_rate\') AS FLOAT64) AS igst_rate, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.settlement_amount\') AS FLOAT64) AS settlement_amount, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.sgst_amount\') AS FLOAT64) AS sgst_amount, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.cgst_amount\') AS FLOAT64) AS cgst_amount, JSON_EXTRACT_SCALAR(item, \'$.sku_code\') AS sku_code, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.gift_wrap_charges\') AS FLOAT64) AS gift_wrap_charges, SAFE_CAST(JSON_EXTRACT_SCALAR(item, \'$.transaction_charges\') AS FLOAT64) AS transaction_charges, JSON_EXTRACT_SCALAR(item, \'$.listing_sku\') AS listing_sku, JSON_EXTRACT_SCALAR(item, \'$.status\') AS status FROM `maplemonk.carlington_omsguru_get_orders` o left join unnest(order_items) AS item ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
