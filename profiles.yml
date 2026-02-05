@@ -3,9 +3,8 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "eethavq-vq26191"
+      account: "vavqosp-vq26191"
       user: "sleepycat_legacy_user"
-      password: "HelloHi1#"
       role: "ACCOUNTADMIN"
       database: "SLEEPYCAT_DB"
       warehouse: "SLEEPYCAT_WH"
