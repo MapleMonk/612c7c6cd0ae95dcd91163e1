@@ -3,7 +3,7 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "qjeorkn-oq80724"
+      account: "vavqosp-oq80724"
       user: "redtape_legacy_user"
       role: "ACCOUNTADMIN"
       database: "REDTAPE_DB"
