@@ -7,7 +7,7 @@
             ) }}
             with sample_data as (
 
-                select * from PRD_DB.information_schema.databases
+                select * from DATALAKE_DB.information_schema.databases
             ),
             
             final as (
