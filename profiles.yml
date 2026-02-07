@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "goodtribe@goodtribe-wh.iam.gserviceaccount.com"
+        client_id: "111497137003685547769"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/goodtribe%40goodtribe-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDw0whKw9bNqXNx\nJdFidzSth53pqMC8ct+lbtV/NaPYhm/jz3TkNKZp+rM5ZmD4POlQIQtKIJv+t/UE\ncqRL9AxvEHKLma8iBO1zMVqTH2m7RLyt3yOtlcseOGeDo3lHLeJOju28W4R097NT\nbNHQ+06unI5UoTxgxKjnGWQLoqmHTHit7DHk+mQMJQ3YJJO/L3zJKBBWSD8UAr6H\nfk2FRXBtD4mKtjuhHXWkYWa9t4Rn2zkRJmLjp+e5sbiJ+HBfXmrbazO5Z0bh0CiT\nQvgkv3FPDlWSZ+47+YRsVHAarCQIBz5u++Dzk9ju2Swa3cW/tgp34DoF5b+hOWbs\nbikDebdjAgMBAAECggEAEICCBwYU1vTEEx5HEv1La24XOK2WZI7T/7BnpYAYGlMj\naqYTy/KPXGkHC/KDWhz8HdKW+/QCzHlLPXnbA4tehCzuIicuuPNDD4uYTBBn6mv1\ncZc09rvgCJsGIfqWoKw435x+Fy91XjB+JeiFFz+tyhKOHDoMesDBXU0t5J3uUz7l\n9+C6ciG4cCK3fAICATF0Q46vwEJ5Q/dx88UmnDNLSuUU+1RcCQcP761wFzTvzA9G\nNI2NiW4VebaDsHb7/Lm4fN2v1VQ7GKlRQmx7XQcj4zG4fRoK7Fw6QamkcitZHfY3\nVcmDcM8bt5OQq8NLygs+68toYJOQ+zKoeyb+f53XcQKBgQD/s+U2GLT7Kb2jCTut\nBIR/13MB+34hkt7rgzxJU3qaInsWoav/5e++zY2/UzgZabAJ4kG6r/YQ+J/7ymvF\nLOmleUyG6sriV1sjeaNnBMha/hqAVZlGxbUCQC9TxFae/aY8ASIIBUkFNOCXad+4\n33ER6R7uQ6tNF8bAVn00jiU3kwKBgQDxGrVzgFzdEOMmMoPrUJdJdARK5tj/ER2w\nR6DpwrGf7PrQRSuLZhzMPkp+0dwMOreAMJrcusEkYxV6C3JWxaQT3e8oWocMY0dg\nCe7ZcrmUMKLnLx66tPghbplSmd1oqJQ7gwuauCV5hEnIj1xnYa+7cws22tZsd499\nS8MV1kHC8QKBgQDvT9Z9wrHfPzmUlNedHlVDsMiaWl253lNz5+dMWSythQfeLoFj\nhjfTQ14eaixe3GM9XNxXdMe/KnHQnaovZ9FkZRoSSzyGiWtq0DT1/avmPVtgMLy7\nV94ItTmWFHNdaddi4UyQZSHqFYr9KsGPrM+OC7g/FmYESPRino+f2ElMsQKBgQDR\ni/QOOY78N1Qke5z55KZIGcQtUSthq/+QmQB6ilMUesOWRbfNxObcgHsAc+Z63oFj\nsVq24r1AobklxFMQpV+wQKA+A0gCdTqwdpGXfcVazVaX9PURMn3BmL069C1ha7rB\namiohMlVLqtt22NlGprAIQGrIFFiHhuguzsHfJrVEQKBgQCQAOvKpIGXJiR0w9U1\n4z7DhbtT+QpuZzL8oK3AMiday2WVU/kdzQogvVjoluaWE4G4qtw8lJuCozMGhKY3\ngR+heYgcUlii9e+NAE8wAMCNkdZQ10+ABstm9FJSEeDu1S5lnuS94XnZUbGBPN/y\nNVHv6Dbfe+5co0mSCv1kNLhIoA==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "300efe323c79c4ccd51e0d313bcdb461457084ec"
+        project_id: "goodtribe-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "goodtribe-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
