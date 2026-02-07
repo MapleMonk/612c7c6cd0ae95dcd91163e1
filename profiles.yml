@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "fablestreet@fablestreet-wh.iam.gserviceaccount.com"
+        client_id: "101036756198025681137"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/fablestreet%40fablestreet-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCso6QvTqu6Cqm7\nlcbffuIR3v48DFzmYc93SytEyZsdVtrXWSCda9ABb1jZrXxuWKVm2Zd20vqdOJ75\nbgdTZ7zYs6qfOfJjfbXL4jQ8RXuPg7mGA0jgIerznwpgd5KHOrE2V8uJj5Rq/7Nv\np5UHAt1FGwsxMgthKrG5cGZlZEl2J9WG5HNG8KrRbg5XjJHjKf21BrLnWt57hgkb\njBisgZmLjAyNfxYGK7q/bhJsUHs65z2iHzHCsIT2lNGwVjhi5NsdWc64yjGNXVjP\nxo9X4zl/Bl0XelXUkP/q3VzBvWjhFx/7baPwlKXquCLWzRlJmprT/2GgfzDJF4ip\nc4ZCpEeXAgMBAAECggEAJgZpLG5Ujsa4efPUePe2jZ8jOlCyyZ+zlZ/96MnLG5w8\n2X/tGh9cEmTXGiMHLDrkO5IjtW1k++ozwdbFUE6iHsz8ANQ/mkBfIYgyXzAitgqa\ne3UPwSZXXM+j9nl/0b9QtxqBX0w7sZGekTJFNeUgnY8GWRCfxwgjWyfxtdVwBNEG\no38Yx87lVJTM4jsHcB6Jx8QfM0461nY/vvKFdwOYHzDChAgo9fNJk99gOnIo3+36\nnma94MV2fjK5co96QouRSVPxfP9yKzx4GOyc4cPx4j7j+8jhD/sirD6CV6pcJK01\nlEDTjBDEboiCbYexi/97rQGSvXCciwVu29uujcJbUQKBgQDZKHbutOcxg5wBX5l5\n+4G1tlzteQAdGQcR/acqHluweXOCqRc8EmgQ3u/hY9OG0Yf2P2yaOPjg0CxhrJQF\nw+aL9xboGSA9FdC5uEupxSFkb2yTc28BPA1fAqRZbhpsO8PhwrZc/6SnGxybGOj/\nY3yXBPoFo1Sf6y05u1uTYfcTSQKBgQDLhK+pzBac3wwkJbBYkBoIf88M0sK2qSY8\nLA89TjIgkPjH8xP3bN63ot2jQ+2HXAnORMpjDU11g4vuUONUTH6ocgUQNmjmteSh\n+bn29trPFLrk7CfnWkeaUiGFmj5hqW7wqNzgzyEuuYdm7pIPKDtIalrBm75U2/cC\nK1Jgjwuj3wKBgGFuQk4/ZCtW/TuwhM+yBDRfKbpyO5bSj9WGlOXU0RaQpz7MVtxg\n9cf7/myFuXYXtITLWBKp1SAoxoDcSV1804egyOpBu7EshIWPJoN5Ks5BH9nYRMmt\nA+LI8KwfNkOxXOWB0whOurUu+NqthnxvSosHdJXq/iDyB0yLvz6VCaHhAoGAc+l4\nWw7f+iyXL6c/jtFT4m9Yr4cCWyJvomm9rD7zEdU/vDHXt14MYy6haTFxAV0MQKyx\nUETtTvbDJdJwBz0iDjISbC9xA6WpOA+ROPVTngnCgEt4Vq32hhAtA3jb+qeThgHG\n+0s9LO2CDr/l9DgHu7DHS+m2N4KoZlXiLxiJmqUCgYA0LlLwp1aJ1g7yY8p+2Jzh\nZxffNNhWZeCVI8t8+6HeZQtOPwAohPFIdT6dtDVm6DNqDwLbigbhb6U8LeJPLmAa\n42CVqwR6OrMX9xwG+yDgByn2Im8c3Usbxypv3UYabLQumHdHw8x04nwZQkVgTeiw\nzaHa02Sj90w3g8RFUh+PKQ==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "92bee4dc16cd486cc336d08389737d1343df45a9"
+        project_id: "fablestreet-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "fablestreet-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
