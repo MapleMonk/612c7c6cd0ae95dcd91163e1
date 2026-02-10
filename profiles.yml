@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "ftune-678@ftune-wh.iam.gserviceaccount.com"
+        client_id: "109794387599855153445"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/ftune-678%40ftune-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbsAK+F4fNM2gs\nPq4qMvNy+nsh+li78KX4xaM+blltv2Ux2qozLJehP+FkFTG7fcrzTdzW6FK0xhqT\nAMbT3zpg4PLVhgNmTbIvxlmvO2BsT08KK75ZLWqdSOAi5wwTlCPTLTngfp7J8ZWb\npn97qvHh8kHP0aJUKiy4I7QysOvILh/UlX9AI5gVBkf/ZpGIsujkU4MpobTAGGf3\n+3sjtGx9HPwbdbXXoM8S6m12eyvVtixwGqChCt5Sa4tWM2AxXZHab6NQuYh/5bu5\nYwHE55cJ3EjHZmtYbFlAGJ84s7ANVlAlig35z06GfnxlIjtYDx+Uw/3f4lj6mSn2\n3qJRVXQrAgMBAAECggEAY61DOUvE3qqV+AlCjbwLcJ5M0xhbPX7NV4gY7uEzq1N9\njza3Jbv0WoH4+qeRJpBHTsiDzHCh4grGkO93xzcQLleyZoZFMZxMHlghZhwLPmln\no+ZAGgc8yfuAUuXBOXrsHEt3aLAazObTqklLq2lfEVURXkEwJX7zRmNQxfU3Ld5D\n3iXn0uvoPBLP/3p7NnJqcuxfQjdFbF6nou2CM919vEdymkPzDxz+GgFmyUdHWLVj\n9LCzjkEDNKKuFGo8GyyEmql96w8x2LeGUBL5BZoF3Sa+xJM+5NxGEymwdj5DO4ys\n6mQquakdBN+cphgXHda9Xe9tEnLmvPNZfEGmLs2V6QKBgQD/jO9ll5Eq/9za7VHb\nUgw0lRYXwEDCnq8LyC79ffm46int/cwhi3wYs0QkQBeP6YciSS1iX17GLeJnVFAg\nRu//Na9B+7L3khlQp+Lip1RFT51Cp+8RROhmLOTnYSKghSkExkdXQlXCtwbxOcwz\nlQ1/KZl2xvF1RUI7VG7c//8zGQKBgQDcEu2EtifGBUOzagmQwnW1xkS7R14d0jke\nQWUTVT6CDj/WcCbBO5muEe38SqrnyHL1+Kev4bM+n+7SkCt8PLWxv0evxTzL6Vt0\nx1ryLusbolmtxsYTMyPYW1Yoh2mm74TKWEpsHEtu+mrWEWCMiuoCfT9Pc+OiStaX\nKwVg2kXt4wKBgFNiIRr9AZkOM3obxYHSm7jsjHDjgj3+mQ83Gl4MJNd5UIUfMuQf\nJzbIB4vsfcOvZzCAwBZBGCOCBUXB9QMTImwbkDvvbM3rFeeDYDykbJLRD3cYZKE1\n4r60F1yIDUxjJqcwK0cFlgYawmEjgsWx9N1xLWncMB0bpCjHvATQYuzBAoGAMY3d\nh8WQfSlQTkTxNHRlFvI3JchzK9nbXLGy9cB7G8PjogCM6XPnLegBo46YnypmoHZG\nI/d5af+PQkCOWiI9c3GzzaNnBi9clZYSJ3hjHkzXTqb0kPwx9RTT+LpNEvbZ+soY\nr/FLFwkyJ1OwXtUkzjyvlc9tkWyyl0Vrp5xepKsCgYEA5y9ooyQ/RxL9K+G20tYB\nlIGFkCWVTYMj3YslyJ7R65qAfhV8RMjJg2UcrFBpCs/kzial7LvVE2zZY4lyr9Nu\nBv9M/wktP/rGv5CoOUlCXFY7YFh8TanguVwx3bFvvVL0wy7X5WODBOBbTr2bZ5pm\nyu/Nm8rtO/uXiFs68aXRsMs=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "fb4effdc0a0fc463ba9fc3df610023bbc0aa9acd"
+        project_id: "ftune-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "ftune-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
