@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "p-tal-194@p-tal-wh.iam.gserviceaccount.com"
+        client_id: "106477668801039760976"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/p-tal-194%40p-tal-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1jebndMJKjUKx\nDBQpAa9OGfmcpk72KZh6hQC/iq203AIC4jSeMcjoTdUi7KDo3NHGQGIW5Vbh+NO2\n/axQUaMU4TrZZxezfL4d8r94mQqt0etR3SjQrp218SJWJjI3zrdMDx1uqL0DutWu\nWY3JticNLOvVV4W1/fYpWRv2XG4oNWdVELz40yNPSftvwATUxVfP+jBup1xI/jWO\n/AnqMaaLfuthWO0BjhhaSwhZ4KY9RCuIWl3QEROxMV1fOr+vPwsYzkp73yGpuBnL\nTrScXg7Qdxf/458CQq5XoFfOBC7qiULXRz7pjZn7JxQtoNhps6CCLXNIRSvKqReC\ncAGMQTVlAgMBAAECggEAFPxCQqI3HAVwfkT6ZpQEhqdPeCksCt2be5v4jmtR8UwV\n6m3prZhtE9b9SiRmZAw0LjF+dQ2MyaFonWf8fSs2icEP+5WkQnGqiw0mTyMHfjh7\nthJ1d4ubfK6S7LjNCLDa9I5xtTsJYA8+SEEfN7/XizkUSGxtru/cPoLHjeY4sGpr\neC4tjUkpV7iSzZmLhKJouoDSQJ8wdB3cL/MRT3B6ncZuRgQLkYXBrPVDwHWslAJg\nKMHStLxBSfS+tj+qGuUvN9ba8KTnDt0Hp3F1k459IFWEFPCSB0mMn6+2cYGB4IXh\nwqBahh6Odvm0GpF9FypjcZJCNiu8U1sXEvLdJwTKMQKBgQD5hEpv5+zH9pP5i46P\nDhDZg3U32zMtTGAJll6Nx3ak+vmr9WMUeP1mOltpiTGOFhLIBZoFg+jB62FiXziY\ngQHT4xiwcBK5TVDjCtfILMMkPK7rtRaW2Q0NyrDxbKBj//PcDcJzEJDsmTXRmRHs\nfTt7MzqhtHnwWRWZ93h3QqL+9QKBgQC6RYuzz2y37gz3uM5219UvfDW7UT6Q/yii\nLEt9we8W8p1+VOBkXzCnfTxNCK793zIgYeU9tTd72Q6e8/+skrD1CjJgrAFoOaji\nTQT+dvQEZMTwp78z4PAU4Rr00wZSWIhujRc67iXgyoEv6qvgvbUMOdh5lFYcHynI\nyNItXaJ2sQKBgDzhyaPqjDzyboLKSZugS/429EgPxTn9U8WjGikwDUQONRN/SZC6\nQOJLxPhIUH4h5q1FqKJF4GpIu7dcEpwrhj2kQOb0Qa1TLzRm9eXS/j5+TBQZWIyw\nI15FIc2WusALuP3toY+f8Cy66YXd+qCgof3aryi7t7Esm3e5CXzYFpttAoGBAKo4\nt6wAGAgVgMA4oGS2ZFlalvexDQ4QPx/EftBTk5xS5l32ToErBBlrNtnm35OcjgBN\nteIoYqXI+7WCoNkhzJiBUvxI85g9aPo1DCVGq0QAmoCZqv9LxdouxCWLWrGRukvc\nn6f4zaCZLmmNeLiOZI7hpdOlHPPh/ps/+eH/OWJhAoGBAImkul7jmEFX9JO3tlRB\nwrmFe8sG5T8HK95ke1/uNRdHb3FJPvePdQiFp70NmiCVQraa1ucyyyyhFcp7mhT/\n6JlwPm0DjXJbUyFjJ8HKMzTVuW0UwckfrIuTwWwyclGpE+7cXgfDC8pcOSfQUMid\nQT75hRX1r6AVbCjEcTwZzLyu\n-----END PRIVATE KEY-----\n"
+        private_key_id: "04ad3cb18998acb697ff4f4b65939f52d0bf58e2"
+        project_id: "p-tal-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "p-tal-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
