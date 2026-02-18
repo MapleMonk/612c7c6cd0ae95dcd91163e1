@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "skinbae@skinbae-wh.iam.gserviceaccount.com"
+        client_id: "108060243122824982091"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/skinbae%40skinbae-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDvGd7ykX+YpWNX\nJq7PieFqL7oFCNK7ZdOPQGhnFDGjmUFY6xFERUuJ4cmrEhDejvfvWsXihSV1bf0F\nTHX29Bfw3mHHdM5P7o6h3N3luvNY3NZht6vL4YewBq9vSFu1q9lDlz8s8I1gxqrc\ngmjKW6sXoQRK2XQO+MSY/3Hos5vk623+xuJWlwgJYMfEVOaxTO8tVqGxbNR1fCDK\nJAsI58Kmf25b4ZZUYndSCjaP87c3sDPRyyMvK3v22QNwvNztsaOwTwpyBgmF7wg1\nqYMlvWz+TRt8Dz05W/RpdF9qwDYqW72grI4M0GKQdBPvSY1ItE+iJMJ27nPc2ZWw\nvRRjvsivAgMBAAECggEAQBYxGddB2gpKbCukI2CTmMCeHYdV5IDQic77rNVO0Mjd\nKRYolKH2M0jfowi+mMi9T9yGucZyWd1XOjpaTAz09czFbI60VdxdQqlOmKrZWvIm\nTB7M32Ld2aKRF0TPwAwFugYqGsOHQW8+kMgrikGzxCuWWPGcF/85wsCFKZgqqtqj\nCkbE80iY0KKCaePtCRM75ePlRjroUxt2iCDCn2jvhVGzbNaskMokacbyiYpzLi+0\nWkeCPuUbVVgHPYGj0qxUJIJSaWp7cTQwxMOXvz/WUH6CB0ueukucplwNENePthXU\nfAoCd4aImQcAPE7fCEk5URiomIQb+luYV/UD/XM+UQKBgQD3f0dXwi5nzyT01yhY\nni1a3TJlkZAO/DdAtbgwo5vYkQiyo7BXzqtRlyPd5NhKI8G/rBgUKW9Fez2sEeZh\nWi8vCWlX9Ck2HV+FMst2FVo/qCZoDq6+L3lmzJCdSSavxduGR7vzdzYQSebDdiEN\nLGD9o5lTYnga80btAxGaKoo3OwKBgQD3UL+0o20Vf3faF0H29gBZNxtqWaEoQN9N\ncjK+Jklk6BBUCPU1q10BtI4VgY7Wq0A7oYxJBPyf9cWnj6z8orFt2TLWJHv1BQ6u\ndK6Xh7jgUyMUOl/ay5epAvtvKk46yjPBNzWWgrNqVBUI1uiejXiib5tpO74SSClt\nXs6K1KElHQKBgQCCVDzuYqvrMHKml/KAD/OUSKz0PV3d9kTmR4sR2eYEegNZhsci\nxgsDMRLLE2ouSHwLggVAAL2+mfJU/SwTEdmM7GjTzxgwjfEyBBiOOxpGMTbgTvMH\n5ZoJXym8GbxMjWVXZcj8oUcP9sqVHUy0Ui1VA2SHO3BByOANiTMousQD5wKBgQCs\n1Zmju7I4G+S+XRKUbEbCEmjuYcTmRK/Jh80+ZbNU+XivwbLb1u4givXgwbH5A6TY\nB4XqYbnKcA+5kgbqZyhoBCoqzURzbx1bfd+ltgvVeURClqj2VuGeE59ziLUzEKwq\nk1K35I9N94TbsJTQeT2dBzIs0Lt8O0H4VREypHYZYQKBgDjf80lar/X79jcoRCs/\nV1y/MLuYAlm9BJ2QA0ct2X8hZvTH2g8dBdEmGGHbIi8Em805CK7qrVYDmVdZEiok\nYTsuof8rEqSlJHa/gKxP+4oFlpzqaqg2+i1KmAHJce8Fpg0UYHsoPhfYL/O3J+1y\nnQ+rdQneG2pmslDBYhYRP2DY\n-----END PRIVATE KEY-----\n"
+        private_key_id: "c8ebfe880c06c612cca49647dbede62b308afc4d"
+        project_id: "skinbae-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "skinbae-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
