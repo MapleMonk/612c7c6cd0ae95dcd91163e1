@@ -3,7 +3,7 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "vjwjvtz-jn98360"
+      account: "vavqosp-jn98360"
       user: "andamen_legacy_user"
       role: "ACCOUNTADMIN"
       database: "andamen_db"
