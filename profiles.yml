@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "maniac-life@maniaclife-wh.iam.gserviceaccount.com"
+        client_id: "106575333922655543515"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/maniac-life%40maniaclife-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDGx2AvrIjcKVxQ\nvgbUi1nbQHCRTiQSXsYSuZoW3nEHPIwv10luKqemdlqqC3wJaVEJIKXVyDn7mrKt\n1NM4OhLJBrDyK0VYHnvrd7Bav43VlUX+jLr/YFFYlzD5HSulr420fRhaLPH7Nb1c\nLw7Qnh07MwPzKGNZjMQBIYW4Vr3OZyUt79ZOTO5WlFkXyaKsnQ1m9ORq+U5TQfXZ\nvdDzSTwJJfjQSUUHzvhguVWRittS2wHFS5YtzACWZNsLnVWPuNSwYm9F20v5AAgR\nMR7qsI4rUgo5drdHYJ7OyMJaSjqh1lNxB2XLes2ZMlasC3rBoSFAX1ndwXNwQAIf\n/R64pKupAgMBAAECggEAEneGU5eDVXTQOz4UM13I2MopSw6H4l8EpsuwaYx70rDI\n0078Zuw2jAv1y1Nq0BMFMMRkM7K41Eugau7ZOqGGij+BY9YqSI/4cj052IxwOFX4\nXTgkzUHc/M57AcG4gtmG4Cw4/XOsfWqWL4C9rxrpW00XglkPtcuSkApVunTwiEK5\n8t340rqS1LtjnGCNVetY8JQ+RjiMhtCciDZbl6Gu2FXZtCVRfmX2prKnVn+1pl9/\npqVJL3Db32sYcII45VHapz4sH3AnQ+eBm+aPaVJvD2lnu2CwGUfvzR7y2fsTzLn7\nwYiCApeeWHQvhjB4N+Gme8UP8uzdtT2Zqidc/uYjIwKBgQDh7+m/Vp8GppKsHvOq\nt8GYHgJAEbiLg0H6MP/NefA4LbDwcssxe7nBOCHvf7Yk+WBLjbANviAQbCiCAa96\nPl/XHxyZjqPa5EiDCgkuo6Hdk32xn094AzfO06IBfQdVXPYAU9cWVKIXm+bf/VJW\nG1XmL88E9mfkaiMm1XdjOY8dSwKBgQDhOl58BIzFF2kd2wn9/cjRAy9c/01NLBNv\nnBdD8+bRW9Ec4lD/JUKPfc6Kid8iMf3Py+MaaX0rVXCYtru9x0Gn5MjQtR+n6Dhk\nPFERZOVXkO9wY3mowx4GJ9C014vFeBkWkP6hc19N5nu2fkkywy9xlNGvB+bO6LWS\nytN4VlCGWwKBgQCisXfIaD+rMld7ye38iMXHHBTSve/9xk7EMnSBKcVpLr2y53aZ\n81YXZKxLIdOvXEOTJDwaKUY9jSS+OSh7Bl9NMQIPMT+cZ7YvZhKmmv376DEirm0z\nJl4ReSO3nqihN4eNRNIlKlxuU700nd2kU5rPXq3cDPNS73rQg/asZM5BcQKBgQCo\nYP2wE6q10fmo8082DlvqPkpTaR3+WrwxDW2rRJVD4TOlN2C8TrvDEJevpMEnDF6m\n0dN3tHN6SQbDdKFIkMV54iVrOm1vFsHJ1fn5WgfG/jizOfsC+tPgYDW8bQQ2XcHL\nyBxE0T7nuy6z0ReiFp/KdyqHgw2/k+Pi2TVdWpIazwKBgQCI9spDDpyNHqeB+VMC\nFumgH1n8MESgOTM+iDJx4R2lleaemAA0H/OnuLc5NJ+Fz/HSzcNBqTHh/2BlbXTM\nA6zaRALmid0h6sgAmDeDL0rMCa2O6Ig9Jce4/kk+RNfY/PF/Ouskc8s9TMcZ1UN6\nUCg1m3ysYnjfde862Jj7FhRjSg==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "4f86197a54bbfb08e32f454e54e3339f5d78de70"
+        project_id: "maniaclife-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "maniaclife-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
