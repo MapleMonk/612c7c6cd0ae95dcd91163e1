@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table maplemonk.saadaa_returns_funnel_by_channel as with og_return_requests as ( select marketplace, date(original_return_request_date) date, return_type, count(distinct order_id) as total_return_request_orders, sum(ifnull(order_quantity,0)) as total_return_requests_quantity from maplemonk.saadaa_returns_consolidated where return_type is not null group by 1,2,3 ), main_return_requests as ( select marketplace, date(final_return_request_date) date, return_type, count(distinct order_id) as main_return_request_orders, sum(ifnull(order_quantity,0)) as main_return_requests_quantity from maplemonk.saadaa_returns_consolidated where return_type is not null group by 1,2,3 ), approved_return_requests as ( select marketplace, date(return_approved_date) date, return_type, count(distinct order_id) as approved_return_request_orders, sum(ifnull(order_quantity,0)) as approved_return_requests_quantity from maplemonk.saadaa_returns_consolidated where return_type is not null group by 1,2,3 ), picked_returns as ( select marketplace, date(estimated_pickup_date) date, return_type, count(distinct order_id) as picked_up_return_orders, sum(ifnull(order_quantity,0)) as picked_up_return_quantity from maplemonk.saadaa_returns_consolidated where return_type is not null group by 1,2,3 ), warehouse_returns as ( select marketplace, date(return_date) date, return_type, count(distinct order_id) as warehouse_return_orders, sum(ifnull(order_quantity,0)) as warehouse_return_quantity from maplemonk.saadaa_returns_consolidated where return_type is not null group by 1,2,3 ) select coalesce(o.marketplace,m.marketplace) as marketplace, coalesce(o.date,m.date) as date, coalesce(o.return_type,m.return_type) as return_type, o.total_return_request_orders, o.total_return_requests_quantity, m.main_return_request_orders, m.main_return_requests_quantity, a.approved_return_request_orders, a.approved_return_requests_quantity, p.picked_up_return_orders, p.picked_up_return_quantity, w.warehouse_return_orders, w.warehouse_return_quantity from og_return_requests o full outer join main_return_requests m on o.marketplace = m.marketplace and o.date = m.date and o.return_type = m.return_type full outer join approved_return_requests a on a.marketplace = coalesce(o.marketplace,m.marketplace) and a.date = coalesce(o.date,m.date) and a.return_type = coalesce(o.return_type,m.return_type) full outer join picked_returns p on p.marketplace = coalesce(o.marketplace,m.marketplace,a.marketplace) and p.date = coalesce(o.date,m.date,a.date) and p.return_type = coalesce(o.return_type,m.return_type,a.return_type) full outer join warehouse_returns w on w.marketplace = coalesce(o.marketplace,m.marketplace,a.marketplace,p.marketplace) and w.date = coalesce(o.date,m.date,a.date,p.date) and w.return_type = coalesce(o.return_type,m.return_type,a.return_type,p.return_type) ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
