@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "matrix-store@matrixstore-wh.iam.gserviceaccount.com"
+        client_id: "100779093488920487241"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/matrix-store%40matrixstore-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZsxhUR93a381w\nR6okXLD9x0YEE2LQtsn0lZpsGzYWwzk7L1WDnbDo4TXyRmGg+gK4SiCBZyr7nIac\nqZUkSD/gNC6Co3yn54S5t/Wg++D8ZFaVlVQfvxWfHeEEfOXGVwbjtFenzqhtpULK\nKPOpAlNmQEAKydVNXbqHfwoy/3GPK6tdAVww6lRz/E5RWoBbBV3rDw6U15fhO4NP\ncquF0QCMG+vIdkTZD+cNDZG7VrOZyZBShXsioHKrUw+Nthzr8fZHzac8qDFYdAWv\n0nRcq6nWD1EgLKKV3j7fYw2+Y0vkNw0+m8+jVH5y4vfsxLzhcuv6fTTU6clQpGHP\nVWagISy/AgMBAAECggEAVaCRjbj0xN3pjuPJQuMohLFIU1sSr3huKCNd6W6skDh6\nftKH5qx0RK0sjF5tkSU1Q6p4bZ2YNP5kniM/s9UtNrEfqCfI5Lv2Ixx94zOfU3bd\n7ZkeTRxaU0sr0hmUQTbC0XaCUdFBw1rQ0fZYnJ37EslrxzKLERKwRxJLfzKlRoPT\nPaSbCFqe57P3ag3+JifsQjrQvlt8OH4R2A95JNHtvUywh7jBFnX9f7gL1v7r0OKQ\n+iX8YfHLPS6EbrHDV7rj216nf8KDKi6ZVbbYM0cfps6nSoPPESxenqV+2zNsMvII\nH3Qw5ImSda/wMShuqfkLfA98MhVVvBoQmqg7GTnfsQKBgQD4o8RkYsv8PjzyKpb7\n14YDV/KS4tdqj/yRnuRIrGFEFqyREahETI/DkEFD9fgQVqE5D+a+kUxNrilOlTBs\nQIW2ErcmzTuvTBgg7JhNpgA1j9FPw9oNxsWw2Jb+iVixsKP903ZmQcJoFlkD+z0g\n50q8AUilRIkGKMoz97RWQEPBrwKBgQDgJNvGbtFZz4SBwWcIJ4jN29nmbbT5AVtd\nGoX2Zfx5iRRY2RB2lpb9lpLqhhDkx64OHDtKcdXVXHwP3JbFdKAey+MfzlxJRmTY\nqxe7EZYMXtk6Y3eQZQ6JTJZJhp97KHRJtF2GLJkpzx2Ph1wQILZqqlt5MsgZAEdV\nzZIPeJ5Z8QKBgQCojfy5QPCgE2ElmhG4sKa85YYgZX87UlkaLuj7C0D085oQzjOP\n+YcMQGK+O6TrDo9FK651SfK8RnDiQOkOub7ra0yWFVN8xs0kpL+rA/noVZLDzDWq\nWTHzbSEPdPSXoPPLQutk7vdnsJ6vwEX0ZFeZlBU3VHq/ni9Vg3rRbceBKQKBgBJj\n08hPFUwaE5QVyx9HJxlEvXcDb0Ky0s0rvOv/aByMm6fCf3BLYK4DqaAmScKLg4NS\n26Z6+oFb6i3e+lvO+sgsEEFuy/GTHfkM6JCHm9j9+zKoMIofUHcBWp9DtVgEdK4L\nZ1T32cUtYg6Bm5MTLARKX+DswrASbsfiauZsDgnxAoGBAPCes6DQE1iI8PtbhfWF\nc3Dyab4hp+Ql/p1ta68/VeL+EzLutiYS6K9G+sXn7qgSnV2JUpgoSo1aE98lOK2O\nvQOSJeV6wEcDCtO7vSITR9iAjPdvWqK9kCX8lSiYiCn7TlWSlLIdC/gSn0sDjq12\nTY62Wslqklc0415+3opHbOnp\n-----END PRIVATE KEY-----\n"
+        private_key_id: "f32f18061f40bc86003f7af7784445bda8d5385b"
+        project_id: "matrixstore-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "matrixstore-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
