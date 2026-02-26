@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "bigquery@saadaa-wh.iam.gserviceaccount.com"
+        client_id: "114142127661744173386"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/bigquery%40saadaa-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8tNG5MtTq4EhI\ndAD/XiqNchAtmXnQqVeuRiTeN/AtTVsMPpVOd9gQAH9MMwZpD0HBTq1MJimFrHgA\nhGgSVNOwmfptW6GvasKCIY8P8aL/lmZaicKCUgt25RPRelXKVW5DaMxGHKHAqy3b\nAnuqnN051WN3jqHCuTIXh9cg1C4Aa6MYLZ3UksTd/j1sbLO5C7VviqqrQGQ1A6sv\np80w10SroVjRbVDxvizl7rT+9QiGaJN7MmORbBRr2NVlts8GchPlEhZrsdEiuPRl\nAFn39uYwlBbqvA1FdQOR47C/UwkmWu97qE/LxoxXFgsBMqPPnCgILLECHX2rkLlM\nrYIeHie3AgMBAAECggEAR/dHkjMGC0sclfETnlApt0a8T7+bus2SQEbE8bBwmr5J\nDkrhwwqmbjfaVFOTSsbEQ3X/Vi6poC6Nl1jnnbIXB185p7IN3+m9o0YsGp8DFCkm\nALpP4UZr09x6KeXXSPI6ul+Bo+1wbJt7we3Y/tCS9+be564QF8RsC5hFHWJ95q9+\nNj0DKQ5D4QDKn1cVHpbPtl+Sl4vltmBabmIDGV6FNlSygqnT5unYkJX+77MRdoyV\nJVdF4LzDD9uwaTQdkO6ymCfyeofKllJ4EV3/a1la8LFNdRLkRvdKVukvhMIfxMSn\nDbX479/TdYeJPcgineIYyj68lu/OVdWDTQ7Dr+xU2QKBgQDllBuhQYoy1mLDnwNa\n95BnJDY+1myH8jXU1hTgKSBoxfsubiPmvHTVpBrT4yxFxaLrCJb6jR343u0oslZy\ndY33ZKEKHRbDyfwbkpvJ17n5bCNDRZb6f6j6QpYCb8t5GJDomC3AGszuGir74uib\noTi4ASKBm92Rzgs8/JfmV8og+QKBgQDSbIZzrOMAQi2h1vCxlBJPcdWKY52Tpd2E\nAwd09ORlowWAM8m/6UH98RrHYICQTTQjc94k4Jz1K4PzFEGhflVyNW3Um5D3jy/m\nF8f0cbNAEggS0BgGlIjDuWQ9uADUl//VXJE3b91pWfi4UZiQQTpFRBiVOZ5MsWHZ\nmN+LkvNqLwKBgQDFaBpuCa4s0p2wOi4nbVKU7dVbKQO/zeyt67udmJ+OmBbJMNnc\nENah0e9jnSa3hB733LX+EZPhKMdixB6DY0PEo5m52ZN2nVsT1nfxEneO2oZj1RXi\nph0FvHXC+KBMq2wHJLvKQQFQB95IIzACipn71rX2HrFiK3sMYOK4pWpf+QKBgAxw\nQdpgo+KGBvCEJiI5IIP1tKvDi7MIoPmGvFAbkcy4QED9zrU7cp0yPWT/vVnKVoSp\n+r2vUVfkxJ3/2olTUHW51s40i/M2UZyGV1mJxxDIgBWsm174NMVtFhHX6KSof4T7\nPdJLGIl7ugobOKt+T5V8mv9nMoZSDfiw4rX7b8wdAoGAdC8/f0Jmcm1EQ4qJYWQL\n+925rpMtS1CH8RyTBCAmaBNeN8MbAGsjU8gRSR5CymrBSKcdpa+5/QxDzMHn2V/w\nKp5FmtGKEdHd2hcKoAG9E+8hRk9TTcP6aG/n9KD+sPqKcejcwC535S7MCYcZOygK\nefNPIPvnwKv5BNrfy4vXXDg=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "2615919e959caa064044566730706b5bafe015d3"
+        project_id: "saadaa-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "saadaa-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"

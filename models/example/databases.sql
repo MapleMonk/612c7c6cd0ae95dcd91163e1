@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table maplemonk.amazon_fba_location_wise_inventory_fact_items as select trim(cast(asin as string)) as asin, msku, fnsku, title, cast(damaged as int64) as damaged, cast(disposed as int64) as disposed, location as fulfillment_centre, Receipts, Disposition, cast(Vendor_Returns as int64) as Vendor_Returns, cast(Customer_Returns as int64) as Customer_Returns, cast(Customer_Shipments as int64) as Customer_Shipments, cast(Ending_Warehouse_Balance as int64) as Ending_Warehouse_Balance, cast(Starting_Warehouse_Balance as int64) as Starting_Warehouse_Balance, cast(Warehouse_Transfer_In_Out as int64) as Warehouse_Transfer_In_Out, cast(In_Transit_Between_Warehouses as int64) as In_Transit_Between_Warehouses, cast(date as date) as Date, coalesce(p.name,p1.name) AS product_name_final, COALESCE(UPPER(cast(p.CATEGORY as string)),UPPER(cast(p1.CATEGORY as string))) AS product_category ,UPPER(coalesce(cast(p.sub_category as string),cast(p1.sub_category as string))) AS product_sub_category ,upper(coalesce(cast(p.Gender as string),cast(p1.Gender as string))) as Gender ,coalesce(p.CategoryType,p1.CategoryType) CategoryType ,coalesce(p.Color_Family,p1.Color_Family) Color_Family ,coalesce(p.Product_Type,p1.Product_Type) Product_Type ,coalesce(p.Product_Variant,p1.Product_Variant) Product_Variant ,coalesce(p.FitType,p1.FitType) FitType ,coalesce(p.Sleeve_Type,p1.Sleeve_Type) Sleeve_Type ,coalesce(p.Neck_Collar_Type,p1.Neck_Collar_Type) Neck_Collar_Type ,coalesce(p.Garment_Length_Type,p1.Garment_Length_Type) as garment_length ,coalesce(p.commonsku,p1.commonsku) commonsku ,upper(coalesce(COALESCE(p.size,p1.size))) as size from maplemonk.amazon_saadaa_get_ledger_summary_view_data svd left join (select * from (select replace(marketplace_sku,\' \',\'\') skucode, product_name name, category, CategoryType, cast(sub_category as string) as sub_category, cast(Gender as string) as Gender, Color_Family, Garment_Length_Type, Product_Type, Product_Variant, FitType, Sleeve_Type, Neck_Collar_Type, commonsku, Size, row_number()over (partition by replace(marketplace_sku,\' \',\'\') order by length(ifnull(replace(marketplace_sku,\' \',\'\'),\'\')) desc) rw from maplemonk.saadaa_final_sku_master where lower(marketplace) like \'%amazon%\') where rw = 1 ) p on lower(replace(svd.msku,\' \',\'\')) = lower(replace(p.skucode,\' \',\'\')) left join (select * from (select replace(commonsku,\' \',\'\') skucode, product_name name, category, CategoryType, cast(sub_category as string) as sub_category, cast(Gender as string) as Gender, Color_Family, Garment_Length_Type, Product_Type, Product_Variant, FitType, Sleeve_Type, Neck_Collar_Type, commonsku, Size, row_number()over (partition by lower(replace(commonsku,\' \',\'\')) order by 1) rw from maplemonk.saadaa_final_sku_master ) where rw = 1 ) p1 on lower(replace(svd.msku,\' \',\'\')) = lower(replace(p1.commonsku,\' \',\'\')) ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
