@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "ALTER SESSION SET TIMEZONE = \'Asia/Kolkata\'; CREATE OR REPLACE TABLE snitch_db.maplemonk.shoes_performance_comparision AS WITH base AS ( SELECT category, sku_group, TO_DATE(date) AS dt, SUM(gross_quantity) AS qty FROM snitch_db.maplemonk.horizontal_sales_categories WHERE category IN (\'Shoes\', \'Bags\', \'Perfumes\', \'Sunglasses\', \'Belts\') and sku_group not in (\'4MSFR0931\',\'4MSFR0930\') GROUP BY 1,2,3 ), anchor AS ( SELECT DATEADD(day, -1, MAX(dt)) AS asof_dt FROM base ), daily AS ( SELECT b.*, a.asof_dt FROM base b CROSS JOIN anchor a ), yday_points AS ( SELECT category, sku_group, asof_dt, IFNULL(MAX(CASE WHEN dt = asof_dt THEN qty END), 0) AS qty_yday, IFNULL(MAX(CASE WHEN dt = DATEADD(day, -1, asof_dt) THEN qty END), 0) AS qty_dby, IFNULL(MAX(CASE WHEN dt = DATEADD(day, -7, asof_dt) THEN qty END), 0) AS qty_lastweek FROM daily WHERE dt IN (asof_dt, DATEADD(day, -1, asof_dt), DATEADD(day, -7, asof_dt)) GROUP BY 1,2,3 ), mtd_points AS ( SELECT category, sku_group, asof_dt, IFNULL(SUM( CASE WHEN dt >= DATE_TRUNC(\'month\', asof_dt) AND dt < asof_dt THEN qty ELSE 0 END ), 0) AS qty_mtd_this, IFNULL(SUM( CASE WHEN dt >= DATEADD(month, -1, DATE_TRUNC(\'month\', asof_dt)) AND dt < DATEADD(day, DAY(asof_dt) - 1, DATEADD(month, -1, DATE_TRUNC(\'month\', asof_dt))) THEN qty ELSE 0 END ), 0) AS qty_mtd_last FROM daily GROUP BY 1,2,3 ), metrics AS ( SELECT y.category, y.sku_group, y.asof_dt, y.qty_yday, y.qty_dby, y.qty_lastweek, m.qty_mtd_this, m.qty_mtd_last, IFNULL( CASE WHEN NULLIF(y.qty_dby, 0) IS NULL THEN NULL ELSE (y.qty_yday - y.qty_dby) / NULLIF(y.qty_dby, 0) END , 0) AS dod_chg_pct, IFNULL( CASE WHEN NULLIF(y.qty_lastweek, 0) IS NULL THEN NULL ELSE (y.qty_yday - y.qty_lastweek) / NULLIF(y.qty_lastweek, 0) END , 0) AS wow_chg_pct, IFNULL( CASE WHEN NULLIF(m.qty_mtd_last, 0) IS NULL THEN NULL ELSE (m.qty_mtd_this - m.qty_mtd_last) / NULLIF(m.qty_mtd_last, 0) END , 0) AS mtd_chg_pct FROM yday_points y JOIN mtd_points m ON y.category = m.category AND y.sku_group = m.sku_group AND y.asof_dt = m.asof_dt ), scored AS ( SELECT *, (0.50 * COALESCE(mtd_chg_pct, 0)) + (0.30 * COALESCE(wow_chg_pct, 0)) + (0.20 * COALESCE(dod_chg_pct, 0)) AS trend_score FROM metrics ), ranked AS ( SELECT *, PERCENT_RANK() OVER (PARTITION BY category ORDER BY trend_score) AS pr FROM scored ), base_pre AS ( SELECT category, sku_group, asof_dt AS metric_date, qty_yday, qty_dby, qty_lastweek, qty_mtd_this, qty_mtd_last, dod_chg_pct, wow_chg_pct, mtd_chg_pct, trend_score, pr, CASE WHEN pr >= 0.70 THEN \'Upward\' WHEN pr <= 0.30 THEN \'Downward\' ELSE \'Similar\' END AS trend_bucket FROM ranked ), base_product AS ( SELECT sku_group, online_inventory + offline_inventory AS total_inventory, image_url FROM snitch_db.maplemonk.base_product QUALIFY ROW_NUMBER() OVER (PARTITION BY sku_group ORDER BY image_url ASC) = 1 ) SELECT a.*, b.total_inventory, b.image_url FROM base_pre a LEFT JOIN base_product b ON a.sku_group = b.sku_group; ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
