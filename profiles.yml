@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "varak-486@varak-wh.iam.gserviceaccount.com"
+        client_id: "112369962452413980389"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/varak-486%40varak-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDvWur+ijAkzszL\nskBuCJ1PhlrTtgj5vn3gkQW+qajw5ZUDbKJIMkPgqqCIzJZc8RlIJkHku+CpEfxf\nlvIv0ywg3OEuakHDu6P9t30jVWw1lnhMxY7RfgKZhPZnPpJ9MtR0uY5WRViPC0ot\n2Hh4HKsBT63kKPh/6UrdK0ViWHj3DJcDg5Wf4Zlu02Xt5Ko6EbC4tIvf+aNzycUY\nm1EsObIaURZjjEL0BawZ4Y9YMXukjdADE8BOkCU1EBIDzUZ2JjpfcN/VPMatLOmE\nXdEK5132hGOWW6bjUifVx8ll/Gps3z/L/mSBG2w8nYeR+Z7rEbFXpVQFbo9Rm0Fy\nInFXZ+H5AgMBAAECggEAB8xvP9tFX0wK0ylovQBBDXn3FDloCHV8iQ6tYIo+ZWVT\n87HpH0lExrMSGoyKUT2C991U10mIM903DlXbztNM3eAK4pkp5GE4O7uFpo5eQYHr\nqhpKIXXY5G/QtKN1LWjn3P4j7st0OIQcwIQ/Kv0WiBGBcAYmHP2YziT4FHcfSQx+\nIgvBlU3hG3BmJYTfXTuhBOx9L4GUZzf0ToN9H/ws79836iULcR66ZJu7h0t6qMra\nzdwtLnqZlQqe2+aAZB6jOXaffzd8mcdlZWPKxTQeyZmpZES/HFFs6pE+es90E67k\nnqWkhCMvtmWgX/yr5dbBY60Eyl5w3G+9auqB94EbGwKBgQD4l/UiElKrNnloT/ak\nHYa7hkwDxe4IasXyyiMgHpBhbVmxPxfuTNzW16EkMDtmA6zWhzTlKETh30zKSBKd\nl7vtNGkQSKUboBazG7dyXUUQbRjV6Gwz/d9Zpu4LFFGMr1MVl8tdcO3brDJc6Wv1\nGefDFFWnhae/v22e7a/jMSwDOwKBgQD2fH+FioeUd/njljTkfmvgTksram913qOb\nb9v4k5oTFS3+jrF/+SfP+rLTHvf45PNLSF5LJ9rSxx40Twezns94i0KV13QSJfCz\nvjFEPj7tdHUiMeSjJOCuE9UM0/7NZSUGClm1VkDJ+zABKb2e9z8NRkumSlN8TGoZ\nwLNt9SR0WwKBgQDFuxigITLgPFQVRIVJxLKGNiwAVE8hIsyQcXe+9JCi7feJpEXE\nph6CRMFHp5WXbxTrDmBkZcNkZdkOjIVCFI7F/goTibTKZGupy0H/FXD5v80hV924\n/RXKmZx984tp+4p6gmKf0FNhh3YHsSLNse1GncYDmav0OK9Y2nYsn9ACQQKBgQDH\nW16QlcCetoLoLf7Np+p8Wxa1ILrRrKbK+ygA3vDI6mJu9t5dURmAP5YO54dMSXD1\nvKx3QN7dh6rIR/tErffD2W6bXs1EOGd8GSIjveyLhZuPcqcnxJXsdaHlZDk7ysit\nIAX6gq6YLo9fAXGadwMKK4bYEll/uRY/ifoVvyYi7QKBgQC2dr+Ihj58GnjdW4BW\n4by2R10MneQASosObcNezWr3hvGdXPnGLrhqbfX2J3NAkfm207D3b0bw3JHokDc5\nmiyS6bVhNvHlbwNNZRyY9PC65Cv1BlpuAb1U7YCKutbXBbwCobcOcbMUf4qfwrCc\n5miJsPGiSTDi4QwQXj0zqYJwEg==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "dd744efaf6d6c8e9da73bfb2c3792a29602dec0a"
+        project_id: "varak-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "varak-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
