@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "banana-club@bananaclub-wh.iam.gserviceaccount.com"
+        client_id: "100501670856713358895"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/banana-club%40bananaclub-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDAgw3LGmkDPzhW\n+xE7KtojVXd9EWqLWRfgApGa6gS+iwUUZIZNRvF+0hBRSnsR9kPfIkAwOQkUCyKM\nMimlrByGScL13UrFBop6f/dCmboCTDrpivoTjZJUPg0nXKWjlWr4Eq7g0hIx4mSI\n6CheVf8Slh4X2QrwKj1XLHuYk/E1Nwxny4U/P+bWzJRzYRbkWfU5B+Kpd9ojPSxb\ntrLZKtdIPRVdH5eB25oPqTYk64gi525UwU1jRamOlS9JaMbiVGXxvywye4otjM7e\nEOZQcP+DZD8GMRtTsOPNck3ezn7qbjbujQcNFXkcYbgdH9cD30BUEyh9rGPqz2VI\niEecEgXPAgMBAAECggEADFX5gsvA8efRrOUur/tpef0miHmeuaouWPjhKquXPTx8\nSVe9sWL745QDXqomo7qDk99GfLCS79lcz94BBDA4rbQ5TXbuLRzjr8DWb8qY/D+1\nQLTanHkkaMiHIEAUDxzqe1X7JcXgS5kFty4lNBJPo3nCGOYcCNK0FotvqhHE0ZOG\nWDsilQgE/WKHWtv3yYJgREfu8DuEb4++4GvCoSxvXKYWFygQUojdJOYDLcUWw8fG\npn3vRdFTpTuwrN7Uzurs6SZAYHE5fql3JD4vrn70iWogeXjjyvoU/Ee0dMVijsUH\niTC2BrJ+KlArdjiC0B4N9N3ehoILv4QgH9ZayOgTcQKBgQD2xmE5osNfZMQpUewN\nerPuOisTyFPL2OSJ8wm+yjBNJbrl4Y3EkPnyR35kpyozHa9qxKEEuAY/hfu498uQ\nuMDiJyGlZZjfbArD28AaK8CeAgtG3AL4/6v3r9E/+Fd7JJjx1vud5/tayd7Rq743\nYEurhGSACukWUZwnnWEq9KV2PwKBgQDHtWF3tJb7+cIl211IuH1pUFp2ifDW514A\nrD2y7VsBjLQQ/PJyQMH52RrAMSSiHJ/0TodCUFICVmyplQj6MYRoQ30IklPXqNos\nESOpUwKNb0NV4lj4+ad5NxlAlvPmp7a14m03zb7mlif2TJA5pUqbrIy1xoRgjZhV\neb8L38oscQKBgQDddMf5jixgZjB3mFILAquIRWE1Hpi8ncbyWU3Mjuvrv8lK1TCB\nT01O9IPj1fRT7PboDM8nSfIpfZaZtp5TIMnP6igSousezXmXrJRnqA3yfokaLQTp\n6Z+s5nYVP0tackxi83fYjD+QiQrSBJruXRdrM6NxGNl2MwS8tEpn3ybBxwKBgQCe\n213rnYAYcWSJPoRmizJfKma7MiCcobA5ssjlYj7o7aZyePLWBUMHXjYUOUMdnM1z\nxV98VW3WpC6NepqIggkD8uMrhVIiExNwyDVoxDocjSuvznvdmKEqH7T7ltfuWuxQ\npAsiv4uh2kFxfxeecyf0yv2mvoGgWCGbpFtes6YbUQKBgQCmy0iCgGPWg2sgfg/Z\nKHoi6MWKCBAycVIa/hVy5mepDXFNjP0T1EmTveIItzcXWgFLUsnGLycQODPr3c1K\nNGQQHfN6l07jMFs2MOuK+j/+Kx+H6Ik3KTFOKg7LGioG8wlOVoGDW+hQ9XFj6ROA\nW4IexWAkBlkeMisfKfF24FMGUw==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "3222777e132cbd36e2d9e26d1bedb0c4aab0af81"
+        project_id: "bananaclub-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "bananaclub-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
