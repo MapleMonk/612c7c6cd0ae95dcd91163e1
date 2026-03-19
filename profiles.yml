@@ -5,7 +5,6 @@ default:
       type: "snowflake"
       account: "marico-marico_analytics_jh"
       user: "compute_jh"
-      password: "Justherbs@2024"
       role: "prd_sys_admin_jh"
       database: "PRD_DB"
       warehouse: "PRD_BI_COMPUTE_WHS_JH"
