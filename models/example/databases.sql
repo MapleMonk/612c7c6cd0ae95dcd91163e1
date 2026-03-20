@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "Create or replace table snitch_db.maplemonk.vendor_SKU_bad_review as WITH vendor AS ( SELECT CASE WHEN UPPER(TRIM(sku)) LIKE \'SN%\' OR UPPER(TRIM(sku)) LIKE \'BP%\' THEN UPPER(TRIM(sku)) WHEN UPPER(TRIM(sku)) LIKE \'MP%\' THEN UPPER(TRIM(REGEXP_SUBSTR(sku::STRING, \'^[^-]+-[^-]+-[^-]+\'))) ELSE CASE WHEN UPPER(TRIM(sku)) LIKE \'%-%\' THEN UPPER(TRIM(REGEXP_SUBSTR(sku::STRING, \'^[^-]+-[^-]+\'))) ELSE UPPER(TRIM(sku_group)) END END AS sku_group, from_party AS vendor_name, min(order_date) as first_order_date, sum(total_qty) as total_ordered_qty FROM SNITCH_DB.MAPLEMONK.LOGIC_PURCHASE_ORDER WHERE UPPER(TRIM(sku_group)) NOT IN ( \'PJ07\',\'PJ05\',\'SB4\',\'PP BINS\',\'NSB2\', \'MPB4\',\'MPB7\',\'CBB001\',\'CBS001\', \'89092763660\',\'89092763661\',\'89092763681\',\'4MST2649-02\' ) AND UPPER(TRIM(sku_group)) NOT ILIKE \'NT00%\' GROUP BY 1,2 having first_order_date >=\'2025-01-01\' ), shopify AS ( SELECT CASE WHEN UPPER(TRIM(sku)) LIKE \'SN%\' OR UPPER(TRIM(sku)) LIKE \'BP%\' THEN UPPER(TRIM(sku)) WHEN UPPER(TRIM(sku)) LIKE \'MP%\' THEN UPPER(TRIM(REGEXP_SUBSTR(sku::STRING, \'^[^-]+-[^-]+-[^-]+\'))) ELSE CASE WHEN UPPER(TRIM(sku)) LIKE \'%-%\' THEN UPPER(TRIM(REGEXP_SUBSTR(sku::STRING, \'^[^-]+-[^-]+\'))) ELSE UPPER(TRIM(sku)) END END AS sku_group, SUM( CASE WHEN review_category ILIKE \'bad_review\' THEN 1 ELSE 0 END ) AS bad_reviews FROM snitch_db.maplemonk.review_shopify GROUP BY 1 ), return_review AS ( SELECT CASE WHEN UPPER(TRIM(sku)) LIKE \'SN%\' OR UPPER(TRIM(sku)) LIKE \'BP%\' THEN UPPER(TRIM(sku)) WHEN UPPER(TRIM(sku)) LIKE \'MP%\' THEN UPPER(TRIM(REGEXP_SUBSTR(sku::STRING, \'^[^-]+-[^-]+-[^-]+\'))) ELSE CASE WHEN UPPER(TRIM(sku)) LIKE \'%-%\' THEN UPPER(TRIM(REGEXP_SUBSTR(sku::STRING, \'^[^-]+-[^-]+\'))) ELSE UPPER(TRIM(sku)) END END AS sku_group, SUM( CASE WHEN return_reasons IN ( \'Wrong or defective product\', \'Defective Product\', \'Finishing is not good\', \'Received a poor-quality product\', \'Product quality issue\', \'Product was dirty & had stains\' ) THEN 1 ELSE 0 END ) AS bad_reviews, COUNT(*) AS total_qty_sold FROM snitch_db.maplemonk.return_fact_items GROUP BY 1 ), total_bad_reviews AS ( SELECT COALESCE(s.sku_group, r.sku_group) AS sku_group, COALESCE(s.bad_reviews, 0) AS shopify_bad_reviews, COALESCE(r.bad_reviews, 0) AS return_bad_reviews, COALESCE(s.bad_reviews, 0) + COALESCE(r.bad_reviews, 0) AS total_bad_reviews FROM shopify s FULL OUTER JOIN return_review r ON s.sku_group = r.sku_group ), final_cte AS ( SELECT v.sku_group, v.vendor_name, v.total_ordered_qty, COALESCE(tbr.total_bad_reviews, 0) AS total_bad_reviews, COALESCE(r.total_qty_sold, 0) AS total_qty_sold, ROUND( 100.0 * COALESCE(tbr.total_bad_reviews, 0) / NULLIF(COALESCE(r.total_qty_sold, 0), 0), 2 ) AS bad_review_pct FROM vendor v LEFT JOIN total_bad_reviews tbr ON v.sku_group = tbr.sku_group LEFT JOIN return_review r ON v.sku_group = r.sku_group ) SELECT * FROM final_cte ORDER BY total_bad_reviews DESC, total_qty_sold DESC ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
