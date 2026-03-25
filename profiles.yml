@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "eatanytime-wh@eatanytime-wh-484310.iam.gserviceaccount.com"
+        client_id: "112589475972458915270"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/eatanytime-wh%40eatanytime-wh-484310.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDKGFtOQgWcWuuJ\n0YuXyKVlG4FXA5blffqiCRYUfQvYKJrzuZhMM2Hsk5BAGh8+otrG9OtHSTZeGwFH\nJhq7yNETXHtFEZIULbB8JrTv54yg99K77l336gBKeZsLf+kdwRztw7OMDsn3FeVF\nsK+mhsr0uR/jbME/h5AnDAxIolvH/VbAAgo9HCgBbUALJ+xYoPYT0xrjhqfeP57S\nyBp63GGo5CRfJsu+pKSA89Q6YptCXNIrrG/RhmELf7VprP0kllIzB/uumT6BYg80\n3h7kJAmMo/vQfTy+6HXD+8jLKxmOv9flURLP5mxJoWxH8mYMZ7kseQxwQjxKm2fB\nqtIvqcbbAgMBAAECggEATfod6NEypwSx0yiGKxehMaTuP+vDomL8fN7ypQ8mrc3l\nE9tttyEwTH8XbpRlr95YeeHwkj3ee2sCEDjUodY3TbgmXB0Odzi12wF4WQTHzygw\nKJEtssWYPSQ0vbgp83AawGb9dTITnYHWSBCHhcKGtuxjMHY7Dk85QMe2SaRTs5MN\n82B8nKFB+xEsTrGuIpmbN6JzPxCyqURbM4BIzEtsksKlGeQ1BYlTAOzFRpLkWc3e\nGoKrZ+zzR4akSW1qW+K3VJfgeHem6hQvwCltJvriMLqwBMSoGKBqu5q+87x4EZK9\nNz3PltxkSNfeH5Ekk5ILmbV/RX+znGIWOBJguhj5gQKBgQDqwuV6V2qHOlm3aB/W\nOUbnm6eFstixxq1r30H4B4I1HQon5g1T/MP30I08xzvBWtpjUdNhPxesEVwl0ddv\nufSnX3yE5jI+uFWiW4EiqLqu3k0w3cAAjTvcfG08y8CKKMPqCS0HEk1ny1m6pIVW\n0+O7yEouEcdw+iQkegj1Al8CQQKBgQDcYOhIc9pw4PYUcpRNb5sIZIiSJdZol6WX\naTU+F8ACrCd+yoBtcZzhWbaOq0Qj2ftfY1yJCIhovX+OvfQG8w8NcvY6jY/LS9jD\n6PjolnwU3Hltw6q68N3grqw7+Xgl8tvCBi9BLV/jOWLd0GxrkqGUc2NUi0HlvyRf\nkvzWmg4KGwKBgCmH9SThlhz6O6jwqMEzPNH4fXhvnVpF9aQhyP/iBCz1SDiqwCzd\niKWspW/dJzsboYr0jNqlWMC+CXk/WEeRtDBv+g1g0/64iZ3BZmUFSJFrDmjYsgDm\n+3IUKRcaTKOkdpROr0KTAFKebO9R76zeq2krE8R2rLvV5NL3K+J8WuaBAoGBANeZ\npyZa0XZlX9oZTqWDbnUDhekVQ3IICmTa9M/OhHcY3XrZulNYN1bwYf2p6Hv6okZr\n+vfFdU6jNcv8YmT6HdvWgLZAEFGf3m2r2vgRYUs3d0S/jKRfSXKq8K2sHrNhqUVk\nr45gSdMPLX48jhWf2pxVVvQ7WTjfi0JFlz6McPfJAoGAHXwBiE6lfB57XhycYBEz\nupn78Nx/HaqIVWxEhl0VmmV5bvYThR4uTAwerYI2iWeHTjz+rX8WMf/3F7JljGtW\n61EvdiUxSVvO5IKkwytaIzl0onyYAcT4mLcSpwsirPalsbOtrApi96HOC/58jbax\nG3nk7fTtg1Bhx1Odwut+aho=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "f5940a1f61a0d0b8cd0f68e4e3183b578a21656b"
+        project_id: "eatanytime-wh-484310"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "eatanytime-wh-484310"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
