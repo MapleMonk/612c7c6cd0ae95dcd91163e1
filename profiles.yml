@@ -3,7 +3,7 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "oabofmg-hi57385"
+      account: "vavqosp-hi57385"
       user: "ttk_legacy_user"
       role: "ACCOUNTADMIN"
       database: "ttk_db"
