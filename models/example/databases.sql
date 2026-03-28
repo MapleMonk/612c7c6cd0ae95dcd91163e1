@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE SLEEPYCAT_DB.MAPLEMONK.Queuebuster_Sales_Fact_Items AS With Sku_items as ( SELECT t.CHAINID, t.STORE_ID, t.SALES_DATE, t.BILLING_USER, CUSTOMER:email::STRING AS email, CUSTOMER:name::STRING AS name, CUSTOMER:phone::STRING AS phone, DETAILS:order_id::STRING AS order_id, DETAILS:device_id::STRING AS device_id, DETAILS:invoice_number::NUMBER AS invoice_number, DETAILS:order_date::DATE AS order_date, DETAILS:order_time::TIMESTAMP AS order_time, item.value:\"Delivery Date\"::string AS Delivery_Date, item.value:Personalization::String AS Personalization, item.value:barcode::String AS barcode, item.value:brand::STRING AS brand, item.value:hsn_code::string AS hsn_code, item.value:product_id::NUMBER AS product_id, item.value:sku::STRING AS sku, item.value:title::STRING AS product_name, item.value:category::STRING AS category, item.value:sub_category::STRING AS sub_category, sum(ifnull(item.value:quantity::NUMBER,0)) AS quantity, sum(ifnull(item.value:price::NUMBER,0)) AS MRP, sum(ifnull(item.value:total::NUMBER,0)) AS total, sum(ifnull(item.value:discount_total::NUMBER,0)) AS discount, sum(ifnull(item.value:total_with_tax::NUMBER,0)) AS total_with_tax, t._AIRBYTE_EMITTED_AT, t._AIRBYTE_NORMALIZED_AT FROM SLEEPYCAT_DB.MAPLEMONK.qb_sc_get_store_sales_invoice t, LATERAL FLATTEN(input => DETAILS:items) item group by ALL ) , ITEM_TAXES AS ( SELECT t.CHAINID, t.STORE_ID, DETAILS:order_id::STRING AS order_id, item.value:sku::STRING AS sku, SUM(IFNULL(tax.value:rate::NUMBER,0)) AS tax_amount FROM SLEEPYCAT_DB.MAPLEMONK.qb_sc_get_store_sales_invoice t, LATERAL FLATTEN(input => DETAILS:items) item, LATERAL FLATTEN(input => item.value:taxes) tax GROUP BY ALL ) , ITEM_DISCOUNTS AS ( SELECT t.CHAINID, t.STORE_ID, DETAILS:order_id::STRING AS order_id, item.value:sku::STRING AS sku, ARRAY_AGG(DISTINCT disc.value:discount_title::STRING) AS discount_list FROM SLEEPYCAT_DB.MAPLEMONK.qb_sc_get_store_sales_invoice t, LATERAL FLATTEN(input => DETAILS:items) item, LATERAL FLATTEN(input => item.value:discounts) disc GROUP BY ALL ), PAYMENT_DETAILS AS ( SELECT t.CHAINID, t.STORE_ID, DETAILS:order_id::STRING AS order_id, ARRAY_AGG(DISTINCT pay.value:payment_type::STRING) AS payment_type FROM SLEEPYCAT_DB.MAPLEMONK.qb_sc_get_store_sales_invoice t, LATERAL FLATTEN(input => DETAILS:payment) pay GROUP BY ALL ) SELECT si.*, it.tax_amount, id.discount_list, pd.payment_type FROM Sku_items si LEFT JOIN ITEM_TAXES it ON si.order_id = it.order_id AND si.sku = it.sku and si.CHAINID = it.CHAINID and si.STORE_ID = it.STORE_ID LEFT JOIN ITEM_DISCOUNTS id ON si.order_id = id.order_id AND si.sku = id.sku and si.CHAINID = it.CHAINID and si.STORE_ID = it.STORE_ID LEFT JOIN PAYMENT_DETAILS pd ON si.order_id = pd.order_id and si.CHAINID = it.CHAINID and si.STORE_ID = it.STORE_ID ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from SLEEPYCAT_DB.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
