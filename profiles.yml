@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "femenest@femenest-wh.iam.gserviceaccount.com"
+        client_id: "111611596087052522311"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/femenest%40femenest-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHpP/Qkg2p0mkS\nN/pn39QRe8Ktov+tFjjcnpMZYzbfCoVONijsNlUj7oxbaNeuiPz11SOq5v49PHKL\nE2OHNflZNPWBpv6v/HTZ2/AK0hVUkDGLSEjPwBqYsURE40XUYHPV7TOh0QQ+NvOP\n8esMTCSLk7lIGCDIVXVU5EmZqUbwqRvoXLG+OldH8d0QY307SGfvT9+19OY3g8e6\nLHNW75yQ8ngu1Gv7jypGsOb5QvVd1qag17b95cKUJXCoQOqlKNBiSxVd5W+fTcTd\nzFYIZAxUFxqstfARYRB18xMxciWa2/Zu6/5ZcCq94R2vM8zQM/HgUFUi67BHKVLf\nhvqsbQ2xAgMBAAECggEAH2XowaGmunWYBsB9BkcicBl5tZs0AMHE8ZWS5uQ+pfde\nnb1Q1E17OGp08o9blFyBBBygPmmTxIe0MAE9nu8zJv94OQrNdVoL+pNnfhwqNKF0\n2UXmBZ5d0HPYm8jum4cL0LI8c4+OzkYQKixO3iE/giAafKcmyLr/9/jrRlpkCMcY\nnN+Yls8pG8KfX7GRkVFMFQsL+MvdT5HDAz7+zsCIchsANrW25e/Pv0DUQyKLBkwu\nGMdIcnxhl8bQZUkiQYVJ4spYyp671bp3Js67ysKA03qz+ALzy22ZSuxtTeXsgiQ1\n+CBAYtr4IQIH+nK5eZcEHdLoihIvgEr5Of8pAwm5LQKBgQDviUVj/NppYyhHzFzJ\nG9ErofaTqOdOqrqPFV0kjYAAMrgq/cSa1SrLDDAZW/ZDMl6+Ngm7y48Qc3wsVYhN\nLhyFzp3hpOY0g0l+UIciTgjLM2Cl1XYFLhKlyk/pbpwj2sEB05CXOgqxikNdiIIK\n/DpENvyXUtvgo24mSW3hxS4oHwKBgQDVXdGyleP3qCQWaa5mXAw5yPyUDwtN5WEp\nne37EOKNxcn6fXBYX7lmCErRiiecEYIU2j2x1RpdFIFsW9LHxZhwbV8S3QxIu9am\n8Hle6Hjrr+/4Ch5qpHuHS4xOlkWXcb//c9XKDDaH7kpyLKNNutPbsHRxgzJSLGzG\nLp2OLlZQLwKBgQDGoEVyDBHwodCc+NFX0kE4tS0KdFyZ1uisDUMXNF6Xy3b770JA\nQdMiXBDmdmNWhUYa5CReHQWc1qZ4/NPxa/Mq4ZH5sgtSMCuZGp1zzNFt7kSOPtuG\noBXGdGSfZKEE+jhhk1WqkO6dGdGSlcd/5HdMaWw67vJ07BBCn1EGjcMgcQKBgQCS\nGRK8cQxPCS/ktOp5JnAspSXmD8MSzIzSXVSWBILMxvE9duUVbj5Z0jXA8xOaNxbW\nRnXWLfBGagMQ+nMC3Zc67HkcRoXhy9T4LFM/HHmoEKmFMxCOvx/ijWV+bkEqqPXp\n6hwqpGA2hYEuWshbMiFdHZ8uFsK/J7I3pbW2pJ3vewKBgAe+JVCmBhy3gD+ct6BM\nd0EVZcdPjY/EeK2TMc9hXP/c4yal2x8OdwHWe/C8UN9NdcfeTQ2AOA+wOVNIGBp3\nflBGL7JTzI0Clvjq6sRVL+E5b/wwebTesz81kYhoSNzux1Q5wb+jksrsWEuSsdZZ\nWN8nyU1ks9z/jhR2BNAflZ72\n-----END PRIVATE KEY-----\n"
+        private_key_id: "b5bb86adf214a63401fba46dedd611bd223c6cc4"
+        project_id: "femenest-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "femenest-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
