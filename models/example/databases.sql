@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "create or replace table snitch_db.maplemonk.dod_all_channels_sku_inventory as WITH inv as ( select date, upper(trim(sku_group)) as sku_group, sum(total_inventory)::INT as inv from snitch_db.maplemonk.cut_size_analysis where date >= \'2024-05-30\' group by 1,2 UNION ALL select date, upper(trim(SKU_GROUP)) as sku_group, sum(inventory+jit_qty)::int AS INV from snitch_db.maplemonk.offline_master_daily_report_1 group by 1,2 ) SELECT DATE, SKU_GROUP, SUM(INV) as inv from inv group by 1,2 ;",
+                    "sql": "create or replace table snitch_db.maplemonk.dod_sku_inventory as WITH inv as ( select DATE, trim(upper(REVERSE(SUBSTRING(REVERSE(\"Item SkuCode\"), CHARINDEX(\'-\', REVERSE(\"Item SkuCode\")) + 1, LEN(\"Item SkuCode\"))))) AS sku_group, sum(inventory) as INV from snitch_db.maplemonk.snitch_final_inventory_wh2 WHERE facility in (\'SAPL-WH2\',\'SAPL-WH1\',\'SAPL_EMIZA\',\'SAPL-NORTH-TAURU\') GROUP BY 1,2 ) select a.date, b.category, sum(a.inv) as inventory from inv a left join base_product b on a.sku_group = b.sku_group where a.date >= \'2025-05-01\' and category is not null group by 1,2",
                     "transaction": true
                 }
             ) }}
