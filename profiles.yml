@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "neobest@hallowed-byte-492210-n6.iam.gserviceaccount.com"
+        client_id: "112400236083490603138"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/neobest%40hallowed-byte-492210-n6.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDP/vTxr944bLPm\nXJFSj7uoirq80FZFkO7YvBGR8+yTnFg6sf8f+HZNqppiyS/d1xt1XrGsof6ECyBc\nk4YoKK8eqSO7gGt4w6QfL0NBYBNwAgh4OY0UI30sv9T28/S6ZQPJ78m9zW1Xgj0c\nK2aqa8z+7pFCCTfn+mRmfZ9Fc8i8DZexpBN3i0+HgMhleLjfTuL5vjQuZnNrvly3\nMWn20FL+A82nCsLY/MmhdmRGeORXP3615rudyUThpd+h7RxckS+gDrjmOtGFoBYA\nlgg+TyCGTcV4ujVZOXI5nITF7qb2YiBaqM3LaxO60KO7TupIMABToNb9vDFN/RX8\n8Cdcts79AgMBAAECggEACfoBNryITK2OHX0QLWUei7GHznmxwal3g2bV8um/zb7A\njqQuCBMLXaNSv21GAf6I3yLZI94rTpsYBMjAtRlqeO6E+7/np8W+kA5cy/x3Qjae\nwGGGTlJ7dROIfAXslao1udBqHVQGrB1foAPG62K7VPkNd5zolRRyD2Z0JsksdjSc\nemunsA5citkX2TBT9J/DEMPahZnHFsrbUY8y/p06F0jDEsVinSq+9QCjLR4/js2v\nO45c0WF5Fe6imoKqkBv9Jxgtu+zaGk289V8lBihp8sxGxi1O2TaBcHdYNgefw30A\nstU93kGL0oCvOaZT6ITbbKPN98bNfZR6SIB/qDnccQKBgQD8GTt8N2enD9iZbqEK\nAFyLPKY2f/sFUDVDXpxD0NyraPNl4oa8EnpP4VxBQO7tjpR7d10SAaTe6YZOuTb1\niKtwh1hyUOl6+6IY/eXqpxt6neuhZSKfVIrjMRZTl47E60quSccC+GXt9sLB4Iw5\nNECvIsSa1zmI00GgRhLkv3Y79QKBgQDTNv98hY+i/ndi26C90ZK4HkF1zlGjuowk\n1eoAviQiWVdj2x49DK4I5eGvkAe7ARWxgHQ2wz/YeocxXtseVfMUuMBOeWsR9KXk\nU2zbPB5X6emQ9nitojHS/tnGD1HFNIWTOXvQz2cxPp4hgwHCuL5WPYFXbO6ffXaI\npnjqcIAp6QKBgB5qYO3stVnHpKdmXJGbV48JAzjCGiQa+EInkQzxjx4zLGKXgRAB\n3rXyh7HrxqfssudukFES17R5UlX/LK1VDvIlsjsgnfrTj0wanfnAraUOlpZDYHj+\ntz8P9hShzXzesoTyq8sk8w9R3U+M6v4f2soGlNflrbBfZKSUr8TfgMFdAoGABTiS\n0C0tA8ZuhQ8QxiBsFAkLbTIQao+t7ysqgaIxmnfC5UEBWlj55FZqYcCZsFGyi5S1\nSrVA2sUMmnfRysotHBIFDuuJbgQyJZa6ViECTwIFOAQfr4sW2DRchbzTNKC7vIvr\nN5oo3trBZeqrHHkcm10h2Vtj+qVLTM1wp7roMCECgYAOXyM1yVPz0yToNEs+xkLu\ncCmFNgQsmFm9r0/wcXsyAeov4iqOLBt89q/gAbKisw6+s0wmNsvFHuIHy7jGVhKt\nK4AlJXmBCVhsP3wFV7RJ7XSeCiAtH9byetEDabK4AORKqiEsqUJ0Phd+L2ERVqDG\ngBQ68g7Us2dxdmQ4TkNr5w==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "6148dc510070dec00cea720166bffe2c19dac081"
+        project_id: "hallowed-byte-492210-n6"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "hallowed-byte-492210-n6"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
