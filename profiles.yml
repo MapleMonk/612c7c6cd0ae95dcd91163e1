@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "gr03377.ap-south-1.aws"
-      user: "BBKANALYTICS"
+      user: "bbk_legacy_user"
       password: "Bbk@1234"
       role: "ACCOUNTADMIN"
       database: "BBK_DB"
