@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table snitch_db.maplemonk.pipeline_view as with base as ( select upper(trim(l1_category)) as l1_category, upper(trim(category)) as category, upper(case when lower(trim(meta1)) like \'na%\' then null else trim(meta1) end) as meta1, upper(case when lower(trim(meta2)) like \'na%\' then null else trim(meta2) end) as meta2, upper(case when lower(trim(meta3)) like \'na%\' then null else trim(meta3) end) as meta3, upper(trim(repeat)) as repeat_type, upper(trim(status)) as status, try_to_date(fdd) as fdd, trim(fdd_month) as fdd_month_raw, try_to_number(qty) as qty from snitch_db.maplemonk.production_pipeline_data ), cleaned as ( select l1_category, category, meta1, meta2, meta3, case when repeat_type = \'REPEAT\' then \'REPEAT\' when repeat_type = \'NEW\' then \'NEW\' else null end as repeat_type, qty, fdd, fdd_month_raw, case when fdd is not null then upper(to_char(fdd, \'MMMM\')) when lower(coalesce(fdd_month_raw, \'\')) like \'%no date%\' then \'NO DATE\' when try_to_date(fdd_month_raw || \'-01\') is not null then upper(to_char(try_to_date(fdd_month_raw || \'-01\'), \'MMMM\')) else \'NO DATE\' end as month_name, case when fdd is not null then extract(year from fdd) when try_to_date(fdd_month_raw || \'-01\') is not null then extract(year from try_to_date(fdd_month_raw || \'-01\')) else null end as month_year from base where lower(coalesce(status, \'\')) <> \'fabric placed\' and qty is not null ), filtered as ( select * from cleaned where ( month_name = \'APRIL\' and month_year = 2026 ) or ( month_name = \'MAY\' and month_year = 2026 ) or ( month_name = \'JUNE\' and month_year = 2026 ) or ( month_name = \'JULY\' and month_year = 2026 ) or ( month_name = \'AUGUST\' and month_year = 2026 ) or ( month_name = \'SEPTEMBER\' and month_year = 2026 ) or ( month_name = \'OCTOBER\' and month_year = 2026 ) or ( month_name = \'NOVEMBER\' and month_year = 2026 ) or ( month_name = \'DECEMBER\' and month_year = 2026 ) or ( month_name = \'JANUARY\' and month_year = 2027 ) or ( month_name = \'FEBRUARY\' and month_year = 2027 ) or ( month_name = \'NO DATE\' ) ), final as ( select month_name, l1_category, category, meta1, meta2, meta3, sum(case when repeat_type = \'NEW\' then qty else 0 end) as new_qty, sum(case when repeat_type = \'REPEAT\' then qty else 0 end) as repeat_qty, sum(qty) as total_qty from filtered group by 1,2,3,4,5,6 ) select * from final order by case when month_name = \'APRIL\' then 1 when month_name = \'MAY\' then 2 when month_name = \'JUNE\' then 3 when month_name = \'JULY\' then 4 when month_name = \'AUGUST\' then 5 when month_name = \'SEPTEMBER\' then 6 when month_name = \'OCTOBER\' then 7 when month_name = \'NOVEMBER\' then 8 when month_name = \'DECEMBER\' then 9 when month_name = \'JANUARY\' then 10 when month_name = \'FEBRUARY\' then 11 when month_name = \'NO DATE\' then 12 end, l1_category, category, meta1, meta2, meta3;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from snitch_db.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
