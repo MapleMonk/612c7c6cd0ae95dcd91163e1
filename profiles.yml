@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "marico-marico_analytics_jh"
+      user: "elt_jh"
+      role: "PRD_SYS_ADMIN_JH"
+      database: "DATALAKE_DB"
+      warehouse: "PRD_BI_ELT_WHS_JH"
+      schema: "justherbs"
+      threads: 10
+      client_session_keep_alive: false
