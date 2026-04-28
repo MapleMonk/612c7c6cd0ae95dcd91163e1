@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "kxipraf-sf98359"
+      user: "philips_legacy_user"
+      role: "ACCOUNTADMIN"
+      database: "philips_db"
+      warehouse: "philips_wh"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
