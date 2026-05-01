@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MAPLEMONK"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "dreambeauty4thd@thd-pharma-wh.iam.gserviceaccount.com"
+        client_id: "113759050826264374789"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/dreambeauty4thd%40thd-pharma-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+gYiuFv1sbGCm\n1icopcJJ4ZKarkP7T2fQ4CkCilrYNN4XCWjwwSOeU8sO9348DXtbp+/gg6YqJpIq\n8QmmNmyY4p1urDu2cmhtLNBjxYVA4zyrXPxD7oDQAwL0rPDjAbp3SId08B9/Z+fN\nU7yslAYAOn+llN8jUxZ1QPx3fOkP/y7iSuy7eEgGqnqneXw1aB5pNuqE+H4scFAO\n+AIM9MWTN9SHK5Y5XN49nJ+mxANE5dfdjcQ8a+T4S3DVJlegW+Z/2fXeM3O7mAa1\nv8t14yIGZg6PcT/8+n9atvKjT53c6hKpv/Iufa2T/HIHeo5XRg6kwps5OajJCj/R\nrf0kUOblAgMBAAECggEAFIlwS5ws27hfPv0NIaOk60QHAufQalIoFetkYGK74lzo\nqEEacAHSLipIVKe3kw+9Aad8A48NpbOcxEZRzPpHAMBFSn4Eveldeo9/M5JCiDk2\n/B49D7Gxbzsz4V6XZVF1YZCPEbslGh4AbjEdwNkAQJwN0LLYzz0QybkkvljX4yJm\ndF/nyjDxcf3s+6tFkSL/j5WvIRAKt0yavoMYERMsc2ccgapGPHcu5w0Q9lwRL4FF\nfvs8VHKhLTWvanYGwx7qTRevHMU2+I90yWlk22jfu/+s7UoHew2cVOczNy6LZt2I\nNg6lVTf08LFOLE+XFJh4Q0uXw9OczlbFzuzOG3hRoQKBgQD01CHi1ALuRRf+MZai\n4jH0V+QDEJEc7TlNCbh2rYsPSBQroHWKfeE/07X/ihM9v4zcvUwXF+BrI3RFg6K8\n/goHxEwJbYVWKpVG0v5nkzpT2qK4tfUEGxtAXOZkSMao8C70dxeHsw0m5O8HxNg2\nYg2NJ7LpHw/Uito9SW/VnX/AOQKBgQDHMtpwaMpoQKKAwDslHSDnxdZpQewd1mlp\nvg1pFpuygRKh88N+GWzJDcGqUJ04nl6PpNmZJwvn/dPG1WSwAeIR5WgDr8DbvFUQ\nFBnUeXqjBQya6iere6ZhJHVGoX3iSPzPJeiJpi+yLa9IEYIUjdvSaOI3+aWe+rJz\nTm0BSe1EDQKBgBYU+AV0Z9tDwhk8McD5M9Y9AyS/nscEInHvWYLivjMfpioVK+TU\n27cdCkJFGt0r5LGYJT/D+IrRRNBsQgZXx2HR86W6CheueY5Mw4NmBRHBG4Ibb0Dy\njO+uMV2ELt7X4vRLtYSYwqvqZCDIQVQOXfiIRxu9oHjkGTED6aFTtk0JAoGBAK9V\n7bxAINl++wrFKcpTR2F7XG0t332r+wFejkNP6SBISHRRMmROUNjvyOX3K0xo6eca\nPYZ3Ph2n6L79mjDql2kVOmb0TpebwGv0pX/GpdHUYfIB5YUlw5+CDdBr2XhSsmRL\ng9GVfCoj2ENhVdRtwW4FcAnBLq0vEeA4ye32emgJAoGADjMh4TaIVKR6D8jcqKuO\nsdoy29VJ/SN6MncWgHAtiCYxvL4NTybaVHG50JXrG+JbIK1RQuxLKEOuQJfo+N1Y\n+F43B3sC1M4xGlymJXNHBN8eJOy6zyE6JXy9UHSMzW8wpJHMe0kxQGECvTa5iWII\nqpuGnIXhKcHaKl4ii23ZOu4=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "023e716d052a64355f310d7003f9e42f11ed2ff2"
+        project_id: "thd-pharma-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "thd-pharma-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
