@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "atovio@neon-poetry-482906-j7.iam.gserviceaccount.com"
+        client_id: "104613229866772376931"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/atovio%40neon-poetry-482906-j7.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCPwFo0B0IO+ja5\nAClZhnCkjEJ3uAnOZYs1L1xoajSUqJflr6w1htbF0M0LlB8w0/BjEuLlFS08fPII\ntF9+XRcc8ZNZyzZx0MB5rmbDC9dm7TxR6D/eP683AjXT71wdZ4OmLUx6BCu7///D\nkoQrs7BJ+AILiQdiDX/8FG1zT/OSar7l5XlpISXVpgNpmuLHR6OAL/afzKuCrXCy\nEqvTc/lgMs9HYFRevJdo5TriUlPH4U47DKp8yTkYRw9aqbPFkKkP1OZGjuTSs5O0\nETBB62xi0dOKuxPyzM/m7qB8bKnEktMl+x59VwDVgDvj6gQSuJGjEL0mDpPmkUT+\niofJzt3jAgMBAAECggEAC5IE8Kkg5Qm4u91Kdr0+ddAgTXiPuYAs20QLoQ/jWY/U\nYhVovAo1YUi0KFlsxUZZ0++iOaQhtvurk43JHeeqQ5ciMBkOMc0GoQSrmslqNguk\nTkduVJo1pSzVXlCmzmsVipucyzlot8IcOQajAs18xAdlSr5lzLufcI/IW3608TTt\nc4xZpZxx2eG3im3mNNOoa4mcwus4zUhjuvNeM7+x9xStElXyWuFxrOz8O6Vaj8rX\nx71/AKZSXCPxJiALU8hldR8Us7JUYLI8/c4DXC4IYlOLHtzSN0EvTpz6jNHkC4P9\n3iQOy7w7lzgv3XFA/VJXLnvf1kFQxQc0pd9WW1ssIQKBgQDDevDhAe5qXzal4XbD\nfcpjQz/qoq293+ilGwg9TqvvPNja6fiFsrNGjIPR9+NUPtdWKD8bAGB09OMfBvnI\nFSoJYL68bGhqJyVSCh0s9WR9reO6nJNqNKGjgBeAkaTShZ63MnHwZwFskA4WNYSV\nFwi/2Gm4c1ERSlsEmphPiyyzsQKBgQC8QZF8Zxi+8OYyYX0+EaMLYOW+aSa07WZa\ni5UsgthcHhQ1WNe7/vw77Rdw8PTu4dSniFTHoQjFkl2doIz03qoFefe+RSjBq2FV\nBoy7OKiuucli64l/UsAiwP8nmEHBuh96JKcT/Nqu8PbsYmQmmIW4B7//A4ljDGqV\nXTN7hfKz0wKBgBtg7bnmBll5qnLDSFoLFTyf36TiUglFAhWV2qqTiTtBv3Gx0XAQ\nXlGkPpY67OkQwCI+EtCaVegroF/pHzTp2fBkT3KekGVFxFFgP0Pbvs5ne3zYj0ER\nzA3VU/Va8MXXlyo7c3/jPWzSJFbx+fbTuhL8oZoG9LTCQEs9x9VkPceRAoGAErP0\n70YS2E14oUK8PaFk8Gl1CcDKnqkDRTWe4WgydJxsZ4xnCn9fsdhxPsBBpUX8aZSK\nz7Z495/9+v4LYvyIKbkfWuDmFq+fIOJgsu0DHTDKCDDcXTDsc8d20gk3ZzbFj836\nZ2r0kvLPpVZ1GryGdG0Yrw475QJDyIkU5028eg8CgYEAuQwXrPekxYtKIgE6Ql7z\nCu+fYEZ5/iaSMP8zhoVqWYxFJ8XN6FI9op4vnwQL+XjrJIU7yPJe++dz+oTZ2vgC\nSnpADK4Dlv06WTV2mgj2Z06b58wn0LhEU/RaoNmteedCJiPC41M9QG1PUjEA1bXY\nnrn3u4J7gYRDGlTqx64eQac=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "193d916009eda0469a2efc08970018e26e1eaa71"
+        project_id: "neon-poetry-482906-j7"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "neon-poetry-482906-j7"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
