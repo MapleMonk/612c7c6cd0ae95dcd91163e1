@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "footmarkshoeco@footmarkshoeco-wh.iam.gserviceaccount.com"
+        client_id: "100908118069502882845"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/footmarkshoeco%40footmarkshoeco-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC0rwcEfFy9kzWr\naWP8aJLpxgSYB/rRyItYD/r+SxjTqE+NTX0LoYUC9NgRtJAnBxPOz5NflP6lP82e\n+QUuskbYfYeBGOWdS92IhnC129ajW8AmBoopNFlgPl6vxvoJ9mmJlWAsYszd2FfS\nRRfBjMI2nBEgy2NL+DaeLuiKpciRszF/a/4j5ePiV5P8LN3IBe1/ZDGehQ8M1gvJ\n6BXLIrNiHZwlCJgkKoxO+nsdQUoxbFGESUOOjH1suphoDGbQ9LkIIEvazcAd29x0\nTTWUWPT+CHShKOk5Cp7Zf9MHkv2xt4DXu9mVTUEfES6yWKWLhO4bL2w49nC2C5Io\ng/CprThBAgMBAAECggEABXHdzq/htTvFqwNGG6cvatiIWb1/JzRkJen2CL+MwWS/\nIEq0vormQM3N4hC0ebHv/J7gOcnkt5LvOGptfSKrBF9EsVT6/GJldrWtw/6FNA8x\n1eODZSpPmYPKTivl691vVjxNtYtfpugb/g6OIKDELH7yUYWXhISiaWIP/gzwuO/m\nESdfmFpTYGF8GgCd9awgObybpZo9IM/d4QfDdWkF5uBniTuMKO1PJIrthOzBPrOo\nQsa3qVPfO0osM8YSVW3QdbTWKu2KgxxI6EZIlWnL0CoeTR6K3D1pDzWfTGHvXBqi\nJdO4gmvx/JMR3+OzbjPVbPaGNNggxcgztsloQoDdDQKBgQDednNd5iUoQcYDx/xu\nN+0ILDnVNwaJcxdw1G09RdWFF77OFp2Y+mhH0frhW9oyUwvfn0UzfV7ObWwBGdIC\nsn1fnFSt5+1+M0RdmhsWcn89VwPxRz2hoyI1GZ3CKcADTHvQL9TYH6Rp2Ve7je5d\n6eHvfEfiNJkNVP3iTp6/mKC3rQKBgQDP7DDyzhnzVCaPPn+e0/S+U0jF9QcmX4LH\npmD/aFJbmM7mNriBV9K+GK47GALcGGAVHOBm9CYU/eS9610grl/x1i3/ZJs3y/Ys\niwjX6OgFwctR9ydaXcb5W/ufa/jBEv9RD+EV8ZDkxcFBahnOOlK6l/RRVWnDW2V8\nvKNeQLPlZQKBgQDLVN67m4io0/1mJVs/bpSTHME7dZDe/rgVI8Q49eRkQsDeY2Nm\nmLHJu04gvzCfQLKgkVXR6yxFZ1QJaY0/c98ODbiEP3EeIUPCfgF2Me7EpQzwcloN\nrCqu+BvuhPSAz153edCEPd+r88Cxp9eQNR6SIzkcs1CVE/L97zhADQQQ/QKBgQCj\nmFZnJMz8TLDOMkGdyW2fNs5im0lV4v52ci2NqBps4Y2hS1rewigZ1Dd6XYkafb9T\nvVW/C8jO6XnKCN9McIcjM/8bHKCYRU3bfEWoBCRTK0j7o/h9vJ1q4/nWVNDzsSvc\nLx9N8bSsnABTpNTLE8617Aua1xaRVF9ExvPPnB8vlQKBgGQkX8qCKmGWnY/Rr2ki\nqkvDy6Mu8RDYr3R/mQ9DzYvUzCPuAGL7wAcr3uRLY2H00un8lIlyv7LaOiKzyFUM\nfDNxNonU5J3A6l+rnarSmgarxlbeq1MGuOEoMHMzMETwU6H7SH5d0H72nQRKjkFt\n1N6OxNmS2zMkr/bd3e7+DkUF\n-----END PRIVATE KEY-----\n"
+        private_key_id: "b0e5a1b2c7c391263acb21a34eca8581b357b2f7"
+        project_id: "footmarkshoeco-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "footmarkshoeco-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
