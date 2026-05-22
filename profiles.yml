@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "wt08714.ap-south-1.aws"
+      user: "HarshitEggoz"
+      role: "ACCOUNTADMIN"
+      database: "EGGOZDB"
+      warehouse: "EGGOZ"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false

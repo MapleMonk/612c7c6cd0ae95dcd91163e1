@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "My_Sql_coco_storedailyinventory"
+    description: "A starter dbt model"
