@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "buildskill@buildskill-wh.iam.gserviceaccount.com"
+        client_id: "103352798221269149101"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/buildskill%40buildskill-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC4f/r9quJ0EZHY\nogA0RdxTAjcT/QNLjr5bAjT5o/EkxVIMmdybQArPlT3IZ7Cz8UhNCsD2rQBsRYmi\nT4XOMPwBiOKbmfTsb4PNFqkgxCtaah5SGs5ZIhjG0oLqqvABS47r8f3enDTYUUu8\nJethOD1toYojComOzskJPqJsqqCDCwRaiUTwlJcaXX7BQkO+HrrkRSIngPs24wiv\nV3OpL2YfadRdDXDQvkjtHKLJv6JlG9b+aXMUTkwSEwENvYfOL481yIYbr3vm1vk+\n5TnTOsRf6lE6PscfLgbI7WBCJonQc/zURQfWAY/mTemaWKUnxfy+EFVXgJSN4gff\n8VVpyEHLAgMBAAECggEAFvk0px5+qSZA62EstlWWnC1z70S7gs6I7GsnbohX8BSz\n5UbJXfmI/xUdxtUGfzmFn7Y9ldmv6kt0WmYdirG1x3kkgmyWv1QZbNGsCJz0qwL4\nuI+G7zlcLXGsBI15aife6YlN68i2mdLxo8FzAD2RBJQvT7KxszsTdFe8wNw0NWzV\nC81idwfWbUrPaMAeigt1U7UXixojurt7N2C3TBn9NqrRSsQch/CwskTOb+O8IO8J\nHbBaiItNRbztA7GZjeLKOZkuf5opaqLMMz3ASWi5sVwyhajHGBABfLF/yypHdpJ2\nWniiqHCiKUwKFkxzNuM4GxGBPm2VVBo5hTkBiSxbxQKBgQDmhSsEVwve0mHjdsjI\n+Xq2sjdl6KlsexxRWxDBX43uI1ZUmXj1tdpJfr4fWe7KDCxO+rJ+0EGUTAGJR3CV\nbgIMXGNpMVieHIPQlt/k4MbB9EoWML+mgIW7PDR+A0pPCqlZm3W1UWpsl9IaiGiJ\nnMhfHJxblJfXeTi8531kTH4tjQKBgQDM5J3RCGNr58L98xs/sSzf8Qpi8WHYNSB8\nGxr11ZTxIhSpO7uHKllx8214g37Xert8Ynh4+4KhT6NNT4shmshyeiwgCyXha4Qe\nKWEPBFWDlhbozbHciOoX7E8WNLGj0mOibI5ZhuMRPUE+WMWJiI/BioB/ly8URQBz\nyQ0RyAL6twKBgAwikoMl+e/+7zxEMomx6G3Zr+TjfJfDW1hFDPrBBv20SoUllyKI\nMjeQPn30BAgK4AJAXEkkuW8PGT2azyhupBj2fB07hci9A4tlhd/MnWn0bDoC0vP2\n7BNRNgo0LiM/Em8vKeEjqhCRZXQUHjywTjQDk4+WoO+s5/m5zfYLuNC5AoGAIaL6\ngaGV6NYQfe5WL9ufWVhR8zJbdMor/hPZFjitDfUhXTMQMz1xl7J1603zGd7tPptP\n2dS4elD/pyaC2c52T8zcx5ns6xfiha0XYQa+Hy8ZrbhvFZxoierihOu7qgBVGQon\nSG1Lg74BowGh1FVV/FkHhWrFcNdvHpMIET47tvsCgYEA5gB41PiKIlxSeEVXbvNT\ncZ5UBYfCRcnlFAar2F3VRcWx/kHSgJH07TwDpzWHIlR95tCyq9IWjBLGzer9iAo6\nIGB7h6vgC4E2ifdcplElA5V72hZyKOu31WU4qWzKbSMr4kd9xfbFSw1vguxiJpR+\nAjYSk5YbR4LORaXwcbNdSAA=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "2d1876b3fd726704d4a5d1a16aac5cbe66be7f0f"
+        project_id: "buildskill-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "buildskill-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
