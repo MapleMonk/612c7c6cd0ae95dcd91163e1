@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "babygo@babygo-wh.iam.gserviceaccount.com"
+        client_id: "102873062227262754603"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/babygo%40babygo-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDi5qFlWJ/o9TWr\np+c1NkkuFktaFU2w+urHEVBfbtsKg7SrA8HbmQb5Zp3v7OtSOn3tblKeynZPaRUx\nDrK53Op9PqEH8lTqBZsMAnAE36hh3p6VSwcfzrhBt8456jR6f5S4LfvMEcgw+3xa\n5rM7dA7b/R0xgAdDU/UOxkaKupmUgd9OCi8t8mQ1Pf9mWj31lKlfASvMnUkx3qA+\nzHIpYdxcOrj1lr6gnsYR+VnlhplOoieGgzUnutPHpPO2+wnTtx6TKNH/q3O0Ihy0\n419/+AFi+NxRVkc/K4eYdKaMqVukCLeJCr/8LBjjz8bCEuA8pn6sw0VRhW7DQ1MD\n4T2OnUojAgMBAAECggEAFLo9JS0cPTjlRGnsA57oFCc3jqJNPMJ3NGSJreYfvrf7\nBvequ7z2Ik4Jqyi+ndONEbsByNK1oxnLifXjRXpVC3LvXUf5vNUdQv1tWUH14lbm\nsBGwtBWmHGQbmTZ4Fnaq0cvAPvX4OTfytg/GxhgbNrp1HRf/0dqMvjhGVRb9v6SU\n1BubOkwUlIhvNw1yla0UXda3eHouCajrgCu+fos3OSWbT/B15Ynk94U0EOf+0i9K\ns+lgm7Xn2bQG9WO5hpU8QBGKVN3KYBYsbAMNRxEcpDcfaMeKX5UIVfqIwibuDLnz\n0tpMjK+15xkTgBLFKA2+SMJILjqmxFB3l0WxzU2VeQKBgQD6G2wti9+USRjK9PC4\nkRvVwPPXI3m0A0K6Q64D57n2ktaZAAQLEGu4fghSYwz3zYvsRx6JQ6YlO7gNeUc5\nAMYPPvHq8eOO+QxrSjyrsyiVsOpkdyFNPYpFwgjicVQtoIcdQyjSCMM+V0uVObxD\ndvwx8E+OxUKPG2RMYF3EOeLLiwKBgQDoPzv9+Vzts0Xy5EgE/AlkFIJlTsBI+4pd\n5+/8WCytzgfgwAocKaIPHvSsroI5IBKb1bxZ27hzskPyGn7cRxxa2jakpMUjrCF3\nT7hmYlsGWnjCIa0XZ/W2cer/NUQcE3v94oB7hGgNPENQgZPmVbj3Znx+7iWuwrUp\nCycfUfmuyQKBgQCVXnNI8FRi1xT7gTWSxPb+vfHi9sjkfV4IqArxQh+J50BKt/uy\nL+hlkr+dlJJWHGgIgKD4EXLUocnWIiwrGw8uY8VPL49b/9ku6nM5iBIg9DvILG2z\nF6HQ74Um19ASP+Dx1P44Eguo27HEOWr6T8FmgcLB3YVWumE4TAUz/+426QKBgCFM\n99gpyjZXDz+NlfoI/Xu5KR1HlnCgiK2AVTvUlMtzEFQclRaGrbMHWEPuXcO9Io3v\nrqsfwynrtKxhOjFxjNJGGbGv4oiD5OSLrMAZeD3H+Sq003HYuTWoze48AAEalhvI\nP232hUjojCpd+gv73KK0skMs+IA/cORqsfhes7NpAoGBALn6ep31jdzHTyVmW2PV\n2cMuZNIKtkSc3lOsbSLbaFI+rPXRdRj4U1FzBUJnl9DhnrBqRtZJzs4lNV3GsU7H\nFNxG/qLXGW0CJwjWRXcroTs2A6xc5HLE28sENc9qww9epRrHAIi2pukG2q+0Zt1S\nrWHMNr0pO9wtyB+C/YPGLMLB\n-----END PRIVATE KEY-----\n"
+        private_key_id: "22f493333879a1b7285deccab817b91ae6c549fc"
+        project_id: "babygo-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "babygo-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
