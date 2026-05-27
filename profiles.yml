@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "misschase-maplemonk@misschase-maplemonk-wh.iam.gserviceaccount.com"
+        client_id: "102544745625605776852"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/misschase-maplemonk%40misschase-maplemonk-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDmCHvyMKt0LK+t\noyZJcVV378TGp976+bYcHQmpn/g+u7jQer+xiLrmROzD6YgZtNNORnNoDbz1pwaE\n3lS4/mpfarQolw7yauQS01p/Pu7Kr33n0N2JUK5Wa7M5YWagItJk8RaA2gJa1qvB\n70WwwCKnwPIwCh9ry/0rqEp+U217HiVRxzJL0HeLgUi2Eu6hFOopWp6ppT389QvP\nQdFMJzKLWVZMltsUKskTHbRPToJ+ZTA5bfzO/dpaZi7FDDsO9pyFHLUamsZkudHE\nE6NzCf3/f/8hazunjLzgKb8zlXxiWq+V6GgTuRup/87caxMFwHS1Y1hJ4sDVlzKp\ne31A/Q4XAgMBAAECggEABq2yfcFPplqm40zzXY+4Z5Si5BHXhaDa6Lu1+ptCbOEs\nefXwJgw1XdAAI4mJPogKZkThsMRM5cEjf0Io/vxqoE+PYHhPKWUqEoy85H5OwUq0\n8QgWau2RO/ndumKyfea4d9CPaBW6fhtxjCVfosSQZB9wj7u3D0RO08XvN70lHaDY\n8BSGqovv1DRKk7w2OYmjF8a6WR/h36jTcYDlr+L7zpE0F5n/hPDF/q0OpEM9LNi7\n56eqLHcPaqLFiDCOFWFwS5uMRV1Sif1yaKtSsm1pAQgEMoZoak6zcXwkO66kKHGt\nyd6oNxZbsII1u3cW6tK1NPIRs2TzJ8MoT8BoGC0/lQKBgQD9O1AgkQvdgyMeFWjO\nTYzPvdeRY0j1BWt4FaPzvVqATEPbyl/MkKOb41NMBiP67r/FbK+NNkX1s5jAraPr\ndCWQeV2EHzE4FDMoZoza7bh5YIj5VYXz1yFdoxBsB6Zx1G4iXc5h5gmt/bD71n1O\nAJr+BaOkZUHQDj7bGNv+5CVCRQKBgQDojD+U3s/aVU+VPDnVC5OeeqouEjVm63gH\nEx/3Y7M5+N2N1aCx5VrBeduObk0pG21gKc8ijXemO+8n1bGC0oehLJ59tNbAXDu2\nMtwaK5fPxY3NA2dAKyGfgsJIbKEFCqNww5YZhwM99S89xnhrC1dJJxE3e2rY3lrZ\n4ClazzRCqwKBgQCgrbH5+A7/TuZJgGwv+yUN6/eMWONCFV5Lo++UCOIT5lBoddCz\njFND5spDwuGxpywnqP77KyTY8kxKdeM800XClj+wRdqFKswLJobZo10aJxbCnnGQ\nd0DEmWMiKPiD4bbAN6VsmPorXH2gTkjT5a5y4EElXtqTmXZory1oXnsFwQKBgQDZ\ncGH3MkuJrCFIulKdCUETe0Dq6S2zuVK20sQeDsRD3ZZUC79A9+Lfa7DGwg419KZV\nt2Itvbd14S6iwaZEW9Rj+RONGO2AWf2fRHkXo1FE/kSzwI3nqyy6OIqvK5t32lWu\nl8MexWZbpYlxqsVn2efYx8XKagUjGO48MOSaO4pzFwKBgET6ZLBhEJ7dE1B7G9wI\n81z77ELV9qSFstuvxrG+urG2FY5LJ3AnDA63xdhWg8doVNffnLMq4e89HlCSK0wD\nRdgWJzUG+siKfA92zH240Dp4G7yErQ/DrMDK73jr1pyEMRFJS5AGJ2zLYDBH6M6C\nBRVROq2HJLcRTXyJV2QRXFyl\n-----END PRIVATE KEY-----\n"
+        private_key_id: "099c17d63f26236a8f734357e8d3df15e610dee6"
+        project_id: "misschase-maplemonk-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "misschase-maplemonk-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
