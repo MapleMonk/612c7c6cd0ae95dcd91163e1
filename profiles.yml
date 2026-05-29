@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "assembly@assembly-wh.iam.gserviceaccount.com"
+        client_id: "106987979149456290014"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/assembly%40assembly-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC6PPyRAA/qJJrZ\nk0KchoTkOgcC3Qm/qKOy0C9JIkB72pBYCQjLsj5eh7UM16pJ/nswDHiIAkitrwK4\nmUrl2iXDd2U3RWR6RhUFz4cAdo4KkpAnrSEXqRum+aS9+cNZuEPqcmjB1nTrA+ej\n4R5kwEvYO2ezd+0xvxnknu2f3/lfN4D9uTDqhIepeLAcBpVa82ZJNwGdprqgpSn3\ncC2Y3sUgVKuAI6S3F1MjMRQTon4s/b4PGGvCYo0UqzJV4QsYSU7g216ocLabKnOq\n9MJ3RR20Z2S6va3EQTA4WNzusuhjDGFDVXlv4ecRO4Sko9weH6629LCbnqp8N6St\nDnIn4wTBAgMBAAECggEAAdqulxD9l5KyufzV2nIaa51KSZSCztYyfwrElcFSDAmi\ni0XXwRNuvIk0W8Lf7qmqd1GAd7YyHAyUhdr83Gn+G0KajuDRfcgp2Gt3CCGmC2Pn\nLIX0QOSNom103vFYKRIFFxX5hgiJFHfu+/o3T8B8YNRClY5Znbet3dFZQ1C7DmAe\nPO78rcQeyULgUmGIxUfnDnHbXq1xu2yYFR1b/IyRRqYOK7eNzNKh5W04InAgT/MU\nE83UfjLjUjgPKnVOFBC6z7V2Lbsu38v1jy+O3p60ytDVsYRhG4ttl8+3riAgdTCG\nqJsBXAAH3FAzSb85vjc5mKPefLDwcEch1znrOQIumwKBgQDoWCBMFSAWn1ZY41tI\npKegChHwCtkqfBMWQZ6DfU+2C+J97MhcIUgN0sn0Ez+akVcUiIBPgY+pUoCMVGGK\nJPd6OwjdKEXkRP32031PUhBzywqCu5CHw/lWy7P1ZaQq0sj6k5QD60fqVeno4w0b\noIfE5xIGjp/WlYjxBFcnqIzuOwKBgQDNMySFl62XiP3SHj4rodOWPslVoWRzwAEb\nFS4FKnJKbyRetQJplwNdnaXf/SUxp0SRPzmjAn0n+7DfefT+jJpD5kEwaEn4mO+7\nXNCvTJsZIWrOolwuEucVjd75QI0KVmZg8jFJ92c79Y6Tu+UG8CsdEKJ3nJ6ne1m2\n2nDi8uq9MwKBgQDafUzZ3x/OxkXPzvWfiV8sa2vU3I69mfHlAw4KPoQAAIsbudfs\nc0ur3CYXxSYRt005POfUXFT5eGD0FcGnw/2JTwyV1HJtJ8ffHaCAP/7CtRQMPk+6\nrDrEOUjgopVPw+pFYRRW3yFAp0wQubsw2LP0IQtdaS+7/eDKLTe8To9A0wKBgQC2\nEhjnyGuot06vr1HumQoKl+9A4ZEl+0l/5E0PHFiInxEgT2+yjOHZoNXbZtwnsIjw\nb68Oaljury6DO80cR1lhwd45u29W+yxLjNFFma1MoRAKBJnR78fGojkj5BjBAWSZ\nxIvjW3foBbvaba+LdnJquaXOh9NmO9agnjXnyS5rbQKBgQDlnfgzP7rdGRLzvNaa\nCmVAy8m2oHoqUBNcNwcRMYLhgupuVtpLEweZBdXLd+I18slW2fTcQFyyna56vWme\n8vvM/PKu/bMF8r/PdiX3bYUc0EGUZGGZ5K/meatcrgxc3yWNuxqfQouS/cd+aMzN\nSYqUMXp2ojLOsD04CMltcJuylA==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "58fca0c443aabc4275d95eda019683a12e2a7788"
+        project_id: "assembly-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "assembly-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
