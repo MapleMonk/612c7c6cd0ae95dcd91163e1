@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "rosier-foods@rosierfoods-wh.iam.gserviceaccount.com"
+        client_id: "117339312360345991384"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/rosier-foods%40rosierfoods-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC46T5+7kg/OJ2V\n0AesH0Hi/WsVasPPBJNz0+0j4qBNwvNpD3+di4Fr3HaoZ5h38JpZz7t4KFZJ3+Zv\nNgDtLfWwlBeQLHJlA9Rfv6aXSnTh/0tHcK6eXqom9U6qK0qHZ0EemfSfAHe0PSlB\nWuTtKbf3nW6tsD0ygqVzxnIH5uPk/l2byUyeWhwxtDnqKC+s9fUNILwV7RgMj2Lu\nyNGd+qYAcHv2p4eeIuTWgs3TwHBlnFALq4T3nibOBpQw0B7qbD2rTShLOF2rgUtz\nGQSSdqLHv1a4uhsqpgybW3sOS2kpSzmLob88au4UU6Cs8XXaxVcCctQAYrbRZpqt\nnEDTgUwNAgMBAAECggEABNWoWiY9wlVnHV8ijDgG/3nTvmwbsYJznoAof5sxyMaz\nmYgbtJFMsXbCrXWD8YLbbkS1qJcZZnYRrs+xJ4JfnZ3Jne3jkcuPVm+K2gLK2ovT\nuoryLdbYyQr54w4dtTuYYsXwtOWMu6wrs3c+bAr+sd0uYyEsAHGVBNln6tf5Fmga\nu78i6+vRnlKcm4Fj5XuPTit3LgZyFJDkiTVcFkF9e5BzOpoy9Wa/Da2/qBBfv/HP\nJXoRATrByvw1Yd4oaq5Y+zd3Nc/nA1SpNQFkJOSHS+BB4ypzaRhUWmKQ4oGkiXgt\nUEodX/rmK/oOYfgpKmA1+Dg68zIBg+Yg+4MpmMNrKwKBgQDtc06D/PJsz5NMSb4U\nDPBQf/4BJDR31V0wzkdl1G7lCLwIZkhzMnQrFqr4nIL+4G6ovFF8Vhz1cTumnDj2\nTDgyrftB7VrfmDnE1ojVH3vMHrMtHFbKjYT9Ky3+INImaRoIGUoris48CLHCqGSd\nCcakJSrvDSkvT6pmPN1PNXbD3wKBgQDHWziS1lUBAqBg32NABf7NTb+zBv4B2ROz\n3gmOgYXRGEjWnAkXBSmKZnSnmf1z3PFuWFvUS8iagVI7Luqhu3JRuMCeFuHtC8iH\nVW7rzWq2VEEC7WNNsY+zOah65l97gbXR1aFbWusIt49JqG/+AxAgiSND+xMtIgWU\nL5XEbzONkwKBgQDfEBlMSM18hqu7WPMlZtpC5Vo6vEZF5Lx84uuTr7LVmhT6Vwvs\nnBMhf1Px5SXyRefuv6pVAZiGwm7lH5ErX4LTqTmGP3HE5v4t+dPlUoQ7xwNPd3XZ\nJoUuR+gW+cIxrz5zKT7SFL2VDB3h3ctW8x4WiYwBsf1kopRTIw5MIM+HRQKBgQDF\nBfCZnl4QS4o5c01hvwsd2FM3Ghf7t5BzWWPUhUm9ZuTFxRxutdliQPPVmKkW0yuA\nxK6s1+EAYgLlHu8gvGK1RYSIOVE7t0OODO88+J0YaZh+ziIwbOX6WWebXwbKx1zs\nbtezs91JljB0uZVFU72iiiZiT0eaeV9OHuFDbCtlJQKBgQDLZeNVsF4FemcZh4a4\nhntGyP2MO8sVENsgbW5BoOyGcnxKXmi+RxqBMUk0KQVllrK00ddBioqdqa7CwzQL\nFYBgL1ZV/1gX8YA0SEoABctG59/MEg4OMil7fllHQPG2a8fczDymoBVYk6/c3pbI\nD/xpDWhoK8FOAUxnX5wR7xWj6g==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "1e6da600c057278a19e9016a0135e502626d2fac"
+        project_id: "rosierfoods-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "rosierfoods-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
