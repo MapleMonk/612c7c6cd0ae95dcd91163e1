@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "gsheet-asaya-data-room@asaya-data-room-487110.iam.gserviceaccount.com"
+        client_id: "111153648152143219678"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/gsheet-asaya-data-room%40asaya-data-room-487110.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQDuHr2X5B0qy0fS\nMwbEHtIUJeeUIl8wIWdVnVP0h7uf/Ww50ft5kmx3nDPWiVeHDJyF/phSRUnTgKzW\nHqUu4Avrw3ZB/9W5jnTmV6Yca2ZfV9K4zXV2KWgzLghprITKyG6jLLm5o9C0mtd/\ngVFAarFICP8VIaiAwxhPriNqmyaikPHmjUe5d1XZM0O5Ebs5UHfP31jBNZRwrbbT\nOuOfSCG9bjun0dlKLYGXCKkk6/1RwUIuvg5pALa8g79xFvM2hIFHgPQ4VPxvZuky\n6KsYpMOp+kdc+oSRnPLKPflis8I/Gf78eWHo87j760YX1g9WxzOARz23HSeuVyH2\np0LFH7aJAgMBAAECgf8/7I2GDGPhuSPuw52glYv2gxzhuth5WbGD9yUyrPDEyPB+\ne5onAnsouqZJhO7nMluF6gy6PIYB+xxrEiifpnkmZOXtkeCuXHzFcxvRq7aWO3cD\nMlgpZud/CQlfiEQERdc6g8DYNUH+06xGboQbGiLwuhMm34JJqHyktC4nafKIcU+I\npBsKNoGhGIg3LLZzVkxhGlIlW2aig+tBoHCN/wajto/J+OIa/6gelquACCB7xD3n\ny0kdI+TUObx/dP8RT6UfSYTKYZTLdeHlIdQO607f4w+ZRvDHrdmE21oPuUML/l6k\n9H7uA36gNEcf8Ad/yzi/5N0bs+fk7c93fyr7/ZECgYEA94JJmkbJ2ltV2jTpCXmG\nyCsTGe1BptI7iuSx6uf+l//FSAzz6WOOmP+cGxEV23LvN8viJ7uPlLmCGjs+7PJM\nDcLcck+hjj2jdOEChyKHPKMjEAFF+pFnJ+NfinONOf0gxPXu/gOC6CaFNFhqYFsJ\nBNEPnzjDRqPzh68XNfjEUTECgYEA9kn/LWEZ5MBw4SOoE7c4mhIfOAjWO7AUSaao\nphcqUgMr+UcdXZeIO97eTL7+Ws5cm/OIxiXBkGLaSiPlRQivmpl5zAav/y+nCxF+\n3v3amlOv4OYKQPbq5yA1nSYven3s313ken0y497PAebZFw2JZV+JhPgY01zEnwt4\ndA0MJNkCgYA33ShPsfqNVmAiSB7xDITnWRGOoIZY6MqXptahdot4MzqL8KB85QOi\ndM7/LPQJ+/8SUOpSnXrizpwW35hsUqPn1zt6cY69VBw4nTC834Y2oXugeSkaTQdD\ncYZ28W3G0OM8kWXH33MEgu09y1b3OJToiWdFQMKShx7IWTSb8fIdgQKBgAP+qUPs\nKkZalLoiIOzI8QMWvijjg84OChYzvNKM16Pi50iwzZoiBhSqhcKK6odAh6ID7jkA\njcYwxEelk2duP6LrUF1t0lb6R+RXEU6+oVgVeWnVcV8iYicDj7sPzn9XIYtx823F\nMBkgGQ132BeWoZ7iUNG2UHjFLW9C+V4wg/zpAoGBALEmYU+0MMG6hPAh+vINy5ro\nyZcIVW5DuoIEB1XFHNAIQndZgYdclQXP9u5weZiY3mwNcmr7d3cK0XKhEwKMOQeN\nN1t+ou6AxAAQr9NxxMWAxwc+mhN01F5ERWul/7HT4U/+VNWWZUpSN2+dVZJug9eF\n6Aqi0eCSVQeXbzNYctrp\n-----END PRIVATE KEY-----\n"
+        private_key_id: "fc194deaf0839b377bbd69130a9baf25d09a1e20"
+        project_id: "asaya-data-room-487110"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "asaya-data-room-487110"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
