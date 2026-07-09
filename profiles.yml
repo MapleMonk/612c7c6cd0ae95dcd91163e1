@@ -1,0 +1,15 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "redshift"
+      host: "anveshan-db-workgroup.618077882437.ap-south-1.redshift-serverless.amazonaws.com"
+      user: "admin"
+      password: "Anveshan#db_2025"
+      port: 5439
+      dbname: "dev"
+      schema: "public"
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 10
+      ra3: true
