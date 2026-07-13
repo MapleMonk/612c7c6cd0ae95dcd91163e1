@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE TABLE IF NOT EXISTS MEDMONGERS_DB.MAPLEMONK.sku_master (skucode VARCHAR(16777216), name VARCHAR(16777216), category VARCHAR(16777216), sub_category VARCHAR(16777216)); CREATE OR REPLACE TABLE MEDMONGERS_DB.MAPLEMONK.MEDMONGERS_DB_amazon_fact_items_intermediate AS SELECT \'AMAZON\' AS shop_name, \"amazon-order-id\" AS order_id, NULL AS order_name, NULL AS customer_id, NULL AS phone, NULL AS tags, NULL AS line_item_id, sku, ASIN AS product_id, currency, case when \"order-status\" in (\'Shipped - Returned to Seller\', \'Shipped - Returning to Seller\',\'Shipped - Rejected by Buyer\',\'Shipped - Damaged\') then 1 else 0 end AS is_refund, upper(\"ship-city\") AS city, upper(\"ship-state\") AS state, \"ship-postal-code\" AS pincode, \"product-name\" AS product_name, NULL AS category, \"order-status\" AS order_status, \"purchase-date\" AS order_timestamp, ifnull(TRY_CAST(\"item-price\" AS FLOAT),0) AS line_item_sales, ifnull(TRY_CAST(\"shipping-price\" AS FLOAT),0) AS shipping_price, ifnull(TRY_CAST(QUANTITY AS FLOAT),0) AS quantity, ifnull(TRY_CAST(\"item-tax\" AS FLOAT),0) AS tax, div0(ifnull(TRY_CAST(\"item-tax\" AS FLOAT),0),ifnull(TRY_CAST(\"item-tax\" AS FLOAT),0)+ifnull(TRY_CAST(\"item-price\" AS FLOAT),0)) as tax_rate, ifnull(TRY_CAST(\"item-promotion-discount\" AS FLOAT),0) AS discount, div0(ifnull(TRY_CAST(\"item-promotion-discount\" AS FLOAT),0),(1-tax_rate)) AS discount_before_tax, NULL AS gross_sales_after_tax, line_item_sales - discount_before_tax AS gross_sales_before_tax, NULL AS net_sales_before_tax, ifnull(TRY_CAST(\"item-price\" AS FLOAT),0) - ifnull(TRY_CAST(\"item-promotion-discount\" AS FLOAT),0) AS total_sales, \'Amazon\' AS source, NULL AS landing_utm_medium, NULL AS landing_utm_source, NULL AS landing_utm_campaign, NULL AS referring_utm_medium, NULL AS referring_utm_source, NULL AS landing_utm_channel, NULL AS referring_utm_channel, NULL AS final_utm_channel, NULL AS new_customer_flag, NULL AS acquisition_channel, NULL AS acquisition_product, ifnull(TRY_CAST(\"shipping-tax\" AS FLOAT),0) AS shipping_tax, ifnull(TRY_CAST(\"ship-promotion-discount\" AS FLOAT),0) AS ship_promotion_discount, ifnull(TRY_CAST(\"gift-wrap-price\" AS FLOAT),0) AS gift_wrap_price, ifnull(TRY_CAST(\"gift-wrap-tax\" AS FLOAT),0) AS gift_wrap_tax FROM (SELECT *, CONVERT_TIMEZONE(\'UTC\',\'Asia/Kolkata\', \"purchase-date\":: DATETIME) as \"Purchase-datetime-PDT\" FROM MEDMONGERS_DB.MAPLEMONK.Amazon_seller_MedMongers_GET_FLAT_FILE_ALL_ORDERS_DATA_BY_LAST_UPDATE_GENERAL )X ; CREATE OR REPLACE TABLE MEDMONGERS_DB.MAPLEMONK.MEDMONGERS_DB_AMAZON_FACT_ITEMS AS SELECT * FROM MEDMONGERS_DB.MAPLEMONK.MEDMONGERS_DB_amazon_fact_items_intermediate;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from MEDMONGERS_DB.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
