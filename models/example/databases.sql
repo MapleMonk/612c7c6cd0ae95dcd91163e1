@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "CREATE OR REPLACE TABLE snitch_db.maplemonk.replen_scorecard AS WITH mix AS ( SELECT DISTINCT branch_code, weighted_mix_deviation, mix_score FROM snitch_db.maplemonk.replen_mix_score ), qty AS ( SELECT DISTINCT branch_code, weighted_qty_deviation, qty_score FROM snitch_db.maplemonk.replen_qty_score ) SELECT COALESCE(m.branch_code, q.branch_code) AS branch_code, m.weighted_mix_deviation, m.mix_score, q.weighted_qty_deviation, q.qty_score, CASE WHEN m.mix_score = \'Poor\' OR q.qty_score = \'Poor\' THEN \'Poor\' WHEN m.mix_score = \'Perfect\' AND q.qty_score = \'Perfect\' THEN \'Perfect\' ELSE \'Okay\' END AS composite_score FROM mix m FULL OUTER JOIN qty q ON m.branch_code = q.branch_code ORDER BY branch_code;",
+                    "sql": "CREATE OR REPLACE TABLE snitch_db.maplemonk.replen_scorecard AS SELECT branch_code, order_date, ANY_VALUE(weighted_mix_deviation) AS weighted_mix_deviation, ANY_VALUE(mix_score) AS composite_score, COUNT_IF(warehouse_constrained_flag = \'Yes\') AS combos_warehouse_constrained, COUNT_IF(warehouse_data_missing = \'Yes\') AS combos_missing_warehouse_data, COUNT(*) AS total_combos FROM snitch_db.maplemonk.replen_mix_score GROUP BY branch_code, order_date ORDER BY branch_code, order_date;",
                     "transaction": true
                 }
             ) }}
