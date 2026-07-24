@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "gvsrnod-bb15712"
+      user: "medmongersanalytics"
+      role: "ACCOUNTADMIN"
+      database: "MEDMONGERS_DB"
+      warehouse: "MEDMONGERS_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
