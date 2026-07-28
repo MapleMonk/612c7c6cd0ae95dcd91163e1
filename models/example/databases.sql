@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE AS maplemonk.beastlife_shiprocket_fact_items AS with base as ( select ID, SPLIT(channel_order_id, \'_\')[OFFSET(0)] AS channel_order_id, zone, UPPER(status) AS order_status, A, P from MAPLEMONK.Shiprocket_beastlife_Shiprocket_orders left join UNNEST(SHIPMENTS) AS A left join UNNEST(products) AS P ), parsed as ( select ID, channel_order_id, zone, order_status, TRIM(REPLACE(JSON_EXTRACT_SCALAR(A, \'$.awb\'), \'\"\', \'\')) AS awb, TRIM(REPLACE(JSON_EXTRACT_SCALAR(A, \'$.courier\'), \'\"\', \'\')) AS courier, TRIM(REPLACE(JSON_EXTRACT_SCALAR(A, \'$.status\'), \'\"\', \'\')) AS shipment_status, SAFE_CAST(JSON_VALUE(A, \'$.charges.freight_charges\') AS FLOAT64) AS shipping_charges, SAFE_CAST(JSON_VALUE(A, \'$.charges.cod_charges\') AS FLOAT64) AS cod_charges, SAFE_CAST(JSON_VALUE(A, \'$.weight\') AS FLOAT64) AS shipment_weight, JSON_EXTRACT_SCALAR(A, \'$.pickedup_timestamp\') AS raw_pickedup_timestamp, JSON_EXTRACT_SCALAR(A, \'$.pickup_scheduled_date\') AS raw_pickup_scheduled_date, JSON_EXTRACT_SCALAR(A, \'$.delivered_date\') AS raw_delivered_date, JSON_EXTRACT_SCALAR(A, \'$.rto_initiated_date\') AS raw_rto_initiated_date, JSON_EXTRACT_SCALAR(A, \'$.rto_delivered_date\') AS raw_rto_delivered_date, JSON_EXTRACT_SCALAR(A, \'$.awb_assign_date\') AS raw_awb_assign_date, COALESCE( TRIM(REPLACE(JSON_EXTRACT_SCALAR(A, \'$.rto_awb\'), \'\"\', \'\')), TRIM(REPLACE(JSON_EXTRACT_SCALAR(A, \'$.return_awb\'), \'\"\', \'\')) ) AS return_awb, TRIM(REPLACE(JSON_EXTRACT_SCALAR(P, \'$.channel_sku\'), \'\"\', \'\')) AS channel_sku, TRIM(REPLACE(JSON_EXTRACT_SCALAR(P, \'$.name\'), \'\"\', \'\')) AS product_name, SAFE_CAST(JSON_VALUE(P, \'$.quantity\') AS INT64) AS quantity, SAFE_CAST(JSON_VALUE(P, \'$.selling_price\') AS FLOAT64) AS selling_price, SAFE_CAST(JSON_VALUE(P, \'$.discount\') AS FLOAT64) AS discount, SAFE_CAST(JSON_VALUE(P, \'$.tax\') AS FLOAT64) AS tax from base ) select ID, channel_order_id, zone, order_status, awb, courier, shipment_status, shipping_charges, cod_charges, shipment_weight, return_awb, channel_sku, product_name, quantity, selling_price, discount, tax, DATE(SAFE.TIMESTAMP(NULLIF(raw_pickedup_timestamp, \'0000-00-00 00:00:00\')), \'Asia/Kolkata\') AS pickedup_date, DATE(SAFE.TIMESTAMP(NULLIF(raw_pickup_scheduled_date, \'0000-00-00 00:00:00\')), \'Asia/Kolkata\') AS pickup_scheduled_date, DATE(SAFE.TIMESTAMP(NULLIF(raw_delivered_date, \'0000-00-00 00:00:00\')), \'Asia/Kolkata\') AS delivered_date, DATE(SAFE.TIMESTAMP(NULLIF(raw_rto_initiated_date, \'0000-00-00 00:00:00\')), \'Asia/Kolkata\') AS rto_initiated_date, DATE(SAFE.TIMESTAMP(NULLIF(raw_rto_delivered_date, \'0000-00-00 00:00:00\')), \'Asia/Kolkata\') AS rto_delivered_date, DATE(SAFE.TIMESTAMP(NULLIF(raw_awb_assign_date, \'0000-00-00 00:00:00\')), \'Asia/Kolkata\') AS awb_assign_date from parsed qualify row_number() over ( partition by ID, awb, channel_sku, raw_awb_assign_date order by ID ) = 1",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
