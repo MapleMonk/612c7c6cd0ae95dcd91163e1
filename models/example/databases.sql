@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "CREATE OR REPLACE TABLE MapleMonk.Asaya_Blinkit_Fact_items AS SELECT distinct concat(mrp,\'-\',item_id,City_name,\'-\',city_id,\'-\',\'-\',CAST(qty_sold as float64),date) as order_id, cast(date as date) order_date, cast(mrp as float64) mrp, city_name as city, item_id as product_id, cast(replace(qty_sold,\'.0\',\'\') as int64) quantity, item_name as product_name FROM `maplemonk.Asaya_blinkit_sales_sales_partner_biz`",
+                    "sql": "CREATE OR REPLACE TABLE MapleMonk.Asaya_Blinkit_Fact_items AS SELECT distinct concat(mrp,\'-\',item_id,City_name,\'-\',city_id,\'-\',\'-\',CAST(qty_sold as float64),date) as order_id, cast(date as date) order_date, cast(mrp as float64) mrp, city_name as city, item_id as product_id, cast(replace(qty_sold,\'.0\',\'\') as int64) quantity, item_name as product_name FROM `maplemonk.Asaya_blinkit_sales_sales_partner_biz` where item_id not in (\'10318644\') ;",
                     "transaction": true
                 }
             ) }}
