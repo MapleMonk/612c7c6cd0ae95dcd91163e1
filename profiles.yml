@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "underfourteenonly-854@underfourteenonly-wh-502410.iam.gserviceaccount.com"
+        client_id: "100703591969790054973"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/underfourteenonly-854%40underfourteenonly-wh-502410.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZFFbAgjWDXtOY\nYpbiO6/pU5iDlnXlpAQv65ZJ6HP8eBIjeIZouJhy7DIJifvPNor5J5xa+6kJW3Te\n6ZNlOXHK0IkyawJCKUshNlNOGPJi6gKQoPGOKoS8QxvuBmXWp1uGLHBzWvdxJIIt\nc2c46qOOZTXmENJkY69yLLHJ+LCIe9fjgzayACCTR+R4KkvYfPDNPWTutiDfqCvW\nsBc3a3TeMKDbcu5HyALXfs9G4oIxl1a3ElqWDjw67N5qnP7OFYpcMkDx4P1vPRfs\nxHcmBv2SdPViu365928TFYYXCxtMFlU0iDOxLbiapUWKkXHjvpvtdNQ3IMUIYmvP\noObkqhfXAgMBAAECggEAIZtWeuMtqbLqizLoLQoUh8jbWbPXeL/Vrh2I3NRR8Ioe\nNMOZ+2hooZIThQqJo2DMTxpkyGkhmENCaqg6m3czOLTkKJwMc3W1HeUtLHAMRmf4\nEa/49Yt7lTHGhykSZxLtxm3m0tUIbcm7JZIyLsuUmpzspTuBdu0/4istMxl/KwHI\nJZ1jsmK1zo5ZPGeyMkaqGw+887T+7XnsDBDX1OvXLGqD2Pi/p4FzpCcynNtofd6K\nftgZU8qnSorqzXajF36irDWOpAuKSwCqdHjhGVQ/ZNrXPAcHDwLOJKSFXmzaGP8+\nVEMSM346UMec7vgm7DgKzlR6KKU1RBABgufhqB2vQQKBgQD5PFgGYFYzLiv6zWgI\naKAvZltZg+nFcXn7eqAtdUkQvyZJ8uWzaEsj53CZ29QS+Oix5xUMjhpfY1AAnfQN\n8FP9mCcSfU7SIiwAad3q6n0vAbsuSg486RhWvOkhtFel1XVLbhxR04fDLlvrH4S7\nDBeBEXiPPvLwvR3fsgNt4xCO8QKBgQDe+JPd6w/OyEPvc4dOo/gYz6YLIN72SkeV\nfP4AUkP/Sgr9JbK1V0J0uPqcDxyhjS6b/zVDo24ogcUAToQWtdi1USISAQ5Zw5Sp\nxonBt+VuDUNWl4jlaq/VFULMKiBLe1a5C9+79CTg6NTkKwjupTczunIJzFeqYKHQ\na37G3v+jRwKBgFceXLZ93iOts/nK6t5lk/h9ktjLX1+Att7MkkjRgmS0LDIVEW2Q\nuxMlxxpA2PR4xP3KhHULBvToxgIxNCnbI8C0+pNf8blJ8I+Ecem3ZWKU/FTF1gw8\nfiFzjxoU674vyvw+1O9VPVNgVQjuz3qCU4TuEnIf0tOLh3G1y7URdaxBAoGBALeM\nrj0bSlIRbktqMVK9jHjwR2IV1zWshC09TeN51VwM2er245yAjsaDmFpr3kfnbx0g\nA/sASKiz2zabbAU+AX2RophroiKm7HSuaay88/Oam3pnGFyzbLfe3rQvYZKBoCyI\n589T9h/ny4lhG+NIwp6kt0f1nZ02Gz71ntGbtZn1AoGACF3FrpQ2zk9VF1sU2rW9\n/vnimZX2n+xZeExT16rdPgoognIZzyTbJ4zMNsFb7XJO7R/iq9dM02DvacjOtJUY\njtdDCOt5JQwcKvfQCZbkHmyeT4s0JhHG5MO5PLekuigHRi9FThhC9TonP7SMZbyp\nBCbiRZ7Xq5tID/+5QBDdLKw=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "5ad0cf6e8ba9acc34de56436360c573073fded91"
+        project_id: "underfourteenonly-wh-502410"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "underfourteenonly-wh-502410"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
