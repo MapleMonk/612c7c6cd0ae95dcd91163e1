@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "DELETE FROM `kerala-ayurveda-wh.MapleMonk.KA_AVP_vendor_purchase_orders_fact_table` WHERE `_airbyte_emitted_at` >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 10 DAY); INSERT INTO `kerala-ayurveda-wh.MapleMonk.KA_AVP_vendor_purchase_orders_fact_table` SELECT NULLIF(TRIM(`_airbyte_unique_key`), \'\') AS `_airbyte_unique_key`, NULLIF(TRIM(`purchaseOrderNumber`), \'\') AS `purchaseOrderNumber`, NULLIF(TRIM(`purchaseOrderType`), \'\') AS `purchaseOrderType`, NULLIF(TRIM(`purchaseOrderState`), \'\') AS `purchaseOrderState`, SAFE_CAST(NULLIF(TRIM(`purchaseOrderDate`), \'\') AS TIMESTAMP) AS `purchaseOrderDate`, SAFE_CAST(NULLIF(TRIM(`purchaseOrderChangedDate`), \'\') AS TIMESTAMP) AS `purchaseOrderChangedDate`, SAFE_CAST(NULLIF(TRIM(`purchaseOrderStateChangedDate`), \'\') AS TIMESTAMP) AS `purchaseOrderStateChangedDate`, SAFE_CAST(NULLIF(TRIM(SPLIT(`deliveryWindow`, \'--\')[SAFE_OFFSET(0)]), \'\') AS TIMESTAMP) AS `deliveryWindowStartDate`, SAFE_CAST(NULLIF(TRIM(SPLIT(`deliveryWindow`, \'--\')[SAFE_OFFSET(1)]), \'\') AS TIMESTAMP) AS `deliveryWindowEndDate`, NULLIF(TRIM(`paymentMethod`), \'\') AS `paymentMethod`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`billToParty`, \'$.partyId\')), \'\') AS `billToPartyId`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`buyingParty`, \'$.partyId\')), \'\') AS `buyingPartyId`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`shipToParty`, \'$.partyId\')), \'\') AS `shipToPartyId`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`sellingParty`, \'$.partyId\')), \'\') AS `sellingPartyId`, SAFE_CAST(NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.itemSequenceNumber\')), \'\') AS INT64) AS `itemSequenceNumber`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.amazonProductIdentifier\')), \'\') AS `amazonProductIdentifier`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.vendorProductIdentifier\')), \'\') AS `vendorProductIdentifier`, SAFE_CAST(NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.isBackOrderAllowed\')), \'\') AS BOOL) AS `isBackOrderAllowed`, SAFE_CAST(NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.orderedQuantity.amount\')), \'\') AS INT64) AS `orderedQuantityAmount`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.orderedQuantity.unitOfMeasure\')), \'\') AS `orderedQuantityUnitOfMeasure`, SAFE_CAST(NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.orderedQuantity.unitSize\')), \'\') AS INT64) AS `orderedQuantityUnitSize`, SAFE_CAST(NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.netCost.amount\')), \'\') AS NUMERIC) AS `netCostAmount`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.netCost.currencyCode\')), \'\') AS `netCostCurrencyCode`, SAFE_CAST(NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.listPrice.amount\')), \'\') AS NUMERIC) AS `listPriceAmount`, NULLIF(TRIM(JSON_EXTRACT_SCALAR(`item`, \'$.listPrice.currencyCode\')), \'\') AS `listPriceCurrencyCode`, `_airbyte_ab_id`, `_airbyte_emitted_at`, `_airbyte_normalized_at`, `_airbyte_KA_AVP_vendor_purchase_orders_hashid`, CURRENT_TIMESTAMP() AS `bq_load_ts` FROM `kerala-ayurveda-wh.MapleMonk.KA_AVP_vendor_purchase_orders`, UNNEST(`items`) AS `item` WHERE `_airbyte_emitted_at` >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 10 DAY);",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
