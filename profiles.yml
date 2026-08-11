@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "onyc-822@onyc-wh.iam.gserviceaccount.com"
+        client_id: "116321391887175450136"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/onyc-822%40onyc-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDtVy1kXOrHSypG\nFqJZy/uMjFbS5tHMpKeyOSUjLQf0dId6fG+CeUxY2ax7q58B6aTD5VSB6gaz/dDA\nYoDhdhgsKxiUxFC9Ta/DCF5VuMmoeF3aLzk2p0v5hev04CZGZLWqFc23c9z48xVw\neP2Pl59gEKeK9nv+W+0GBBX4DSA5ARs/xRJhr0QLmcrEHq4AfRozifjqA7wLqxO4\n/+3mWAc8YM0V0OcgrAFyZTITvXKhUOLF9ouSTEsF2wZNHGDByhwVka4Ivpuopik4\nM/RORFy4XulniPe7AcO8gDH/vwZxj5yYgqiJjvWa5K+D8nt4Ji19q9gy6LglfyPz\nEvSPpHGfAgMBAAECggEAZ6+5Nepd6zkMO9hxjtdNiuZYnASYzVV1qafLcKWgnww1\nj65DLPX/A6X8835TlgtTnv1WQPdTfFi7VQDzmwvznYAqWfu15i3FRmgmhj6XYtFK\n9yHAVf8acuUt4yn1rrUapDaoS6gDdoMD78H7zDqKNvavq0bpfoL8dq9cRaS+Wggp\nVcnCBeT9G+mcZQYCtd9DP9f+HF8wHKnc9qDTmFrtIwbNUfelvtUKfrUJfBDDNN3W\n5UNWF5LDIfzr1OepnErWZy9eLpGZB49wLpaNdgBhVdhgGI7M2uWCtubxUTfl5INA\nbYqb8+bQXzBX3p3OCbi0i0hJyk0vf/dKbOKWrvE7GQKBgQD371FXdwHE5AOacbVx\nxxkmk0JuWVKGuqa0vjqK+0KtfI9i2Ssx6GbFsBGiNIVTGq8Al8z4IqJ9tHr5iJev\ncxu7b19eBY1pd9gftHMoKkLREM9XTPJdkIoyMd7RC0J91XH4DFescMN2o/BwvUUn\nnjVDhZKq1XJ9XLdLOz0zZ+6jlQKBgQD1D6KlqozaDajEIn/ptJf4rVBUvnFF8t+t\n1DoK05Aetb3dt3K8XBLT/OoUP3Gj9ay2sEr3/dK/Q6iemk1AZ71iRHOgOdf94d3J\nAu/2b+/9meao+fidGfL4v3fKX0e1BJONj6ea33cK2igRnRf9+Uz7EKuy1h3hwPxU\nLcV3m5KzYwKBgQCWz4Ny6HizAt8OOsxbgPfTdw+Zf8urGC3/ExcZIuzUCkhNoDue\nB/c7mHWhbMEMY9a/TZbn+GlOfVGwJ13c4u+je4NO9aGm3bcg0eqaK9qowMjeGXfz\nYdAt6BfYoDi5wfOpJhjOU2kR6XZ/nSFLj/hmMgGc2GjjyFnV8RqxAi8uYQKBgQDo\nj4f409uLa38Hcv4U2Y+HLWKYqYpxqUVgf5D9iTyyCCNA78DwxCgSCWhTAspjoNfh\nH3hl0/lWDW1N5nz9a/Wr9e4M1hgGFX0WL7VuF1iXQKBHJ8IpxOBx87JI2RcB0G/+\n3Z9fOEaOg+2WmZCVMys879shglUlUrGjaTSGh5s2pQKBgQC44GvsvBQS65uaQMVN\nRYKM7Qzosd1bLvj3yq4UHnTcgdzZSNLMAqxkphxejvBhQdMM3fPuH4hQUtBIUnfg\nd9YntPQP66DRB1RVJhZmF5/yl+1k2QOtuLyxHWH8nKdTB03qdDPT/R16hCkKnga6\ndU9rRgjeIUgpsZqyFTYgk6B7cw==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "1bb4d30297ea768b573007daaddbd9a65c22b10a"
+        project_id: "onyc-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "onyc-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
