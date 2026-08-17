@@ -131,20 +131,20 @@ fx_overall AS (
 ),
 sem_dedup AS (
     SELECT 
-        "date", "Campaign ID", SKU, "Item ID", "Ad Spend", SALES, CLICKS, IMPRESSIONS 
+        "Date", "Campaign ID", SKU, "Item ID", "Ad Spend", SALES, CLICKS, IMPRESSIONS 
     FROM VAHDAM_DB.MAPLEMONK1.WALMART_3P_US_GET_SEM_PERFORMANCE_REPORT 
-    QUALIFY ROW_NUMBER() OVER (PARTITION BY "date", "Campaign ID", SKU, "Item ID" ORDER BY _AIRBYTE_EMITTED_AT DESC) = 1
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY "Date", "Campaign ID", SKU, "Item ID" ORDER BY _AIRBYTE_EMITTED_AT DESC) = 1
 ),
 sem_daily AS (
     SELECT 
-        TRY_TO_DATE("date") AS day, 
+        TRY_TO_DATE("Date") AS day, 
         SKU AS sku, 
         SUM(TRY_TO_DOUBLE("Ad Spend")) AS spend, 
         SUM(TRY_TO_DOUBLE(SALES)) AS ad_sales, 
         SUM(TRY_TO_DOUBLE(CLICKS)) AS clicks, 
         SUM(TRY_TO_DOUBLE(IMPRESSIONS)) AS impressions 
     FROM sem_dedup 
-    WHERE TRY_TO_DATE("date") IS NOT NULL 
+    WHERE TRY_TO_DATE("Date") IS NOT NULL 
       AND NULLIF(SKU,'') IS NOT NULL 
     GROUP BY 1,2
 ),
