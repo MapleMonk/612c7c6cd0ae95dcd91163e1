@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "qurez-559@qurez-wh.iam.gserviceaccount.com"
+        client_id: "107992255630795633923"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/qurez-559%40qurez-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNjniWekjekfVK\nC9eG4RqwveMIuiv3zKyuATzshdPc9XHTckb48d0eWcedElWBLSIS71aBvHEOmcqx\nGdvuYMSLTqmP4OOLijOxby8ZDjYhlBUJ1e+dZaTBUVKYmhTJRXaSWXaQRpWDKp9u\n2XADv4Ebxj5D3nV72i3Br2oaq4YNdphuQLvLeFWvVW5LzBKX09AxXYu6n+WeASWD\n0R3r5A38O6l0VbPPdZK20ksukR30nslxu9bTdKg4yKFz3EYBgZikFtyx/AKv2y2P\n39P4xsVhLhrL4GlX7vkRJD7DuCGilpoaYHlDmSfM4RYWV590vE4ODO/j94Ml4hAz\nCdBiXr6DAgMBAAECggEAYr0LhrjRtPvml/1tN5B8qiZkXqZTBXKPBfx5P+Ie/VX3\nKcsMdXt0rCYTIQuT//tmkTLfWm1i31EXkI+r2esorgQIpiCwHLCzmQkf1gjCDsob\newCFW5VeGTBPnRbyYiYYST9pGO+W1Q1NzUjsKhi801McSKycwXPxo8Z3kL0QpPkU\n5lf5QWvrn0J+rNkv6gMQGk0Se/4tRoBEfoLkwLvYiwvWXskVwRKqB7vqoVGUTY8+\n6E1uWrLIre0ujJoQaPW6Ji4cGKdg4U4GOKjHYXkBViJNLNp6mFLkUYlHXKIJMpDQ\nJ7i6aKtfoRScckn8xu3U1B5WhfGJYmiv1J/hvcf81QKBgQDnZpc5EkYcCfZ5S3+L\nkiblA5XwUxk8D7pgT4xNIRvelvjYOx4IKDyDu43Suh4q+AkHTbiKShCzts8qtads\nHV5n8Y6+26JaUFNOkxqxUJTH6Oi6G76txvsoO7wUiZ5W3msapMx5xD1lA0kBCWdp\nNXMog7onn05qN70IT3kNxnw6DwKBgQDjaIxMtAn/8qYG/6QwPmie+IFkk+ra0GOw\nFUMomLdl/aCmNUxWdPOPu4ZrEVJz37txQVJuLHkPBkaAsbwuFfgnmjw1xZHsQPJu\ny+vIT/OcZ6f63qyTOpxd79n3GgdmGFtGmIrs+1IU0+U34HDCHEfTwMH7gG84GcjY\nJLBi/tI4TQKBgQDX30JGcMDNGZJBV+h1+XOlhHHVkIBjIr0ZajyWG8QXJLqjZos+\nyuKhdk/5fb31Eg3CLYRyJmRsc6fSzUKSPte6moQzk0xjeros/FkTf/w8fxDVxlpd\nXdsijo+IjVYU7kv2wDUth6BK4wSxHefGI6H58uGwYxLRToxf+1wQONHdiwKBgQDS\ncokL3r02UG6XIXLndonJO/46fqyjzJ/EbxjUc+edCgbmaYJ4rAhOJmNxp/ke5JiJ\nacMH1D4/yjXqmRClsY0R0SkRNgIhmcUBBdPwbxTp0/9fKTyZj27ve6zBgSQBtl6Z\nyUcfokDGp4WDnT+cUyGhc8vQnH3QdAQrCmD1bA5NLQKBgAqCblDzSNZUre1hTlQ6\nmO6iE01/X5kLpth9fWwsyfRZBUWqn8T2udbTQWLKFdYu0ZyG6YaQ11gpXPmQvKJu\n2zjPMH3LD0RCv+UKGP1oEHWksvxaGPPjd/ExIUMmxZxNER44IByNgS8RF3H12364\n1qYWegSIJDGtz5fLJ8Wb4u5I\n-----END PRIVATE KEY-----\n"
+        private_key_id: "d541bdae7b779e69b1c55dda664a611dd94b4368"
+        project_id: "qurez-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "qurez-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
