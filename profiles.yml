@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "fs03183.ap-south-1.aws"
+      user: "snitch_kp_airbyte_user"
+      role: "ACCOUNTADMIN"
+      database: "SNITCH_DB"
+      warehouse: "SNITCH_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
