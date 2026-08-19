@@ -7,7 +7,7 @@
             ) }}
             with sample_data as (
 
-                select * from snitch_db.information_schema.databases
+                select * from SNITCH_DB.information_schema.databases
             ),
             
             final as (
