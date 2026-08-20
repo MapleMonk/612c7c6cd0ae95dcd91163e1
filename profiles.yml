@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "vavqosp-vq26191"
-      user: "sleepycat_legacy_user"
+      user: "sleepycat_kp_airbyte_user"
       role: "ACCOUNTADMIN"
       database: "SLEEPYCAT_DB"
       warehouse: "SLEEPYCAT_WH"
