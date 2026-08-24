@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "ba95169.ap-south-1.aws"
+      user: "vahdam_kp_airbyte_user"
+      role: "ACCOUNTADMIN"
+      database: "VAHDAM_DB"
+      warehouse: "VAHDAM_ANALYTICS"
+      schema: "MAPLEMONK1"
+      threads: 10
+      client_session_keep_alive: false
