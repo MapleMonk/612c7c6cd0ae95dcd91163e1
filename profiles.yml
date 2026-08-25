@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "QGTXWEF-JF22939"
+      user: "daniel_klein_kp_airbyte_user"
+      role: "ACCOUNTADMIN"
+      database: "DANIEL_KLEIN_DB"
+      warehouse: "DANIEL_KLEIN_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
