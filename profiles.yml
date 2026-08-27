@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "gvsrnod-bb15712"
-      user: "medmongersanalytics"
+      user: "medmongers_kp_airbyte_user"
       role: "ACCOUNTADMIN"
       database: "MEDMONGERS_DB"
       warehouse: "MEDMONGERS_WH"
