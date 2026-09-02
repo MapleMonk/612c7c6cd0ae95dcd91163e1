@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Custom_Facebook_Marketing_Zouk_Meta_customcampaigns_data"
+    description: "A starter dbt model"
