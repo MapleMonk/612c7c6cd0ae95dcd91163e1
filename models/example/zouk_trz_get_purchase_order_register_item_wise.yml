@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "zouk_trz_get_purchase_order_register_item_wise"
+    description: "A starter dbt model"
