@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "ba95169.ap-south-1.aws"
-      user: "vahdam_legacy_user_v1"
+      user: "vahdam_kp_airbyte_user"
       role: "ACCOUNTADMIN"
       database: "VAHDAM_DB"
       warehouse: "VAHDAM_ANALYTICS"
