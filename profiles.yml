@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "ellementry@ellementry-498507.iam.gserviceaccount.com"
+        client_id: "108888732109565872737"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/ellementry%40ellementry-498507.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJYYvUBqA9oBj8\nVtIOENtAkNhVD5qzyri8ECDpjmMBGfkUZu6To3UMVy43ndHhMdFy4ClP3ZS3/4Es\nLNYWfb+WnR6BVlkv2t8G380A16jW7pwaDM97yJONcqTSxtO4GawZ+grvMS8//VXP\n1V3nFxgddvO7I+YdkGvXmiufBTdtycuPd556kRB6Wvze7SSK+w4IDHBhFFo+g/iP\np8lvy1D6ET3BDlD8WZO2d11TeVDQ2JSkd3xxXVUgm0tEKljN6yONFLUl6VoKpU9j\nV7b2Pjh7bGqSj58c5sOppNaUaQpR6H+nC7m1cNBlHW19Z4mW/luor2U+ZPvDvrkF\nnERXMqUbAgMBAAECggEAD0sztINY+bp7ZfVCraPKauxf1DyY+feMMRLOf75QYYiI\nmevj9DLGlGHYljZg9p0dyX92/mRBw6Q0D1f2Xa3oy3ZHl039/FGUfNqpSzDrAdZh\nj47n1lWaHcoWShWkhZzu15LdmrhzB1qPgPcKKHSLYHgktCfaoDspcth4C0h4+Fg8\n92bapmtqwdybmjOhI9rLyw9IJ5Jv9o8Xf4qwaKzmf+xNX5qcfx7VVoENvNRZ31qr\nzykWoTELhRpNjxjLW3S3KjbFT764tfAcZXXKrw4YVZYSeMPE96g0XJ15dDHxMN2b\nCRQkar6B6xKnQujGOvDZKxTEWBhjGmeP5FXlR8DwIQKBgQDpuI3NN43lyeC2yDzB\nI1Xhm445HKB2e59AAjFKuFZnFepgF9kGRQnbd+K1zkpNXyBqfldUjOm3kFptVVQ/\nQGnWrSP18mVB5Gz0CjbT1ye9lP/uEqTMhE+GZWHBgb7DINSytnq51cO8U0Md4i5v\nawTZsH+JwO/XlGAfECbXsSdiuwKBgQDck88CNINKYEWZBSEU6oHmE62i62fVwQn5\nVib0FuU2c9qbYiShXzZSU3XS6V2clL6K8N67nbpuMWQOpZ4kGebEO6kjvz7oemTZ\nE7uugLsuJmEZXgj1yjVBQOj5Me8whwKBoSriY+bkNJfmYDvl9E0IRzYef+og3G5M\nrLKkoumRIQKBgG27usgpVzQWTq1C4lOD9aSRVns2F5jJfgGdheshFWAdCAfJ6plo\n/LHQXd8iVfxxt1SIsRP/fRQ0cGB4+a8g3RBwBjxJbIU9bHJAAXIAyKXYOTlcA4gK\nbxQYsYcbFaej2Hl397MczGO1bAOx2D9zrblPhvH0Zid/gInVGYeXo3hVAoGAYmxF\n02sRJk/c3lGumEGnor0nHmpCE9wmEi7CBOpubqS1Z94cEDGG8KczDOB6l9K7Tw35\npOfVdzPsvKhj7yHrmaYxa7T7YgqzEzW96jigzQ/tBb+y6dHHf41yJzeDzjiAAs2i\ncBA5x5w8J1zLfWlMMiRsXqGfG/if8vCgadwTsmECgYBPRxfcBM5kDgEirFD2F9lZ\nMuj7irSs/MsZi+9h2BO6+AOIhepkeCq7KmaBwQs5L+ehKJIU5mCMsM0sIkc4IzGd\nZ0sMLo39hUK1neH8zzCOZH2tg73SEWAXDTycdNP0UEj/DftF5pUqJXSoM2/l6ohf\nsCmYQlvMrfi3mUMSL90TDw==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "693f70348ff11e5594155ed9acb8686e5f72cde9"
+        project_id: "ellementry-498507"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "ellementry-498507"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
