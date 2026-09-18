@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "Postgres_city"
+    description: "A starter dbt model"
