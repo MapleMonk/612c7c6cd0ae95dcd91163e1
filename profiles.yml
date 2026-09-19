@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "fs03183.ap-south-1.aws"
-      user: "Snitch_legacy_user"
+      user: "snitch_kp_airbyte_user"
       role: "ACCOUNTADMIN"
       database: "SNITCH_DB"
       warehouse: "SNITCH_WH"
