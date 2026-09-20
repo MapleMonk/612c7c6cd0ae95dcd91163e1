@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "zouk-mm-bigquery@zouk-wh.iam.gserviceaccount.com"
+        client_id: "103552459782507989004"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/zouk-mm-bigquery%40zouk-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAjMwah+L6dmdb\nH7P9fObsf2sjr4++rjd/YA3yFBxlDzN4UnxFUkVsvdVVb80cDjnJvqXLRcshDBJt\n7HlVOVRl+N43mq0vg1aaGczkH0qR4rbTPulWk51WbTz/pUeDVul9rDBDwoSP8vE4\n//2yoiND0LsLYomGhgrNzCvj0JYMte15Iym0gJ82kd711rn6IODYjhf2Qb/c3co0\nyhXatToB7aU9PuI9Aj7ZrZBg/eIel07yFN/EaABOSUzGcD7Lvb1P1yic/hISwLbK\np+YufMOOFIHM30X10tVignyD9AqD+OdTthMAP6tMUU+ty89CNsbFckouKtEG4yoy\nm4wGYdpnAgMBAAECggEACjQr6MgEtkMqDQEsF6XT0vqZoeV+15sB4+UiOA7qxkw8\n7QZqAX5voWiZ8pIfK3pxg4hv3srPDexG2b5rW6HTIChFFmtC/D6Yi0gMvJYP7JU4\nHQ+7a9QcxWS6k82dcY9chkVmtWCMh9hXAi9GsX24IrLgBqVtJkzaK7fDJ6p5GSk/\nVzT2DU5r6lKgk6zG4XzTu88GiAXIM86wbOH2zVQ6TAKA9XCTsA7Jhyzv9YMs72AL\ncPyBOOykOtDY6XkT1KVSxWGtlvUoaWLUHJ9mtP553ZnB17eEdMGld4+6e+V6m+fT\nVXLQUduBBp9AiDxrAndb7YWM/2cxdeVZNaLkH1nA2QKBgQDv89fwNpe1DlTHkpMQ\nUFUON3mIZriTMg9Zi6CyPgmA3IF1VhygfotZEZS5HLIeKDciL3X4d+5IAOLz+6Bh\njpARZFn35bzzYlFTucPQKP+lz8VdNWkR8KGHK1n4P7CBe7CM1HxUNnwi8NMrfp//\nB/FS7r/8JqKmfxUs9a6OagPKIwKBgQDNbWOan7VfvvBKmE99RPr7WEVoDDuKKeSc\nLp/d4LRNJC8oBRhL3pFRG7mrYBNE/ZnUrDdlrqtQ/7PDk5pTyZZihmXAjcX+laj+\nHyc2f8M55UGx3JOZ8W4svDFusmQ51n7PA795mOf0aL2FmEmTIRvGxdrhrUuC+krs\nI1cnKpDo7QKBgQCQaP6isRhofPGFEq+zd8VYwwY/kyKuY8hdKe1SmId7qDm5dlPQ\nO5h9yFjrd1uzTpyv1ER5fyRG7VGpaNzDGduWvABxczBegeNUMk6orqP9FKhBSm2r\nwFhWUz7Yauw9YUWF3DPfMtNO7AUK/jAoeo1ATjP4+v+UmJMT9eBSEXeqZQKBgHMj\n9ekLzUA+KDbXSe5/xGEup7Ba8uBM/Nrhcy+Mq+J0/o1i1axosnCQpq+8qPBJaHiA\nkohGr7U1rQ9Y4u5FlinhBJU5oZlBTzgoQ/VTBRylN/42EPD/Fm6yiM5v5KdaZzcm\n9aJ1JsWiE2AW7F4v936hFT7av/FI0seqQ0YroI89AoGBAO6QCeO/Rn4IWpAJ0smK\ntFRWhGGeOI9i5EJfrwv0cwMyzp37omsly5bcXAKMI4yWDZESVEEABohN7HbbCvfL\n+k44WyGeESy+DpQhTsMj0DsN+VhrFJ6oVvCGC4hnMJIEvvChWLqLsasXXtC4IhjF\nU+6FniGhCUYerWxHWazgUq0r\n-----END PRIVATE KEY-----\n"
+        private_key_id: "85aca105d2cf9402f9f2a7e486c4b86411c558b0"
+        project_id: "zouk-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "zouk-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
