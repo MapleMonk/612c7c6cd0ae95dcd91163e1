@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "CTPZNDA-LH56688"
+      user: "praveenappl"
+      role: "ACCOUNTADMIN"
+      database: "APPLDATABASE"
+      warehouse: "COMPUTE_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
