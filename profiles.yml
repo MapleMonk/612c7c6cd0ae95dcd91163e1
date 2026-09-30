@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "wt08714.ap-south-1.aws"
-      user: "HarshitEggoz"
+      user: "eggoz_etl_user"
       role: "ACCOUNTADMIN"
       database: "EGGOZDB"
       warehouse: "EGGOZ"
