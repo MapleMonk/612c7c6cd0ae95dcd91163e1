@@ -3,8 +3,8 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "gvsrnod-bb15712"
-      user: "medmongersanalytics"
+      account: "vavqosp-bb15712"
+      user: "medmongers_kp_airbyte_user"
       role: "ACCOUNTADMIN"
       database: "MEDMONGERS_DB"
       warehouse: "MEDMONGERS_WH"
