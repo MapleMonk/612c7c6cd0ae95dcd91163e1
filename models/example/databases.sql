@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "create or replace table `prolicious-wh.maplemonk.prolicious_sale_channel_drr_view` as with date_range as ( select min(order_date) as min_date, max(order_date) as max_date from `prolicious-wh.maplemonk.prolicious_wh_sales_consolidated` where shop_name <> \'B2B\' ), date_spine as ( select date_array from date_range, unnest(generate_date_array(min_date, max_date, interval 1 day)) as date_array ), marketplaces as ( select distinct case when upper(shop_name) like \'%FLIPKART%\' then \'FLIPKART\' else upper(shop_name) end as marketplace from `prolicious-wh.maplemonk.prolicious_wh_sales_consolidated` where shop_name <> \'B2B\' ), dense_grid as ( select d.date_array as order_date, m.marketplace from date_spine d cross join marketplaces m ), daily_agg as ( select order_date, case when upper(shop_name) like \'%FLIPKART%\' then \'FLIPKART\' else upper(shop_name) end as marketplace, sum(ifnull(selling_price,0)) as daily_sales from `prolicious-wh.maplemonk.prolicious_wh_sales_consolidated` where shop_name <> \'B2B\' group by 1,2 ), dense_data as ( select g.order_date, g.marketplace, coalesce(a.daily_sales, 0) as daily_sales from dense_grid g left join daily_agg a on g.order_date = a.order_date and g.marketplace = a.marketplace ), rolling_base as ( select order_date, marketplace, daily_sales, sum(daily_sales) over (partition by marketplace, date_trunc(order_date, month) order by order_date) as tm_actual, sum(daily_sales) over (partition by marketplace order by order_date rows between 60 preceding and 31 preceding) as lm_actual, sum(daily_sales) over (partition by marketplace order by order_date rows between 89 preceding and current row) as l3m_actual, sum(daily_sales) over (partition by marketplace order by order_date rows between 179 preceding and current row) as l6m_actual, sum(daily_sales) over (partition by marketplace order by order_date rows between 269 preceding and current row) as l9m_actual, sum(daily_sales) over (partition by marketplace order by order_date rows between 364 preceding and current row) as l12m_actual, extract(day from order_date) as days_passed, extract(day from last_day(order_date)) as days_in_month from dense_data ) select order_date as date, marketplace as marketplace, tm_actual as tm_actual, lm_actual as lm_actual, tm_actual / nullif(days_passed, 0) as tm_rr, lm_actual / nullif(days_in_month, 0) as lm_rr, l3m_actual / 90.0 as l3m_rr, l6m_actual / 180.0 as l6m_rr, l9m_actual / 270.0 as l9m_rr, l12m_actual / 365.0 as l12m_rr, (tm_actual / nullif(days_passed, 0)) * days_in_month as tm_likely from rolling_base;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from maplemonk.INFORMATION_SCHEMA.TABLES
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
