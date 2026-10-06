@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "MapleMonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "big-query-maplemonk@kerala-ayurveda-wh.iam.gserviceaccount.com"
+        client_id: "111607842818856192080"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/big-query-maplemonk%40kerala-ayurveda-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCkkZQob5dMSBW2\nPMWXt1WFJc8vXVHpSxGLxXsOuVwQldWlvnO4KLW8YH736RPCZigquC9JnJjVaQyi\nt1NuePy+RIjNTLP2kz5zFOnT3DNf6RqFriRyLJPjG83vRcwvY+f5lYsxxTAAWKzY\nUj3x0Unda6/CYxpHGnsJb2IF8E+++tQ+6YSzr33TlR0/QPgKFLSCbu27fpqt0s+H\n2TiwsYcP4wm+0Di3F3hBTMKxeeGwyyFEajpRO1bQ7cSdodi/7C2SmS4LWAjmaJLc\nu66BCLjbCDgh0+t6Zz/+92eCYZx3g4Gb2M498Yb5ZddzB1jOdaVpu428ZUwvDhgP\nPpOqcM7BAgMBAAECggEAMiwyE9vlsDt/5xYDFdyupY/f6SxV1z7sRAU6ncQUVfgg\ncU4twJUkxyBSRWnZfNihYVjTDenAzLugvxEOTi1zvNxvKsw6R7Afh312RoGpZhHO\n5LexY9/EXKay88J/XGlkpXqau9tG5awjUjZMrWdl0ixNIwIM1mWz4i4DoBTiczJP\nPMynhB7/smglwb0FhRSfCQHIQXlK4FV7tO2LhfT12ySlpmYGNtQ79ZQruDDPcBCz\nclY2PTnutR7hox5vkLvazAPzuacbCdAWjg+qm6NjryGqK/5CeA0wCc/jGZjq9zb/\nIN2IcWm4/C969fFwTWXyf9RQVUuksO2Dj9xI/qKcGwKBgQDcoPiz4mXYmTXqhWzF\nb4tsuRyJjM9AtS4Jj1kAfnDfp0nnqGMJar+dOrSTiTK4/IDvF15K3wOHa7OqPoD6\n98UZaXoIMF0sKD3w0tNnaFIbfMRg5eCCIaehjy16MwkbJgTpw59vlG8vxG1j9zEk\nxhaAddoOsglxDMhS5074sPBD0wKBgQC+88rMB04RbJ/cVtEZoyAObFmvR42rWSLm\nIzov4yrrgXKt2iKVI+NuYNMkutBl+0nZk7yZcxMB0Xwnjj7R0BQFEBHvY11bGcY0\nNUZYSXin4W9Q6ZLjmxva2Pr0gsFwS5T/b3Xv11f9ggGNcV0ihsoQ3zd47xTROpnQ\nViVrcPiKmwKBgQDLSOJ+1G6k6V49TVzQehuMPO+naX+ZDpdxpYwLIXWdDYXSFlvS\nVHJjS7EQc4yx165xHiX6dIvK3hi4F0k+dMc9x+rx2qYuxpFz8L1q/TsSKp7C7Ww0\nWxAak1MC0j1kr149icrAw5LC/4kPX7b/PCmFiZE2kyKR8IYvpQMlr9phkwKBgQCt\n5VEDG4fyAE1ZGMsWIONZnzzRjkUrDWLl2KDt6WA11s48GxIxZdyBsbW3llWg+gaY\nGZ3A1PYzSrZZQ4ZcBrWkoqziqEflZgSFmRq13jr+ECQSuJPnqWLlm4J3V/iXro1D\nThtGT4M3P8TwLZQWlE/Cq7VV8cywekCHZVxwixIdDwKBgQDGpDl+HGRM4exDvTSl\ny4ZDrfddNkFVpSzZr5rw/CoJ+qJaZHmfSa2+SEvh8aUH/rMsc2eZrt8KTKYmYhZ6\noFsGrsA+J7Wi0BKV8fOs3zFMndttosJZ45SA1neM+aSs+qVXeR47OIo7908Acrc5\nZUtOwCc1c5kXJ5E7oREL6GVKbQ==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "9c50bb27cefa07b3a25f56f7ab860baa62a12308"
+        project_id: "kerala-ayurveda-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "kerala-ayurveda-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
