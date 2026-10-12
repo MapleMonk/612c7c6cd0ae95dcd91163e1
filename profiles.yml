@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "Maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "samyog-health-foods-pvt-ltd@prolicious-wh.iam.gserviceaccount.com"
+        client_id: "110477012307669228684"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/samyog-health-foods-pvt-ltd%40prolicious-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqDEF+7CPonW9E\nd/TYaMvWLWYxE4sIpCFY6F4gfnH+v3HYWZr+jB9emwzy3uhYztkpSGpEhNl63ncB\n5yrlBxdgaJ9Mff0j1ExgT+g2DWDVhIrHiSlV5atW5SYpSY954pYTahqJ2vi13DV/\nHPXnQ5nRpMvauBo+u9utdWgwIq731ABLbWLYKP6qC2i0mz1r+QMRWu1kWVJARUM/\neH05wmmIe/jEgdWi/4sd50/F3ip8VHUdEHw296SUFejFaZaN9UgTYg+Lres1+ZsI\n2b96fJPhs/jZDatUgs95fMHTxYnz5/d1phWTY2d01h2+NNDrpKAPIlmPCaaxW0Dr\nmfYXSt/VAgMBAAECggEADWAnardiX7K6hNU2sisUFYW+qw+ReR2H7flhJgcsKlCe\nwNjTg0A8W3GwxA3aktm6ZS/oA/m7LZoAHGs1iYxUP2YbWaXzWnUhiNXgOxg0TLc/\nP1C/qp0FLDGcHdVGbtzu1xoaekt6Erv+jUAW65j6qW3gBxVCIzsdnXhFuLuRrbaj\nXE0rkqI8uA36GeWCGp779+u9FDAgBwLwUGsi/QZ4/SQtuOMKI77sDcuN+sryKMat\n/WlFrNddYqqczAwIf9hPkb7iz/a7b35NQgE6nndu+QdbZpyRPxKKiHbRDsZ+rXXr\njcEW8NLsMe/SfX45f+jyZTv6u2apfHbREfIt42tRhQKBgQDicrvKXeWw/jwD8oem\nkShvvVLozaaszIMAD/Xmav6uTvasjZc1YoaeTdqg29/vPz00b12svGvRNjf/Eoj7\nCscWwzoIxBfqtamIAN1aCW7LKZcZNjWyiCIhYTUReQd93YNG2BYfKApMQD9DlskT\n5dfQkWjFxoBNXlPOfJxPeaVgawKBgQDAPUeTnt9FBAW25ySGA27DwIEj1CrdHWaf\nYy8wWZeuh+Bueh54YpYJO4jLzJkGkAgq3362WEdIajt//QdqNKB9lsBCCDeHHqTC\nBQgig6yG5WMFxuYVH2ustD8SWt0pcGXuQqbSUgcqW96wko2CBO8C7i/4OkoJkDIg\n5xt0k/PQvwKBgCITbdroAlZ+C330kyEnmtQlw0IxIDHEnLn3rOM9mpGUZF5W+Dga\nWXOc95dZPvt7orQvRgNmXzseU5LYsTBF0OvF+Qe0qnyxVY+Xwbd4z+lWmtw6Yh45\nihlHzXqRoeT43nZcsgeCOPp8eIitOhj6b119ZCzO0CPUW/womEUFYzN9AoGBAIM+\nkwpmsdnFiD06C0ZvO4TrfX8/j9AMDY8NwR7KW/MtEv155CmebP56pcc1tNe1J85V\nbYYCORBobpzP2+sXaOa1MCckwvw94JARrV8a9IPYQcWk6FpNbE6pdFIMtOdgtEZ5\nPLlkhT3XIO797xxwT9l5UkivSvLCfmbWQXlStWezAoGBAIuVp8Wr23mA5pioYkWv\n/6Gk7zW7cV9/wV6UHSMil/wbLKRfXorsr/66NOak7WsNlmQoRWyQDlAVfrFAtYT7\nnItC2+qXJ4OOwJNTACmlzDRMcRhTyF9nfseKa184qOr6OfEPZUyC91zLcyHPeyFE\n4oLMUIuQFTrM22/w5hxlTsoz\n-----END PRIVATE KEY-----\n"
+        private_key_id: "66d3c1b2cff9b906b6868969bcc8b047997b884a"
+        project_id: "prolicious-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "prolicious-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
