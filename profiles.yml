@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "UGJNCZB-VI46542"
+      user: "SunbeamAnalytics"
+      role: "ACCOUNTADMIN"
+      database: "Sunbeam_DB"
+      warehouse: "Sunbeam_WH"
+      schema: "Maplemonk"
+      threads: 10
+      client_session_keep_alive: false
