@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "vavqosp-ifbanalytics"
+      user: "ifb_etl"
+      role: "ACCOUNTADMIN"
+      database: "IFB_DB"
+      warehouse: "IFB_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
