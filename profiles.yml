@@ -4,7 +4,7 @@ default:
     dev:
       type: "snowflake"
       account: "nqfyswq-yn19490"
-      user: "analyticsmaplemonk"
+      user: "etl_user"
       role: "ACCOUNTADMIN"
       database: "PEESAFE_DB"
       warehouse: "PEESAFE_WH"
