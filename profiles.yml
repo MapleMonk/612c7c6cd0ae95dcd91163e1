@@ -3,11 +3,11 @@ default:
   outputs:
     dev:
       type: "snowflake"
-      account: "kxipraf-sf98359"
-      user: "philips_legacy_user"
+      account: "vavqosp-sf98359"
+      user: "ph_etl_user"
       role: "ACCOUNTADMIN"
-      database: "philips_db"
-      warehouse: "philips_wh"
+      database: "PHILIPS_DB"
+      warehouse: "PHILIPS_WH"
       schema: "MAPLEMONK"
       threads: 10
       client_session_keep_alive: false
