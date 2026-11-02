@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "https://vavqosp-rubysorganics"
+      user: "rubysorganics_etl_user"
+      role: "ACCOUNTADMIN"
+      database: "RUBYSORGANICS_DB"
+      warehouse: "RUBYSORGANICS_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
