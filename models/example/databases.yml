@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: "databases"
+    description: "A starter dbt model"
