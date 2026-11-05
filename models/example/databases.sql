@@ -1,0 +1,17 @@
+{{ config(
+            materialized='table',
+                post_hook={
+                    "sql": "CREATE OR REPLACE TABLE RUBYSORGANICS_DB.MAPLEMONK.rubysorganics_nykaa_ads_normalization AS SELECT _airbyte_data:end_date::VARCHAR AS end_date, TRY_TO_DOUBLE(_airbyte_data:ctr::VARCHAR) AS ctr, TRY_TO_NUMBER(_airbyte_data:\"direct cart additions\"::VARCHAR) AS direct_cart_additions, TRY_TO_DOUBLE(_airbyte_data:spends::VARCHAR) AS spends, TRY_TO_DOUBLE(_airbyte_data:\"indirect revenue\"::VARCHAR) AS indirect_revenue, TRY_TO_DATE(_airbyte_data:ad_live_date::VARCHAR) AS ad_live_date, _airbyte_data:ad_request_name::VARCHAR AS ad_request_name, _airbyte_data:brand_name::VARCHAR AS brand_name, _airbyte_data:bid_type::VARCHAR AS bid_type, TRY_TO_NUMBER(_airbyte_data:impressions::VARCHAR) AS impressions, TRY_TO_DOUBLE(_airbyte_data:daily_ad_budget::VARCHAR) AS daily_ad_budget, _airbyte_data:avg_bid_multiplier::VARCHAR AS avg_bid_multiplier, TRY_TO_DOUBLE(_airbyte_data:\"total roas\"::VARCHAR) AS total_roas, TRY_TO_NUMBER(_airbyte_data:\"direct units\"::VARCHAR) AS direct_units, TRY_TO_DOUBLE(_airbyte_data:\"direct revenue\"::VARCHAR) AS direct_revenue, TRY_TO_DOUBLE(_airbyte_data:cpc::VARCHAR) AS cpc, TRY_TO_NUMBER(_airbyte_data:clicks::VARCHAR) AS clicks, _airbyte_data:brand_group::VARCHAR AS brand_group, TRY_TO_NUMBER(_airbyte_data:\"direct orders\"::VARCHAR) AS direct_orders, _airbyte_data:status::VARCHAR AS status, TRY_TO_DATE(_airbyte_data:start_date::VARCHAR) AS start_date, TRY_TO_DOUBLE(_airbyte_data:free_credits::VARCHAR) AS free_credits FROM RUBYSORGANICS_DB.MAPLEMONK._airbyte_raw_rubys_organics_Nykaa_ads_report QUALIFY ROW_NUMBER() OVER ( PARTITION BY _airbyte_data:ad_request_name::VARCHAR, TRY_TO_DATE(_airbyte_data:ad_live_date::VARCHAR), _airbyte_data:brand_name::VARCHAR ORDER BY _airbyte_emitted_at DESC ) = 1; CREATE OR REPLACE TABLE RUBYSORGANICS_DB.MAPLEMONK.rubysorganics_nykaa_ads_fact_items AS SELECT \'NYKAA ADS\' AS ACCOUNT_NAME ,NULL::VARCHAR AS ACCOUNT_ID ,UPPER(ad_request_name)::VARCHAR AS CAMPAIGN_NAME ,NULL::VARCHAR AS CAMPAIGN_ID ,NULL::VARCHAR AS ADSET_NAME ,NULL::VARCHAR AS ADSET_ID ,NULL::VARCHAR AS AD_ID ,NULL::VARCHAR AS AD_NAME ,ad_live_date::DATE AS DATE ,NULL::VARCHAR AS AD_TYPE ,NULL::VARCHAR AS AD_STRENGTH ,NULL::VARCHAR AS AD_NETWORK_TYPE ,NULL::VARCHAR AS AD_URL ,NULL::VARCHAR AS Day_of_Week ,EXTRACT(YEAR FROM ad_live_date::DATE) AS YEAR ,EXTRACT(MONTH FROM ad_live_date::DATE) AS MONTH ,\'NYKAA ADS\' AS CHANNEL ,NULL::VARCHAR AS ACCOUNT ,Clicks::FLOAT AS Clicks ,spends::FLOAT AS Spend ,Impressions::FLOAT AS Impressions ,IFNULL(direct_orders::FLOAT, 0) AS Conversions ,IFNULL((indirect_revenue + direct_revenue)::FLOAT, 0) AS Conversion_Value ,NULL::NUMBER AS Add_to_carts ,NULL::NUMBER AS Add_to_cart_value ,NULL::NUMBER AS Landing_page_views ,NULL::NUMBER AS Initiate_checkouts ,NULL::NUMBER AS Initiate_checkouts_value FROM RUBYSORGANICS_DB.MAPLEMONK.rubysorganics_nykaa_ads_normalization ;",
+                    "transaction": true
+                }
+            ) }}
+            with sample_data as (
+
+                select * from RUBYSORGANICS_DB.information_schema.databases
+            ),
+            
+            final as (
+                select * from sample_data
+            )
+            select * from final
+            
