@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "vavqosp-sf98359"
+      user: "ph_etl_user"
+      role: "ACCOUNTADMIN"
+      database: "PHILIPS_DB"
+      warehouse: "PHILIPS_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
