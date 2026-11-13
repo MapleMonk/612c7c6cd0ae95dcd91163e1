@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "hyuman@hyuman-wh.iam.gserviceaccount.com"
+        client_id: "110652940516417324613"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/hyuman%40hyuman-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCwEa1lWDm0VB3/\n14StrMyv8ecLv/MHHD6kr4VF9L7hpSEothYHDPQS7Mo3yH3HJxU6zA29i0SpxO7O\nNLQsd3YhqVKpZcx1mYOr+OR+XYN+1O764QSBTaZQvg/Yw6d3ymFo9EGBU++HEcHG\ncnCyJAJwqrb7yqOvRuMY8r+bnImzoWnS6xUQ863MGhY1i+U8IJ92XhERBpe4Uo93\nCeVMzMmgmKV/m4o8p59og6GRgml7+AFY0M8s/vdU61/odBilovrMEGU6GCeO+m8h\ncswAJccUxmALvLiXQCqCWya8pI43C4scbCPIOBkWpdjqvE8NONTsaw46DXXdbgsr\n9+PDR7IpAgMBAAECggEAOSArKbAT3OHT7+/toOnpaYarh6DqSZrM6mL2c0mi6xRI\nK2zUvcnioQdJ3wqCYKzaEv8k0CRRDWITdz0bXjgOUIKfCs44Jcm+snvpKuTNZsfQ\nl/6NFyTp+tWHz7U/bzrvGv3xCPSCSUkmHWyBCxNq5UJGZ3CKZjKyOSR9rY//D5Qc\nAHbH7AEWOqi0Qcq7TVSKbqcndLp24a/AYqri14euNy9bsBHqdtlvrXIk12qRtUqc\n4A2nzgVWdBU5uMx8v3gBJJgYmS31FNbLamPIFXN4oyNYLOyx7vgD98ztXVHOmIg7\ngAiY3iDWuKehuOpOjqzA/k4XC8hHcSW3e/Im+wt8vwKBgQDhFgplrLzFGdMWJqEX\nE2JawRgXqga2utbnfOenehlH8k7Mq9bEuhsmrre2/pT+/vm7NoJOWsSMYWgekkpj\n8QIaI7Nhhf97enfVrY7Ahn9uMN1wTxJdVZMI8imfFAuk/DktjZW5Ua6v6kU1qYOW\nxpkr35l/mhPnwR3j9r7Ra3TYCwKBgQDIQDZSpHZzPjM+m+xEV+EhoQKNXjxdEQcE\nehLDxL3BUqAijSmKfVSxUw91v7Dl+/N0XQQ3OmpgiDWV10ViSMhJiCMRBAmSVhce\n2/N5QPYpU8fDnYVkI8DBkC7FWgCBU1kcMuW+REODBy76BCa7uChXfQZeqt3X/cd8\neBN91BtbGwKBgAcIqUqEG2INbItEqcQO1wP/BMG4jn0nWY/iV1rkdeXJrKy4sf1z\n02ViEFunmQBe927iRTAtpfa9FIPgDnMRFP+8Hd7uUQ2KxjPnOI7LpS/MVx8rWWeR\nRQcCikpuVe7R8vd5dTRVWSAmMgN7SKFtk1vLoQBb0ENtxYFaNJxWv1ABAoGATJPx\nsizedzekFR8/fOs2Vsvh0/njj5uBWX7tShwkjJdyUYQ2DJXdG2quENNbbLeq5Cbm\nA9C8+WldRI3sJKe8oBIFhu5KUsHFWbG3K/lhqXA2hmHoruDVR7BBkorWgp5DB3uX\nS+mC/8pxdn676TGFi99t3intaDnOXZT1rzq7s10CgYAPP2RHmbjzEVQaTvbTS5pG\nov+Bow5Rq5gfmUmgNovXKZtkZhY0NdHdWDZ4/hV8eBMCS7xp3dvGMdwObvtz5XWT\nNbHh5ju/EfkA+ejS48+RqhrpsQq9JwMaBWn1MFHf/fzPh2DlYzD92/0RHXvAb+w9\nFV2/p942FglMLxBgdV5bgw==\n-----END PRIVATE KEY-----\n"
+        private_key_id: "429d5da71dbb9387215dd2f0af9cbc088ec6cf24"
+        project_id: "hyuman-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "hyuman-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
