@@ -1,7 +1,7 @@
 {{ config(
             materialized='table',
                 post_hook={
-                    "sql": "create or replace table maplemonk.missing_product_mapping as select distinct product_id, marketplace from Maplemonk.philips_db_sales_consolidated where sku is null",
+                    "sql": "create or replace table maplemonk.missing_product_mapping as select distinct product_id, product_name_final, marketplace from Maplemonk.philips_db_sales_consolidated where sku is null",
                     "transaction": true
                 }
             ) }}
