@@ -1,0 +1,23 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      dataset: "maplemonk"
+      keyfile_json:
+        auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+        auth_uri: "https://accounts.google.com/o/oauth2/auth"
+        client_email: "rainandrainbow@rainandrainbow-wh.iam.gserviceaccount.com"
+        client_id: "110869399389831736608"
+        client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/rainandrainbow%40rainandrainbow-wh.iam.gserviceaccount.com"
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDHtKAQOGcwwRVw\nQOp04dzXF9qIBEGCyJY/S8n4B+FvM9ITYBjy6ciWk/icyCxDGIODdecKkrS/NFYI\nKwr1DViMOKx1bCQSnKg3AOg+SJWlOP81NtXehaRDQ4Gs8QIt/GaNpJ6U5oGrbwnN\nnkm8S7eO/s9jlu1aVWh4IbApAgQ6Cp7YK2w7Zt3cm8O+S1zc16Nd68HeoECwdDfK\nPlb6DvKQM47DiGnldWcRA4jI0pvXzbydOuKIsReWIhB2VwEe6c9EeJMpmfBOw2bn\npy7nfeguen6UhNiuiKvPHpJwBNYSjAgTaL/bv9kUBfi1Gvv8TlBvfyKh8gKmDPYQ\n0DValKXRAgMBAAECggEAVZZUrv7tQpjNjlFT6gnOcqR3dKmWRe2fbrsVcOY3uEfW\nNZWOu7Rz0gzSlKa5SXwdCN8jyIU9T2CnqlKAHKu+kkHLr3tMLmnTMdeCsQa8k5XM\n0kqQ+BAAaQ9qaOrVS04LyZKOoDP1yLoK0oOPCFLO9UrBKOZLDNbjsfCGJd0GYLTf\noNc9Hdg1D7HatywfR2fgi79iUR2I2D90axtBWGsT2ISDf+65FF8YDHY8ozYb5ezE\n9n7pS8+QMnyFtQAd+z0q/EJnJrcee4an3JyI5YTbA9M8gNi/RF9Kpj/B3WICiG1A\nUKI35E2APHyJIcTfk3M94C2qNgz2x2SVh/7I2CgwfQKBgQD7TcmslXypotTF2fbN\n6jJRJSPzNGDgkd3Ragt1RDlmtxwwKr/LlLmCUSQ4QveoJeplL1NIY5ej8vyrYef/\nzSPA8gy1gExFjyDhHxSkBwj9oR6zMkMrp9ZFAZ9+m7LaEvQE4nnYkZ0A1C4eaXau\nDgT0d/gjckybXwgY4Z+0ERthFwKBgQDLb/8X4EW0qNa16gdDVC3UfXyMR4CEdgxB\nAEVvTGldChjM40QAdbgbcNZq+Bu6WuI7BqgHtprsczTHRmtZsyk/Vgb0gFTBnG7p\nnNGsm/RAI/4DEqgx9el0A40O4P/tTUK/kkoy8dJgbgdTH8YEFPYRUKTz56hsAS4b\npBbzByDxVwKBgHYNxdboZqa+EpxbV2DGSxrpiqjei0AT5hNRcM6G3TxOetR50J3P\nYRJCEfTIKNV58lHUWJhiCMOBC4drN/RoJwql6qh8+9eVdEmtMyIXF/cl8GkYDIv+\njV7fc1CjzfI6Ax4kUj8VsJ7KDlxFCPadKWC61vu33xsCGqitnTuW6bjDAoGARtV5\nKbQSMUQ0dmTFIKFXz8vdqO5ghj6gJ6XTh1xAt3+DgRuEmvBiKVPRpK884FcyvECm\nEwF20euPLe+MA1CJhR8MDuf8GunACKFstEAc/JRLpoBBhhvMrHNsEwkus06adh+W\nrERc7uyAqmW+yb8Oqpq8xJwdnXWPu1oYD4ik5MMCgYEAqMEa7gYjbQYWGRM/2iJe\nsJiw/dg3ZBrTC2lqiiibB6ORbx5oIxNe899nKGuqj+XSyx+qDIE19vDdE+Y7d/NS\nkBQoAx3JTqZ65OWTJ52Tx30LEd5x+gYIRjTHCOFeEkeORDkE8tJdCFoWI+d/P5hZ\njPKOkAmSvWBllBenojKn7BQ=\n-----END PRIVATE KEY-----\n"
+        private_key_id: "4fa336561c36fcadd251bb7b6452ced04fb093b1"
+        project_id: "rainandrainbow-wh"
+        token_uri: "https://oauth2.googleapis.com/token"
+        type: "service_account"
+        universe_domain: "googleapis.com"
+      location: "asia-south1"
+      priority: "interactive"
+      project: "rainandrainbow-wh"
+      retries: 2
+      threads: 8
+      method: "service-account-json"
