@@ -1,0 +1,13 @@
+default:
+  target: "dev"
+  outputs:
+    dev:
+      type: "snowflake"
+      account: "abdtkxo-hj39090"
+      user: "jlt_elt_user"
+      role: "ACCOUNTADMIN"
+      database: "JLT_DB"
+      warehouse: "JLT_WH"
+      schema: "MAPLEMONK"
+      threads: 10
+      client_session_keep_alive: false
